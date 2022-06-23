@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour {
   [SerializeField] private Collider2D headCollider;
   [SerializeField] private Transform groundCheck;
   [SerializeField] private LayerMask groundLayer;
+  [SerializeField] private Transform defaultWeapon;
+  
+  private Transform inventory;
 
   internal Animator animator;
   internal SpriteRenderer spriteRenderer;
@@ -33,6 +36,8 @@ public class PlayerController : MonoBehaviour {
   {
     animator = GetComponent<Animator>();
     spriteRenderer = GetComponent<SpriteRenderer>();
+    inventory = transform.Find("Inventory");
+    AddWeapon(defaultWeapon);
   }
 
   private void Update()
@@ -114,6 +119,11 @@ public class PlayerController : MonoBehaviour {
     pauseGroundCheck = true;
     yield return new WaitForSeconds(pauseTime);
     pauseGroundCheck = false;
+  }
+
+  public void AddWeapon( Transform weapon )
+  {
+    inventory.GetComponent<InventoryController>().AddWeapon( weapon );
   }
 
 }

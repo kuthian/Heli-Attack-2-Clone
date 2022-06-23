@@ -18,6 +18,20 @@ public class ShootProjectile : MonoBehaviour
     GetComponent<AimAtMouse>().OnClickReleased += ShootProjectile_OnClickReleased;
   }
 
+  private void OnEnable()
+  {
+    GetComponent<AimAtMouse>().OnClick += ShootProjectile_OnClick;
+    GetComponent<AimAtMouse>().OnClickReleased += ShootProjectile_OnClickReleased;
+  }
+
+  private void OnDisable()
+  {
+    GetComponent<AimAtMouse>().OnClick -= ShootProjectile_OnClick;
+    GetComponent<AimAtMouse>().OnClickReleased -= ShootProjectile_OnClickReleased;
+    shoot = false;
+    onCooldown = false;
+  }
+
   public void ShootProjectile_OnClick(object sender, AimAtMouse.OnClickEventArgs e)
   {
     shoot = true;
@@ -30,7 +44,7 @@ public class ShootProjectile : MonoBehaviour
   
   private void Update()
   {
-    if (shoot && !onCooldown)
+    if (!onCooldown && shoot)
     {
       Transform projectileTransform = 
         Instantiate(pfProjectile, firePointTransform.position, Quaternion.identity);

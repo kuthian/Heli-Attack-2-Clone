@@ -5,27 +5,23 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
   [SerializeField] private Rigidbody2D rb;
-  private Vector3 direction;
-  private float speed = 10f;
+  public float speed = 10f;
+  public float maxLifetimeSeconds = 5f;
 
   public void Setup( Vector3 direction )
   {
-    this.direction = direction;
     rb.velocity = direction.normalized * speed;
-    Destroy(gameObject, 5.0f);
-  }
-
-  private void Update()
-  {
+    transform.eulerAngles = new Vector3(0, 0, Utils.UtilsClass.GetAngleFromVectorFloat(direction));
+    Destroy(gameObject, maxLifetimeSeconds);
   }
 
   void OnTriggerEnter2D (Collider2D other)
   {
-    if (other.gameObject.tag == "Map")
+    if (other.CompareTag("Map"))
     {
       Destroy(gameObject);
     }
-    if (other.gameObject.tag == "Enemy") 
+    if (other.CompareTag("Enemy")) 
     {
       Destroy(other.gameObject);
       Destroy(gameObject);
@@ -34,7 +30,7 @@ public class Projectile : MonoBehaviour
 
   void OnTriggerExit2D (Collider2D other)
   {
-    if (other.gameObject.tag == "GameArea")
+    if (other.CompareTag("GameArea"))
     {
       Destroy(gameObject);
     }
