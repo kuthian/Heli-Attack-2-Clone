@@ -3,25 +3,26 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-  public float maxSpeed = 3f;
-  public float jumpingPower = 6.5f;
-  public float jumpingDeceleration = 0.5f;
-  public float MoveAcceleration = 20;
-  public float MoveDecceleration = 12;
+  private float maxSpeed = 3f;
+  private float jumpingPower = 8f;
+  private float jumpingDeceleration = 0.5f;
+  private float MoveAcceleration = 20;
+  private float MoveDecceleration = 12;
 
-  [SerializeField] private Rigidbody2D rb;
   [SerializeField] private Collider2D headCollider;
+  [SerializeField] private GameObject defaultWeapon;
   [SerializeField] private Transform groundCheck;
   [SerializeField] private LayerMask groundLayer;
-  [SerializeField] private Transform defaultWeapon;
+  [SerializeField] private ParticleSystem pfDamageEffect;
   
   private Transform inventory;
 
+  internal Rigidbody2D rb;
   internal Animator animator;
   internal SpriteRenderer spriteRenderer;
 
-  public bool grounded;
-  public bool crouched;
+  private bool grounded;
+  private bool crouched;
   private bool pauseGroundCheck = false;
 
   private float horizontal;
@@ -29,14 +30,16 @@ public class PlayerController : MonoBehaviour {
   private bool jump = false;
   private bool stopJump = false;
   private bool jumping = false;
-  public int jumpCounter = 2;
-  public int maxJumpCount = 2;
+  private int jumpCounter = 2;
+  private int maxJumpCount = 2;
 
   private void Awake()
   {
+    rb = GetComponent<Rigidbody2D>();
     animator = GetComponent<Animator>();
     spriteRenderer = GetComponent<SpriteRenderer>();
     inventory = transform.Find("Inventory");
+
     AddWeapon(defaultWeapon);
   }
 
@@ -56,7 +59,6 @@ public class PlayerController : MonoBehaviour {
     {
       jumping = false;
       jumpCounter = maxJumpCount;
-      // FIXME: Add deceleration instead of flat stop
       if (crouched) horizontal = 0;
     }
     
@@ -71,7 +73,6 @@ public class PlayerController : MonoBehaviour {
     {
       stopJump = true;
     }
-
 
     animator.SetBool("Crouched", crouched);
     animator.SetInteger("JumpCount", maxJumpCount - jumpCounter);
@@ -121,9 +122,15 @@ public class PlayerController : MonoBehaviour {
     pauseGroundCheck = false;
   }
 
-  public void AddWeapon( Transform weapon )
+  public void AddWeapon( GameObject weapon )
   {
     inventory.GetComponent<InventoryController>().AddWeapon( weapon );
+  }
+
+  public void Damage( int var )
+  {
+    ParticleSystem obj = Instantiate(pfDamageEffect, transform.position, Quaternion.identity);
+    Destroy( obj.gameObject, 1.0f );
   }
 
 }

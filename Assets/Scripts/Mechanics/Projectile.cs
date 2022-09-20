@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
-{
+public class Projectile : MonoBehaviour {
+
   [SerializeField] private Rigidbody2D rb;
-  public float speed = 10f;
-  public float maxLifetimeSeconds = 5f;
+  [SerializeField] private int damage = 10;
+  [SerializeField] private float speed = 10f;
+  [SerializeField] private float maxLifetimeSeconds = 5f;
 
   public void Setup( Vector3 direction )
   {
@@ -23,7 +24,18 @@ public class Projectile : MonoBehaviour
     }
     if (other.CompareTag("Enemy")) 
     {
-      Destroy(other.gameObject);
+      Destroy(gameObject);
+    }
+    if (CompareTag("EnemyProjectile") && other.CompareTag("Player")) 
+    {
+      // Enemy projectile hits Player
+      other.gameObject.SendMessage("Damage", damage);
+      Destroy(gameObject);
+    }
+    if (CompareTag("PlayerProjectile") && other.CompareTag("Enemy")) 
+    {
+      // Player projectile hits Enemy
+      other.gameObject.SendMessage("Damage", damage);
       Destroy(gameObject);
     }
   }

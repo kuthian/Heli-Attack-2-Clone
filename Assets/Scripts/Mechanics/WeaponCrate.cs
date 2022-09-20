@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WeaponCrate : MonoBehaviour {
 
-  [SerializeField] private Transform weapon;
+  [SerializeField] private GameObject weapon;
 
   private void OnTriggerEnter2D(Collider2D other)
   {
