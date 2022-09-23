@@ -7,12 +7,12 @@ public class GunController : MonoBehaviour {
 
   public ReloadBar reloadBar;
 
-  internal AudioSource shootingSound;
   internal Ammo ammo;
 
   [SerializeField] protected Transform firePointTransform;
   [SerializeField] protected Transform pfProjectile;
   [SerializeField] private Sprite crateSprite;
+  public GunType gunType;
 
   [SerializeField] private float cooldownTime = 0.5f;
   [SerializeField] protected int ammoPerShot = 1;
@@ -23,14 +23,8 @@ public class GunController : MonoBehaviour {
 
   public Sprite CrateSprite => crateSprite;
 
-  public void Init(ReloadBar rBar)
-  {
-    reloadBar = rBar;
-  }
-
   private void Awake()
   {
-    shootingSound = GetComponent<AudioSource>();
     ammo = GetComponent<Ammo>();
     cooldownTimeRemaining = 0;
   }
@@ -82,7 +76,7 @@ public class GunController : MonoBehaviour {
     {
       InstantiateProjectile();
 
-      shootingSound.Play(0);
+      AudioManager.PlayShootingSound( gunType );
 
       cooldownOffTime = DateTime.Now.AddSeconds(cooldownTime);
       cooldownTimeRemaining = cooldownTime;

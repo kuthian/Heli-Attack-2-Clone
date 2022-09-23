@@ -64,11 +64,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 795742884974927923, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.082
+      value: -0.029
       objectReference: {fileID: 0}
     - target: {fileID: 795742884974927923, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.041
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 795742884974927923, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -110,6 +110,10 @@ PrefabInstance:
       propertyPath: crateSprite
       value: 
       objectReference: {fileID: 21300000, guid: 2b84dab5f95a8d84296f24a3cf82e2e7, type: 3}
+    - target: {fileID: 6063942180843961441, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 951cda21d04c6934b872aded180dbac9, type: 3}
     m_RemovedComponents:
     - {fileID: 795742884974927934, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
@@ -139,6 +143,7 @@ MonoBehaviour:
   firePointTransform: {fileID: 4618725055256072039}
   pfProjectile: {fileID: 1994916729556804204, guid: 3db81ebe9647a914988c4d52bc0cb240, type: 3}
   crateSprite: {fileID: 21300000, guid: 2b84dab5f95a8d84296f24a3cf82e2e7, type: 3}
+  gunType: 2
   cooldownTime: 0.1
   ammoPerShot: 2
   secondFirePointTransform: {fileID: 5708294885215499212}

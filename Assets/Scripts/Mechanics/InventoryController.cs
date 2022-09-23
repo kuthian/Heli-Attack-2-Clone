@@ -22,7 +22,7 @@ public class InventoryController : MonoBehaviour {
     // Weapon doesn't already exist, add it
     bool firstWeapon = transform.childCount == 0;
     GameObject obj = Instantiate(weapon, transform) as GameObject;
-    obj.GetComponent<GunController>().Init( reloadBar );
+    obj.GetComponent<GunController>().reloadBar = reloadBar;
     if (firstWeapon) obj.SetActive(true);
   }
 

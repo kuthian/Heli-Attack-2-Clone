@@ -8,9 +8,10 @@ public class HealthCrate : MonoBehaviour {
   {
     if (other.CompareTag("Player"))
     {
+      AudioManager.PlayCrateOpen();
       other.gameObject.SendMessage("Heal", healBy);
       Destroy(gameObject);
-    } 
+    }
   }
 
 }

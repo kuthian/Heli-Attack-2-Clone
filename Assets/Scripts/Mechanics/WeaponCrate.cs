@@ -8,6 +8,7 @@ public class WeaponCrate : MonoBehaviour {
   {
     if (other.CompareTag("Player"))
     {
+      AudioManager.PlayCrateOpen();
       other.gameObject.SendMessage("AddWeapon", weapon);
       Destroy(gameObject);
     } 

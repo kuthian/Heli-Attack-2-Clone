@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour {
 
   private void CreateEnemy( Transform p )
   {
-    GameObject obj = Instantiate(enemy, p.position, Quaternion.identity, transform);
+    GameObject obj = Instantiate(enemy, p.position, Quaternion.identity);
     obj.GetComponent<EnemyController>().Init( player );
     obj.GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
     if (Random.Range(0, 2) == 1) {

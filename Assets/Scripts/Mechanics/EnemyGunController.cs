@@ -7,13 +7,9 @@ public class EnemyGunController : MonoBehaviour {
   [SerializeField] private Transform firePointTransform;
   [SerializeField] private GameObject pfProjectile;
   public GameObject objectToIgnore;
-  public float cooldownTime = 2f;
-  private DateTime cooldownOffTime;
 
-  public void Init(GameObject obj)
-  {
-    objectToIgnore = obj;
-  }
+  [SerializeField] private float cooldownTime = 2f;
+  private DateTime cooldownOffTime;
 
   private void Start()
   {

@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
   
-  public float maxSpeed = 3f;
-  public float MoveAcceleration = 5;
-  public float MoveDecceleration = 5;
+  [SerializeField] private float maxSpeed = 3f;
+  [SerializeField] private float MoveAcceleration = 5;
+  [SerializeField] private float MoveDecceleration = 5;
+  [SerializeField] private float tolerance = 2f;
+  [SerializeField] private Transform target;
+
+  [SerializeField] private GameObject pfDestroyedHelicopter;
+  [SerializeField] private GameObject pfDestroyedGunner;
+  [SerializeField] private ParticleSystem pfDestroyedEffect;
+  [SerializeField] private GameObject[] pfWeaponCrates; 
 
   internal Rigidbody2D rb;
-  private Transform target;
-  public float tolerance = 2f;
-  public float vel;
-
-  public GameObject[] pfWeaponCrates; 
 
   int horizontal = 0;
 
@@ -38,7 +40,6 @@ public class EnemyController : MonoBehaviour {
 
   void FixedUpdate()
   {
-    vel = rb.velocity.x;
     if ( horizontal != 0 )
     {
       float speed = Mathf.Abs(rb.velocity.x) + MoveAcceleration * Time.fixedDeltaTime;
@@ -60,7 +61,21 @@ public class EnemyController : MonoBehaviour {
 
   private void HandleOnHealthZero()
   {
+    GameObject destroyedGunner = Instantiate(pfDestroyedGunner, transform.position, transform.rotation);
+    destroyedGunner.GetComponent<Rigidbody2D>().velocity = new Vector3( 0.0f, 3.0f, 0.0f );
+    destroyedGunner.GetComponent<Rigidbody2D>().angularVelocity = 20.0f;
+    Destroy(destroyedGunner, 2);
+
+    GameObject destroyedHeli = Instantiate(pfDestroyedHelicopter, transform.position, transform.rotation);
+    destroyedHeli.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+    int direction = rb.velocity.x >= 0 ? -1 : 1;
+    destroyedHeli.GetComponent<Rigidbody2D>().angularVelocity = direction * 11.0f;
+
+    ParticleSystem particle = Instantiate(pfDestroyedEffect, destroyedHeli.transform);
+    Destroy(particle.gameObject, 5);
+
     Instantiate(pfWeaponCrates[Random.Range(0, pfWeaponCrates.Length)], transform.position, Quaternion.identity);
+
     Destroy(gameObject);
   }
 
