@@ -240,12 +240,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a1d94f2336fba4bb11b64ba62d9c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadBar: {fileID: 0}
-  inventoryHUD: {fileID: 0}
-  firePointTransform: {fileID: 795742884866758721}
-  pfProjectile: {fileID: 8547701279384925765, guid: 4965d607913209248a64dff351753ff2, type: 3}
+  _firePointTransform: {fileID: 795742884866758721}
+  _pfProjectile: {fileID: 8547701279384925765, guid: 4965d607913209248a64dff351753ff2, type: 3}
   crateSprite: {fileID: 21300000, guid: 61fdbfc97defd23478be62284e047a1e, type: 3}
+  gunType: 0
   cooldownTime: 0.5
+  ammoPerShot: 1
 --- !u!114 &-3042042246017636319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,5 +258,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfefa9af0ea88a546a8824578a41ac24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infiniteAmmo: 0
-  startingAmmo: 10
+  _infiniteAmmo: 0
+  _startingAmmo: 10

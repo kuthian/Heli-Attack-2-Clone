@@ -12,8 +12,13 @@ public class ParticleAssets : MonoBehaviour {
   }
 
   [SerializeField]
-  private ParticleSystem explodedEffect;
+  private ParticleSystem _explodedEffect;
 
-  public ParticleSystem ExplodedEffect => explodedEffect;
+  public ParticleSystem ExplodedEffect => _explodedEffect;
+
+  [SerializeField]
+  private ParticleSystem _damagedPlayerEffect;
+
+  public ParticleSystem DamagedPlayerEffect => _damagedPlayerEffect;
 
 }

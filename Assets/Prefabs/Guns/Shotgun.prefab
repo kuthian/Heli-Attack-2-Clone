@@ -31,6 +31,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 795742884974927922, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: m_TagString
+      value: GunShotgun
+      objectReference: {fileID: 0}
     - target: {fileID: 795742884974927923, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -115,16 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d774e15550b20264d88650445132529a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePointTransform: {fileID: 8802175741454373776}
-  pfProjectile: {fileID: 3721999795625928666, guid: 6b9221894aa7e3544965bcc842b47011, type: 3}
-  crateSprite: {fileID: 21300000, guid: 1c74ae81c2cc49641b6a65cb85b48314, type: 3}
-  gunType: 3
+  _pfProjectile: {fileID: 3721999795625928666, guid: 6b9221894aa7e3544965bcc842b47011, type: 3}
   cooldownTime: 4
   ammoPerShot: 7
-  pStepScalar: 0.1
-  dStepScalar: 0.075
---- !u!4 &8802175741454373776 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
-  m_PrefabInstance: {fileID: 8155059891165580241}
-  m_PrefabAsset: {fileID: 0}
+  _pStepScalar: 0.1
+  _dStepScalar: 0.075

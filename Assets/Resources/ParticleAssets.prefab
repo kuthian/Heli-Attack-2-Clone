@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b6339e4d2c0bac40b96d17682ead38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explodedEffect: {fileID: 533991866992134506, guid: 9fd5b6c0b9ae0604bb17a6d033ff9f49, type: 3}
+  _explodedEffect: {fileID: 533991866992134506, guid: 9fd5b6c0b9ae0604bb17a6d033ff9f49, type: 3}
+  _damagedPlayerEffect: {fileID: 533991866992134506, guid: 55a560be67358c041a0717c0076870d7, type: 3}

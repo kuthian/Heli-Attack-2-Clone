@@ -63,7 +63,7 @@ public class InventoryController : MonoBehaviour {
       transform.GetChild(index).gameObject.SetActive(false);
     }
     weapon.SetActive(true);
-    HUDManager.Inventory.SetActiveWeapon( weapon.GetComponent<GunController>().CrateSprite );
+    HUDManager.Inventory.SetActiveWeapon( ItemManager.GetInventorySpriteByTag( weapon.tag ) );
     HUDManager.Inventory.SetAmmoCount( weapon.GetComponent<Ammo>().Count );
     weapon.GetComponent<Ammo>().OnAmmoChanged += HUDManager.Inventory.SetAmmoCount;
   }

@@ -4,12 +4,12 @@ public class AudioManager : Singleton<AudioManager> {
 
   public static void PlaySound( AudioClip clip, float volume = 1.0f )
   {
-    _PlaySound( clip, volume );
+    __PlaySound( clip, volume );
   }
 
   public static void PlaySoundDelayed( AudioClip clip, float seconds, float volume = 1.0f )
   {
-    _PlaySound( clip, volume, seconds );
+    __PlaySound( clip, volume, seconds );
   }
 
   public static void PlayCrateOpen()
@@ -25,14 +25,14 @@ public class AudioManager : Singleton<AudioManager> {
   public static void PlayShootingSound( GunType type )
   {
     switch (type) {
-      case GunType.rifle:
+      case GunType.Rifle:
         PlaySound(AudioAssets.i.GetRifleShotClip());
         break;
-      case GunType.uzi:
+      case GunType.Uzi:
         PlaySound(AudioAssets.i.GetUziShotClip());
         PlaySoundDelayed(AudioAssets.i.GetUziShotClip(), 0.2f);
         break;
-      case GunType.shotgun:
+      case GunType.Shotgun:
         PlaySound(AudioAssets.i.GetShotgunShotClip());
         break;
       default:
@@ -40,14 +40,16 @@ public class AudioManager : Singleton<AudioManager> {
     }
   }
 
-  private static void _PlaySound( AudioClip clip, float volume = 1.0f, float delaySeconds = 0 )
+  private static void __PlaySound( AudioClip clip, float volume = 1.0f, float delaySeconds = 0 )
   {
+    if ( !clip ) return;
+
     GameObject sound = new GameObject("Sound");
     AudioSource source = sound.AddComponent<AudioSource>();
     source.clip = clip;
     source.volume = volume;
 
-    DynamicObjects.AssignChild( sound );
+    DynamicObjects.Reparent( sound, DynamicObjects.Sounds );
 
     if ( delaySeconds == 0 ) source.Play();
     else source.PlayDelayed(delaySeconds);
