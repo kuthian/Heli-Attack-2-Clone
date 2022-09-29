@@ -26,11 +26,14 @@ public class AudioManager : Singleton<AudioManager> {
   {
     switch (type) {
       case GunType.rifle:
-        PlaySound(AudioAssets.i.GetRifleShotClips());
+        PlaySound(AudioAssets.i.GetRifleShotClip());
         break;
       case GunType.uzi:
-        PlaySound(AudioAssets.i.GetUziShotClips());
-        PlaySoundDelayed(AudioAssets.i.GetUziShotClips(), 0.2f);
+        PlaySound(AudioAssets.i.GetUziShotClip());
+        PlaySoundDelayed(AudioAssets.i.GetUziShotClip(), 0.2f);
+        break;
+      case GunType.shotgun:
+        PlaySound(AudioAssets.i.GetShotgunShotClip());
         break;
       default:
         break;

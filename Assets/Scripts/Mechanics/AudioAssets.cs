@@ -11,28 +11,40 @@ public class AudioAssets : MonoBehaviour {
     }
   }
 
+  private AudioClip RandomInRange( AudioClip[] clips ) {
+    return clips[Random.Range(0, clips.Length)];
+  }
+
   [SerializeField]
   private AudioClip[] openCrateClips;
 
   public AudioClip GetOpenCrateClip()
   {
-    return openCrateClips[Random.Range(0, openCrateClips.Length)];
+    return RandomInRange( openCrateClips );
   }
 
   [SerializeField]
   private AudioClip[] rifleShotClips;
 
-  public AudioClip GetRifleShotClips()
+  public AudioClip GetRifleShotClip()
   {
-    return rifleShotClips[Random.Range(0, rifleShotClips.Length)];
+    return RandomInRange( rifleShotClips );
   }
 
   [SerializeField]
   private AudioClip[] uziShotClips;
 
-  public AudioClip GetUziShotClips()
+  public AudioClip GetUziShotClip()
   {
-    return uziShotClips[Random.Range(0, uziShotClips.Length)];
+    return RandomInRange( uziShotClips );
+  }
+
+  [SerializeField]
+  private AudioClip[] shotgunClips;
+
+  public AudioClip GetShotgunShotClip()
+  {
+    return RandomInRange( shotgunClips );
   }
 
   [SerializeField]
