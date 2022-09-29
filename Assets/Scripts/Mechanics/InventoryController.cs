@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour {
 
-  [SerializeField] private ReloadBar reloadBar;
-  [SerializeField] private InventoryHUD inventoryHUD;
-
   private int NoWeaponSelected = -99;
 
   public void AddWeapon( GameObject weapon ) 
@@ -22,7 +19,6 @@ public class InventoryController : MonoBehaviour {
     // Weapon doesn't already exist, add it
     bool firstWeapon = transform.childCount == 0;
     GameObject obj = Instantiate(weapon, transform) as GameObject;
-    obj.GetComponent<GunController>().reloadBar = reloadBar;
     if (firstWeapon) obj.SetActive(true);
   }
 
@@ -67,9 +63,9 @@ public class InventoryController : MonoBehaviour {
       transform.GetChild(index).gameObject.SetActive(false);
     }
     weapon.SetActive(true);
-    inventoryHUD.SetActiveWeapon( weapon.GetComponent<GunController>().CrateSprite );
-    inventoryHUD.SetAmmoCount( weapon.GetComponent<Ammo>().Count );
-    weapon.GetComponent<Ammo>().OnAmmoChanged += inventoryHUD.SetAmmoCount;
+    HUDManager.Inventory.SetActiveWeapon( weapon.GetComponent<GunController>().CrateSprite );
+    HUDManager.Inventory.SetAmmoCount( weapon.GetComponent<Ammo>().Count );
+    weapon.GetComponent<Ammo>().OnAmmoChanged += HUDManager.Inventory.SetAmmoCount;
   }
 
   private void SelectNextWeapon()

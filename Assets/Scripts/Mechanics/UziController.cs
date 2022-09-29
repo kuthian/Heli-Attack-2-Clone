@@ -9,14 +9,14 @@ public class UziController : GunController {
     {
       Transform t = firePointTransform;
       Transform projectile = 
-        Instantiate(pfProjectile, t.position, Quaternion.identity);
+        Instantiate(pfProjectile, t.position, Quaternion.identity, DynamicObjects.transform);
       Vector3 direction = t.right - t.up * 0.001f * (float) Random.Range(-100,100);
       projectile.GetComponent<Projectile>().Setup(direction);
     }
     {
       Transform t = secondFirePointTransform;
       Transform projectile = 
-        Instantiate(pfProjectile, t.position, Quaternion.identity);
+        Instantiate(pfProjectile, t.position, Quaternion.identity, DynamicObjects.transform);
       Vector3 direction = t.right - t.up * 0.001f * (float) Random.Range(-100,100);
       projectile.GetComponent<Projectile>().Setup(direction);
     }

@@ -10,22 +10,17 @@ public class EnemyController : MonoBehaviour {
 
   [SerializeField] private GameObject pfDestroyedHelicopter;
   [SerializeField] private GameObject pfDestroyedGunner;
-  [SerializeField] private ParticleSystem pfDestroyedEffect;
   [SerializeField] private GameObject[] pfWeaponCrates; 
 
   internal Rigidbody2D rb;
 
-  int horizontal = 0;
-
-  public void Init( Transform t )
-  {
-    target = t;
-    GetComponentInChildren<AimAtTransform>().target = t;
-  }
+  private int horizontal = 0;
 
   void Awake()
   {
     rb = GetComponent<Rigidbody2D>();
+    target = GameObject.Find("Player").transform;
+    GetComponentInChildren<AimAtTransform>().target = target;
     GetComponentInChildren<EnemyGunController>().objectToIgnore = gameObject;
     GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
   }
@@ -71,8 +66,9 @@ public class EnemyController : MonoBehaviour {
     int direction = rb.velocity.x >= 0 ? -1 : 1;
     destroyedHeli.GetComponent<Rigidbody2D>().angularVelocity = direction * 11.0f;
 
-    ParticleSystem particle = Instantiate(pfDestroyedEffect, destroyedHeli.transform);
-    Destroy(particle.gameObject, 5);
+    ParticleManager.PlayExplodedEffect( destroyedHeli.transform );
+
+    AudioManager.PlayExplosion();
 
     Instantiate(pfWeaponCrates[Random.Range(0, pfWeaponCrates.Length)], transform.position, Quaternion.identity);
 

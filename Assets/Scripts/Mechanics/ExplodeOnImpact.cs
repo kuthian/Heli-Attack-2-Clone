@@ -3,7 +3,6 @@ using UnityEngine;
 public class ExplodeOnImpact : MonoBehaviour {
 
   internal Rigidbody2D rb;
-  [SerializeField] private ParticleSystem pfExplodeEffect;
 
   void Start()
   {
@@ -16,7 +15,8 @@ public class ExplodeOnImpact : MonoBehaviour {
     {
       rb.angularVelocity = 0;
       rb.constraints = RigidbodyConstraints2D.FreezePosition;
-      ParticleSystem obj = Instantiate(pfExplodeEffect, transform);
+      ParticleManager.PlayExplodedEffect( transform );
+      AudioManager.PlayExplosion();
       Destroy(gameObject, 0.75f);
     }
   }

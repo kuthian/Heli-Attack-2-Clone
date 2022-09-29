@@ -19,7 +19,7 @@ public class EnemyGunController : MonoBehaviour {
   private void ShootProjectile()
   {
     GameObject projectile = 
-      Instantiate(pfProjectile, firePointTransform.position, Quaternion.identity);
+      Instantiate(pfProjectile, firePointTransform.position, Quaternion.identity, DynamicObjects.transform);
 
     if (objectToIgnore)
     {

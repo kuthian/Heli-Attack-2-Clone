@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
   
-  [SerializeField] private GameObject enemy;
-  [SerializeField] private Transform player;
-  [SerializeField] private HeliCountHUD heliCount;
+  [SerializeField] private GameObject pfEnemy;
   public Transform[] spawnPoints;
 
   void Start()
@@ -19,8 +17,7 @@ public class EnemyManager : MonoBehaviour {
 
   private void CreateEnemy( Transform p )
   {
-    GameObject obj = Instantiate(enemy, p.position, Quaternion.identity);
-    obj.GetComponent<EnemyController>().Init( player );
+    GameObject obj = Instantiate(pfEnemy, p.position, Quaternion.identity);
     obj.GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
     if (Random.Range(0, 2) == 1) {
       // Flip the transform
@@ -31,7 +28,7 @@ public class EnemyManager : MonoBehaviour {
 
   void HandleOnHealthZero()
   {
-    heliCount.Add(1);
+    HUDManager.HeliCount.Add(1);
     CreateEnemyRandom();
   }
 }

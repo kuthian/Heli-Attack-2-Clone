@@ -1,41 +1,56 @@
 using UnityEngine;
 
-public static class AudioManager {
+public class AudioManager : Singleton<AudioManager> {
 
-  public static void PlaySound( AudioClip clip )
+  public static void PlaySound( AudioClip clip, float volume = 1.0f )
   {
-    GameObject sound = new GameObject("Sound");
-    AudioSource source = sound.AddComponent<AudioSource>();
-    source.PlayOneShot(clip);
-    GameObject.Destroy(source.gameObject, (clip.samples / clip.frequency) + 0.5f);
+    _PlaySound( clip, volume );
   }
 
-  public static void PlaySoundDelayed( AudioClip clip, float seconds )
+  public static void PlaySoundDelayed( AudioClip clip, float seconds, float volume = 1.0f )
   {
-    GameObject sound = new GameObject("Sound");
-    AudioSource source = sound.AddComponent<AudioSource>();
-    source.clip = clip;
-    source.PlayDelayed(seconds);
-    GameObject.Destroy(source.gameObject, seconds + (clip.samples / clip.frequency) + 0.5f);
+    _PlaySound( clip, volume, seconds );
   }
 
   public static void PlayCrateOpen()
   {
-    PlaySound(GameAssets.i.GetOpenCrateClip());
+    PlaySound(AudioAssets.i.GetOpenCrateClip());
+  }
+
+  public static void PlayExplosion()
+  {
+    PlaySound(AudioAssets.i.GetExplosionClip(), 0.25f);
   }
 
   public static void PlayShootingSound( GunType type )
   {
     switch (type) {
       case GunType.rifle:
-        PlaySound(GameAssets.i.GetRifleShotClips());
+        PlaySound(AudioAssets.i.GetRifleShotClips());
         break;
       case GunType.uzi:
-        PlaySound(GameAssets.i.GetUziShotClips());
-        PlaySoundDelayed(GameAssets.i.GetUziShotClips(), 0.2f);
+        PlaySound(AudioAssets.i.GetUziShotClips());
+        PlaySoundDelayed(AudioAssets.i.GetUziShotClips(), 0.2f);
         break;
       default:
         break;
     }
   }
-}
+
+  private static void _PlaySound( AudioClip clip, float volume = 1.0f, float delaySeconds = 0 )
+  {
+    GameObject sound = new GameObject("Sound");
+    AudioSource source = sound.AddComponent<AudioSource>();
+    source.clip = clip;
+    source.volume = volume;
+
+    DynamicObjects.AssignChild( sound );
+
+    if ( delaySeconds == 0 ) source.Play();
+    else source.PlayDelayed(delaySeconds);
+
+    float clipDurationSeconds = clip.samples / clip.frequency;
+    GameObject.Destroy(source.gameObject, delaySeconds + clipDurationSeconds + 0.5f);
+  }
+
+};

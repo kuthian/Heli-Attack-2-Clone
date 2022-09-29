@@ -15,7 +15,7 @@ public class ShotgunController : GunController {
     for (int i = 0; i < ammoPerShot; i++)
     {
       Transform projectile = 
-        Instantiate(pfProjectile, position, Quaternion.identity);
+        Instantiate(pfProjectile, position, Quaternion.identity, DynamicObjects.transform);
       projectile.GetComponent<Projectile>().Setup(direction);
       position = position + pStep;
       direction = direction + dStep;

@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour {
 
-  public ReloadBar reloadBar;
-
   internal Ammo ammo;
 
   [SerializeField] protected Transform firePointTransform;
@@ -31,8 +29,8 @@ public class GunController : MonoBehaviour {
 
   private void OnEnable()
   {
-    reloadBar.SetCooldownTime(cooldownTime);
-    reloadBar.SetTimeRemaining(0);
+    HUDManager.ReloadBar.SetCooldownTime(cooldownTime);
+    HUDManager.ReloadBar.SetTimeRemaining(0);
   }
 
   private void OnDisable()
@@ -43,7 +41,7 @@ public class GunController : MonoBehaviour {
   virtual protected void InstantiateProjectile()
   {
     Transform projectileTransform = 
-      Instantiate(pfProjectile, firePointTransform.position, Quaternion.identity);
+      Instantiate(pfProjectile, firePointTransform.position, Quaternion.identity, DynamicObjects.transform);
 
     Vector3 direction = firePointTransform.right;
 
@@ -60,7 +58,7 @@ public class GunController : MonoBehaviour {
         onCooldown = false;
         timeRemaining = 0;
       }
-      reloadBar.SetTimeRemaining(timeRemaining);
+      HUDManager.ReloadBar.SetTimeRemaining(timeRemaining);
     }
 
     if (Input.GetMouseButtonDown(0))

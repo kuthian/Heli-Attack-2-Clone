@@ -8,7 +8,7 @@ public class InventoryHUD : MonoBehaviour {
   [SerializeField] private TextMeshProUGUI ammoText;
   private int InfiniteAmmo = -1;
   private string ammoSuffix = " x";
-  
+
   public void SetActiveWeapon( Sprite sprite )
   {
     activeWeapon.sprite = sprite;
