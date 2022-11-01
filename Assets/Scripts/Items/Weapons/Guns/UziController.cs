@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UziController : GunController {
+public class UziController : __GunController {
 
   [SerializeField] protected Transform _secondFirePointTransform;
 

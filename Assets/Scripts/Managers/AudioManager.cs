@@ -49,7 +49,7 @@ public class AudioManager : Singleton<AudioManager> {
     source.clip = clip;
     source.volume = volume;
 
-    DynamicObjects.Reparent( sound, DynamicObjects.Sounds );
+    DynamicObjects.Reparent(sound, DynamicObjects.Sounds);
 
     if ( delaySeconds == 0 ) source.Play();
     else source.PlayDelayed(delaySeconds);

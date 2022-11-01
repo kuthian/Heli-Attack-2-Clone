@@ -9,6 +9,10 @@ TagManager:
   - Map
   - EnemyProjectile
   - PlayerProjectile
+  - GunNone
+  - GunRifle
+  - GunUzi
+  - GunShotgun
   layers:
   - Default
   - TransparentFX

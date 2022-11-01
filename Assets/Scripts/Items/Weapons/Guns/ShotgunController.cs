@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShotgunController : GunController {
+public class ShotgunController : __GunController {
 
   [SerializeField] private float _pStepScalar = 0.1f;
   [SerializeField] private float _dStepScalar = 0.075f;

@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour {
 
     AudioManager.PlayExplosion();
 
-    ItemManager.SpawnItemCrateRandom( transform.position );
+    CrateGenerator.SpawnCrateRandom( transform.position );
 
     Destroy(gameObject);
   }

@@ -1,13 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
-
-[System.Serializable]
-public class GunItem
-{
-  public GunType type;
-  public Sprite crateSprite;
-  public GameObject gunPrefab;
-}
 
 public class ItemAssets : MonoBehaviour {
   
@@ -20,8 +11,20 @@ public class ItemAssets : MonoBehaviour {
     }
   }
 
-  [SerializeField] private GunItem[] _Guns;
+  [SerializeField] private GameObject _riflePrefab;
 
-  public GunItem[] GunItems => _Guns;
+  public GameObject RiflePrefab => _riflePrefab;
+
+  [SerializeField] private GameObject _uziPrefab;
+
+  public GameObject UziPrefab => _uziPrefab;
+
+  [SerializeField] private GameObject _shotgunPrefab;
+
+  public GameObject ShotgunPrefab => _shotgunPrefab;
+
+  [SerializeField] private GameObject[] _cratePrefabs;
+
+  public GameObject[] CratePrefabs => _cratePrefabs;
 
 }

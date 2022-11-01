@@ -1,6 +1,8 @@
 {
     "files.exclude":
     {
+        "*.csproj": true,
+        "*.sln": true,
         "**/.DS_Store": true,
         "**/.git": true,
         "**/.gitmodules": true,
@@ -42,6 +44,16 @@
         "**/*.user": true,
         "**/*.userprefs": true,
         "**/*.wav": true,
+        "Assets/Animation": true,
+        "Assets/Audio": true,
+        "Assets/Materials": true,
+        "Assets/Prefabs": true,
+        "Assets/Resources": true,
+        "Assets/Scenes": true,
+        "Assets/Sprites": true,
+        "Assets/TextMesh*": true,
+        "Assets/Textures": true,
+        "Assets/Tiles": true,
         "build/": true,
         "Build/": true,
         "library/": true,
@@ -51,9 +63,8 @@
         "Obj/": true,
         "Packages/": true,
         "ProjectSettings/": true,
-        "Scripts/Sprites": true,
-        "Scripts/Textures": true,
         "temp/": true,
-        "Temp/": true
+        "Temp/": true,
+        "UserSettings": true
     }
 }

@@ -44,13 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f62ba326d6cc9468aaac884b7a148f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Guns:
-  - type: 1
-    crateSprite: {fileID: 21300000, guid: 61fdbfc97defd23478be62284e047a1e, type: 3}
-    gunPrefab: {fileID: 6148923621895001315, guid: bbfa8272c1a99ae4f9c190ed24f507a9, type: 3}
-  - type: 2
-    crateSprite: {fileID: 21300000, guid: 2b84dab5f95a8d84296f24a3cf82e2e7, type: 3}
-    gunPrefab: {fileID: 4618725055357171476, guid: 0621b605af99586429c207fe8439aff0, type: 3}
-  - type: 3
-    crateSprite: {fileID: 21300000, guid: 1c74ae81c2cc49641b6a65cb85b48314, type: 3}
-    gunPrefab: {fileID: 8802175741346999267, guid: dc99b4aebea69f14a908afe6e7fd91db, type: 3}
+  _riflePrefab: {fileID: 6148923621895001315, guid: bbfa8272c1a99ae4f9c190ed24f507a9, type: 3}
+  _uziPrefab: {fileID: 4618725055357171476, guid: 0621b605af99586429c207fe8439aff0, type: 3}
+  _shotgunPrefab: {fileID: 8802175741346999267, guid: dc99b4aebea69f14a908afe6e7fd91db, type: 3}
+  _cratePrefabs:
+  - {fileID: 2649735548198870377, guid: 1cda70799e49601419f7f8fc28a488c0, type: 3}
+  - {fileID: 1532144907407848313, guid: b3027cbb3af6f204fab8c98dcb96e758, type: 3}
+  - {fileID: 281469661615914786, guid: 21d5b92874bc40e4fa9509ab6b64faec, type: 3}

@@ -7,9 +7,12 @@ public enum GunType {
   Shotgun,
 }
 
-public enum ConsumableType {
+public enum CrateType {
   None,
   Health,
+  Rifle,
+  Uzi,
+  Shotgun,
 }
 
 static class ItemTypes {

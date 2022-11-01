@@ -3,55 +3,47 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+  private Transform _inventory;
+  private Transform _groundCheck;
+  private LayerMask _groundLayer;
+
+  internal Rigidbody2D _rb;
+  internal Collider2D _headCollider;
+
   private float _maxSpeed = 3f;
   private float _jumpingPower = 8f;
   private float _jumpingDeceleration = 0.5f;
   private float _MoveAcceleration = 20;
   private float _MoveDecceleration = 12;
 
-  [SerializeField] private GameObject _defaultWeapon;
-  
-  private Transform _groundCheck;
-  private LayerMask _groundLayer;
-
-  private Transform _inventory;
-
-  internal Rigidbody2D _rb;
-  internal Animator _animator;
-  internal SpriteRenderer _spriteRenderer;
-  internal Collider2D _headCollider;
-
-  private bool _grounded;
-  private bool _crouched;
   private bool _pauseGroundCheck = false;
-
-  private float _horizontal;
-
   private bool _jump = false;
   private bool _stopJump = false;
   private bool _jumping = false;
   private int _jumpCounter = 2;
   private int _maxJumpCount = 2;
 
+  private float _horizontal;
+  private bool _crouched;
+  private bool _grounded;
+  
+  public bool Crouched => _crouched;
+  public bool Grounded => _grounded;
+  public int JumpCount => _maxJumpCount - _jumpCounter;
+  public float SpeedX => Mathf.Abs(_rb.velocity.x);
+
   private void Awake()
   {
     _headCollider = GetComponent<CircleCollider2D>();
     _rb = GetComponent<Rigidbody2D>();
-    _animator = GetComponent<Animator>();
-    _spriteRenderer = GetComponent<SpriteRenderer>();
     _inventory = transform.Find("Inventory");
     _groundCheck = transform.Find("GroundCheck");
     _groundLayer = LayerMask.GetMask("Ground");
   }
 
-  private void Start()
-  {
-    AddWeapon(_defaultWeapon);
-  }
-
   private void Update()
   {
-    if ( GameManager.Paused ) return;
+    if (GameManager.Paused) return;
 
     _horizontal = Input.GetAxisRaw("Horizontal");
     _crouched = Input.GetAxisRaw("Vertical") == -1;
@@ -81,11 +73,6 @@ public class PlayerController : MonoBehaviour {
     {
       _stopJump = true;
     }
-
-    _animator.SetBool("Crouched", _crouched);
-    _animator.SetInteger("JumpCount", _maxJumpCount - _jumpCounter);
-    _animator.SetBool("Grounded", IsGrounded());
-    _animator.SetFloat("VelocityX", Mathf.Abs(_rb.velocity.x));
   }
 
   private void FixedUpdate()

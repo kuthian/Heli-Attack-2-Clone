@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunController : MonoBehaviour {
+public class __GunController : MonoBehaviour {
 
   internal Ammo _ammo;
+
+  [SerializeField] private Sprite _inventorySprite;
+  public Sprite InventorySprite => _inventorySprite;
 
   [SerializeField] protected Transform _pfProjectile;
 

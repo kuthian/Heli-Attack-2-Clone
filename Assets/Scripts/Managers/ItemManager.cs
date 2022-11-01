@@ -2,39 +2,19 @@ using UnityEngine;
 
 public class ItemManager : Singleton<ItemManager> {
 
-  public static Sprite GetInventorySpriteByType( GunType gunType )
+  public static GameObject GetRiflePrefab()
   {
-    foreach (var gun in ItemAssets.i.GunItems)
-    {
-      if ( gun.type == gunType )
-        return gun.crateSprite;
-    }
-    return null;
+    return ItemAssets.i.RiflePrefab;
   }
 
-  public static Sprite GetInventorySpriteByTag( string tag )
+  public static GameObject GetUziPrefab()
   {
-    return GetInventorySpriteByType( ItemTypes.GunTypeFromString(tag) );
+    return ItemAssets.i.UziPrefab;
   }
 
-  public static Sprite GetInventorySprite( ConsumableType consumableType )
+  public static GameObject GetShotgunPrefab()
   {
-    return null;
-  }
-
-  public static void SpawnItemCrateRandom( Vector3 position )
-  {
-    SpawnItemCrate( Utils.RandomInRange(ItemAssets.i.GunItems), position );
-  }
-
-  public static void SpawnItemCrate( GunItem gunItem, Vector3 position )
-  {
-    GameObject cratePrefab = Resources.Load<GameObject>("__Crate");
-    GameObject obj = Instantiate( cratePrefab, position, Quaternion.identity );
-    gunItem.gunPrefab.tag = ItemTypes.ToString( gunItem.type );
-    obj.GetComponent<SpriteRenderer>().sprite = gunItem.crateSprite;
-    obj.AddComponent<WeaponCrate>().weapon = gunItem.gunPrefab;
-    DynamicObjects.Reparent( obj, DynamicObjects.Items );
+    return ItemAssets.i.ShotgunPrefab;
   }
 
 }
