@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: damage
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: -7133862975253113648, guid: 4965d607913209248a64dff351753ff2, type: 3}
+      propertyPath: maxLifetimeSeconds
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 92056171148992293, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Name
       value: RocketLauncherProjectile
@@ -26,6 +30,10 @@ PrefabInstance:
     - target: {fileID: 204390147081383657, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888089037947282560, guid: 4965d607913209248a64dff351753ff2, type: 3}
+      propertyPath: m_Interpolate
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4622716945185236742, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Sprite
@@ -98,3 +106,52 @@ CapsuleCollider2D:
   m_Offset: {x: 0.021191986, y: 0.00012053298}
   m_Size: {x: 0.3855955, y: 0.1983847}
   m_Direction: 1
+--- !u!114 &292189436525216149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441856767691234024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 794447268
+      Data2: 1134843794
+      Data3: 1115496591
+      Data4: 775895190
+    Path: event:/bullets/Rocket
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &4632285606485638112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441856767691234024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Enemy
+  Emitters:
+  - Target: {fileID: 292189436525216149}
+    Params:
+    - Name: Impacting
+      Value: 1
+  TriggerEvent: 2

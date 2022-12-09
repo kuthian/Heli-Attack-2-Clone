@@ -16,8 +16,7 @@ public class ExplodeOnImpact : MonoBehaviour {
       rb.angularVelocity = 0;
       rb.constraints = RigidbodyConstraints2D.FreezePosition;
       ParticleManager.PlayExplodedEffect( transform );
-      AudioManager.PlayExplosion();
-      Destroy(gameObject, 0.75f);
+      Destroy(gameObject, 1.5f);
     }
   }
 

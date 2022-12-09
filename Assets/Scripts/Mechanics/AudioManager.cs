@@ -53,7 +53,7 @@ public class AudioManager : Singleton<AudioManager> {
     else source.PlayDelayed(delaySeconds);
 
     float clipDurationSeconds = clip.samples / clip.frequency;
-    GameObject.Destroy(source.gameObject, delaySeconds + clipDurationSeconds + 0.5f);
+    GameObject.Destroy(source.gameObject, delaySeconds + clipDurationSeconds + 2f);
   }
 
 };

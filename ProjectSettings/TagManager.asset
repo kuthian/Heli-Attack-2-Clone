@@ -9,6 +9,7 @@ TagManager:
   - Map
   - EnemyProjectile
   - PlayerProjectile
+  - PlayerTagAlias
   layers:
   - Default
   - TransparentFX

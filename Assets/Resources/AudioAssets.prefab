@@ -61,5 +61,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6a35d818527430b4d8f88ce9590ba8e2, type: 3}
   - {fileID: 8300000, guid: 14423311c2ff61f46a20a01aeea15dc1, type: 3}
   shotgunClips:
-  - {fileID: 8300000, guid: e7db9dbc91848ad48bc5c6cd03a2bfcf, type: 3}
+  - {fileID: 8300000, guid: 834a304177d0bfe428ff4e1743370f4a, type: 3}
   explosionClip: {fileID: 8300000, guid: 8f3b5e81237184d4d9a42c4bfaaaaa5e, type: 3}

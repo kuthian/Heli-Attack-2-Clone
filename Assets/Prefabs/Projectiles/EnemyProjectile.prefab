@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: EnemyProjectile
       objectReference: {fileID: 0}
+    - target: {fileID: 1888089037947282560, guid: 4965d607913209248a64dff351753ff2, type: 3}
+      propertyPath: m_Interpolate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4622716945185236742, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Color.b
       value: 0.013216423

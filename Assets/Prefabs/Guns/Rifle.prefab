@@ -64,9 +64,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 795742884974927932, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.515625
+      objectReference: {fileID: 0}
+    - target: {fileID: 795742884974927932, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 795742884974927932, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8472010f184761549a34d844dd9479fe, type: 3}
+      objectReference: {fileID: 21300000, guid: 3290ce0e0529bdd458751b6955cb9248, type: 3}
     - target: {fileID: 795742884974927934, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: gunType
       value: 1
@@ -86,6 +94,46 @@ PrefabInstance:
     - target: {fileID: 6063942180843961441, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e7db9dbc91848ad48bc5c6cd03a2bfcf, type: 3}
-    m_RemovedComponents: []
+      objectReference: {fileID: 8300000, guid: b4a6bcf8f33f0224fadefac5e635fc8f, type: 3}
+    - target: {fileID: 6063942180843961441, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6063942180843961441, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+--- !u!1 &6148923621895001315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 795742884974927922, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+  m_PrefabInstance: {fileID: 6799967615490389201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-3142891099007690061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148923621895001315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1761616090
+      Data2: 1231723808
+      Data3: -1711471977
+      Data4: -1911163581
+    Path: event:/Weapon Select/Select
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

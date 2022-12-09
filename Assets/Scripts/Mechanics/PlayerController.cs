@@ -64,9 +64,12 @@ public class PlayerController : MonoBehaviour {
     
     if (Input.GetButtonDown("Jump") && jumpCounter > 0 && !crouched)
     {
+      PlayFmodJumpEvent();
       jump = true;
-      grounded = false;
+      grounded = false;       
       StartCoroutine(PauseGroundCheck(0.4f));
+
+
     }
 
     if (Input.GetButtonUp("Jump") && jumping && rb.velocity.y > 0f)
@@ -132,5 +135,13 @@ public class PlayerController : MonoBehaviour {
     ParticleSystem obj = Instantiate(pfDamageEffect, transform.position, Quaternion.identity);
     Destroy( obj.gameObject, 1.0f );
   }
+
+    public void PlayFmodFootstepsEvent()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Footsteps", GetComponent<Transform>().position);
+    }public void PlayFmodJumpEvent()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Jump", GetComponent<Transform>().position);
+    }
 
 }

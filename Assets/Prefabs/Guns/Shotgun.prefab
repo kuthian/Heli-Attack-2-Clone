@@ -95,6 +95,18 @@ PrefabInstance:
       propertyPath: crateSprite
       value: 
       objectReference: {fileID: 21300000, guid: 1c74ae81c2cc49641b6a65cb85b48314, type: 3}
+    - target: {fileID: 6063942180843961441, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: m_Pitch
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063942180843961441, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: m_Volume
+      value: 0.815
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063942180843961441, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 795742884974927934, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
@@ -119,10 +131,40 @@ MonoBehaviour:
   pfProjectile: {fileID: 3721999795625928666, guid: 6b9221894aa7e3544965bcc842b47011, type: 3}
   crateSprite: {fileID: 21300000, guid: 1c74ae81c2cc49641b6a65cb85b48314, type: 3}
   gunType: 3
-  cooldownTime: 4
+  cooldownTime: 2
   ammoPerShot: 7
   pStepScalar: 0.1
   dStepScalar: 0.075
+--- !u!114 &2938031550610697491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802175741346999267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1761616090
+      Data2: 1231723808
+      Data3: -1711471977
+      Data4: -1911163581
+    Path: event:/Weapon Select/Select
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &8802175741454373776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
