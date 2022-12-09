@@ -1,15 +1,20 @@
 using UnityEngine;
 
-public class WeaponCrate : MonoBehaviour {
+public class CrateController : MonoBehaviour {
 
-  public GameObject weapon;
+  private __CrateAction _action;
+
+  public void Start()
+  {
+    _action = GetComponent<__CrateAction>();
+  }
 
   private void OnTriggerEnter2D(Collider2D other)
   {
     if (other.CompareTag("Player"))
     {
       AudioManager.PlayCrateOpen();
-      other.gameObject.SendMessage("AddWeapon", weapon);
+      _action.Do(other.gameObject);
       Destroy(gameObject);
     } 
   }
