@@ -48,6 +48,6 @@ MonoBehaviour:
   _uziPrefab: {fileID: 4618725055357171476, guid: 0621b605af99586429c207fe8439aff0, type: 3}
   _shotgunPrefab: {fileID: 8802175741346999267, guid: dc99b4aebea69f14a908afe6e7fd91db, type: 3}
   _cratePrefabs:
-  - {fileID: 2649735548198870377, guid: 1cda70799e49601419f7f8fc28a488c0, type: 3}
-  - {fileID: 1532144907407848313, guid: b3027cbb3af6f204fab8c98dcb96e758, type: 3}
-  - {fileID: 281469661615914786, guid: 21d5b92874bc40e4fa9509ab6b64faec, type: 3}
+  - {fileID: 4222134024656963866, guid: 5be4f28d5f0eb204ab8004c53d5b280b, type: 3}
+  - {fileID: 4689171823083695148, guid: 21d5b92874bc40e4fa9509ab6b64faec, type: 3}
+  - {fileID: 8362075391230359950, guid: b3027cbb3af6f204fab8c98dcb96e758, type: 3}

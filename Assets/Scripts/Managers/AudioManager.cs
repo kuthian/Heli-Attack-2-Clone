@@ -14,12 +14,12 @@ public class AudioManager : Singleton<AudioManager> {
 
   public static void PlayCrateOpen()
   {
-    PlaySound(AudioAssets.i.GetOpenCrateClip());
+    // PlaySound(AudioAssets.i.GetOpenCrateClip());
   }
 
   public static void PlayExplosion()
   {
-    PlaySound(AudioAssets.i.GetExplosionClip(), 0.25f);
+    // PlaySound(AudioAssets.i.GetExplosionClip(), 0.25f);
   }
 
   public static void PlayShootingSound( GunType type )
@@ -42,20 +42,20 @@ public class AudioManager : Singleton<AudioManager> {
 
   private static void __PlaySound( AudioClip clip, float volume = 1.0f, float delaySeconds = 0 )
   {
-    if ( !clip ) return;
+    // if ( !clip ) return;
 
-    GameObject sound = new GameObject("Sound");
-    AudioSource source = sound.AddComponent<AudioSource>();
-    source.clip = clip;
-    source.volume = volume;
+    // GameObject sound = new GameObject("Sound");
+    // AudioSource source = sound.AddComponent<AudioSource>();
+    // source.clip = clip;
+    // source.volume = volume;
 
-    DynamicObjects.Reparent(sound, DynamicObjects.Sounds);
+    // DynamicObjects.Reparent(sound, DynamicObjects.Sounds);
 
-    if ( delaySeconds == 0 ) source.Play();
-    else source.PlayDelayed(delaySeconds);
+    // if ( delaySeconds == 0 ) source.Play();
+    // else source.PlayDelayed(delaySeconds);
 
-    float clipDurationSeconds = clip.samples / clip.frequency;
-    GameObject.Destroy(source.gameObject, delaySeconds + clipDurationSeconds + 2f);
+    // float clipDurationSeconds = clip.samples / clip.frequency;
+    // GameObject.Destroy(source.gameObject, delaySeconds + clipDurationSeconds + 2f);
   }
 
 };

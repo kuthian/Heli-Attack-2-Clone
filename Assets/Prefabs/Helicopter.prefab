@@ -187,18 +187,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406d85fb4701f4f43959fd0231e7c8e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 3
-  MoveAcceleration: 5
-  MoveDecceleration: 5
-  tolerance: 2
-  target: {fileID: 0}
-  pfDestroyedHelicopter: {fileID: 1328479410968822439, guid: c08f37f8f5129d0418319aff7143a71e, type: 3}
-  pfDestroyedGunner: {fileID: 8951443885998499864, guid: b4184f840eb43a04a903de192cf8ef6e, type: 3}
-  pfWeaponCrates:
-  - {fileID: 7403552511818551045, guid: d43604c4e3467994a84ba0cf8da3b035, type: 3}
-  - {fileID: 8583237545709525532, guid: 1ef0f4dbe4207cd42a44d3644a8f2aec, type: 3}
-  - {fileID: 3111798086435407631, guid: 197d59c029b578f468cf682109f0a5c8, type: 3}
-  - {fileID: 4912135711368166267, guid: 1cda70799e49601419f7f8fc28a488c0, type: 3}
+  _maxSpeed: 3
+  _MoveAcceleration: 5
+  _MoveDecceleration: 5
+  _tolerance: 2
+  _pfDestroyedHelicopter: {fileID: 1328479410968822439, guid: c08f37f8f5129d0418319aff7143a71e, type: 3}
+  _pfDestroyedGunner: {fileID: 8951443885998499864, guid: b4184f840eb43a04a903de192cf8ef6e, type: 3}
 --- !u!114 &7921896769568558857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,6 +411,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6522029875409214862, guid: d3d22ec07ca94a7489f9768b3e248907, type: 3}
+      propertyPath: _pfProjectile
+      value: 
+      objectReference: {fileID: 507896712255646871, guid: f4b1b4166042f144ead58cf263f33f8b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3d22ec07ca94a7489f9768b3e248907, type: 3}
 --- !u!4 &6196517748705088851 stripped

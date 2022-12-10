@@ -4,10 +4,16 @@ using UnityEngine.UI;
 
 public class InventoryHUD : MonoBehaviour {
 
-  [SerializeField] private Image _activeWeapon;
-  [SerializeField] private TextMeshProUGUI _ammoText;
+  internal Image _activeWeapon;
+  internal TextMeshProUGUI _ammoText;
   private int _InfiniteAmmo = -1;
   private string _ammoSuffix = " x";
+
+  public void Start()
+  {
+    _activeWeapon = GetComponentInChildren<Image>();
+    _ammoText = GetComponentInChildren<TextMeshProUGUI>();
+  }
 
   public void SetActiveWeapon( Sprite sprite )
   {
