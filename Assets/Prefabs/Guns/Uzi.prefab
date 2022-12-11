@@ -44,11 +44,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: _infiniteAmmo
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: _startingAmmo
-      value: -1
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -190,8 +190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inventorySprite: {fileID: 21300000, guid: 2b84dab5f95a8d84296f24a3cf82e2e7, type: 3}
   _pfProjectile: {fileID: 1994916729556804204, guid: 3db81ebe9647a914988c4d52bc0cb240, type: 3}
-  _cooldownTime: 0.5
-  _ammoPerShot: 1
+  _cooldownTime: 0.1
+  _ammoPerShot: 2
   _secondFirePointTransform: {fileID: 5708294885215499212}
 --- !u!4 &4618725055357171477 stripped
 Transform:

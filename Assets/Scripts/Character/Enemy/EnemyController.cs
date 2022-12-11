@@ -66,8 +66,6 @@ public class EnemyController : MonoBehaviour {
 
     ParticleManager.PlayExplodedEffect( destroyedHeli.transform );
 
-    AudioManager.PlayExplosion();
-
     CrateGenerator.SpawnCrateRandom( transform.position );
 
     Destroy(gameObject);
