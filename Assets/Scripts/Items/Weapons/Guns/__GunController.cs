@@ -77,8 +77,6 @@ public class __GunController : MonoBehaviour {
     {
       InstantiateProjectile();
 
-      AudioManager.PlayShootingSound( ItemTypes.GunTypeFromString(tag) );
-
       _cooldownOffTime = DateTime.Now.AddSeconds(_cooldownTime);
       _cooldownTimeRemaining = _cooldownTime;
       _onCooldown = true;

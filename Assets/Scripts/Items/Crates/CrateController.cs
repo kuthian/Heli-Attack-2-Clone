@@ -13,7 +13,6 @@ public class CrateController : MonoBehaviour {
   {
     if (other.CompareTag("Player"))
     {
-      AudioManager.PlayCrateOpen();
       _action.Do(other.gameObject);
       Destroy(gameObject);
     } 
