@@ -127,12 +127,4 @@ public class PlayerController : MonoBehaviour {
     ParticleManager.PlayDamagedPlayerEffect( transform );
   }
 
-  public void PlayFmodFootstepsEvent()
-  {
-    FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Footsteps", GetComponent<Transform>().position);
-  }public void PlayFmodJumpEvent()
-  {
-    FMODUnity.RuntimeManager.PlayOneShot("event:/Player/Jump", GetComponent<Transform>().position);
-  }
-
 }
