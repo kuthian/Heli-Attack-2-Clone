@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explodedEffect: {fileID: 533991866992134506, guid: 9fd5b6c0b9ae0604bb17a6d033ff9f49, type: 3}
   _damagedPlayerEffect: {fileID: 533991866992134506, guid: 55a560be67358c041a0717c0076870d7, type: 3}
+  _explodedHeliEffect: {fileID: 4604981165108337881, guid: 921c6750541671f479e1d33a517eb945, type: 3}

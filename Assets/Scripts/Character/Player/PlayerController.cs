@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour {
   private bool _crouched;
   private bool _grounded;
   
+  public Rigidbody2D Rigidbody => _rb;
   public bool Crouched => _crouched;
   public bool Grounded => _grounded;
   public int JumpCount => _maxJumpCount - _jumpCounter;

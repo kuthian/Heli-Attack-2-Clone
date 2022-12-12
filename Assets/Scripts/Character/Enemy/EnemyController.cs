@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
@@ -13,14 +14,17 @@ public class EnemyController : MonoBehaviour {
   private Transform _target;
 
   internal Rigidbody2D _rb;
+  internal SpriteRenderer _spriteRenderer;
 
   void Awake()
   {
     _rb = GetComponent<Rigidbody2D>();
+    _spriteRenderer = GetComponent<SpriteRenderer>();
     _target = GameObject.Find("Player").transform;
     GetComponentInChildren<AimAtTransform>().target = _target;
     GetComponentInChildren<EnemyGunController>().objectToIgnore = gameObject;
     GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
+    GetComponent<Health>().OnHealthChanged += HandleOnHealthChanged;
   }
 
   void Update()
@@ -69,6 +73,18 @@ public class EnemyController : MonoBehaviour {
     CrateGenerator.SpawnCrateRandom( transform.position );
 
     Destroy(gameObject);
+  }
+
+  private IEnumerator FlashWhite()
+  {
+    _spriteRenderer.color = new Color( 0.75f, 0.75f, 0.75f, 1.0f  );
+    yield return new WaitForSeconds(0.05f);
+    _spriteRenderer.color = Color.white;
+  }
+
+  private void HandleOnHealthChanged(int health)
+  {
+    StartCoroutine(FlashWhite());
   }
 
 }

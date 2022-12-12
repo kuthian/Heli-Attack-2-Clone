@@ -21,4 +21,9 @@ public class ParticleAssets : MonoBehaviour {
 
   public ParticleSystem DamagedPlayerEffect => _damagedPlayerEffect;
 
+  [SerializeField]
+  private ParticleSystem _explodedHeliEffect;
+
+  public ParticleSystem ExplodedHeliEffect => _explodedHeliEffect;
+
 }

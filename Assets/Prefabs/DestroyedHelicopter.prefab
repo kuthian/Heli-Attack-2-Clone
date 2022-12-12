@@ -102,7 +102,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5122292, y: -0.40695363}
+  m_Offset: {x: 0.70845175, y: -0.25720486}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -113,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.83635, y: 0.8153256}
+  m_Size: {x: 1.4439049, y: 0.5158281}
   m_EdgeRadius: 0
 --- !u!50 &1328479410968822437
 Rigidbody2D:

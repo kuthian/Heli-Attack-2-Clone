@@ -13,10 +13,8 @@ public class ExplodeOnImpact : MonoBehaviour {
   {
     if (other.CompareTag("Map"))
     {
-      _rb.angularVelocity = 0;
-      _rb.constraints = RigidbodyConstraints2D.FreezePosition;
-      ParticleManager.PlayExplodedEffect( transform );
-      Destroy(gameObject, 1.5f);
+      ParticleManager.PlayExplodedHeliEffect( transform );
+      Destroy(gameObject);
     }
   }
 
