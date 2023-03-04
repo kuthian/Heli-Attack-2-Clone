@@ -14,6 +14,16 @@ public class HealthBar : MonoBehaviour {
     _health.OnHealthChanged += HandleOnHealthChanged;
   }
 
+  private void OnEnable()
+  {
+    _health.OnHealthChanged += HandleOnHealthChanged;
+  }
+
+  private void OnDisable()
+  {
+    _health.OnHealthChanged -= HandleOnHealthChanged;
+  }
+
   private void HandleOnHealthChanged(int health)
   {
     _slider.value = health;

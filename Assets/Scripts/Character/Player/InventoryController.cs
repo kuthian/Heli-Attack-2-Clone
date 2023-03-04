@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour {
 
-  private int NoWeaponSelected = -99;
+  static int NoWeaponSelected = -99;
 
   public void AddWeapon( GameObject weapon ) 
   {

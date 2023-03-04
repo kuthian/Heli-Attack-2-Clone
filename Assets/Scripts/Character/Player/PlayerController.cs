@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-  private Transform _inventory;
+  private InventoryController _inventory;
   private Transform _groundCheck;
   private LayerMask _groundLayer;
 
@@ -24,20 +24,23 @@ public class PlayerController : MonoBehaviour {
   private int _maxJumpCount = 2;
 
   private float _horizontal;
-  private bool _crouched;
-  private bool _grounded;
+  public bool Crouched { get; private set; }
+  public bool Grounded { get; private set; }
   
   public Rigidbody2D Rigidbody => _rb;
-  public bool Crouched => _crouched;
-  public bool Grounded => _grounded;
   public int JumpCount => _maxJumpCount - _jumpCounter;
-  public float SpeedX => Mathf.Abs(_rb.velocity.x);
+
+  public float VelocityX => _rb.velocity.x;
+  public float VelocityY => _rb.velocity.y;
+  public float SpeedX => Mathf.Abs(VelocityX);
+  public float SpeedY => Mathf.Abs(VelocityY);
+  public float DirectionX => Mathf.Sign(VelocityX);
 
   private void Awake()
   {
     _headCollider = GetComponent<CircleCollider2D>();
     _rb = GetComponent<Rigidbody2D>();
-    _inventory = transform.Find("Inventory");
+    _inventory = GetComponentInChildren<InventoryController>();
     _groundCheck = transform.Find("GroundCheck");
     _groundLayer = LayerMask.GetMask("Ground");
   }
@@ -47,30 +50,30 @@ public class PlayerController : MonoBehaviour {
     if (GameManager.Paused) return;
 
     _horizontal = Input.GetAxisRaw("Horizontal");
-    _crouched = Input.GetAxisRaw("Vertical") == -1;
+    Crouched = Input.GetAxisRaw("Vertical") == -1;
 
-    _headCollider.enabled = !_crouched;
+    _headCollider.enabled = !Crouched;
 
     if (!_pauseGroundCheck)
     {
-      _grounded = IsGrounded();
+      Grounded = IsGrounded();
     }
 
-    if (_grounded)
+    if (Grounded)
     {
       _jumping = false;
       _jumpCounter = _maxJumpCount;
-      if (_crouched) _horizontal = 0;
+      if (Crouched) _horizontal = 0;
     }
     
-    if (Input.GetButtonDown("Jump") && _jumpCounter > 0 && !_crouched)
+    if (Input.GetButtonDown("Jump") && _jumpCounter > 0 && !Crouched)
     {
       _jump = true;
-      _grounded = false;
+      Grounded = false;
       StartCoroutine(PauseGroundCheck(0.4f));
     }
 
-    if (Input.GetButtonUp("Jump") && _jumping && _rb.velocity.y > 0f)
+    if (Input.GetButtonUp("Jump") && _jumping && VelocityY > 0f)
     {
       _stopJump = true;
     }
@@ -80,28 +83,27 @@ public class PlayerController : MonoBehaviour {
   {
     if (_horizontal != 0)
     {
-      float speed = Mathf.Abs(_rb.velocity.x) + _MoveAcceleration * Time.fixedDeltaTime;
+      float speed = SpeedX + _MoveAcceleration * Time.fixedDeltaTime;
       if (speed > _maxSpeed) speed = _maxSpeed;
-      _rb.velocity = new Vector2(_horizontal * speed, _rb.velocity.y);
+      _rb.velocity = new Vector2(_horizontal * speed, VelocityY);
     }
     else
     {
-      int direction = _rb.velocity.x > 0 ? 1 : -1;
-      float speed = Mathf.Abs(_rb.velocity.x) - _MoveDecceleration * Time.fixedDeltaTime;
+      float speed = SpeedX - _MoveDecceleration * Time.fixedDeltaTime;
       if (speed < 0) speed = 0;
-      _rb.velocity = new Vector2(direction * speed, _rb.velocity.y);
+      _rb.velocity = new Vector2(DirectionX * speed, VelocityY);
     }
 
     if (_jump)
     {
-      _rb.velocity = new Vector2(_rb.velocity.x, _jumpingPower); 
+      _rb.velocity = new Vector2(VelocityX, _jumpingPower); 
       _jumpCounter--;
       _jumping = true;
       _jump = false;
     }
     if (_stopJump)
     {
-      _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y*_jumpingDeceleration); 
+      _rb.velocity = new Vector2(VelocityX, VelocityY*_jumpingDeceleration); 
       _stopJump = false;
     }
   }

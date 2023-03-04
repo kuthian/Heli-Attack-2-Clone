@@ -7,10 +7,9 @@ public class CrateController : MonoBehaviour {
   private Transform _groundCheck;
   private LayerMask _groundLayer;
   internal Rigidbody2D _rb;
-  private bool _grounded;
+  public bool Grounded { get; set; }
 
   public Rigidbody2D Rigidbody => _rb;
-  public bool Grounded => _grounded;
 
   public void Start()
   {
@@ -22,8 +21,8 @@ public class CrateController : MonoBehaviour {
 
   private void Update()
   {
-    if (_grounded) return;
-    _grounded = Physics2D.OverlapCircle(_groundCheck.position, 0.2f, _groundLayer);
+    if (Grounded) return;
+    Grounded = Physics2D.OverlapCircle(_groundCheck.position, 0.2f, _groundLayer);
 
   }
 

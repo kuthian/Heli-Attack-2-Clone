@@ -15,6 +15,7 @@ public abstract class AimAtTarget : MonoBehaviour {
   protected void HandleAiming()
   {
     if ( GameManager.Paused ) return;
+
     Vector3 targetPosition = GetTargetPosition();
     targetPosition.z = 0.0f;
     Vector3 aimDirection = (targetPosition - transform.position).normalized;

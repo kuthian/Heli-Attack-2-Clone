@@ -3,39 +3,39 @@ using System.Collections;
 
 public class Health : MonoBehaviour {
 
-  [SerializeField] private int maxHealth = 100;
-  private int currentHealth;
+  [field:SerializeField]
+  public int MaxHealth { get; set; } = 100;
 
-  public int MaxHealth => maxHealth;
-  public int CurrentHealth => currentHealth;
+  [field:SerializeField]
+  public int CurrentHealth { get; set; }
 
   public delegate void _OnHealthChanged(int health);
-  public event _OnHealthChanged OnHealthChanged;
+  public event _OnHealthChanged OnHealthChanged; 
 
   public delegate void _OnHealthZero();
   public event _OnHealthZero OnHealthZero;
 
   void Start()
   {
-    currentHealth = maxHealth;
+    CurrentHealth = MaxHealth;
   }
 
   public void Damage( int points )
   {
-    if (currentHealth > 0)
+    if (CurrentHealth > 0)
     {
-      currentHealth -= points;
-      if (currentHealth < 0) currentHealth = 0;
-      if (currentHealth == 0) OnHealthZero?.Invoke();
-      OnHealthChanged?.Invoke(currentHealth);
+      CurrentHealth -= points;
+      if (CurrentHealth < 0) CurrentHealth = 0;
+      if (CurrentHealth == 0) OnHealthZero?.Invoke();
+      OnHealthChanged?.Invoke(CurrentHealth);
     }
   }
 
   public void Heal( int points )
   {
-    currentHealth += points;
-    if (currentHealth > maxHealth) currentHealth = maxHealth;
-    OnHealthChanged?.Invoke(currentHealth);
+    CurrentHealth += points;
+    if (CurrentHealth > MaxHealth) CurrentHealth = MaxHealth;
+    OnHealthChanged?.Invoke(CurrentHealth);
   }
 
 }

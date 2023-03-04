@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class AimAtTransform : AimAtTarget {
   
-  public Transform target;
+  public Transform Target { get; set; }
 
   protected override Vector3 GetTargetPosition()
   {
-    return target.position;
+    return Target.position;
   }
 }

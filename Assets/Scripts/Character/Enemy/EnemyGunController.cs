@@ -4,18 +4,28 @@ using UnityEngine;
 
 public class EnemyGunController : MonoBehaviour {
 
-  [HideInInspector] public GameObject objectToIgnore;
+  [field:HideInInspector]
+  public GameObject ObjectToIgnore { get; set; }
 
-  [SerializeField] private GameObject _pfProjectile;
+  public bool ShootingEnabled { get; set; } = true;
+
+  [field:HideInInspector]
+  private DateTime _lastShotTime = DateTime.Now;
+
+  [SerializeField]
+  private float _cooldownTime = 2f;
+
+  [SerializeField]
+  private GameObject _pfProjectile;
+
+  [field:HideInInspector]
   private Transform _firePointTransform;
 
-  [SerializeField] private float _cooldownTime = 2f;
-  private DateTime _cooldownOffTime;
+  private bool OnCoolDown => (_lastShotTime).AddSeconds(_cooldownTime) > DateTime.Now;
 
   private void Start()
   {
     _firePointTransform = transform.Find("FirePoint");
-    _cooldownOffTime = DateTime.Now.AddSeconds(2);
   }
 
   private void ShootProjectile()
@@ -23,9 +33,9 @@ public class EnemyGunController : MonoBehaviour {
     GameObject projectile = 
       Instantiate(_pfProjectile, _firePointTransform.position, Quaternion.identity, DynamicObjects.Projectiles);
 
-    if (objectToIgnore)
+    if (ObjectToIgnore)
     {
-      var colliders = objectToIgnore.GetComponents<Collider2D>();
+      var colliders = ObjectToIgnore.GetComponents<Collider2D>();
       foreach ( Collider2D collider in colliders ) {
         Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(), collider);
       }
@@ -40,11 +50,10 @@ public class EnemyGunController : MonoBehaviour {
   {
     if ( GameManager.Paused ) return;
 
-    var now = DateTime.Now;
-    if (_cooldownOffTime <= now)
+    if ( ShootingEnabled && !OnCoolDown )
     {
       ShootProjectile();
-      _cooldownOffTime = now.AddSeconds(_cooldownTime);
+      _lastShotTime = DateTime.Now.AddSeconds(_cooldownTime);
     }
   }
 
