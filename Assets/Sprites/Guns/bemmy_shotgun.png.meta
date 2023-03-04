@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ab6f1471b1bbaff45b0d82657ecf7535
+guid: f017af6233f8cbc4393897da6913c9d1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 3
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bemmy_0
+      name: bemmy_shotgun_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06645e93533624c4b99ccabcc8ade54b
-      internalID: -1632524850
+      spriteID: 252c8082c65ecc640ad12fd0a8dc63c3
+      internalID: -364665380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_1
+      name: bemmy_shotgun_1
       rect:
         serializedVersion: 2
         x: 64
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b915b8042fa50544960ad4c3c3dcda6
-      internalID: -96884019
+      spriteID: 6235e737313e8ae4a9bb01ef774e5274
+      internalID: -1409677552
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_2
+      name: bemmy_shotgun_2
       rect:
         serializedVersion: 2
         x: 128
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 747812535d2a1cf43b69d4e36ee49465
-      internalID: 1367394151
+      spriteID: 254636945ff1e244c9df8b388f700c2d
+      internalID: -1081514629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_3
+      name: bemmy_shotgun_3
       rect:
         serializedVersion: 2
         x: 192
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f46f95955073f9540921734aa72101ae
-      internalID: 1581466556
+      spriteID: ad09b222cd41e5e409eaa24df6c230a5
+      internalID: -550389823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_4
+      name: bemmy_shotgun_4
       rect:
         serializedVersion: 2
         x: 256
@@ -214,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdf036017748a89458074e6e670da341
-      internalID: 2065564267
+      spriteID: 8f292f8821d56ae4fb91da53595cc10d
+      internalID: 963688588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_5
+      name: bemmy_shotgun_5
       rect:
         serializedVersion: 2
         x: 320
@@ -235,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd817a613cf8e1848ac15acdd8ce912e
-      internalID: -321019719
+      spriteID: cfe7181a0e61b5048b0c52d5066eaebf
+      internalID: 849243348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_6
+      name: bemmy_shotgun_6
       rect:
         serializedVersion: 2
         x: 384
@@ -256,8 +256,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1885663417acda64996b0df66da9797c
-      internalID: 869971079
+      spriteID: 9b7ad788129efef4c86d8ceb6d54484c
+      internalID: -1213961522
       vertices: []
       indices: 
       edges: []
@@ -273,13 +273,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bemmy_6: 869971079
-      bemmy_5: -321019719
-      bemmy_4: 2065564267
-      bemmy_3: 1581466556
-      bemmy_2: 1367394151
-      bemmy_0: -1632524850
-      bemmy_1: -96884019
+      bemmy_shotgun_4: 963688588
+      bemmy_shotgun_1: -1409677552
+      bemmy_shotgun_2: -1081514629
+      bemmy_shotgun_3: -550389823
+      bemmy_shotgun_5: 849243348
+      bemmy_shotgun_6: -1213961522
+      bemmy_shotgun_0: -364665380
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

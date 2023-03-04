@@ -15,13 +15,21 @@ PrefabInstance:
       propertyPath: _infiniteAmmo
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.956
+      objectReference: {fileID: 0}
+    - target: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.144
+      objectReference: {fileID: 0}
     - target: {fileID: 795742884974927922, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_Name
       value: Rifle
       objectReference: {fileID: 0}
     - target: {fileID: 795742884974927922, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 795742884974927923, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_RootOrder
@@ -78,7 +86,7 @@ PrefabInstance:
     - target: {fileID: 795742884974927932, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3290ce0e0529bdd458751b6955cb9248, type: 3}
+      objectReference: {fileID: 1275214696, guid: 04cd6b18ce8f08c479827005b2c9abf9, type: 3}
     - target: {fileID: 795742884974927934, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: gunType
       value: 1
@@ -112,6 +120,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 795742884974927922, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
   m_PrefabInstance: {fileID: 6799967615490389201}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &9066791604528590673
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148923621895001315}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c23d97ae82e587a4d898b363cd611c6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &-3142891099007690061
 MonoBehaviour:
   m_ObjectHideFlags: 0

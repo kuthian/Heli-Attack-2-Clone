@@ -12,4 +12,9 @@ public class RifleController : __GunController {
     projectileTransform.GetComponent<Projectile>().Setup(direction);
   }
 
+  override public void SyncAnimation()
+  { 
+    _animator.Play("Rifle", -1, 0f);
+  }
+
 }

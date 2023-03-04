@@ -116,4 +116,14 @@ public class InventoryController : MonoBehaviour {
     }
     return index;
   }
+
+  public __GunController GunController()
+  {
+    foreach (Transform child in transform) {
+      if (child.gameObject.activeSelf) {
+        return child.gameObject.GetComponent<__GunController>();
+      }
+    }
+    return null;
+  }
 }

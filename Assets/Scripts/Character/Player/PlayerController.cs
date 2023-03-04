@@ -106,6 +106,9 @@ public class PlayerController : MonoBehaviour {
       _rb.velocity = new Vector2(VelocityX, VelocityY*_jumpingDeceleration); 
       _stopJump = false;
     }
+
+    // _inventory.GunController().Steady = SpeedX != 0.0f || SpeedY != 0.0f;
+
   }
 
   private bool IsGrounded()
@@ -122,7 +125,7 @@ public class PlayerController : MonoBehaviour {
 
   public void AddWeapon( GameObject weapon )
   {
-    _inventory.GetComponent<InventoryController>().AddWeapon( weapon );
+    _inventory.AddWeapon( weapon );
   }
 
   public void Damage( int var )
@@ -130,4 +133,8 @@ public class PlayerController : MonoBehaviour {
     ParticleManager.PlayDamagedPlayerEffect( transform );
   }
 
+  public void SyncAnimation()
+  {
+    _inventory.GunController().SyncAnimation();
+  }
 }

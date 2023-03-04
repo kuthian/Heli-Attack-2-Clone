@@ -6,11 +6,13 @@ using UnityEngine;
 public class __GunController : MonoBehaviour {
 
   internal Ammo _ammo;
+  internal Animator _animator;
 
-  [SerializeField] private Sprite _inventorySprite;
-  public Sprite InventorySprite => _inventorySprite;
+  [SerializeField] 
+  public Sprite InventorySprite { get; set; }
 
-  [SerializeField] protected Transform _pfProjectile;
+  [SerializeField]
+  protected Transform _pfProjectile;
 
   protected Transform _firePointTransform;
 
@@ -20,9 +22,13 @@ public class __GunController : MonoBehaviour {
   private float _cooldownTimeRemaining;
   private bool _onCooldown = false;
   private bool _shoot = false;
+  public bool Steady { get; set; } = false;
+
+  virtual public void SyncAnimation() {}
 
   private void Awake()
   {
+    _animator = GetComponent<Animator>();
     _firePointTransform = transform.Find("FirePoint");
     _ammo = GetComponent<Ammo>();
     _cooldownTimeRemaining = 0;

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ab6f1471b1bbaff45b0d82657ecf7535
+guid: 04cd6b18ce8f08c479827005b2c9abf9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 3
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bemmy_0
+      name: bemmy_rifle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06645e93533624c4b99ccabcc8ade54b
-      internalID: -1632524850
+      spriteID: b6ea1d8006c45e64e93b686d154d0b7c
+      internalID: 1275214696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_1
+      name: bemmy_rifle_1
       rect:
         serializedVersion: 2
         x: 64
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b915b8042fa50544960ad4c3c3dcda6
-      internalID: -96884019
+      spriteID: f1a65c31c9ecd8b4a804604b7ad0fe78
+      internalID: 1836723090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_2
+      name: bemmy_rifle_2
       rect:
         serializedVersion: 2
         x: 128
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 747812535d2a1cf43b69d4e36ee49465
-      internalID: 1367394151
+      spriteID: d4b03b04edbfffd47bde2b7ba0f5c367
+      internalID: -301540794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_3
+      name: bemmy_rifle_3
       rect:
         serializedVersion: 2
         x: 192
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f46f95955073f9540921734aa72101ae
-      internalID: 1581466556
+      spriteID: dd9f553d069fb134dba12f969cf78941
+      internalID: -1874855663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_4
+      name: bemmy_rifle_4
       rect:
         serializedVersion: 2
         x: 256
@@ -214,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdf036017748a89458074e6e670da341
-      internalID: 2065564267
+      spriteID: 3850e55cc31ef5c4ba51d12a55f977b4
+      internalID: -85216847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_5
+      name: bemmy_rifle_5
       rect:
         serializedVersion: 2
         x: 320
@@ -235,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd817a613cf8e1848ac15acdd8ce912e
-      internalID: -321019719
+      spriteID: cc3143233045ae2468d03c6fa8203e4b
+      internalID: 781956059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bemmy_6
+      name: bemmy_rifle_6
       rect:
         serializedVersion: 2
         x: 384
@@ -256,8 +256,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1885663417acda64996b0df66da9797c
-      internalID: 869971079
+      spriteID: a3b54834417410f4da0123fa5a81ea23
+      internalID: 994690818
       vertices: []
       indices: 
       edges: []
@@ -273,13 +273,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bemmy_6: 869971079
-      bemmy_5: -321019719
-      bemmy_4: 2065564267
-      bemmy_3: 1581466556
-      bemmy_2: 1367394151
-      bemmy_0: -1632524850
-      bemmy_1: -96884019
+      bemmy_rifle_5: 781956059
+      bemmy_rifle_6: 994690818
+      bemmy_rifle_0: 1275214696
+      bemmy_rifle_2: -301540794
+      bemmy_rifle_3: -1874855663
+      bemmy_rifle_1: 1836723090
+      bemmy_rifle_4: -85216847
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
