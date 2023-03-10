@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
   private int _jumpCounter = 2;
   private int _maxJumpCount = 2;
 
-  private float _horizontal;
+  public float InputX { get; private set; }
   public bool Crouched { get; private set; }
   public bool Grounded { get; private set; }
   
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour {
   {
     if (GameManager.Paused) return;
 
-    _horizontal = Input.GetAxisRaw("Horizontal");
+    InputX = Input.GetAxisRaw("Horizontal");
     Crouched = Input.GetAxisRaw("Vertical") == -1;
 
     _headCollider.enabled = !Crouched;
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour {
     {
       _jumping = false;
       _jumpCounter = _maxJumpCount;
-      if (Crouched) _horizontal = 0;
+      if (Crouched) InputX = 0;
     }
     
     if (Input.GetButtonDown("Jump") && _jumpCounter > 0 && !Crouched)
@@ -81,11 +81,11 @@ public class PlayerController : MonoBehaviour {
 
   private void FixedUpdate()
   {
-    if (_horizontal != 0)
+    if (InputX != 0)
     {
       float speed = SpeedX + _MoveAcceleration * Time.fixedDeltaTime;
       if (speed > _maxSpeed) speed = _maxSpeed;
-      _rb.velocity = new Vector2(_horizontal * speed, VelocityY);
+      _rb.velocity = new Vector2(InputX * speed, VelocityY);
     }
     else
     {

@@ -190,9 +190,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _state: 1
   _idle:
-    maxSpeed: 4
-    acceleration: {x: 5, y: 2}
-    decceleration: {x: 5, y: 5}
+    maxSpeed: 2.5
+    acceleration: {x: 4, y: 2}
+    decceleration: {x: 4, y: 5}
     tolerance: 1.5
     durationSeconds: 10
   _leaving:

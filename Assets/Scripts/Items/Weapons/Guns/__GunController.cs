@@ -8,7 +8,7 @@ public class __GunController : MonoBehaviour {
   internal Ammo _ammo;
   internal Animator _animator;
 
-  [SerializeField] 
+  [field:SerializeField] 
   public Sprite InventorySprite { get; set; }
 
   [SerializeField]

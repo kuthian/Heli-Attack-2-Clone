@@ -1068,7 +1068,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -1316613480, guid: 7c90a3891792f0c4fac32f264bd56ce5, type: 3}
+  m_Sprite: {fileID: -1632524850, guid: ab6f1471b1bbaff45b0d82657ecf7535, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1180,8 +1180,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000047683716, y: -0.1269027}
-  m_Size: {x: 0.48159885, y: 0.81990266}
+  m_Offset: {x: -0.009670913, y: 0.25346738}
+  m_Size: {x: 0.5525154, y: 1.0777808}
   m_Direction: 0
 --- !u!114 &633470007
 MonoBehaviour:
@@ -1479,7 +1479,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7781818, y: 1}
+    m_SensorSize: {x: 1.9769231, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
