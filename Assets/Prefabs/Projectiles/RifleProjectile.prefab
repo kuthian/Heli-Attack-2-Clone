@@ -12,8 +12,16 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -7133862975253113648, guid: 4965d607913209248a64dff351753ff2, type: 3}
+      propertyPath: _speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7133862975253113648, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: damage
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -7133862975253113648, guid: 4965d607913209248a64dff351753ff2, type: 3}
+      propertyPath: _damage
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 92056171148992293, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Name

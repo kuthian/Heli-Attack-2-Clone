@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerParachute : MonoBehaviour {
   
-  [SerializeField] private int ParachuteDrag = 10;
+  public int ParachuteDrag = 10;
   internal SpriteRenderer _spriteRenderer;
   internal PlayerController _player;
 

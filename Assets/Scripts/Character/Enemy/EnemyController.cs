@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
+  internal Rigidbody2D _rb;
+  private EnemyGunController _gunController;
+  private Transform _player;
+
+  public bool IdleOnly = false;
+
   enum State
   {
     WakingUp,
@@ -17,7 +23,7 @@ public class EnemyController : MonoBehaviour {
 
   [Serializable]
   struct StateParameters {
-    public float maxSpeed;
+    public Vector2 maxSpeed;
     public Vector2 acceleration;
     public Vector2 decceleration;
     public float tolerance;
@@ -35,20 +41,21 @@ public class EnemyController : MonoBehaviour {
   [SerializeField]
   private StateParameters _returning;
 
-  private Transform _player;
-
   private int DirectionToPlayerX => (int)Mathf.Sign(_player.position.x - transform.position.x);
   private int DirectionToPlayerY => (int)Mathf.Sign(_player.position.y - transform.position.y);
   private float DistanceFromPlayerX => transform.position.x - _player.position.x;
   private float DistanceFromPlayerY => transform.position.y - _player.position.y;
-  private float DistanceFromGroundY => transform.position.y + 3.5f;
-
   private bool MovingTowardsPlayerX => DirectionToPlayerX == DirectionX;
   private bool MovingTowardsPlayerY => DirectionToPlayerY == DirectionY;
 
-  private EnemyGunController _gunController;
+  [SerializeField]
+  private float _cruisingPositionY = 1.0f;
+  [SerializeField]
+  private float _cruisingToleranceY = 0.2f;
 
-  internal Rigidbody2D _rb;
+  private float DistanceFromCruisingY => MathF.Abs(_cruisingPositionY - transform.position.y);
+  private int DirectionToCruisingY => (int)Mathf.Sign(_cruisingPositionY - transform.position.y);
+  private bool MovingTowardsCruising => DirectionToCruisingY == DirectionY;
 
   private float VelocityX => _rb.velocity.x;
   private float VelocityY => _rb.velocity.y;
@@ -92,7 +99,7 @@ public class EnemyController : MonoBehaviour {
         GoToState( State.Idle );
         break;
       case State.Idle:
-        GoToState( State.Idle );
+        GoToState( IdleOnly ? State.Idle : State.Leaving );
         break;
       case State.Leaving:
         GoToState( State.Returning );
@@ -127,7 +134,7 @@ public class EnemyController : MonoBehaviour {
       Debug.Log("MoveTowardsPlayerX");
       var m = GetStateParameters(_state);
       float speed = SpeedX + m.acceleration.x * Time.fixedDeltaTime;
-      if (speed > m.maxSpeed) speed = m.maxSpeed;
+      if (speed > m.maxSpeed.x) speed = m.maxSpeed.x;
       _rb.velocity = new Vector2(DirectionToPlayerX * speed, VelocityY);
     } 
     else
@@ -143,7 +150,7 @@ public class EnemyController : MonoBehaviour {
       Debug.Log("MoveTowardsPlayerY");
       var m = GetStateParameters(_state);
       float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
-      if (speed > m.maxSpeed) speed = m.maxSpeed;
+      if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
       _rb.velocity = new Vector2(VelocityX, DirectionToPlayerY * speed);
     }
     else
@@ -161,7 +168,7 @@ public class EnemyController : MonoBehaviour {
     Debug.Log("MoveAwayFromPlayerX");
     var m = GetStateParameters(_state);
     float speed = SpeedX + m.acceleration.x * Time.fixedDeltaTime;
-    if (speed > m.maxSpeed) speed = m.maxSpeed;
+    if (speed > m.maxSpeed.x) speed = m.maxSpeed.x;
     _rb.velocity = new Vector2(-1*DirectionToPlayerX * speed, VelocityY);
   }
 
@@ -174,7 +181,7 @@ public class EnemyController : MonoBehaviour {
     Debug.Log("MoveAwayFromPlayerY");
     var m = GetStateParameters(_state);
     float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
-    if (speed > m.maxSpeed) speed = m.maxSpeed;
+    if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
     _rb.velocity = new Vector2(VelocityX, -1*DirectionToPlayerY * speed);
   }
 
@@ -196,15 +203,15 @@ public class EnemyController : MonoBehaviour {
     _rb.velocity = new Vector2(VelocityX, DirectionY * speed);
   }
 
-  private void MoveToCruisingHeight()
+  private void MoveToCruising()
   {
     if ( MovingTowardsPlayerY || NotMovingY )
     {
-      Debug.Log("MoveTowardsPlayerY");
+      Debug.Log("MoveToCruisingY");
       var m = GetStateParameters(_state);
       float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
-      if (speed > m.maxSpeed) speed = m.maxSpeed;
-      _rb.velocity = new Vector2(VelocityX, DirectionToPlayerY * speed);
+      if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
+      _rb.velocity = new Vector2(VelocityX, DirectionToCruisingY * speed);
     }
     else
     {
@@ -229,85 +236,23 @@ public class EnemyController : MonoBehaviour {
       SlowDownX();
     }
 
-    // Debug.Log("Distance from player: " + DistanceFromPlayerY + 
-    //           ", Distance from ground: " + (transform.position.y + 3.5f));
-
-    // float minDistanceFromTarget = 3;
-    // float maxDistanceFromTarget = 5;
-    // float cruisingPositionY = 1.0f;
-    // float cruisingToleranceY = 0.2f;
-
-    // float DistanceToCruisingY = MathF.Abs(cruisingPositionY - transform.position.y);
-    // int DirectionToCruisingY = (int)Mathf.Sign(cruisingPositionY - transform.position.y);
-    // bool MovingTowardsCruising = DirectionToCruisingY == DirectionY;
-
-
-    // Debug.Log("Distance: " + DistanceToCruisingY + ", MovingTowards: " + MovingTowardsCruising );
-    // Debug.Log("MovingTowards: " + MovingTowardsCruising);
-    // Debug.Log("NotMovingY: " + NotMovingY);
-    // Debug.Log("DirectionToCruisingY: " + DirectionToCruisingY);
-
-    // bool withinCruisingTolerance = Mathf.Abs(DistanceToCruisingY) < cruisingToleranceY;
-
-    // if (!withinCruisingTolerance)
-    // {
-    //   if ( MovingTowardsCruising || NotMovingY )
-    //   {
-    //     Debug.Log("MoveTowardsCruising");
-    //     // var m = GetStateParameters(_state);
-    //     float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
-    //     if (speed > m.maxSpeed) speed = m.maxSpeed;
-    //     _rb.velocity = new Vector2(VelocityX, DirectionToCruisingY * speed);
-    //   }
-    //   else
-    //   {
-    //     Debug.Log("MoveTowardsCruising");
-    //     SlowDownY();
-    //   }
-    // }
-    // else
-    // if ( MovingY )
-    // {
-    //   SlowDownY();
-    // }
-    // Debug.Log("DirectionToCruisingPositionY: " + DirectionToCruisingPositionY);
-    // Debug.Log("maxDistanceFromTarget: " + maxDistanceFromTarget);
-    // Debug.Log("VelocityY: " + VelocityY);
-
-    _rb.velocity = new Vector2(VelocityX, 0.0f);
-
-
-    // float tolerance = 0.25f;
-    // bool tooFar = DistanceFromGroundY > maxDistanceFromTarget;
-    // bool tooClose = (DistanceFromPlayerY + tolerance) < minDistanceFromTarget;
-    // if ( tooClose )
-    // // && (!MovingTowardsPlayerY || NotMovingY ) )
-    // {
-    //   // Debug.Log("Moving Away");
-    //   // Move away from target
-    //   // float speed = SpeedY + 2.0f * Time.fixedDeltaTime;
-    //   MoveAwayFromPlayerY();
-    //   // _rb.velocity = new Vector2(VelocityX, 1.0f*speed);
-    // }
-    // else 
-    // if ( tooFar )
-    // // && (MovingTowardsPlayerY || NotMovingY ) )
-    // {
-    //   // Debug.Log("Moving Towards");
-    //   // Move towards target
-    //   // int direction = _rb.velocity.y > 0 ? 1 : -1;
-    //   // int direction = -1;
-    //   // float speed = SpeedY + 2.0f * Time.fixedDeltaTime;
-    //   // if (speed > m.maxSpeed) speed = m.maxSpeed;
-    //   // _rb.velocity = new Vector2(VelocityX, direction * speed);
-    //   MoveTowardsPlayerY();
-    // }
-    // else
-    // if ( MovingY )
-    // {
-    //   // SlowDown
-    //   SlowDownY();
-    // }
+    bool withinToleranceY = Mathf.Abs(DistanceFromCruisingY) < _cruisingToleranceY;
+    if ( !withinToleranceY )
+    {
+      MoveToCruising();
+      // if ( MovingTowardsCruising || NotMovingY )
+      // {
+      // }
+      // else
+      // {
+      //   SlowDownY();
+      // }
+    }
+    else
+    if ( MovingY )
+    {
+      SlowDownY();
+    }
   }
 
   void LeavingMovement()
@@ -358,9 +303,33 @@ public class EnemyController : MonoBehaviour {
     else
     {
       SlowDownX();
-      if (SpeedX < 3) {
-        GoToState( State.Idle );
-      }
+      // if (SpeedX < 3) {
+      //   GoToState( State.Idle );
+      // }
+    }
+
+    bool withinToleranceY = Mathf.Abs(DistanceFromCruisingY) < m.tolerance;
+    if ( !withinToleranceY )
+    {
+        MoveToCruising();
+      // if ( MovingTowardsCruising || NotMovingY )
+      // {
+      // }
+      // else
+      // {
+      //   SlowDownY();
+      // }
+    }
+    else
+    if ( MovingY )
+    {
+      SlowDownY();
+    }
+
+
+    if (withinToleranceY && withinToleranceX &&
+        SpeedX < 1 && SpeedY < 1 ) {
+      GoToState( State.Idle );
     }
   }
 
