@@ -9,14 +9,23 @@ public class EnemyGunController : MonoBehaviour {
 
   public bool ShootingEnabled { get; set; } = true;
 
+  [Serializable]
+  public struct projectile {
+    public Transform prefab;
+    public float damage;
+    public float speed;
+    public float maxLifetime;
+  }
+
+  [SerializeField]
+  private projectile _projectile;
+
   [field:HideInInspector]
   private DateTime _lastShotTime = DateTime.Now;
 
   [SerializeField]
   private float _cooldownTime = 2f;
 
-  [SerializeField]
-  private GameObject _pfProjectile;
 
   [field:HideInInspector]
   private Transform _firePointTransform;
@@ -30,8 +39,8 @@ public class EnemyGunController : MonoBehaviour {
 
   private void ShootProjectile()
   {
-    GameObject projectile = 
-      Instantiate(_pfProjectile, _firePointTransform.position, Quaternion.identity, DynamicObjects.Projectiles);
+    Transform projectile = 
+      Instantiate(_projectile.prefab, _firePointTransform.position, Quaternion.identity, DynamicObjects.Projectiles);
 
     if (ObjectToIgnore)
     {
@@ -41,9 +50,10 @@ public class EnemyGunController : MonoBehaviour {
       }
     }
 
-    Vector3 direction = _firePointTransform.right;
-
-    projectile.GetComponent<Projectile>().Setup(direction);
+    projectile.GetComponent<Projectile>().Damage = _projectile.damage;
+    projectile.GetComponent<Projectile>().Speed = _projectile.speed;
+    projectile.GetComponent<Projectile>().MaxLifetimeSeconds = _projectile.maxLifetime;
+    projectile.GetComponent<Projectile>().Shoot(_firePointTransform.right);
   }
 
   private void Update()

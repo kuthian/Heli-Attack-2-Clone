@@ -5,24 +5,33 @@ using UnityEngine;
 
 public class __GunController : MonoBehaviour {
 
-  internal Ammo _ammo;
-  internal Animator _animator;
-
   [field:SerializeField] 
   public Sprite InventorySprite { get; set; }
 
-  [SerializeField]
-  protected Transform _pfProjectile;
+  public bool Steady { get; set; } = false;
 
+  internal Ammo _ammo;
+  internal Animator _animator;
+
+  [Serializable]
+  public struct projectile {
+    public Transform prefab;
+    public float damage;
+    public float speed;
+    public float maxLifetime;
+  }
+
+  [SerializeField]
+  protected projectile _projectile;
   protected Transform _firePointTransform;
 
-  [SerializeField] private float _cooldownTime = 0.5f;
   [SerializeField] protected int _ammoPerShot = 1;
+  [SerializeField] private float _cooldownTime = 0.5f;
   private DateTime _cooldownOffTime;
   private float _cooldownTimeRemaining;
   private bool _onCooldown = false;
   private bool _shoot = false;
-  public bool Steady { get; set; } = false;
+
 
   virtual public void SyncAnimation() {}
 
@@ -45,14 +54,22 @@ public class __GunController : MonoBehaviour {
     _shoot = false;
   }
 
-  virtual protected void InstantiateProjectile()
+  virtual protected void Shoot()
   {
-    Transform projectileTransform = 
-      Instantiate(_pfProjectile, _firePointTransform.position, Quaternion.identity, DynamicObjects.Projectiles);
+    InstantiateProjectile( _firePointTransform.position, _firePointTransform.right);
+  }
 
-    Vector3 direction = _firePointTransform.right;
+  virtual protected void InstantiateProjectile( Vector3 position, Vector3 direction )
+  {
+    if ( ! _projectile.prefab ) return;
 
-    projectileTransform.GetComponent<Projectile>().Setup(direction);
+    Transform projectile = 
+      Instantiate(_projectile.prefab, position, Quaternion.identity, DynamicObjects.Projectiles);
+
+    projectile.GetComponent<Projectile>().Damage = _projectile.damage;
+    projectile.GetComponent<Projectile>().Speed = _projectile.speed;
+    projectile.GetComponent<Projectile>().MaxLifetimeSeconds = _projectile.maxLifetime;
+    projectile.GetComponent<Projectile>().Shoot(direction);
   }
 
   private void Update()
@@ -81,7 +98,7 @@ public class __GunController : MonoBehaviour {
 
     if (!_onCooldown && _shoot && !_ammo.Empty())
     {
-      InstantiateProjectile();
+      Shoot();
 
       _cooldownOffTime = DateTime.Now.AddSeconds(_cooldownTime);
       _cooldownTimeRemaining = _cooldownTime;

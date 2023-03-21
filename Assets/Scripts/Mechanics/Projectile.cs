@@ -5,20 +5,23 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
 
   internal Rigidbody2D _rb;
-  [SerializeField] private int _damage = 10;
-  [SerializeField] private float _speed = 10f;
-  [SerializeField] private float _maxLifetimeSeconds = 5f;
+  [field:HideInInspector]
+  public float Damage { get; set; } = 10;
+  [field:HideInInspector]
+  public float Speed { get; set; } = 10;
+  [field:HideInInspector]
+  public float MaxLifetimeSeconds { get; set; } = 5;
 
   private void Awake()
   {
     _rb = GetComponent<Rigidbody2D>();
   }
 
-  public void Setup( Vector3 direction )
+  public void Shoot( Vector3 direction )
   {
-    _rb.velocity = direction.normalized * _speed;
+    _rb.velocity = direction.normalized * Speed;
     transform.eulerAngles = new Vector3(0, 0, Utils.GetAngleFromVectorFloat(direction));
-    Destroy(gameObject, _maxLifetimeSeconds);
+    Destroy(gameObject, MaxLifetimeSeconds);
   }
 
   void OnTriggerEnter2D (Collider2D other)
@@ -34,13 +37,13 @@ public class Projectile : MonoBehaviour {
     if (CompareTag("EnemyProjectile") && other.CompareTag("Player")) 
     {
       // Enemy projectile hits Player
-      other.gameObject.SendMessage("Damage", _damage);
+      other.gameObject.SendMessage("Damage", Damage);
       Destroy(gameObject);
     }
     if (CompareTag("PlayerProjectile") && other.CompareTag("Enemy")) 
     {
       // Player projectile hits Enemy
-      other.gameObject.SendMessage("Damage", _damage);
+      other.gameObject.SendMessage("Damage", Damage);
       Destroy(gameObject);
     }
   }

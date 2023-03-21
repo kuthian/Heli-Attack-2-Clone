@@ -7,7 +7,6 @@ public class InventoryHUD : MonoBehaviour {
   internal Image _activeWeapon;
   internal TextMeshProUGUI _ammoText;
   private int _InfiniteAmmo = -1;
-  private string _ammoSuffix = " x";
 
   public void Start()
   {
@@ -22,15 +21,15 @@ public class InventoryHUD : MonoBehaviour {
 
   public void SetAmmoCount( int ammoCount )
   {
-    _ammoText.SetText(GenerateAmmoText(ammoCount));
+    if (_InfiniteAmmo == ammoCount)
+    {
+      _ammoText.fontSize = 70;
+      _ammoText.SetText("\u221E");
+    }
+    else
+    {
+      _ammoText.fontSize = 50;
+      _ammoText.SetText(ammoCount.ToString());
+    }
   }
-
-  private string GenerateAmmoText(int ammoCount)
-  {
-    string str;
-    if (_InfiniteAmmo == ammoCount) str = "Infinite" + _ammoSuffix;
-    else str = ammoCount + _ammoSuffix;
-    return str;
-  }
-
 }

@@ -183,6 +183,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <InventorySprite>k__BackingField: {fileID: 21300000, guid: 61fdbfc97defd23478be62284e047a1e, type: 3}
-  _pfProjectile: {fileID: 8130383542522873335, guid: 57f549212852abd4d9be4f7c8f877d81, type: 3}
-  _cooldownTime: 0.2
+  _projectile:
+    prefab: {fileID: 8130383542522873335, guid: 57f549212852abd4d9be4f7c8f877d81, type: 3}
+    damage: 100
+    speed: 2
+    maxLifetime: 10
   _ammoPerShot: 1
+  _cooldownTime: 0.2
