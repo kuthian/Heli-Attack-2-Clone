@@ -1,0 +1,26 @@
+Event	ID	Name			Wwise Object Path	Notes
+	733168346	game_start			\Default Work Unit\game_start	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	534996730	gameplay_score			\Default Work Unit\gameplay_score	
+
+Switch	ID	Name	Switch Group			Notes
+	1510941265	switch_1	gameplay_score			
+	1510941266	switch_2	gameplay_score			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	762757699	gameplay_state			\Default Work Unit\gameplay_state	
+
+State	ID	Name	State Group			Notes
+	89505537	gameplay	gameplay_state			
+	748895195	None	gameplay_state			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2398231425	score			\Default Work Unit\score	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	2701525	test_2_b	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\SFX\test_2_b_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\Second Playlist\b\test_2_b		2932428
+	77780979	test_1_a	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\SFX\test_1_a_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\First Playlist\a\test_1_a		3351340
+	670829299	test_2_a	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\SFX\test_2_a_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\Second Playlist\a\test_2_a		2932428
+	1029126601	test_1_b	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\SFX\test_1_b_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\First Playlist\b\test_1_b		3351340
+
