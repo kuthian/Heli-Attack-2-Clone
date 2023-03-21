@@ -1,0 +1,22 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	534996730	gameplay_score			\Default Work Unit\gameplay_score	
+
+Switch	ID	Name	Switch Group			Notes
+	1510941265	switch_1	gameplay_score			
+	1510941266	switch_2	gameplay_score			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	762757699	gameplay_state			\Default Work Unit\gameplay_state	
+
+State	ID	Name	State Group			Notes
+	89505537	gameplay	gameplay_state			
+	748895195	None	gameplay_state			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

@@ -16,9 +16,6 @@ GameObject:
   - component: {fileID: 1786696879855725077}
   - component: {fileID: 7921896769568558857}
   - component: {fileID: 6501264673782278908}
-  - component: {fileID: 4056979616556251025}
-  - component: {fileID: -5005043861047212786}
-  - component: {fileID: -1050697274196980645}
   m_Layer: 0
   m_Name: Helicopter
   m_TagString: Enemy
@@ -238,71 +235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pfDestroyedHelicopter: {fileID: 1328479410968822439, guid: c08f37f8f5129d0418319aff7143a71e, type: 3}
   _pfDestroyedGunner: {fileID: 8951443885998499864, guid: b4184f840eb43a04a903de192cf8ef6e, type: 3}
---- !u!114 &4056979616556251025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786696879855725082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -938787986
-      Data2: 1296194867
-      Data3: -29815410
-      Data4: -296107032
-    Path: event:/Heli Stuff/Helicopter
-  Event: 
-  PlayEvent: 1
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 1
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &-5005043861047212786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786696879855725082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Emitters:
-  - Target: {fileID: 4056979616556251025}
-    Params:
-    - Name: Crashing
-      Value: 1
-  TriggerEvent: 2
---- !u!114 &-1050697274196980645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786696879855725082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Parameter: Change
-  TriggerEvent: 2
-  Value: 1
 --- !u!1 &1786696879887992436
 GameObject:
   m_ObjectHideFlags: 0

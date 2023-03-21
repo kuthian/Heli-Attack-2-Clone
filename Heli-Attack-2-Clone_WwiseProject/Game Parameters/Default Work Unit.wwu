@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{82B5FDFF-D52C-46F1-A8A1-03EC7E9D981B}" SchemaVersion="103">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{82B5FDFF-D52C-46F1-A8A1-03EC7E9D981B}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="score" ID="{22942617-D37D-453B-B701-97737750A3AE}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="10"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

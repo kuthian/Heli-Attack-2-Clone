@@ -11,6 +11,14 @@ public class HeliCountHUD : MonoBehaviour {
   {
     heliCount += count;
     heliCountText.SetText("" + heliCount);
+    if(heliCount >= 5)
+        {
+            AkSoundEngine.SetRTPCValue("score", 5);
+        }
   }
+
+
+
+    
 
 }

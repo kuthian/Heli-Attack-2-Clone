@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="643678412">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2228651116" Language="SFX" Hash="468183197">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
+			<ShortName>Main_Soundbank</ShortName>
+			<Path>Main_Soundbank.bnk</Path>
+			<IncludedEvents>
+				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="2701525" Language="SFX">
+							<ShortName>test_2_b.wav</ShortName>
+							<Path>SFX\test_2_b_D79FB2B7.wem</Path>
+						</File>
+						<File Id="77780979" Language="SFX">
+							<ShortName>test_1_a.wav</ShortName>
+							<Path>SFX\test_1_a_D79FB2B7.wem</Path>
+						</File>
+						<File Id="670829299" Language="SFX">
+							<ShortName>test_2_a.wav</ShortName>
+							<Path>SFX\test_2_a_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1029126601" Language="SFX">
+							<ShortName>test_1_b.wav</ShortName>
+							<Path>SFX\test_1_b_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}">
+							<Children>
+								<SwitchContainer SwitchValue="{403F8205-A9AD-492F-AEBC-449397B95617}">
+									<Media>
+										<File Id="77780979"/>
+										<File Id="1029126601"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{6487540E-EA87-44B4-B788-66529BE069FE}">
+									<Media>
+										<File Id="2701525"/>
+										<File Id="670829299"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\gameplay_state\gameplay"/>
+					</ActionSetState>
+				</Event>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="2701525" Language="SFX">
+					<ShortName>test_2_b.wav</ShortName>
+					<Path>SFX\test_2_b_D79FB2B7.wem</Path>
+				</File>
+				<File Id="77780979" Language="SFX">
+					<ShortName>test_1_a.wav</ShortName>
+					<Path>SFX\test_1_a_D79FB2B7.wem</Path>
+				</File>
+				<File Id="670829299" Language="SFX">
+					<ShortName>test_2_a.wav</ShortName>
+					<Path>SFX\test_2_a_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1029126601" Language="SFX">
+					<ShortName>test_1_b.wav</ShortName>
+					<Path>SFX\test_1_b_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+			<GameParameters>
+				<GameParameter Id="2398231425" Name="score" ObjectPath="\Game Parameters\Default Work Unit\score"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\gameplay_state\gameplay" GUID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="762757699" Name="gameplay_state" ObjectPath="\States\Default Work Unit\gameplay_state" GUID="{E5A62C64-624B-4A96-9A89-81842F483229}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\gameplay_state\None" GUID="{693A9CBB-4702-4795-A426-08D6AF509BEC}"/>
+						<State Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\gameplay_state\gameplay" GUID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="534996730" Name="gameplay_score" ObjectPath="\Switches\Default Work Unit\gameplay_score" GUID="{0E67270A-9D3D-4963-BB78-D30A16F1B835}">
+					<Switches>
+						<Switch Id="1510941266" Name="switch_2" ObjectPath="\Switches\Default Work Unit\gameplay_score\switch_2" GUID="{6487540E-EA87-44B4-B788-66529BE069FE}"/>
+						<Switch Id="1510941265" Name="switch_1" ObjectPath="\Switches\Default Work Unit\gameplay_score\switch_1" GUID="{403F8205-A9AD-492F-AEBC-449397B95617}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
