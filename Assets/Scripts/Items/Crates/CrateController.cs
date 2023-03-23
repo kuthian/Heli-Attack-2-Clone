@@ -6,15 +6,13 @@ public class CrateController : MonoBehaviour {
 
   private Transform _groundCheck;
   private LayerMask _groundLayer;
-  internal Rigidbody2D _rb;
   public bool Grounded { get; set; }
+  public Rigidbody2D Rigidbody { get; set; }
 
-  public Rigidbody2D Rigidbody => _rb;
-
-  public void Start()
+  public void Awake()
   {
     _action = GetComponent<__CrateAction>();
-    _rb = GetComponent<Rigidbody2D>();
+    Rigidbody = GetComponent<Rigidbody2D>();
     _groundCheck = transform.Find("GroundCheck");
     _groundLayer = LayerMask.GetMask("Ground");
   }

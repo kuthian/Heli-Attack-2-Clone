@@ -45,6 +45,7 @@ public class __GunController : MonoBehaviour {
 
   private void OnEnable()
   {
+    Debug.Log(HUDManager.ReloadBar);
     HUDManager.ReloadBar.SetCooldownTime(_cooldownTime);
     HUDManager.ReloadBar.SetTimeRemaining(0);
   }

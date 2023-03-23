@@ -30,7 +30,11 @@ PrefabInstance:
     - target: {fileID: 5509626010415754209, guid: 97154dc62ed973f4f8d041d98f0dd3ec, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2b84dab5f95a8d84296f24a3cf82e2e7, type: 3}
+      objectReference: {fileID: 21300000, guid: ad163887787454442bbe7db6dda6b465, type: 3}
+    - target: {fileID: 5509626010415754209, guid: 97154dc62ed973f4f8d041d98f0dd3ec, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5509626010415754213, guid: 97154dc62ed973f4f8d041d98f0dd3ec, type: 3}
       propertyPath: m_Name
       value: UziCrate

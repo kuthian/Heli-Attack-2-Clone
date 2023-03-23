@@ -30,7 +30,11 @@ PrefabInstance:
     - target: {fileID: 5509626010415754209, guid: 97154dc62ed973f4f8d041d98f0dd3ec, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1c74ae81c2cc49641b6a65cb85b48314, type: 3}
+      objectReference: {fileID: 21300000, guid: 654e972ed66035e40953a11645427a36, type: 3}
+    - target: {fileID: 5509626010415754209, guid: 97154dc62ed973f4f8d041d98f0dd3ec, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5509626010415754213, guid: 97154dc62ed973f4f8d041d98f0dd3ec, type: 3}
       propertyPath: m_Name
       value: ShotgunCrate

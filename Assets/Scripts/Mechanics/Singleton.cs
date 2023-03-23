@@ -14,6 +14,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
          if(_instance == null)
          {
             _instance = (T) FindObjectOfType(typeof(T));
+            Debug.Log(_instance);
  
             if (_instance == null)
             {
@@ -27,6 +28,6 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
    }
 
    protected virtual void Awake()
-   {   
+   {
    }
 }

@@ -19,7 +19,7 @@ public class InventoryController : MonoBehaviour {
     // Weapon doesn't already exist, add it
     bool firstWeapon = transform.childCount == 0;
     GameObject obj = Instantiate(weapon, transform) as GameObject;
-    if (firstWeapon) obj.SetActive(true);
+    obj.SetActive(firstWeapon);
   }
 
   private void Update()
