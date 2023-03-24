@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class __GunController : MonoBehaviour {
 
+  [SerializeField] private AK.Wwise.Event myEvent;
+
   [field:SerializeField] 
   public Sprite InventorySprite { get; set; }
 
@@ -58,6 +60,7 @@ public class __GunController : MonoBehaviour {
   virtual protected void Shoot()
   {
     InstantiateProjectile( _firePointTransform.position, _firePointTransform.right);
+    myEvent.Post(gameObject);
   }
 
   virtual protected void InstantiateProjectile( Vector3 position, Vector3 direction )

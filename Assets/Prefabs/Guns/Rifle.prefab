@@ -152,6 +152,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21c3ea8edd79274194f080039715691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 27e61b9c0e88c8447987486894fa15c4, type: 2}
   <InventorySprite>k__BackingField: {fileID: 21300000, guid: ccf0a8d2da6b23c4a81e95ecbc55a877, type: 3}
   _projectile:
     prefab: {fileID: 8130383542522873335, guid: 57f549212852abd4d9be4f7c8f877d81, type: 3}
