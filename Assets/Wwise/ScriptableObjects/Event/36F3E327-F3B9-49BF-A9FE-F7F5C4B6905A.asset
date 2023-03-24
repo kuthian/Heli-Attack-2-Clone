@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87cd56146330a57438e7d54b7dfe2e2e, type: 3}
   m_Name: 36F3E327-F3B9-49BF-A9FE-F7F5C4B6905A
   m_EditorClassIdentifier: 
-  objectName: game_start
-  id: 733168346
+  objectName: ww_game_start
+  id: 3769215785
   guid: 36F3E327-F3B9-49BF-A9FE-F7F5C4B6905A

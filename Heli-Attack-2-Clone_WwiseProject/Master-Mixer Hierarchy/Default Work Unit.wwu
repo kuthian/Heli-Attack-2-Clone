@@ -13,6 +13,9 @@
 						<Bus Name="Music" ID="{753EAF5A-12CE-451F-AD27-BB79E0D54221}">
 							<ObjectLists/>
 						</Bus>
+						<Bus Name="Rifle" ID="{98EE210D-8713-46B6-A5BC-14D359BFCFD6}">
+							<ObjectLists/>
+						</Bus>
 					</ChildrenList>
 					<ObjectLists/>
 				</Bus>

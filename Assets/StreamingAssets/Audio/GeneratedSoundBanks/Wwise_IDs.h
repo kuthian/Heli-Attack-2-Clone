@@ -13,7 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID GAME_START = 733168346U;
+        static const AkUniqueID WW_GAME_START = 3769215785U;
+        static const AkUniqueID WW_RIFLE_SHOT = 2496926511U;
     } // namespace EVENTS
 
     namespace STATES
@@ -61,6 +62,7 @@ namespace AK
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID RIFLE = 4262674733U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

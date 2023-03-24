@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{8A8ED7BC-5F3A-4922-A015-DA6A45F4BE16}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="game_start" ID="{36F3E327-F3B9-49BF-A9FE-F7F5C4B6905A}" WorkUnitID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}"/>
+							<ObjectRef Name="ww_game_start" ID="{36F3E327-F3B9-49BF-A9FE-F7F5C4B6905A}" WorkUnitID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 					</ModuleList>
@@ -17,7 +17,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="gameplay" ID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
+						<CurrentStateRef Name="None" ID="{693A9CBB-4702-4795-A426-08D6AF509BEC}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="switch_2" ID="{6487540E-EA87-44B4-B788-66529BE069FE}"/>

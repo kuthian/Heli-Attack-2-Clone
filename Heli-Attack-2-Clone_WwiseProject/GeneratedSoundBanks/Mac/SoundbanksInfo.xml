@@ -11,17 +11,17 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="693394606">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2231541016">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="468183197">
+		<SoundBank Id="2228651116" Language="SFX" Hash="3418126820">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" DurationType="Infinite">
+				<Event Id="3769215785" Name="ww_game_start" ObjectPath="\Events\Default Work Unit\ww_game_start" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="2701525" Language="SFX">
 							<ShortName>test_2_b.wav</ShortName>
@@ -61,6 +61,14 @@
 					<ActionSetState>
 						<ActionSetStateEntry Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\gameplay_state\gameplay"/>
 					</ActionSetState>
+				</Event>
+				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Default Work Unit\ww_rifle_shot" DurationType="OneShot" DurationMin="1.529978" DurationMax="1.877108">
+					<IncludedMemoryFiles>
+						<File Id="322712021" Language="SFX">
+							<ShortName>ShootingClip.wav</ShortName>
+							<Path>SFX\ShootingClip_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
