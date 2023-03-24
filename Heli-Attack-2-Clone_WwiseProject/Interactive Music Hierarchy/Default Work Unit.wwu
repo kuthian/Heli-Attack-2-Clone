@@ -5,7 +5,18 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="Game Music Container" ID="{F5CB3645-D8F6-4CAA-AB59-27EC685D4C08}" ShortID="436639116">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="110"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
