@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class __GunController : MonoBehaviour {
 
-  [SerializeField] private AK.Wwise.Event myEvent;
+  [SerializeField] private AK.Wwise.Event _wwOnShoot;
 
   [field:SerializeField] 
   public Sprite InventorySprite { get; set; }
@@ -34,8 +34,8 @@ public class __GunController : MonoBehaviour {
   private bool _onCooldown = false;
   private bool _shoot = false;
 
-
-  virtual public void SyncAnimation() {}
+  virtual protected void OnShootStart() {}
+  virtual protected void OnShootEnd() {}
 
   private void Awake()
   {
@@ -60,7 +60,7 @@ public class __GunController : MonoBehaviour {
   virtual protected void Shoot()
   {
     InstantiateProjectile( _firePointTransform.position, _firePointTransform.right);
-    myEvent.Post(gameObject);
+    _wwOnShoot.Post(gameObject);
   }
 
   virtual protected void InstantiateProjectile( Vector3 position, Vector3 direction )
@@ -94,10 +94,12 @@ public class __GunController : MonoBehaviour {
     if (Input.GetMouseButtonDown(0))
     {
       _shoot = true;
+      OnShootStart();
     }
     if (Input.GetMouseButtonUp(0))
     {
       _shoot = false;
+      OnShootEnd();
     }
 
     if (!_onCooldown && _shoot && !_ammo.Empty())

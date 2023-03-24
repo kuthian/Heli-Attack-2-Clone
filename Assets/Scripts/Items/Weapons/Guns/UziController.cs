@@ -2,7 +2,21 @@ using UnityEngine;
 
 public class UziController : __GunController {
 
-  [SerializeField] protected Transform _secondFirePointTransform;
+  [SerializeField]
+  protected Transform _secondFirePointTransform;
+
+  [SerializeField] private AK.Wwise.Event _wwShootStart;
+  [SerializeField] private AK.Wwise.Event _wwShootEnd;
+
+  override protected void OnShootStart()
+  {
+    _wwShootStart.Post(gameObject);
+  }
+
+  override protected void OnShootEnd()
+  {
+    _wwShootEnd.Post(gameObject);
+  }
 
   override protected void Shoot()
   {

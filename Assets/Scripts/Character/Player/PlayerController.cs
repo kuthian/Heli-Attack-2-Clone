@@ -133,8 +133,4 @@ public class PlayerController : MonoBehaviour {
     ParticleManager.PlayDamagedPlayerEffect( transform );
   }
 
-  public void SyncAnimation()
-  {
-    _inventory.GunController().SyncAnimation();
-  }
 }
