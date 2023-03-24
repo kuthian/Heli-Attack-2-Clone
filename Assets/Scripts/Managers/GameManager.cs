@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager> {
 
   private GameObject _player;
+  [SerializeField]
+  private GameObject _pauseMenuUI;
 
   public void Start()
   {
@@ -14,22 +17,41 @@ public class GameManager : Singleton<GameManager> {
 
   static public bool Paused => Time.timeScale == 0;
 
-  private static void PauseGame()
+  public void PauseGame()
   {
+    _pauseMenuUI.SetActive(true);
     Time.timeScale = 0;
   }
 
-  private static void ResumeGame()
+  public void ResumeGame()
   {
+    _pauseMenuUI.SetActive(false);
     Time.timeScale = 1;
+  }
+
+  public void StartMenu()
+  {
+    SceneManager.LoadScene("StartMenu");
+    Time.timeScale = 1;
+  }
+
+  public void Quit()
+  {
+    Application.Quit();
   }
 
   public void Update()
   {
-    if (Input.GetKeyDown("p"))
+    if (Input.GetKeyDown("escape"))
     {
-      if (!Paused) PauseGame();
-      else ResumeGame();
+      if (!Paused)
+      {
+        PauseGame();
+      } 
+      else
+      {
+        ResumeGame();
+      } 
     }
   }
 
