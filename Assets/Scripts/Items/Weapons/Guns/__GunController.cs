@@ -36,7 +36,10 @@ public class __GunController : MonoBehaviour {
 
   virtual protected void OnShootStart() {}
   virtual protected void OnShootEnd() {}
-  virtual protected void OnShootEndEmpty() { }
+  virtual protected void OnShootEndEmpty() {}
+  virtual protected void OnShootShotgun() {}
+
+
 
     private void Awake()
   {

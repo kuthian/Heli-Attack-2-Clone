@@ -65,6 +65,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ww_shotgun_shot" ID="{05D90798-F1AC-49F0-81E3-8A66CCCA4640}">
+					<ChildrenList>
+						<Action Name="" ID="{03458385-5DFF-474A-8D1D-A6BE79382EFC}" ShortID="393423923">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shotgun" ID="{C054EBEB-4C07-4118-8ED0-273FA5376DBC}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
