@@ -7,18 +7,25 @@ public class UziController : __GunController {
 
   [SerializeField] private AK.Wwise.Event _wwShootStart;
   [SerializeField] private AK.Wwise.Event _wwShootEnd;
+  [SerializeField] private AK.Wwise.Event _wwShootEndEmpty;
 
-  override protected void OnShootStart()
+    override protected void OnShootStart()
   {
     _wwShootStart.Post(gameObject);
   }
 
-  override protected void OnShootEnd()
+    override protected void OnShootEnd()
   {
     _wwShootEnd.Post(gameObject);
   }
+    override protected void OnShootEndEmpty()
+  {
+    _wwShootEndEmpty.Post(gameObject);
+  }
 
-  override protected void Shoot()
+
+
+    override protected void Shoot()
   {
     {
       Transform t = _firePointTransform;

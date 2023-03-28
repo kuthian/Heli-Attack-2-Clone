@@ -20,9 +20,5 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2398231425	score			\Default Work Unit\score	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	2701525	test_2_b	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\SFX\test_2_b_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\Second Playlist\b\test_2_b		2932428
-	77780979	test_1_a	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\SFX\test_1_a_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\First Playlist\a\test_1_a		3351340
-	322712021	ShootingClip	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\SFX\ShootingClip_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Rifle\ShootingClip		228816
-	670829299	test_2_a	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\SFX\test_2_a_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\Second Playlist\a\test_2_a		2932428
-	1029126601	test_1_b	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\SFX\test_1_b_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\First Playlist\b\test_1_b		3351340
+	51274058	rifle_fire_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Windows\SFX\rifle_fire_01_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Rifle\rifle_fire_01		295452
 

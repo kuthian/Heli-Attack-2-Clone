@@ -16,79 +16,30 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3418126820">
+		<SoundBank Id="2228651116" Language="SFX" Hash="330576221">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3769215785" Name="ww_game_start" ObjectPath="\Events\Default Work Unit\ww_game_start" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="2701525" Language="SFX">
-							<ShortName>test_2_b.wav</ShortName>
-							<Path>SFX\test_2_b_D79FB2B7.wem</Path>
-						</File>
-						<File Id="77780979" Language="SFX">
-							<ShortName>test_1_a.wav</ShortName>
-							<Path>SFX\test_1_a_D79FB2B7.wem</Path>
-						</File>
-						<File Id="670829299" Language="SFX">
-							<ShortName>test_2_a.wav</ShortName>
-							<Path>SFX\test_2_a_D79FB2B7.wem</Path>
-						</File>
-						<File Id="1029126601" Language="SFX">
-							<ShortName>test_1_b.wav</ShortName>
-							<Path>SFX\test_1_b_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}">
-							<Children>
-								<SwitchContainer SwitchValue="{403F8205-A9AD-492F-AEBC-449397B95617}">
-									<Media>
-										<File Id="77780979"/>
-										<File Id="1029126601"/>
-									</Media>
-								</SwitchContainer>
-								<SwitchContainer SwitchValue="{6487540E-EA87-44B4-B788-66529BE069FE}">
-									<Media>
-										<File Id="2701525"/>
-										<File Id="670829299"/>
-									</Media>
-								</SwitchContainer>
-							</Children>
+							<Children/>
 						</SwitchContainer>
 					</SwitchContainers>
 					<ActionSetState>
 						<ActionSetStateEntry Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\gameplay_state\gameplay"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Default Work Unit\ww_rifle_shot" DurationType="OneShot" DurationMin="1.529978" DurationMax="1.877108">
+				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Default Work Unit\ww_rifle_shot" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479">
 					<IncludedMemoryFiles>
-						<File Id="322712021" Language="SFX">
-							<ShortName>ShootingClip.wav</ShortName>
-							<Path>SFX\ShootingClip_10C4C929.wem</Path>
+						<File Id="51274058" Language="SFX">
+							<ShortName>rifle_fire_01.wav</ShortName>
+							<Path>SFX\rifle_fire_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="2701525" Language="SFX">
-					<ShortName>test_2_b.wav</ShortName>
-					<Path>SFX\test_2_b_D79FB2B7.wem</Path>
-				</File>
-				<File Id="77780979" Language="SFX">
-					<ShortName>test_1_a.wav</ShortName>
-					<Path>SFX\test_1_a_D79FB2B7.wem</Path>
-				</File>
-				<File Id="670829299" Language="SFX">
-					<ShortName>test_2_a.wav</ShortName>
-					<Path>SFX\test_2_a_D79FB2B7.wem</Path>
-				</File>
-				<File Id="1029126601" Language="SFX">
-					<ShortName>test_1_b.wav</ShortName>
-					<Path>SFX\test_1_b_D79FB2B7.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="2398231425" Name="score" ObjectPath="\Game Parameters\Default Work Unit\score"/>
 			</GameParameters>

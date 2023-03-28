@@ -36,8 +36,9 @@ public class __GunController : MonoBehaviour {
 
   virtual protected void OnShootStart() {}
   virtual protected void OnShootEnd() {}
+  virtual protected void OnShootEndEmpty() { }
 
-  private void Awake()
+    private void Awake()
   {
     _animator = GetComponent<Animator>();
     _firePointTransform = transform.Find("FirePoint");
@@ -111,6 +112,10 @@ public class __GunController : MonoBehaviour {
       _onCooldown = true;
 
       _ammo.Remove(_ammoPerShot);
+    }
+    if (_ammo.Empty())
+    {
+      OnShootEndEmpty();
     }
 
   }

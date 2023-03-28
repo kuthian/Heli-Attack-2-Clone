@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}" SchemaVersion="103" RootDocumentID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}" ParentDocumentID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}">
+	<Events>
+		<WorkUnit Name="Gunfire" ID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}" OwnerID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="ww_rifle_shot" ID="{3D02E72B-E67D-4B0F-A038-7E3F62F91667}">
+					<ChildrenList>
+						<Action Name="" ID="{BC234AD2-C6EA-4A5A-A95D-01093D250BE7}" ShortID="809227933">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Rifle" ID="{06D2245E-25FE-412A-B0C1-FF1378489679}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ww_uzi_shot_loop" ID="{039A5705-0B4B-4861-9A53-6BEEE6965F31}">
+					<ChildrenList>
+						<Action Name="" ID="{826964F7-EC02-4471-A519-18ADF0BA006F}" ShortID="752790577">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ww_uzi_stop_empty" ID="{1A5D5A3B-86D6-439F-896B-57AB04F8CE7E}">
+					<ChildrenList>
+						<Action Name="" ID="{0A6CB7CE-4A0C-4249-8345-990541D9EE1E}" ShortID="399034034">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2CDF915E-04B1-422E-B149-6CB542064BAD}" ShortID="500797894">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="uzi_empty" ID="{6A4EF48B-81FA-4E9C-AC00-787D2C17F4B1}" WorkUnitID="{18BC388D-B94C-4362-BD31-FB9AA3EFE568}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ww_uzi_stop" ID="{C92D6F75-F248-40E4-8703-E9C691BFAF9D}">
+					<ChildrenList>
+						<Action Name="" ID="{F7647963-4A49-4362-8DE5-18B2BAD4BD0C}" ShortID="183128476">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
