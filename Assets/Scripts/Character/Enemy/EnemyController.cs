@@ -131,7 +131,7 @@ public class EnemyController : MonoBehaviour {
   {
     if ( MovingTowardsPlayerX || NotMovingX )
     {
-      Debug.Log("MoveTowardsPlayerX");
+      //Debug.Log("MoveTowardsPlayerX");
       var m = GetStateParameters(_state);
       float speed = SpeedX + m.acceleration.x * Time.fixedDeltaTime;
       if (speed > m.maxSpeed.x) speed = m.maxSpeed.x;
@@ -147,7 +147,7 @@ public class EnemyController : MonoBehaviour {
   {
     if ( MovingTowardsPlayerY || NotMovingY )
     {
-      Debug.Log("MoveTowardsPlayerY");
+      //Debug.Log("MoveTowardsPlayerY");
       var m = GetStateParameters(_state);
       float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
       if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
@@ -165,7 +165,7 @@ public class EnemyController : MonoBehaviour {
       SlowDownX();
       return;
     }
-    Debug.Log("MoveAwayFromPlayerX");
+    //Debug.Log("MoveAwayFromPlayerX");
     var m = GetStateParameters(_state);
     float speed = SpeedX + m.acceleration.x * Time.fixedDeltaTime;
     if (speed > m.maxSpeed.x) speed = m.maxSpeed.x;
@@ -178,7 +178,7 @@ public class EnemyController : MonoBehaviour {
       SlowDownY();
       return;
     }
-    Debug.Log("MoveAwayFromPlayerY");
+    //Debug.Log("MoveAwayFromPlayerY");
     var m = GetStateParameters(_state);
     float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
     if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
@@ -187,7 +187,7 @@ public class EnemyController : MonoBehaviour {
 
   private void SlowDownX()
   {
-    Debug.Log("SlowDownX");
+   // Debug.Log("SlowDownX");
     var m = GetStateParameters(_state);
     float speed = SpeedX - m.decceleration.x * Time.fixedDeltaTime;
     if (speed < 0) speed = 0;
@@ -196,7 +196,7 @@ public class EnemyController : MonoBehaviour {
 
   private void SlowDownY()
   {
-    Debug.Log("SlowDownY");
+   // Debug.Log("SlowDownY");
     var m = GetStateParameters(_state);
     float speed = SpeedY - m.decceleration.y * Time.fixedDeltaTime;
     if (speed < 0) speed = 0;
@@ -207,7 +207,7 @@ public class EnemyController : MonoBehaviour {
   {
     if ( MovingTowardsPlayerY || NotMovingY )
     {
-      Debug.Log("MoveToCruisingY");
+     // Debug.Log("MoveToCruisingY");
       var m = GetStateParameters(_state);
       float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
       if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;

@@ -1761,7 +1761,6 @@ GameObject:
   - component: {fileID: 633470001}
   - component: {fileID: 633470003}
   - component: {fileID: 633470008}
-  - component: {fileID: 633470009}
   - component: {fileID: 633470007}
   m_Layer: 0
   m_Name: Player
@@ -1906,9 +1905,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.23590052}
+  m_Offset: {x: -0.027863503, y: 0.53418475}
   serializedVersion: 2
-  m_Radius: 0.17608178
+  m_Radius: 0.22330469
 --- !u!70 &633470006
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1922,8 +1921,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009670913, y: 0.14513093}
-  m_Size: {x: 0.5525154, y: 1.2944537}
+  m_Offset: {x: -0.019505471, y: -0.097911656}
+  m_Size: {x: 0.75575405, y: 0.80836856}
   m_Direction: 0
 --- !u!114 &633470007
 MonoBehaviour:
@@ -1949,18 +1948,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7b99e203107dad48afe31a28e603454, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &633470009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633469995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10bb12249aea90479e404905da7abd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &641501046
@@ -4661,10 +4648,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5171f3c5d991c40b0c70cf8646fa33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myEvent:
+  _wwGameStart:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: daa4a8bf83ae4dc4ea668c627d628f91, type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &1081647510
 MonoBehaviour:
   m_ObjectHideFlags: 0

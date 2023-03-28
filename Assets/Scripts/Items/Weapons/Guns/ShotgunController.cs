@@ -7,11 +7,9 @@ public class ShotgunController : __GunController {
   [SerializeField] private AK.Wwise.Event _wwShootShotgun;
 
 
-    
     override protected void Shoot()
-  {
-     _wwShootShotgun.Post(gameObject);
-
+  {     
+    
     Vector3 pStep = _firePointTransform.up * _pStepScalar;
     Vector3 position = _firePointTransform.position - pStep * (_ammoPerShot / 2);
     Vector3 dStep = _firePointTransform.up * _dStepScalar;
@@ -24,7 +22,9 @@ public class ShotgunController : __GunController {
       position = position + pStep;
       direction = direction + dStep;            
     }
-       
+     _wwShootShotgun.Post(gameObject);
+
   }
+    
 
 }
