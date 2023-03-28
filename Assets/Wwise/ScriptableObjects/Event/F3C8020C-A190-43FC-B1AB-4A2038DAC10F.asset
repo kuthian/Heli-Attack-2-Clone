@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87cd56146330a57438e7d54b7dfe2e2e, type: 3}
-  m_Name: 3D02E72B-E67D-4B0F-A038-7E3F62F91667
+  m_Name: F3C8020C-A190-43FC-B1AB-4A2038DAC10F
   m_EditorClassIdentifier: 
   objectName: ww_rifle_shot
   id: 2496926511
-  guid: 3D02E72B-E67D-4B0F-A038-7E3F62F91667
+  guid: F3C8020C-A190-43FC-B1AB-4A2038DAC10F

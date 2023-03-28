@@ -102,9 +102,6 @@
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
 						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Reverb_Outdoors" ID="{7DB7B63B-B49E-4D92-A3C8-3CDFB98A0B4C}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
-						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="uzi_spray" ID="{0FEF9CD5-32BD-41FC-9944-9C0D1C331FFC}" ShortID="1018285511">

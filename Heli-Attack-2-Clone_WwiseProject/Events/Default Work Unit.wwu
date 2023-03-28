@@ -24,17 +24,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="ww_rifle_shot" ID="{3D02E72B-E67D-4B0F-A038-7E3F62F91667}">
-					<ChildrenList>
-						<Action Name="" ID="{BC234AD2-C6EA-4A5A-A95D-01093D250BE7}" ShortID="809227933">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rifle" ID="{06D2245E-25FE-412A-B0C1-FF1378489679}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

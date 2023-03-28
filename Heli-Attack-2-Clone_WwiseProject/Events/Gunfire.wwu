@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}" SchemaVersion="103" RootDocumentID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}" ParentDocumentID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}">
+<WwiseDocument Type="WorkUnit" ID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Gunfire" ID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}" OwnerID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}" PersistMode="Nested">
+		<WorkUnit Name="Gunfire" ID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}" PersistMode="Standalone">
 			<PropertyList>
 				<Property Name="Color" Type="int16" Value="10"/>
 			</PropertyList>
 			<ChildrenList>
-				<Event Name="ww_rifle_shot" ID="{3D02E72B-E67D-4B0F-A038-7E3F62F91667}">
+				<Event Name="ww_rifle_shot" ID="{F3C8020C-A190-43FC-B1AB-4A2038DAC10F}">
 					<ChildrenList>
-						<Action Name="" ID="{BC234AD2-C6EA-4A5A-A95D-01093D250BE7}" ShortID="809227933">
+						<Action Name="" ID="{C62AE8A5-616D-4CE5-A19B-4B1DA28E648C}" ShortID="809227934">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Rifle" ID="{06D2245E-25FE-412A-B0C1-FF1378489679}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>

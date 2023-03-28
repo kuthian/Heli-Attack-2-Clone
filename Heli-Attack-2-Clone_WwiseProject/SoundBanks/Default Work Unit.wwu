@@ -6,6 +6,7 @@
 				<SoundBank Name="Main_Soundbank" ID="{2F4F8889-6B4E-4EC7-9F1E-4A958DFEF3D6}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Default Work Unit" ID="{48089242-6501-413A-9C66-44DDDA85A9AD}" WorkUnitID="{48089242-6501-413A-9C66-44DDDA85A9AD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Gunfire" ID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}" WorkUnitID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}" WorkUnitID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

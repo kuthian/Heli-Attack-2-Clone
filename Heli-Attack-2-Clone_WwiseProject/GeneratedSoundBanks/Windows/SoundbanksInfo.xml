@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="330576221">
+		<SoundBank Id="2228651116" Language="SFX" Hash="2080444060">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
@@ -31,11 +31,28 @@
 						<ActionSetStateEntry Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\gameplay_state\gameplay"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Default Work Unit\ww_rifle_shot" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479">
+				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Gunfire\ww_rifle_shot" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479">
 					<IncludedMemoryFiles>
 						<File Id="51274058" Language="SFX">
 							<ShortName>rifle_fire_01.wav</ShortName>
 							<Path>SFX\rifle_fire_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\ww_uzi_shot_loop" DurationType="OneShot" DurationMin="4.198729" DurationMax="4.198729">
+					<IncludedMemoryFiles>
+						<File Id="1059951826" Language="SFX">
+							<ShortName>uzi_spray.wav</ShortName>
+							<Path>SFX\uzi_spray_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="795925999" Name="ww_uzi_stop" ObjectPath="\Events\Gunfire\ww_uzi_stop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3895319721" Name="ww_uzi_stop_empty" ObjectPath="\Events\Gunfire\ww_uzi_stop_empty" DurationType="OneShot" DurationMin="0.128208" DurationMax="0.128208">
+					<IncludedMemoryFiles>
+						<File Id="942672928" Language="SFX">
+							<ShortName>uzi_empty.wav</ShortName>
+							<Path>SFX\uzi_empty_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

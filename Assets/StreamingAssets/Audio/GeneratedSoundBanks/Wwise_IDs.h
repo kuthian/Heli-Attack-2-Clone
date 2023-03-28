@@ -15,6 +15,9 @@ namespace AK
     {
         static const AkUniqueID WW_GAME_START = 3769215785U;
         static const AkUniqueID WW_RIFLE_SHOT = 2496926511U;
+        static const AkUniqueID WW_UZI_SHOT_LOOP = 1852187988U;
+        static const AkUniqueID WW_UZI_STOP = 795925999U;
+        static const AkUniqueID WW_UZI_STOP_EMPTY = 3895319721U;
     } // namespace EVENTS
 
     namespace STATES
