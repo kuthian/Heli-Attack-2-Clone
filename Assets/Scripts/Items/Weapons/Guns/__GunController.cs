@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class __GunController : MonoBehaviour {
 
-  [SerializeField] private AK.Wwise.Event _wwOnShoot;
+  [SerializeField] protected AK.Wwise.Event _wwOnShoot;
 
   [field:SerializeField] 
   public Sprite InventorySprite { get; set; }
@@ -14,9 +14,6 @@ public class __GunController : MonoBehaviour {
 
   internal Ammo _ammo;
   internal Animator _animator;
-  
-  
-  
 
   [Serializable]
   public struct projectile {
@@ -40,12 +37,8 @@ public class __GunController : MonoBehaviour {
   virtual protected void OnShootStart() {}
   virtual protected void OnShootEnd() {}
   virtual protected void OnShootEndEmpty() {}
-  
 
-
-
-
-    private void Awake()
+  private void Awake()
   {
     _animator = GetComponent<Animator>();
     _firePointTransform = transform.Find("FirePoint");
