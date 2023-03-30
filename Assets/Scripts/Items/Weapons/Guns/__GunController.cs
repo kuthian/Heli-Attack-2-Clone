@@ -36,7 +36,7 @@ public class __GunController : MonoBehaviour {
 
   virtual protected void OnShootStart() {}
   virtual protected void OnShootEnd() {}
-  virtual protected void OnShootEndEmpty() {}
+  virtual protected void OnAmmoEmpty() {}
 
   private void Awake()
   {
@@ -48,7 +48,6 @@ public class __GunController : MonoBehaviour {
 
   private void OnEnable()
   {
-    //Debug.Log(HUDManager.ReloadBar);
     HUDManager.ReloadBar.SetCooldownTime(_cooldownTime);
     HUDManager.ReloadBar.SetTimeRemaining(0);
   }
@@ -82,7 +81,7 @@ public class __GunController : MonoBehaviour {
     if (GameManager.Paused) return;
 
     if (_onCooldown)
-    {    
+    {
       float timeRemaining = (float)(_cooldownOffTime - DateTime.Now).TotalSeconds;
       if (timeRemaining < 0)
       {
@@ -112,12 +111,11 @@ public class __GunController : MonoBehaviour {
       _onCooldown = true;
 
       _ammo.Remove(_ammoPerShot);
+      if (_ammo.Empty())
+      {
+        OnAmmoEmpty();
+      }
     }
-    if (_ammo.Empty())
-    {
-      OnShootEndEmpty();
-    }
-
   }
 
   private void FixedUpdate()
@@ -126,7 +124,6 @@ public class __GunController : MonoBehaviour {
     {
       _cooldownTimeRemaining -= Time.fixedDeltaTime;
     }
-    
   }
 
 }
