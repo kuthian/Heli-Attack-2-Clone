@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class __GunController : MonoBehaviour {
 
-  [SerializeField] private AK.Wwise.Event _wwOnShoot;
+  [SerializeField] protected AK.Wwise.Event _wwOnShoot;
 
   [field:SerializeField] 
   public Sprite InventorySprite { get; set; }
@@ -36,6 +36,7 @@ public class __GunController : MonoBehaviour {
 
   virtual protected void OnShootStart() {}
   virtual protected void OnShootEnd() {}
+  virtual protected void OnAmmoEmpty() {}
 
   private void Awake()
   {
@@ -47,7 +48,6 @@ public class __GunController : MonoBehaviour {
 
   private void OnEnable()
   {
-    Debug.Log(HUDManager.ReloadBar);
     HUDManager.ReloadBar.SetCooldownTime(_cooldownTime);
     HUDManager.ReloadBar.SetTimeRemaining(0);
   }
@@ -111,8 +111,11 @@ public class __GunController : MonoBehaviour {
       _onCooldown = true;
 
       _ammo.Remove(_ammoPerShot);
+      if (_ammo.Empty())
+      {
+        OnAmmoEmpty();
+      }
     }
-
   }
 
   private void FixedUpdate()
@@ -122,4 +125,5 @@ public class __GunController : MonoBehaviour {
       _cooldownTimeRemaining -= Time.fixedDeltaTime;
     }
   }
+
 }

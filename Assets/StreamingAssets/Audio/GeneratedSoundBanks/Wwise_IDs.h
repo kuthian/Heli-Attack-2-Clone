@@ -15,6 +15,10 @@ namespace AK
     {
         static const AkUniqueID WW_GAME_START = 3769215785U;
         static const AkUniqueID WW_RIFLE_SHOT = 2496926511U;
+        static const AkUniqueID WW_SHOTGUN_SHOT = 1587775315U;
+        static const AkUniqueID WW_UZI_SHOT_LOOP = 1852187988U;
+        static const AkUniqueID WW_UZI_STOP = 795925999U;
+        static const AkUniqueID WW_UZI_STOP_EMPTY = 3895319721U;
     } // namespace EVENTS
 
     namespace STATES
@@ -64,6 +68,11 @@ namespace AK
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID RIFLE = 4262674733U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID OUTDOOR_VERB = 1211327461U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

@@ -7,6 +7,7 @@ public class UziController : __GunController {
 
   [SerializeField] private AK.Wwise.Event _wwShootStart;
   [SerializeField] private AK.Wwise.Event _wwShootEnd;
+  [SerializeField] private AK.Wwise.Event _wwAmmoEmpty;
 
   override protected void OnShootStart()
   {
@@ -16,6 +17,11 @@ public class UziController : __GunController {
   override protected void OnShootEnd()
   {
     _wwShootEnd.Post(gameObject);
+  }
+
+  override protected void OnAmmoEmpty()
+  {
+    _wwAmmoEmpty.Post(gameObject);
   }
 
   override protected void Shoot()
