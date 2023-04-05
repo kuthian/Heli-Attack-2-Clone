@@ -56,7 +56,7 @@ public class EnemyManager : MonoBehaviour {
   void HandleOnHealthZero()
   {
     _enemies.RemoveAll(HasHealthZero);
-    HUDManager.HeliCount.Add(1);
+    HUDManager.ScoreCount.Add(1);
     CreateEnemyRandom();
   }
 

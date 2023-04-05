@@ -12,7 +12,7 @@ public class HUDManager : Singleton<HUDManager> {
   private InventoryHUD inventoryHUD;
 
   [SerializeField]
-  private HeliCountHUD heliCountHUD;
+  private ScoreCount scoreCount;
 
   public static HealthBar HealthBar {
     get {
@@ -32,9 +32,9 @@ public class HUDManager : Singleton<HUDManager> {
     }
   }
 
-  public static HeliCountHUD HeliCount {
+  public static ScoreCount ScoreCount {
     get {
-      return Instance.heliCountHUD;
+      return Instance.scoreCount;
     }
   }
 
