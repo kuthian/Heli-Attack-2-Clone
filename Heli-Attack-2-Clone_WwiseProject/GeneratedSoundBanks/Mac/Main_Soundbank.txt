@@ -1,6 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2496926511	ww_rifle_shot			\Default Work Unit\ww_rifle_shot	
+	795925999	ww_uzi_stop			\Gunfire\ww_uzi_stop	
+	1587775315	ww_shotgun_shot			\Gunfire\ww_shotgun_shot	
+	1852187988	ww_uzi_shot_loop			\Gunfire\ww_uzi_shot_loop	
+	2496926511	ww_rifle_shot			\Gunfire\ww_rifle_shot	
 	3769215785	ww_game_start			\Default Work Unit\ww_game_start	
+	3895319721	ww_uzi_stop_empty			\Gunfire\ww_uzi_stop_empty	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	534996730	gameplay_score			\Default Work Unit\gameplay_score	
@@ -20,9 +24,10 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2398231425	score			\Default Work Unit\score	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	2701525	test_2_b	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\test_2_b_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\Second Playlist\b\test_2_b		2932428
-	77780979	test_1_a	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\test_1_a_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\First Playlist\a\test_1_a		3351340
-	322712021	ShootingClip	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\ShootingClip_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Rifle\ShootingClip		228816
-	670829299	test_2_a	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\test_2_a_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\Second Playlist\a\test_2_a		2932428
-	1029126601	test_1_b	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\test_1_b_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\First Playlist\b\test_1_b		3351340
+	51274058	rifle_fire_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\rifle_fire_01_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Rifle\rifle_fire_01		295452
+	659578000	shotgun_shot_03	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\shotgun_shot_03_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_03		243044
+	772319303	shotgun_shot_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\shotgun_shot_01_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_01		180436
+	942672928	uzi_empty	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\uzi_empty_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Empty Guns\uzi_empty		24680
+	1046341244	shotgun_shot_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\shotgun_shot_02_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_02		201544
+	1059951826	uzi_spray	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\SFX\uzi_spray_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Uzi\uzi_spray		806220
 

@@ -166,15 +166,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02a5ea08ac621b246b595db893fab4a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _wwOnShoot:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   <InventorySprite>k__BackingField: {fileID: 21300000, guid: ad163887787454442bbe7db6dda6b465, type: 3}
   _projectile:
     prefab: {fileID: 1994916729556804204, guid: 3db81ebe9647a914988c4d52bc0cb240, type: 3}
     damage: 3
-    speed: 2
+    speed: 4
     maxLifetime: 10
   _ammoPerShot: 2
   _cooldownTime: 0.1
   _secondFirePointTransform: {fileID: 5708294885215499212}
+  _wwShootStart:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 99e3976c6bd5c5d4f9ecd7686a39eaed, type: 2}
+  _wwShootEnd:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 079706faee3c9b64683f7fb7b7ac1e34, type: 2}
+  _wwShootEndEmpty:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9a9e7d61dbacdb24382e906ac5fcc902, type: 2}
 --- !u!4 &4618725055357171477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 795742884974927923, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
