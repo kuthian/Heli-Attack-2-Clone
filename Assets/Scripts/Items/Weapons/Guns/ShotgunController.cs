@@ -12,7 +12,6 @@ public class ShotgunController : __GunController {
     Vector3 dStep = _firePointTransform.up * _dStepScalar;
     Vector3 direction = _firePointTransform.right - dStep * (_ammoPerShot / 2);;
 
-
     for (int i = 0; i < _ammoPerShot; i++)
     {
       InstantiateProjectile( position, direction );
