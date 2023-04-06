@@ -154,7 +154,7 @@ MonoBehaviour:
   _wwOnShoot:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f442fb92a7c264346b9737cd8657ff38, type: 2}
   <InventorySprite>k__BackingField: {fileID: 21300000, guid: 654e972ed66035e40953a11645427a36, type: 3}
   _projectile:
     prefab: {fileID: 3721999795625928666, guid: 6b9221894aa7e3544965bcc842b47011, type: 3}
@@ -165,8 +165,3 @@ MonoBehaviour:
   _cooldownTime: 3
   _pStepScalar: 0.1
   _dStepScalar: 0.075
-  _wwShootShotgun:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: f442fb92a7c264346b9737cd8657ff38, type: 2}
-  _shotgunAnimator: {fileID: 350801742210759619}

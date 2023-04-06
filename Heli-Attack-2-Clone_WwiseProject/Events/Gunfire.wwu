@@ -76,6 +76,84 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ww_bazooka_rocket" ID="{8FBF0CCB-ED4C-4A60-B281-8BB259B4FA0F}">
+					<ChildrenList>
+						<Action Name="" ID="{04030E7F-A7A5-4C36-A4BF-E9E6743AF886}" ShortID="991507679">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bazooka Shoot" ID="{40AEB44D-8938-4657-86DA-8676B214FC86}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{42F69506-07DA-4826-8448-15D8D2136101}" ShortID="710888040">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="missile_cruise" ID="{949F1A67-CFF1-401E-9885-736ADF37E218}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AC82FDF1-4510-4F86-9F31-F8AE32F6DF1B}" ShortID="1014841007">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64" Value="90">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{EB4C3DD7-A2E5-4CF1-A9BD-FA0ADA38056A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-90"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="missile_cruise" ID="{949F1A67-CFF1-401E-9885-736ADF37E218}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ww_rocket_impact" ID="{86B7123C-A370-4045-B076-669EF31A5079}">
+					<ChildrenList>
+						<Action Name="" ID="{32AE90DB-0C36-4BEA-8879-7160240C44B0}" ShortID="352767341">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="bazooka Impact" ID="{2E88FADA-7A3F-41B7-961D-B4F64DCD7EB7}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F6016543-C944-4FD9-90C5-6E1B41A42AE8}" ShortID="768713870">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bazooka Shoot" ID="{40AEB44D-8938-4657-86DA-8676B214FC86}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1326C23F-93F4-4A53-BB01-CDE027133093}" ShortID="974583168">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="missile_cruise" ID="{949F1A67-CFF1-401E-9885-736ADF37E218}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

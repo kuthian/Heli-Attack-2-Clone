@@ -10,6 +10,7 @@ TagManager:
   - EnemyProjectile
   - PlayerProjectile
   - PlayerTagAlias
+  - BulletLimit
   layers:
   - Default
   - TransparentFX

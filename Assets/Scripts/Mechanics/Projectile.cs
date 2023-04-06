@@ -46,13 +46,11 @@ public class Projectile : MonoBehaviour {
       other.gameObject.SendMessage("Damage", Damage);
       Destroy(gameObject);
     }
-  }
-
-  void OnTriggerExit2D (Collider2D other)
-  {
-    if (other.CompareTag("GameArea"))
+    if (other.CompareTag("BulletLimit"))
     {
       Destroy(gameObject);
     }
-  }
+
+    }
+
 }

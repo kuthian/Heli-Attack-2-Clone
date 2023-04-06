@@ -13,8 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID WW_BAZOOKA_ROCKET = 4268654734U;
         static const AkUniqueID WW_GAME_START = 3769215785U;
         static const AkUniqueID WW_RIFLE_SHOT = 2496926511U;
+        static const AkUniqueID WW_ROCKET_IMPACT = 3440676915U;
         static const AkUniqueID WW_SHOTGUN_SHOT = 1587775315U;
         static const AkUniqueID WW_UZI_SHOT_LOOP = 1852187988U;
         static const AkUniqueID WW_UZI_STOP = 795925999U;
@@ -64,6 +66,8 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID BAZOOKAIMPACT = 4071838224U;
+        static const AkUniqueID BAZOOKASHOT = 717903094U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID RIFLE = 4262674733U;

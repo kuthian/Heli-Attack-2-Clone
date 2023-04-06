@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1113341287">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3512441054">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,11 +19,23 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="65496275">
+		<SoundBank Id="2228651116" Language="SFX" Hash="1138694290">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="4268654734" Name="ww_bazooka_rocket" ObjectPath="\Events\Gunfire\ww_bazooka_rocket" MaxAttenuation="200." DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="698990276" Language="SFX">
+							<ShortName>missile_cruise_01.wav</ShortName>
+							<Path>SFX\missile_cruise_01_10C4C929.wem</Path>
+						</File>
+						<File Id="753735373" Language="SFX">
+							<ShortName>bazooka_fire_01.wav</ShortName>
+							<Path>SFX\bazooka_fire_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3769215785" Name="ww_game_start" ObjectPath="\Events\Default Work Unit\ww_game_start" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}">
@@ -45,6 +57,14 @@
 						<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 					</AuxBusSends>
 				</Event>
+				<Event Id="3440676915" Name="ww_rocket_impact" ObjectPath="\Events\Gunfire\ww_rocket_impact" MaxAttenuation="200." DurationType="OneShot" DurationMin="2.705728" DurationMax="2.950617">
+					<IncludedMemoryFiles>
+						<File Id="388277586" Language="SFX">
+							<ShortName>missile_impact_01.wav</ShortName>
+							<Path>SFX\missile_impact_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1587775315" Name="ww_shotgun_shot" ObjectPath="\Events\Gunfire\ww_shotgun_shot" DurationType="OneShot" DurationMin="0.860473" DurationMax="1.303356">
 					<IncludedMemoryFiles>
 						<File Id="659578000" Language="SFX">
@@ -60,6 +80,9 @@
 							<Path>SFX\shotgun_shot_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\ww_uzi_shot_loop" DurationType="OneShot" DurationMin="4.198729" DurationMax="4.198729">
 					<IncludedMemoryFiles>

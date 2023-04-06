@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 92056171148992293, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Name
-      value: RocketLauncherProjectile
+      value: BazookaProjectile
       objectReference: {fileID: 0}
     - target: {fileID: 92056171148992293, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_IsActive
@@ -106,3 +106,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0.021191986, y: 0.00012053298}
   m_Size: {x: 0.3855955, y: 0.1983847}
   m_Direction: 1
+--- !u!114 &8639170589788329181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441856767691234024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0083d74413501be4b949cd1a14fc446a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketShoot:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ccf5d09d319e5484995c650a9ccffe2d, type: 2}
+  rocketImpact:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 943e89a95e8a86a4bb58b16f462896c2, type: 2}

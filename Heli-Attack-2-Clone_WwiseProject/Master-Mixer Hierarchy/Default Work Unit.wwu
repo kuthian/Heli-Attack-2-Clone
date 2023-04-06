@@ -24,6 +24,30 @@
 							</ReferenceList>
 							<ObjectLists/>
 						</AuxBus>
+						<Folder Name="Bazooka" ID="{45B30440-B9C6-4548-8180-B7C05A52F615}" ShortID="324496171">
+							<ChildrenList>
+								<Bus Name="BazookaImpact" ID="{01E000E2-FAA0-46AA-A05A-6D1A4F7D9B21}">
+									<PropertyList>
+										<Property Name="RecoveryTime" Type="Real64" Value="0"/>
+									</PropertyList>
+									<ObjectLists/>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="BazookaShot" ID="{EE2E1B84-0473-4B65-BFC1-188C707171A1}"/>
+											<DuckingParam>
+												<Volume>-3</Volume>
+												<FadeInTime>0.100000001490116</FadeInTime>
+												<FadeOutTime>0.100000001490116</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
+								<Bus Name="BazookaShot" ID="{EE2E1B84-0473-4B65-BFC1-188C707171A1}">
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
