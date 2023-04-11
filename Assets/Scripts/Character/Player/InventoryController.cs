@@ -60,7 +60,9 @@ public class InventoryController : MonoBehaviour {
   {
     int index = SelectedWeaponIndex();
     if ( NoWeaponSelected != index ) {
-      transform.GetChild(index).gameObject.SetActive(false);
+      var active_weapon = transform.GetChild(index).gameObject;
+      active_weapon.SetActive(false);
+      active_weapon.GetComponent<Ammo>().OnAmmoChanged -= HUDManager.Inventory.SetAmmoCount;
     }
     weapon.SetActive(true);
     HUDManager.Inventory.SetActiveWeapon( weapon.GetComponent<__GunController>().InventorySprite );

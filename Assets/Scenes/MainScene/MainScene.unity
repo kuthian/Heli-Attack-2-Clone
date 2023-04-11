@@ -929,7 +929,7 @@ MonoBehaviour:
   healthBar: {fileID: 646409434}
   reloadBar: {fileID: 551751298}
   inventoryHUD: {fileID: 868877513}
-  heliCountHUD: {fileID: 1506342466}
+  scoreCount: {fileID: 1506342466}
 --- !u!1 &401207196
 GameObject:
   m_ObjectHideFlags: 0
@@ -5862,7 +5862,7 @@ GameObject:
   - component: {fileID: 1506342465}
   - component: {fileID: 1506342466}
   m_Layer: 5
-  m_Name: HeliCount
+  m_Name: ScoreCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5902,7 +5902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffef9b2ae62cb2c4093b1257ce6bd3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heliCountText: {fileID: 1555301}
+  scoreCountText: {fileID: 1555301}
 --- !u!1 &1525434482
 GameObject:
   m_ObjectHideFlags: 0
