@@ -5,15 +5,16 @@ using UnityEngine;
 
 public class __GunController : MonoBehaviour {
 
-  [SerializeField] protected AK.Wwise.Event _wwOnShoot;
+  [SerializeField]
+  protected AK.Wwise.Event _wwOnShoot;
 
   [field:SerializeField] 
   public Sprite InventorySprite { get; set; }
 
   public bool Steady { get; set; } = false;
 
-  internal Ammo _ammo;
-  internal Animator _animator;
+  internal protected Ammo _ammo;
+  internal protected Animator _animator;
 
   [Serializable]
   public struct projectile {
@@ -50,6 +51,7 @@ public class __GunController : MonoBehaviour {
   {
     HUDManager.ReloadBar.SetCooldownTime(_cooldownTime);
     HUDManager.ReloadBar.SetTimeRemaining(0);
+    _animator.SetBool("OnCooldown", _onCooldown);
   }
 
   private void OnDisable()
@@ -86,6 +88,7 @@ public class __GunController : MonoBehaviour {
       if (timeRemaining < 0)
       {
         _onCooldown = false;
+        _animator.SetBool("OnCooldown", _onCooldown);
         timeRemaining = 0;
       }
       HUDManager.ReloadBar.SetTimeRemaining(timeRemaining);
@@ -108,6 +111,7 @@ public class __GunController : MonoBehaviour {
 
       _cooldownOffTime = DateTime.Now.AddSeconds(_cooldownTime);
       _cooldownTimeRemaining = _cooldownTime;
+      _animator.SetBool("OnCooldown", true);
       _onCooldown = true;
 
       _ammo.Remove(_ammoPerShot);

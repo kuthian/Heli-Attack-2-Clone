@@ -6,7 +6,7 @@ public class ShotgunController : __GunController {
   [SerializeField] private float _dStepScalar = 0.075f;
 
   override protected void Shoot()
-  {     
+  {
     Vector3 pStep = _firePointTransform.up * _pStepScalar;
     Vector3 position = _firePointTransform.position - pStep * (_ammoPerShot / 2);
     Vector3 dStep = _firePointTransform.up * _dStepScalar;
