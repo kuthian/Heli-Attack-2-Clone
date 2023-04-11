@@ -12,6 +12,12 @@ public class Projectile : MonoBehaviour {
   [field:HideInInspector]
   public float MaxLifetimeSeconds { get; set; } = 5;
 
+  [SerializeField]
+  private AK.Wwise.Event _wwOnImpact;
+
+  [SerializeField]
+  private AK.Wwise.Event _wwOnLeaveGameArea;
+
   private void Awake()
   {
     _rb = GetComponent<Rigidbody2D>();
@@ -24,25 +30,34 @@ public class Projectile : MonoBehaviour {
     Destroy(gameObject, MaxLifetimeSeconds);
   }
 
+  private void PlayImpactSound()
+  {
+    if (_wwOnImpact.IsValid()) {
+      _wwOnImpact.Post(gameObject);
+    }
+  }
+
   void OnTriggerEnter2D (Collider2D other)
   {
     if (other.CompareTag("Map"))
     {
+      // Any Projectile hits a map object
+      PlayImpactSound();
       Destroy(gameObject);
     }
-    if (other.CompareTag("Enemy")) 
-    {
-      Destroy(gameObject);
-    }
+    else 
     if (CompareTag("EnemyProjectile") && other.CompareTag("Player")) 
     {
       // Enemy projectile hits Player
+      PlayImpactSound();
       other.gameObject.SendMessage("Damage", Damage);
       Destroy(gameObject);
     }
+    else 
     if (CompareTag("PlayerProjectile") && other.CompareTag("Enemy")) 
     {
       // Player projectile hits Enemy
+      PlayImpactSound();
       other.gameObject.SendMessage("Damage", Damage);
       Destroy(gameObject);
     }
@@ -52,6 +67,9 @@ public class Projectile : MonoBehaviour {
   {
     if (other.CompareTag("GameArea"))
     {
+      if (_wwOnLeaveGameArea.IsValid()) {
+        _wwOnLeaveGameArea.Post(gameObject);
+      }
       Destroy(gameObject);
     }
   }
