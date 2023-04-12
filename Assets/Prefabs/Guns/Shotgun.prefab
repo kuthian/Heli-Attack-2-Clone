@@ -16,6 +16,10 @@ PrefabInstance:
       value: 21
       objectReference: {fileID: 0}
     - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+      propertyPath: _infiniteAmmo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: _startingAmmo
       value: 21
       objectReference: {fileID: 0}
