@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\Heli-Attack-2-Clone_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1113341287">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2960114123">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,15 +19,27 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="65496275">
+		<SoundBank Id="2228651116" Language="SFX" Hash="299874432">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3769215785" Name="ww_game_start" ObjectPath="\Events\Default Work Unit\ww_game_start" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="401330989" Language="SFX">
+							<ShortName>BemmyMusic.wav</ShortName>
+							<Path>SFX\BemmyMusic_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}">
-							<Children/>
+							<Children>
+								<SwitchContainer SwitchValue="{403F8205-A9AD-492F-AEBC-449397B95617}">
+									<Media>
+										<File Id="401330989"/>
+									</Media>
+								</SwitchContainer>
+							</Children>
 						</SwitchContainer>
 					</SwitchContainers>
 					<ActionSetState>
@@ -60,6 +72,9 @@
 							<Path>SFX\shotgun_shot_02_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<AuxBusSends>
+						<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
+					</AuxBusSends>
 				</Event>
 				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\ww_uzi_shot_loop" DurationType="OneShot" DurationMin="4.198729" DurationMax="4.198729">
 					<IncludedMemoryFiles>
@@ -82,6 +97,12 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="401330989" Language="SFX">
+					<ShortName>BemmyMusic.wav</ShortName>
+					<Path>SFX\BemmyMusic_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="2398231425" Name="score" ObjectPath="\Game Parameters\Default Work Unit\score"/>
 			</GameParameters>

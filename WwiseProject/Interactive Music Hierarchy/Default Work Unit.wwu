@@ -48,6 +48,11 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-25</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -60,7 +65,7 @@
 									<ChildrenList>
 										<MusicSegment Name="a" ID="{0DDC53DF-0108-479B-BD4C-95F5E46CDD31}" ShortID="1065388637">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="17454.5625"/>
+												<Property Name="EndPosition" Type="Real64" Value="259249.682539683"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -70,6 +75,58 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="BemmyMusic" ID="{5829A6C2-4586-461F-A964-A42F41B71C9E}" ShortID="742931320">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="BemmyMusic" ID="{E3376681-DF09-475C-99C6-0116998BBBF6}">
+															<Language>SFX</Language>
+															<AudioFile>BemmyMusic.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="401330989"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{FC531517-385B-4426-BC19-128D3C420815}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{8DDB0880-497A-493B-B720-74302045D5B2}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="BemmyMusic" ID="{5155A3DA-1D00-485D-AF64-CC5523FAD5CF}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="259249.682539683"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="BemmyMusic" ID="{E3376681-DF09-475C-99C6-0116998BBBF6}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="Cues">
 													<Reference>
@@ -82,7 +139,7 @@
 															<MusicCue Name="Exit Cue" ID="{B97F5D59-8E01-49DB-982D-A7D561DD5AE8}">
 																<PropertyList>
 																	<Property Name="CueType" Type="int16" Value="1"/>
-																	<Property Name="TimeMs" Type="Real64" Value="15272.7272727273"/>
+																	<Property Name="TimeMs" Type="Real64" Value="84026.6746812639"/>
 																</PropertyList>
 															</MusicCue>
 														</Local>
@@ -92,7 +149,7 @@
 										</MusicSegment>
 										<MusicSegment Name="b" ID="{E1185AD7-BC2B-4734-AF79-1737E530930C}" ShortID="516780503">
 											<PropertyList>
-												<Property Name="EndPosition" Type="Real64" Value="17454.5625"/>
+												<Property Name="EndPosition" Type="Real64" Value="259249.682539683"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -102,6 +159,58 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
 												</Reference>
 											</ReferenceList>
+											<ChildrenList>
+												<MusicTrack Name="BemmyMusic" ID="{B1FAB60F-7C94-49D1-9269-6B6BC1D35242}" ShortID="225067230">
+													<ReferenceList>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="BemmyMusic" ID="{7621BDAB-23A5-438C-9027-2FADD7550768}">
+															<Language>SFX</Language>
+															<AudioFile>BemmyMusic.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="401330989"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<TransitionList>
+														<MusicTransition Name="Root" ID="{348F135F-6F13-4E39-AA30-EE8DD4F1B091}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</TransitionList>
+													<ObjectLists>
+														<ObjectList Name="Sequences">
+															<Reference>
+																<Local>
+																	<MusicTrackSequence Name="" ID="{58CE4827-F7C6-4A4A-B8FB-FDF3446353BA}">
+																		<ObjectLists>
+																			<ObjectList Name="Clips">
+																				<Reference>
+																					<Local>
+																						<MusicClip Name="BemmyMusic" ID="{7AC9E762-0FEE-4597-A2DE-71EAFB3BD978}">
+																							<PropertyList>
+																								<Property Name="EndTrimOffset" Type="Real64" Value="259249.682539683"/>
+																								<Property Name="FadeInMode" Type="int16" Value="0"/>
+																								<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																							</PropertyList>
+																							<AudioSourceRef Name="BemmyMusic" ID="{7621BDAB-23A5-438C-9027-2FADD7550768}"/>
+																						</MusicClip>
+																					</Local>
+																				</Reference>
+																			</ObjectList>
+																		</ObjectLists>
+																	</MusicTrackSequence>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</MusicTrack>
+											</ChildrenList>
 											<ObjectLists>
 												<ObjectList Name="Cues">
 													<Reference>

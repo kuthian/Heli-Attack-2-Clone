@@ -5,7 +5,7 @@ using UnityEngine;
 public class MusicInitializer : MonoBehaviour
 {
   [SerializeField] private AK.Wwise.Event _wwGameStart;
-  
+
   void Awake()
   {
     DontDestroyOnLoad(this.gameObject);
