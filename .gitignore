@@ -61,11 +61,12 @@ crashlytics-build.properties
 ## ---------------- ##
 
 # project stuff
-WWiseProject/.cache/
-WWiseProject/*.prof
+WwiseProject/.cache/
+WwiseProject/*.prof
 WwiseProject/WwiseProject.*.validationcache
 WwiseProject/WwiseProject.*.wsettings
 WwiseProject/**/*.akd
+WwiseProject/GeneratedSoundBanks/*
 
 # build stuff (unsure?)
 # Assets/Wwise/Deployment/Plugins/Windows/**/*.meta

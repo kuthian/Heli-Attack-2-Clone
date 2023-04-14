@@ -6,7 +6,10 @@ public class ItemAssets : MonoBehaviour {
 
   public static ItemAssets i {
     get {
-      if (_i == null) _i = Instantiate(Resources.Load<ItemAssets>("ItemAssets"));
+      _i = (ItemAssets) FindObjectOfType(typeof(ItemAssets));
+      if (_i == null) {
+        _i = Instantiate(Resources.Load<ItemAssets>("ItemAssets"));
+      }
       return _i;
     }
   }

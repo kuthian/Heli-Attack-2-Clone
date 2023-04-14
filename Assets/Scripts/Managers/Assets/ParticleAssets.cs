@@ -6,7 +6,12 @@ public class ParticleAssets : MonoBehaviour {
 
   public static ParticleAssets i {
     get {
-      if (_i == null) _i = Instantiate(Resources.Load<ParticleAssets>("ParticleAssets"));
+      if (_i == null) {
+        _i = (ParticleAssets) FindObjectOfType(typeof(ParticleAssets));
+        if (_i == null) {
+          _i = Instantiate(Resources.Load<ParticleAssets>("ParticleAssets"));
+        }
+      } 
       return _i;
     }
   }
@@ -25,5 +30,5 @@ public class ParticleAssets : MonoBehaviour {
   private ParticleSystem _explodedHeliEffect;
 
   public ParticleSystem ExplodedHeliEffect => _explodedHeliEffect;
-
+ 
 }
