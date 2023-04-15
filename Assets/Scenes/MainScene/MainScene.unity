@@ -2585,6 +2585,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ca6469163a8764885f14a933d26107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _state:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 51a9db225da3bbc4b958974f91cde201, type: 2}
 --- !u!4 &944810295
 Transform:
   m_ObjectHideFlags: 0
