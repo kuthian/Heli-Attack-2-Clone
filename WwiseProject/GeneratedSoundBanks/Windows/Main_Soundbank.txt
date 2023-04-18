@@ -1,34 +1,47 @@
 Event	ID	Name			Wwise Object Path	Notes
 	795925999	ww_uzi_stop			\Gunfire\ww_uzi_stop	
 	1587775315	ww_shotgun_shot			\Gunfire\ww_shotgun_shot	
+	1650400503	ww_shotgun_shell			\Reloads\ww_shotgun_shell	
+	1701460811	ww_shotgun_cock			\Reloads\ww_shotgun_cock	
 	1852187988	ww_uzi_shot_loop			\Gunfire\ww_uzi_shot_loop	
+	2045634255	ww_music			\Default Work Unit\ww_music	
 	2496926511	ww_rifle_shot			\Gunfire\ww_rifle_shot	
-	3769215785	ww_game_start			\Default Work Unit\ww_game_start	
 	3895319721	ww_uzi_stop_empty			\Gunfire\ww_uzi_stop_empty	
-
-Switch Group	ID	Name			Wwise Object Path	Notes
-	534996730	gameplay_score			\Default Work Unit\gameplay_score	
-
-Switch	ID	Name	Switch Group			Notes
-	1510941265	switch_1	gameplay_score			
-	1510941266	switch_2	gameplay_score			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	762757699	gameplay_state			\Default Work Unit\gameplay_state	
 
 State	ID	Name	State Group			Notes
 	89505537	gameplay	gameplay_state			
+	319258907	paused	gameplay_state			
 	748895195	None	gameplay_state			
+	2005704188	main_menu	gameplay_state			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	552086483	paused	gameplay_state	\Interactive Music Hierarchy\Default Work Unit\Master Music Container		
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	2398231425	score			\Default Work Unit\score	
+	72790338	low_health			\Default Work Unit\low_health	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	51274058	rifle_fire_01	C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\rifle_fire_01_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Rifle\rifle_fire_01		295452
-	401330989	BemmyMusic	C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\BemmyMusic_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Game Music Container\Gameplay\First Playlist\a\BemmyMusic		45731708
-	659578000	shotgun_shot_03	C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\shotgun_shot_03_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_03		243044
-	772319303	shotgun_shot_01	C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\shotgun_shot_01_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_01		180436
-	942672928	uzi_empty	C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\uzi_empty_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Empty Guns\uzi_empty		24680
-	1046341244	shotgun_shot_02	C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\shotgun_shot_02_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_02		201544
-	1059951826	uzi_spray	C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\uzi_spray_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Uzi\uzi_spray		806220
+	12940122	shotgun_load_shell_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\shotgun_load_shell_02_10C4C929.wem		\Actor-Mixer Hierarchy\Reloads\Shotgun\Shotgun Shell\shotgun_load_shell_02		52372
+	21967293	gameplay_arp	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\gameplay_arp_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay Arp\gameplay_arp		3544680
+	51274058	rifle_fire_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\rifle_fire_01_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Rifle\rifle_fire_01		295452
+	183273539	gameplay_lead	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\gameplay_lead_var_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay\gameplay_lead		3544680
+	186017570	gameplay_lead	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\gameplay_lead_var_02_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay\gameplay_lead		3544680
+	235667579	shotgun_cock	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\shotgun_cock_10C4C929.wem		\Actor-Mixer Hierarchy\Reloads\Shotgun\Shotgun Cock\shotgun_cock		107760
+	253870176	shotgun_load_shell_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\shotgun_load_shell_01_10C4C929.wem		\Actor-Mixer Hierarchy\Reloads\Shotgun\Shotgun Shell\shotgun_load_shell_01		43144
+	286259284	gameplay_hats	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\gameplay_hats_var_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay\gameplay_hats		3544680
+	348128673	gameplay_drums	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\gameplay_drums_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay\gameplay_drums		3544680
+	520519977	gameplay_arp	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\gameplay_arp_var_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay Arp\gameplay_arp		3544680
+	653811676	gameplay_bass	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\gameplay_bass_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay\gameplay_bass		3544680
+	659578000	shotgun_shot_03	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\shotgun_shot_03_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_03		243044
+	694052461	gameplay_hats	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\gameplay_hats_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay\gameplay_hats		3544680
+	772319303	shotgun_shot_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\shotgun_shot_01_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_01		180436
+	882975028	gameplay_lead	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\gameplay_lead_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay\gameplay_lead		3544680
+	913002348	main_menu	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\main_menu_var_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Main Menu Music Playlist\Main Menu\main_menu		3544680
+	942672928	uzi_empty	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\uzi_empty_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Empty Guns\uzi_empty		24680
+	1029407437	main_menu	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\main_menu_117bpm_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Main Menu Music Playlist\Main Menu\main_menu		3150836
+	1046341244	shotgun_shot_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\shotgun_shot_02_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_02		201544
+	1059951826	uzi_spray	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\uzi_spray_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Uzi\uzi_spray		806220
 

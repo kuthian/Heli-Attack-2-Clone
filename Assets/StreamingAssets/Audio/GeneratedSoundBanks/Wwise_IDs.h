@@ -13,8 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID WW_GAME_START = 3769215785U;
+        static const AkUniqueID WW_MUSIC = 2045634255U;
         static const AkUniqueID WW_RIFLE_SHOT = 2496926511U;
+        static const AkUniqueID WW_SHOTGUN_COCK = 1701460811U;
+        static const AkUniqueID WW_SHOTGUN_SHELL = 1650400503U;
         static const AkUniqueID WW_SHOTGUN_SHOT = 1587775315U;
         static const AkUniqueID WW_UZI_SHOT_LOOP = 1852187988U;
         static const AkUniqueID WW_UZI_STOP = 795925999U;
@@ -30,7 +32,9 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID GAMEPLAY = 89505537U;
+                static const AkUniqueID MAIN_MENU = 2005704188U;
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID PAUSED = 319258907U;
             } // namespace STATE
         } // namespace GAMEPLAY_STATE
 
@@ -53,6 +57,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID LOW_HEALTH = 72790338U;
         static const AkUniqueID SCORE = 2398231425U;
     } // namespace GAME_PARAMETERS
 

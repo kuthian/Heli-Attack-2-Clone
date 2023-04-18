@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1ED61334-08D4-42AE-AC0A-D2677D2C444D}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Reloads" ID="{1ED61334-08D4-42AE-AC0A-D2677D2C444D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="ww_shotgun_shell" ID="{4C9BB828-C71E-42FA-9294-6A959FB7C4E0}">
+					<ChildrenList>
+						<Action Name="" ID="{B32EF726-2DA0-4BA1-80A0-C2A3600E382C}" ShortID="771909759">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shotgun Shell" ID="{BEC7CC07-9CEB-4EC2-8FCF-AD1120FAB467}" WorkUnitID="{5F6D68B5-CBED-404C-88EA-BACAB96B774C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ww_shotgun_cock" ID="{E5002EAD-102B-4A8E-8B15-7C89C17DBE70}">
+					<ChildrenList>
+						<Action Name="" ID="{C0233D41-0F15-473A-80FC-0F737929BADA}" ShortID="41012511">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Shotgun Cock" ID="{7CCBAAF9-1C75-47A3-852F-F886849564A0}" WorkUnitID="{5F6D68B5-CBED-404C-88EA-BACAB96B774C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

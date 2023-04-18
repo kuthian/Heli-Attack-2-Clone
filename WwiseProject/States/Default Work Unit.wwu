@@ -7,6 +7,8 @@
 					<ChildrenList>
 						<State Name="None" ID="{693A9CBB-4702-4795-A426-08D6AF509BEC}"/>
 						<State Name="gameplay" ID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
+						<State Name="paused" ID="{95491A7E-01AC-4766-A593-BA6FA8AC0FFD}"/>
+						<State Name="main_menu" ID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

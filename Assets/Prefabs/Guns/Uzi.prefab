@@ -187,7 +187,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 079706faee3c9b64683f7fb7b7ac1e34, type: 2}
-  _wwShootEndEmpty:
+  _wwAmmoEmpty:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 9a9e7d61dbacdb24382e906ac5fcc902, type: 2}
