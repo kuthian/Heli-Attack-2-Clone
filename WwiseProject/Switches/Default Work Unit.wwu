@@ -11,31 +11,6 @@
 						<Switch Name="switch_2" ID="{6487540E-EA87-44B4-B788-66529BE069FE}"/>
 						<Switch Name="switch_1" ID="{403F8205-A9AD-492F-AEBC-449397B95617}"/>
 					</ChildrenList>
-					<SwitchOnRTPC>
-						<GameParameterRef Name="score" ID="{22942617-D37D-453B-B701-97737750A3AE}"/>
-						<Curve Name="" ID="{38908F0D-27C0-4DB3-BBC6-ECD81B4CCBF7}">
-							<PropertyList>
-								<Property Name="Flags" Type="int32" Value="65537"/>
-							</PropertyList>
-							<PointList>
-								<Point>
-									<XPos>0</XPos>
-									<YPos>2</YPos>
-									<Flags>5</Flags>
-								</Point>
-								<Point>
-									<XPos>5</XPos>
-									<YPos>1</YPos>
-									<Flags>0</Flags>
-								</Point>
-								<Point>
-									<XPos>10</XPos>
-									<YPos>1</YPos>
-									<Flags>37</Flags>
-								</Point>
-							</PointList>
-						</Curve>
-					</SwitchOnRTPC>
 				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>

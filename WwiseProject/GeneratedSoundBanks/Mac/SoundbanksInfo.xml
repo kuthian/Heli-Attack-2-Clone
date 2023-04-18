@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2960114123">
+		<SoundBank Id="1355168291" Language="SFX" Hash="20373357">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,31 +19,94 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="299874432">
+		<SoundBank Id="2228651116" Language="SFX" Hash="2936996265">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3769215785" Name="ww_game_start" ObjectPath="\Events\Default Work Unit\ww_game_start" DurationType="Infinite">
+				<Event Id="2045634255" Name="ww_music" ObjectPath="\Events\Default Work Unit\ww_music" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="401330989" Language="SFX">
-							<ShortName>BemmyMusic.wav</ShortName>
-							<Path>SFX\BemmyMusic_D79FB2B7.wem</Path>
+						<File Id="21967293" Language="SFX">
+							<ShortName>gameplay_arp.wav</ShortName>
+							<Path>SFX\gameplay_arp_D79FB2B7.wem</Path>
+						</File>
+						<File Id="183273539" Language="SFX">
+							<ShortName>gameplay_lead_var_01.wav</ShortName>
+							<Path>SFX\gameplay_lead_var_01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="186017570" Language="SFX">
+							<ShortName>gameplay_lead_var_02.wav</ShortName>
+							<Path>SFX\gameplay_lead_var_02_D79FB2B7.wem</Path>
+						</File>
+						<File Id="286259284" Language="SFX">
+							<ShortName>gameplay_hats_var_01.wav</ShortName>
+							<Path>SFX\gameplay_hats_var_01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="348128673" Language="SFX">
+							<ShortName>gameplay_drums.wav</ShortName>
+							<Path>SFX\gameplay_drums_D79FB2B7.wem</Path>
+						</File>
+						<File Id="520519977" Language="SFX">
+							<ShortName>gameplay_arp_var_01.wav</ShortName>
+							<Path>SFX\gameplay_arp_var_01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="653811676" Language="SFX">
+							<ShortName>gameplay_bass.wav</ShortName>
+							<Path>SFX\gameplay_bass_D79FB2B7.wem</Path>
+						</File>
+						<File Id="694052461" Language="SFX">
+							<ShortName>gameplay_hats.wav</ShortName>
+							<Path>SFX\gameplay_hats_D79FB2B7.wem</Path>
+						</File>
+						<File Id="882975028" Language="SFX">
+							<ShortName>gameplay_lead.wav</ShortName>
+							<Path>SFX\gameplay_lead_D79FB2B7.wem</Path>
+						</File>
+						<File Id="913002348" Language="SFX">
+							<ShortName>main_menu_var_01.wav</ShortName>
+							<Path>SFX\main_menu_var_01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1029407437" Language="SFX">
+							<ShortName>main_menu_117bpm.wav</ShortName>
+							<Path>SFX\main_menu_117bpm_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}">
-							<Children>
-								<SwitchContainer SwitchValue="{403F8205-A9AD-492F-AEBC-449397B95617}">
-									<Media>
-										<File Id="401330989"/>
-									</Media>
-								</SwitchContainer>
-							</Children>
+							<Media>
+								<File Id="21967293"/>
+								<File Id="183273539"/>
+								<File Id="186017570"/>
+								<File Id="286259284"/>
+								<File Id="348128673"/>
+								<File Id="520519977"/>
+								<File Id="653811676"/>
+								<File Id="694052461"/>
+								<File Id="882975028"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{F368E153-8A72-4AB8-8297-EFB65C9BA832}">
+							<Media>
+								<File Id="913002348"/>
+								<File Id="1029407437"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{95491A7E-01AC-4766-A593-BA6FA8AC0FFD}">
+							<Media>
+								<File Id="21967293"/>
+								<File Id="183273539"/>
+								<File Id="186017570"/>
+								<File Id="286259284"/>
+								<File Id="348128673"/>
+								<File Id="520519977"/>
+								<File Id="653811676"/>
+								<File Id="694052461"/>
+								<File Id="882975028"/>
+							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
 					<ActionSetState>
-						<ActionSetStateEntry Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\gameplay_state\gameplay"/>
+						<ActionSetStateEntry Id="2005704188" Name="main_menu" ObjectPath="\States\Default Work Unit\gameplay_state\main_menu"/>
 					</ActionSetState>
 				</Event>
 				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Gunfire\ww_rifle_shot" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479">
@@ -56,6 +119,26 @@
 					<AuxBusSends>
 						<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 					</AuxBusSends>
+				</Event>
+				<Event Id="1701460811" Name="ww_shotgun_cock" ObjectPath="\Events\Reloads\ww_shotgun_cock" DurationType="OneShot" DurationMin="0.560917" DurationMax="0.560917">
+					<IncludedMemoryFiles>
+						<File Id="235667579" Language="SFX">
+							<ShortName>shotgun_cock.wav</ShortName>
+							<Path>SFX\shotgun_cock_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1650400503" Name="ww_shotgun_shell" ObjectPath="\Events\Reloads\ww_shotgun_shell" DurationType="OneShot" DurationMin="0.224375" DurationMax="0.272438">
+					<IncludedMemoryFiles>
+						<File Id="12940122" Language="SFX">
+							<ShortName>shotgun_load_shell_02.wav</ShortName>
+							<Path>SFX\shotgun_load_shell_02_10C4C929.wem</Path>
+						</File>
+						<File Id="253870176" Language="SFX">
+							<ShortName>shotgun_load_shell_01.wav</ShortName>
+							<Path>SFX\shotgun_load_shell_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="1587775315" Name="ww_shotgun_shot" ObjectPath="\Events\Gunfire\ww_shotgun_shot" DurationType="OneShot" DurationMin="0.860473" DurationMax="1.303356">
 					<IncludedMemoryFiles>
@@ -98,23 +181,65 @@
 				</Event>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="401330989" Language="SFX">
-					<ShortName>BemmyMusic.wav</ShortName>
-					<Path>SFX\BemmyMusic_D79FB2B7.wem</Path>
+				<File Id="21967293" Language="SFX">
+					<ShortName>gameplay_arp.wav</ShortName>
+					<Path>SFX\gameplay_arp_D79FB2B7.wem</Path>
+				</File>
+				<File Id="183273539" Language="SFX">
+					<ShortName>gameplay_lead_var_01.wav</ShortName>
+					<Path>SFX\gameplay_lead_var_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="186017570" Language="SFX">
+					<ShortName>gameplay_lead_var_02.wav</ShortName>
+					<Path>SFX\gameplay_lead_var_02_D79FB2B7.wem</Path>
+				</File>
+				<File Id="286259284" Language="SFX">
+					<ShortName>gameplay_hats_var_01.wav</ShortName>
+					<Path>SFX\gameplay_hats_var_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="348128673" Language="SFX">
+					<ShortName>gameplay_drums.wav</ShortName>
+					<Path>SFX\gameplay_drums_D79FB2B7.wem</Path>
+				</File>
+				<File Id="520519977" Language="SFX">
+					<ShortName>gameplay_arp_var_01.wav</ShortName>
+					<Path>SFX\gameplay_arp_var_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="653811676" Language="SFX">
+					<ShortName>gameplay_bass.wav</ShortName>
+					<Path>SFX\gameplay_bass_D79FB2B7.wem</Path>
+				</File>
+				<File Id="694052461" Language="SFX">
+					<ShortName>gameplay_hats.wav</ShortName>
+					<Path>SFX\gameplay_hats_D79FB2B7.wem</Path>
+				</File>
+				<File Id="882975028" Language="SFX">
+					<ShortName>gameplay_lead.wav</ShortName>
+					<Path>SFX\gameplay_lead_D79FB2B7.wem</Path>
+				</File>
+				<File Id="913002348" Language="SFX">
+					<ShortName>main_menu_var_01.wav</ShortName>
+					<Path>SFX\main_menu_var_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1029407437" Language="SFX">
+					<ShortName>main_menu_117bpm.wav</ShortName>
+					<Path>SFX\main_menu_117bpm_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 			<GameParameters>
-				<GameParameter Id="2398231425" Name="score" ObjectPath="\Game Parameters\Default Work Unit\score"/>
+				<GameParameter Id="72790338" Name="low_health" ObjectPath="\Game Parameters\Default Work Unit\low_health"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\gameplay_state\gameplay" GUID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}">
-					<States/>
-				</StateGroup>
 				<StateGroup Id="762757699" Name="gameplay_state" ObjectPath="\States\Default Work Unit\gameplay_state" GUID="{E5A62C64-624B-4A96-9A89-81842F483229}">
 					<States>
 						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\gameplay_state\None" GUID="{693A9CBB-4702-4795-A426-08D6AF509BEC}"/>
 						<State Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\gameplay_state\gameplay" GUID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
+						<State Id="319258907" Name="paused" ObjectPath="\States\Default Work Unit\gameplay_state\paused" GUID="{95491A7E-01AC-4766-A593-BA6FA8AC0FFD}"/>
+						<State Id="2005704188" Name="main_menu" ObjectPath="\States\Default Work Unit\gameplay_state\main_menu" GUID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}"/>
 					</States>
+				</StateGroup>
+				<StateGroup Id="2005704188" Name="main_menu" ObjectPath="\States\Default Work Unit\gameplay_state\main_menu" GUID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}">
+					<States/>
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>

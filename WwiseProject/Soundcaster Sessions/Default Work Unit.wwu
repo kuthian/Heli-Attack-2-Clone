@@ -4,23 +4,41 @@
 		<WorkUnit Name="Default Work Unit" ID="{9500869E-F52D-4E2F-89AD-6D696A2297C1}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{8A8ED7BC-5F3A-4922-A015-DA6A45F4BE16}">
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="score" ID="{2E64B58B-3C59-4B78-9105-25E18E25CD8A}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="main_menu" ID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="switch_2" ID="{6487540E-EA87-44B4-B788-66529BE069FE}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+				<SoundcasterSession Name="New Soundcaster Session_01" ID="{02E8B314-0694-4E15-88F8-137BCF293680}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="ww_game_start" ID="{36F3E327-F3B9-49BF-A9FE-F7F5C4B6905A}" WorkUnitID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}"/>
+							<ObjectRef Name="ww_music" ID="{36F3E327-F3B9-49BF-A9FE-F7F5C4B6905A}" WorkUnitID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
-							<GameParameterRef Name="score" ID="{22942617-D37D-453B-B701-97737750A3AE}"/>
-							<Value>4.90857946554149</Value>
+							<GameParameterRef Name="score" ID="{2E64B58B-3C59-4B78-9105-25E18E25CD8A}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="low_health" ID="{14542769-B3B2-4DA1-A204-AE3FE99BE382}"/>
+							<Value>29.5269320843091</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{693A9CBB-4702-4795-A426-08D6AF509BEC}"/>
+						<CurrentStateRef Name="gameplay" ID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="switch_2" ID="{6487540E-EA87-44B4-B788-66529BE069FE}"/>
+						<CurrentSwitchRef Name="switch_1" ID="{403F8205-A9AD-492F-AEBC-449397B95617}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

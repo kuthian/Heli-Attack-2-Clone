@@ -3,11 +3,19 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{82B5FDFF-D52C-46F1-A8A1-03EC7E9D981B}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="score" ID="{22942617-D37D-453B-B701-97737750A3AE}">
+				<GameParameter Name="score" ID="{2E64B58B-3C59-4B78-9105-25E18E25CD8A}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 						<Property Name="Max" Type="Real64" Value="10"/>
 						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="low_health" ID="{14542769-B3B2-4DA1-A204-AE3FE99BE382}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="10"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="10"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>
