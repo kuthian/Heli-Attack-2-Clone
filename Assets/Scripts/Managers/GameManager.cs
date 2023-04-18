@@ -21,14 +21,14 @@ public class GameManager : Singleton<GameManager> {
   {
     _pauseMenuUI.SetActive(true);
     Time.timeScale = 0;
-    AkSoundEngine.SetState("gameplay_state", "paused");
+    GameMusic.Paused();
   }
 
   public void ResumeGame()
   {
     _pauseMenuUI.SetActive(false);
     Time.timeScale = 1;
-    AkSoundEngine.SetState("gameplay_state", "gameplay");
+    GameMusic.Gameplay();
   }
 
   public void StartMenu()

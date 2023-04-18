@@ -76,6 +76,24 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: daa4a8bf83ae4dc4ea668c627d628f91, type: 2}
+  _wwGameplay:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 51a9db225da3bbc4b958974f91cde201, type: 2}
+  _wwMainMenu:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3edc0917e3001364d9b5cc48623c6652, type: 2}
+  _wwPaused:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 445432480b8141b4abed955aed8814c3, type: 2}
 --- !u!114 &894241732570995782
 MonoBehaviour:
   m_ObjectHideFlags: 0

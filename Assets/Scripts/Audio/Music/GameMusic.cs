@@ -29,19 +29,19 @@ public class GameMusic : MonoBehaviour
     DontDestroyOnLoad(gameObject);
   }
 
-  public void Gameplay()
+  static public void Gameplay()
   {
-    _wwGameplay.SetValue();
+    i._wwGameplay.SetValue();
   }
 
-  public void MainMenu()
+  static public void MainMenu()
   {
-    _wwMainMenu.SetValue();
+    i._wwMainMenu.SetValue();
   }
 
-  public void Paused()
+  static public void Paused()
   {
-    _wwPaused.SetValue();
+    i._wwPaused.SetValue();
   }
 
   public void Init()
