@@ -75,7 +75,7 @@ MonoBehaviour:
   _wwGameMusic:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: daa4a8bf83ae4dc4ea668c627d628f91, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 3aae183c44c13364694bcbc414548c31, type: 2}
   _wwGameplay:
     idInternal: 0
     valueGuidInternal: 

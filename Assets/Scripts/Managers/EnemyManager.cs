@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
   
+  public bool EnemiesEnabled = true;
   [SerializeField] private GameObject _pfEnemy;
   public Transform[] _spawnPoints;
   internal List<GameObject> _enemies;
@@ -14,7 +15,10 @@ public class EnemyManager : MonoBehaviour {
 
   void Start()
   {
-    CreateEnemyRandom();
+    if ( EnemiesEnabled )
+    {
+      CreateEnemyRandom();
+    }
   }
 
   private void OnEnable()

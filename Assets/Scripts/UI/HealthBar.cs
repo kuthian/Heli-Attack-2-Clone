@@ -12,6 +12,7 @@ public class HealthBar : MonoBehaviour {
     _slider.maxValue = _health.MaxHealth;
     _slider.value = _health.CurrentHealth;
     _health.OnHealthChanged += HandleOnHealthChanged;
+    AkSoundEngine.SetRTPCValue("health", _slider.value);
   }
 
   private void OnEnable()
@@ -27,6 +28,7 @@ public class HealthBar : MonoBehaviour {
   private void HandleOnHealthChanged(int health)
   {
     _slider.value = health;
+    AkSoundEngine.SetRTPCValue("health", _slider.value);
   }
 
 }

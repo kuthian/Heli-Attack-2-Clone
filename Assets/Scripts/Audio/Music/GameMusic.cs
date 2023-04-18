@@ -10,6 +10,8 @@ public class GameMusic : MonoBehaviour
   [SerializeField] private AK.Wwise.State _wwMainMenu;
   [SerializeField] private AK.Wwise.State _wwPaused;
 
+  private AK.Wwise.State _initState;
+
   private static GameMusic _i;
 
   public static GameMusic i {
@@ -25,8 +27,12 @@ public class GameMusic : MonoBehaviour
   void Start()
   {
     name = "GameMusic";
-    _wwGameMusic.Post(gameObject);
     DontDestroyOnLoad(gameObject);
+    _wwGameMusic.Post(gameObject);
+    if (_initState.IsValid()) {
+      Debug.Log(_initState);
+      _initState.SetValue();
+    }
   }
 
   static public void Gameplay()
@@ -50,7 +56,8 @@ public class GameMusic : MonoBehaviour
 
   public void Init( AK.Wwise.State state )
   {
-    state.SetValue();
+    _initState = state;
+    _initState.SetValue();
   }
 
 }
