@@ -42,7 +42,7 @@ public class EnemyManager : MonoBehaviour {
 
   private void CreateEnemy( Transform p )
   {
-    GameObject obj = Instantiate(_pfEnemy, p.position, Quaternion.identity);
+    GameObject obj = Instantiate(_pfEnemy, p.position, Quaternion.identity, transform);
     obj.GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
     // TODO: Fix random enemy facing
     // if (Random.Range(0, 2) == 1) {
