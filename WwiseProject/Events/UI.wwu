@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2A91333B-A7C8-4870-B7A3-B2C9C348C1A6}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="UI" ID="{2A91333B-A7C8-4870-B7A3-B2C9C348C1A6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="ui_mouse_hover" ID="{25D162F5-47EF-41D4-9140-2CDEBB9F7C3F}">
+					<ChildrenList>
+						<Action Name="" ID="{EF19AF08-2752-4708-86CF-A05F0D1C2356}" ShortID="110305444">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mouse Hover" ID="{3FED400B-560D-43CA-8D3B-5D21F3C5A449}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_mouse_click" ID="{87C08474-66AA-4F0E-B64B-4EB156E50831}">
+					<ChildrenList>
+						<Action Name="" ID="{4D291593-0F49-4F27-B841-362833E6D87F}" ShortID="301593038">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mouse Click" ID="{4CD3291D-EEAC-41E6-B9F7-6333CA31810C}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0CE604A0-E378-47DB-BA98-72762F5E285B}" ShortID="833946979">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.07"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mouse Click Stinger" ID="{16D34F05-EFB7-45A4-B10E-34F9BEC98A00}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

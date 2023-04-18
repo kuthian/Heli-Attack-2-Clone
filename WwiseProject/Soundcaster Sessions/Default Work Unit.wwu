@@ -7,11 +7,15 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="score" ID="{2E64B58B-3C59-4B78-9105-25E18E25CD8A}"/>
-							<Value>0</Value>
+							<Value>5</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="health" ID="{14542769-B3B2-4DA1-A204-AE3FE99BE382}"/>
+							<Value>100</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="main_menu" ID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}"/>
+						<CurrentStateRef Name="gameplay" ID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="switch_2" ID="{6487540E-EA87-44B4-B788-66529BE069FE}"/>
@@ -20,7 +24,7 @@
 				<SoundcasterSession Name="New Soundcaster Session_01" ID="{02E8B314-0694-4E15-88F8-137BCF293680}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="ww_music" ID="{36F3E327-F3B9-49BF-A9FE-F7F5C4B6905A}" WorkUnitID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}"/>
+							<ObjectRef Name="ww_music" ID="{36F3E327-F3B9-49BF-A9FE-F7F5C4B6905A}" WorkUnitID="{4F6AF0DE-71ED-470C-BACC-D5950DE4CB29}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 					</ModuleList>
@@ -30,7 +34,7 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
-							<GameParameterRef Name="low_health" ID="{14542769-B3B2-4DA1-A204-AE3FE99BE382}"/>
+							<GameParameterRef Name="health" ID="{14542769-B3B2-4DA1-A204-AE3FE99BE382}"/>
 							<Value>29.5269320843091</Value>
 						</RTPCValue>
 					</RTPCValueList>
