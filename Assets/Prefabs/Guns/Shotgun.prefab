@@ -153,3 +153,23 @@ MonoBehaviour:
   _cooldownTime: 3
   _pStepScalar: 0.1
   _dStepScalar: 0.075
+--- !u!114 &5364720382001714547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802175741346999267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c759e4b6708fa244a8e5252d059aa3de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wwShotgunLoad:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c1fbfe187db7614498750d3cfb89f41c, type: 2}
+  _wwShotgunCock:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: df68a1f7eca5d3946a4c806c62c1ffa2, type: 2}

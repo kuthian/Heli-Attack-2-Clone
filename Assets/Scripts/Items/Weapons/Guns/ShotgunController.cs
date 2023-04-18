@@ -19,6 +19,6 @@ public class ShotgunController : __GunController {
       direction = direction + dStep;            
     }
     _wwOnShoot.Post(gameObject);
-  } 
+  }
 
 }
