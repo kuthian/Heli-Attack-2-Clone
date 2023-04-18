@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}" PersistMode="Standalone">
-			<ChildrenList>
-				<Event Name="ww_music" ID="{36F3E327-F3B9-49BF-A9FE-F7F5C4B6905A}">
-					<ChildrenList>
-						<Action Name="" ID="{2B588742-465C-4A00-AEB0-3E109483ECEB}" ShortID="809513889">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="main_menu" ID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}" WorkUnitID="{66B98053-CA8A-4449-8E12-61A43AD9CD54}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{1943A941-CC44-4470-82BD-137FCA6846F0}" ShortID="1013469359">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Master Music Container" ID="{F5CB3645-D8F6-4CAA-AB59-27EC685D4C08}" WorkUnitID="{48089242-6501-413A-9C66-44DDDA85A9AD}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{629C531D-C3EC-4DD5-B782-4C96AD72E202}" PersistMode="Standalone"/>
 	</Events>
 </WwiseDocument>

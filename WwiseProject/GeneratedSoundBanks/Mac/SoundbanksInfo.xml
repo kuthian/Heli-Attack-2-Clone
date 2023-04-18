@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="20373357">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1356995867">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,171 +19,41 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="2936996265">
+		<SoundBank Id="2228651116" Language="SFX" Hash="3570134104">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2045634255" Name="ww_music" ObjectPath="\Events\Default Work Unit\ww_music" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="21967293" Language="SFX">
-							<ShortName>gameplay_arp.wav</ShortName>
-							<Path>SFX\gameplay_arp_D79FB2B7.wem</Path>
-						</File>
-						<File Id="183273539" Language="SFX">
-							<ShortName>gameplay_lead_var_01.wav</ShortName>
-							<Path>SFX\gameplay_lead_var_01_D79FB2B7.wem</Path>
-						</File>
-						<File Id="186017570" Language="SFX">
-							<ShortName>gameplay_lead_var_02.wav</ShortName>
-							<Path>SFX\gameplay_lead_var_02_D79FB2B7.wem</Path>
-						</File>
-						<File Id="286259284" Language="SFX">
-							<ShortName>gameplay_hats_var_01.wav</ShortName>
-							<Path>SFX\gameplay_hats_var_01_D79FB2B7.wem</Path>
-						</File>
-						<File Id="348128673" Language="SFX">
-							<ShortName>gameplay_drums.wav</ShortName>
-							<Path>SFX\gameplay_drums_D79FB2B7.wem</Path>
-						</File>
-						<File Id="520519977" Language="SFX">
-							<ShortName>gameplay_arp_var_01.wav</ShortName>
-							<Path>SFX\gameplay_arp_var_01_D79FB2B7.wem</Path>
-						</File>
-						<File Id="653811676" Language="SFX">
-							<ShortName>gameplay_bass.wav</ShortName>
-							<Path>SFX\gameplay_bass_D79FB2B7.wem</Path>
-						</File>
-						<File Id="694052461" Language="SFX">
-							<ShortName>gameplay_hats.wav</ShortName>
-							<Path>SFX\gameplay_hats_D79FB2B7.wem</Path>
-						</File>
-						<File Id="882975028" Language="SFX">
-							<ShortName>gameplay_lead.wav</ShortName>
-							<Path>SFX\gameplay_lead_D79FB2B7.wem</Path>
-						</File>
-						<File Id="913002348" Language="SFX">
-							<ShortName>main_menu_var_01.wav</ShortName>
-							<Path>SFX\main_menu_var_01_D79FB2B7.wem</Path>
-						</File>
-						<File Id="1029407437" Language="SFX">
-							<ShortName>main_menu_117bpm.wav</ShortName>
-							<Path>SFX\main_menu_117bpm_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<SwitchContainers>
-						<SwitchContainer SwitchValue="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}">
-							<Media>
-								<File Id="21967293"/>
-								<File Id="183273539"/>
-								<File Id="186017570"/>
-								<File Id="286259284"/>
-								<File Id="348128673"/>
-								<File Id="520519977"/>
-								<File Id="653811676"/>
-								<File Id="694052461"/>
-								<File Id="882975028"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{F368E153-8A72-4AB8-8297-EFB65C9BA832}">
-							<Media>
-								<File Id="913002348"/>
-								<File Id="1029407437"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{95491A7E-01AC-4766-A593-BA6FA8AC0FFD}">
-							<Media>
-								<File Id="21967293"/>
-								<File Id="183273539"/>
-								<File Id="186017570"/>
-								<File Id="286259284"/>
-								<File Id="348128673"/>
-								<File Id="520519977"/>
-								<File Id="653811676"/>
-								<File Id="694052461"/>
-								<File Id="882975028"/>
-							</Media>
-						</SwitchContainer>
-					</SwitchContainers>
+				<Event Id="2359679562" Name="ui_mouse_click" ObjectPath="\Events\UI\ui_mouse_click" DurationType="OneShot" DurationMin="4.685396" DurationMax="4.685396"/>
+				<Event Id="1201739520" Name="ui_mouse_hover" ObjectPath="\Events\UI\ui_mouse_hover" DurationType="OneShot" DurationMin="0.117432" DurationMax="0.139974"/>
+				<Event Id="2045634255" Name="ww_music" ObjectPath="\Events\Music\ww_music" DurationType="Infinite">
 					<ActionSetState>
 						<ActionSetStateEntry Id="2005704188" Name="main_menu" ObjectPath="\States\Default Work Unit\gameplay_state\main_menu"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Gunfire\ww_rifle_shot" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479">
-					<IncludedMemoryFiles>
-						<File Id="51274058" Language="SFX">
-							<ShortName>rifle_fire_01.wav</ShortName>
-							<Path>SFX\rifle_fire_01_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
-					</AuxBusSends>
-				</Event>
-				<Event Id="1701460811" Name="ww_shotgun_cock" ObjectPath="\Events\Reloads\ww_shotgun_cock" DurationType="OneShot" DurationMin="0.560917" DurationMax="0.560917">
-					<IncludedMemoryFiles>
-						<File Id="235667579" Language="SFX">
-							<ShortName>shotgun_cock.wav</ShortName>
-							<Path>SFX\shotgun_cock_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="1650400503" Name="ww_shotgun_shell" ObjectPath="\Events\Reloads\ww_shotgun_shell" DurationType="OneShot" DurationMin="0.224375" DurationMax="0.272438">
-					<IncludedMemoryFiles>
-						<File Id="12940122" Language="SFX">
-							<ShortName>shotgun_load_shell_02.wav</ShortName>
-							<Path>SFX\shotgun_load_shell_02_10C4C929.wem</Path>
-						</File>
-						<File Id="253870176" Language="SFX">
-							<ShortName>shotgun_load_shell_01.wav</ShortName>
-							<Path>SFX\shotgun_load_shell_01_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="1587775315" Name="ww_shotgun_shot" ObjectPath="\Events\Gunfire\ww_shotgun_shot" DurationType="OneShot" DurationMin="0.860473" DurationMax="1.303356">
-					<IncludedMemoryFiles>
-						<File Id="659578000" Language="SFX">
-							<ShortName>shotgun_shot_03.wav</ShortName>
-							<Path>SFX\shotgun_shot_03_10C4C929.wem</Path>
-						</File>
-						<File Id="772319303" Language="SFX">
-							<ShortName>shotgun_shot_01.wav</ShortName>
-							<Path>SFX\shotgun_shot_01_10C4C929.wem</Path>
-						</File>
-						<File Id="1046341244" Language="SFX">
-							<ShortName>shotgun_shot_02.wav</ShortName>
-							<Path>SFX\shotgun_shot_02_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
-					</AuxBusSends>
-				</Event>
-				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\ww_uzi_shot_loop" DurationType="OneShot" DurationMin="4.198729" DurationMax="4.198729">
-					<IncludedMemoryFiles>
-						<File Id="1059951826" Language="SFX">
-							<ShortName>uzi_spray.wav</ShortName>
-							<Path>SFX\uzi_spray_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<AuxBusSends>
-						<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
-					</AuxBusSends>
-				</Event>
+				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Gunfire\ww_rifle_shot" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479"/>
+				<Event Id="1701460811" Name="ww_shotgun_cock" ObjectPath="\Events\Reloads\ww_shotgun_cock" DurationType="OneShot" DurationMin="0.560917" DurationMax="0.560917"/>
+				<Event Id="1650400503" Name="ww_shotgun_shell" ObjectPath="\Events\Reloads\ww_shotgun_shell" DurationType="OneShot" DurationMin="0.224375" DurationMax="0.272438"/>
+				<Event Id="1587775315" Name="ww_shotgun_shot" ObjectPath="\Events\Gunfire\ww_shotgun_shot" DurationType="OneShot" DurationMin="0.860473" DurationMax="1.303356"/>
+				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\ww_uzi_shot_loop" DurationType="OneShot" DurationMin="4.198729" DurationMax="4.198729"/>
 				<Event Id="795925999" Name="ww_uzi_stop" ObjectPath="\Events\Gunfire\ww_uzi_stop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3895319721" Name="ww_uzi_stop_empty" ObjectPath="\Events\Gunfire\ww_uzi_stop_empty" DurationType="OneShot" DurationMin="0.128208" DurationMax="0.128208">
-					<IncludedMemoryFiles>
-						<File Id="942672928" Language="SFX">
-							<ShortName>uzi_empty.wav</ShortName>
-							<Path>SFX\uzi_empty_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
+				<Event Id="3895319721" Name="ww_uzi_stop_empty" ObjectPath="\Events\Gunfire\ww_uzi_stop_empty" DurationType="OneShot" DurationMin="0.128208" DurationMax="0.128208"/>
 			</IncludedEvents>
+			<IncludedAuxBusses>
+				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
+			</IncludedAuxBusses>
 			<IncludedMemoryFiles>
+				<File Id="12940122" Language="SFX">
+					<ShortName>shotgun_load_shell_02.wav</ShortName>
+					<Path>SFX\shotgun_load_shell_02_10C4C929.wem</Path>
+				</File>
 				<File Id="21967293" Language="SFX">
 					<ShortName>gameplay_arp.wav</ShortName>
 					<Path>SFX\gameplay_arp_D79FB2B7.wem</Path>
+				</File>
+				<File Id="51274058" Language="SFX">
+					<ShortName>rifle_fire_01.wav</ShortName>
+					<Path>SFX\rifle_fire_01_10C4C929.wem</Path>
 				</File>
 				<File Id="183273539" Language="SFX">
 					<ShortName>gameplay_lead_var_01.wav</ShortName>
@@ -193,6 +63,18 @@
 					<ShortName>gameplay_lead_var_02.wav</ShortName>
 					<Path>SFX\gameplay_lead_var_02_D79FB2B7.wem</Path>
 				</File>
+				<File Id="235667579" Language="SFX">
+					<ShortName>shotgun_cock.wav</ShortName>
+					<Path>SFX\shotgun_cock_10C4C929.wem</Path>
+				</File>
+				<File Id="253870176" Language="SFX">
+					<ShortName>shotgun_load_shell_01.wav</ShortName>
+					<Path>SFX\shotgun_load_shell_01_10C4C929.wem</Path>
+				</File>
+				<File Id="273001963" Language="SFX">
+					<ShortName>ui_mouse_hover.wav</ShortName>
+					<Path>SFX\ui_mouse_hover_10C4C929.wem</Path>
+				</File>
 				<File Id="286259284" Language="SFX">
 					<ShortName>gameplay_hats_var_01.wav</ShortName>
 					<Path>SFX\gameplay_hats_var_01_D79FB2B7.wem</Path>
@@ -201,17 +83,37 @@
 					<ShortName>gameplay_drums.wav</ShortName>
 					<Path>SFX\gameplay_drums_D79FB2B7.wem</Path>
 				</File>
+				<File Id="349521609" Language="SFX">
+					<ShortName>ui_play_stinger.wav</ShortName>
+					<Path>SFX\ui_play_stinger_10C4C929.wem</Path>
+				</File>
 				<File Id="520519977" Language="SFX">
 					<ShortName>gameplay_arp_var_01.wav</ShortName>
 					<Path>SFX\gameplay_arp_var_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="597570077" Language="SFX">
+					<ShortName>sfx_ui_click_generic.wav</ShortName>
+					<Path>SFX\sfx_ui_click_generic_10C4C929.wem</Path>
 				</File>
 				<File Id="653811676" Language="SFX">
 					<ShortName>gameplay_bass.wav</ShortName>
 					<Path>SFX\gameplay_bass_D79FB2B7.wem</Path>
 				</File>
+				<File Id="659578000" Language="SFX">
+					<ShortName>shotgun_shot_03.wav</ShortName>
+					<Path>SFX\shotgun_shot_03_10C4C929.wem</Path>
+				</File>
 				<File Id="694052461" Language="SFX">
 					<ShortName>gameplay_hats.wav</ShortName>
 					<Path>SFX\gameplay_hats_D79FB2B7.wem</Path>
+				</File>
+				<File Id="772319303" Language="SFX">
+					<ShortName>shotgun_shot_01.wav</ShortName>
+					<Path>SFX\shotgun_shot_01_10C4C929.wem</Path>
+				</File>
+				<File Id="788969360" Language="SFX">
+					<ShortName>gameplay_drums_metal_117bpm.wav</ShortName>
+					<Path>SFX\gameplay_drums_metal_117bpm_D79FB2B7.wem</Path>
 				</File>
 				<File Id="882975028" Language="SFX">
 					<ShortName>gameplay_lead.wav</ShortName>
@@ -221,13 +123,26 @@
 					<ShortName>main_menu_var_01.wav</ShortName>
 					<Path>SFX\main_menu_var_01_D79FB2B7.wem</Path>
 				</File>
+				<File Id="942672928" Language="SFX">
+					<ShortName>uzi_empty.wav</ShortName>
+					<Path>SFX\uzi_empty_10C4C929.wem</Path>
+				</File>
 				<File Id="1029407437" Language="SFX">
 					<ShortName>main_menu_117bpm.wav</ShortName>
 					<Path>SFX\main_menu_117bpm_D79FB2B7.wem</Path>
 				</File>
+				<File Id="1046341244" Language="SFX">
+					<ShortName>shotgun_shot_02.wav</ShortName>
+					<Path>SFX\shotgun_shot_02_10C4C929.wem</Path>
+				</File>
+				<File Id="1059951826" Language="SFX">
+					<ShortName>uzi_spray.wav</ShortName>
+					<Path>SFX\uzi_spray_10C4C929.wem</Path>
+				</File>
 			</IncludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="72790338" Name="low_health" ObjectPath="\Game Parameters\Default Work Unit\low_health"/>
+				<GameParameter Id="2398231425" Name="score" ObjectPath="\Game Parameters\Default Work Unit\score"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="762757699" Name="gameplay_state" ObjectPath="\States\Default Work Unit\gameplay_state" GUID="{E5A62C64-624B-4A96-9A89-81842F483229}">

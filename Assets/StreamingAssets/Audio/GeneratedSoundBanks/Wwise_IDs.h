@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID UI_MOUSE_CLICK = 2359679562U;
+        static const AkUniqueID UI_MOUSE_HOVER = 1201739520U;
         static const AkUniqueID WW_MUSIC = 2045634255U;
         static const AkUniqueID WW_RIFLE_SHOT = 2496926511U;
         static const AkUniqueID WW_SHOTGUN_COCK = 1701460811U;
