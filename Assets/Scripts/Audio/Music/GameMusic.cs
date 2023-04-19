@@ -24,13 +24,22 @@ public class GameMusic : MonoBehaviour
     }
   }
 
+  public void Init()
+  {
+  }
+
+  public void Init( AK.Wwise.State state )
+  {
+    _initState = state;
+    _initState.SetValue();
+  }
+
   void Start()
   {
     name = "GameMusic";
     DontDestroyOnLoad(gameObject);
     _wwGameMusic.Post(gameObject);
     if (_initState.IsValid()) {
-      Debug.Log(_initState);
       _initState.SetValue();
     }
   }
@@ -48,16 +57,6 @@ public class GameMusic : MonoBehaviour
   static public void Paused()
   {
     i._wwPaused.SetValue();
-  }
-
-  public void Init()
-  {
-  }
-
-  public void Init( AK.Wwise.State state )
-  {
-    _initState = state;
-    _initState.SetValue();
   }
 
 }

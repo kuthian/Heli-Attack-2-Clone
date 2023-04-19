@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+  public bool BlockInput = false;
+
   private InventoryController _inventory;
   private Transform _groundCheck;
   private LayerMask _groundLayer;
@@ -47,7 +49,7 @@ public class PlayerController : MonoBehaviour {
 
   private void Update()
   {
-    if (GameManager.Paused) return;
+    if (GameManager.Paused || BlockInput) return;
 
     InputX = Input.GetAxisRaw("Horizontal");
     Crouched = Input.GetAxisRaw("Vertical") == -1;

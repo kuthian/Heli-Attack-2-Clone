@@ -8,17 +8,14 @@ public class ShotgunSounds : MonoBehaviour {
   [SerializeField]
   private AK.Wwise.Event _wwShotgunCock;
 
-  public void ShotgunLoadSound()
+  public void ShotgunLoad()
   {
-    if (_wwShotgunLoad.IsValid()) {
-      _wwShotgunLoad.Post(gameObject);
-    }  
+    _wwShotgunLoad.Post(gameObject);
   }
-  public void ShotgunCockSound()
+
+  public void ShotgunCock()
   {
-    if (_wwShotgunCock.IsValid()) {
-      _wwShotgunCock.Post(gameObject);
-    }  
+    _wwShotgunCock.Post(gameObject);
   }
 
 }
