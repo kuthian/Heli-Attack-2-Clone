@@ -62,7 +62,9 @@ public class __GunController : MonoBehaviour {
   virtual protected void Shoot()
   {
     InstantiateProjectile( _firePointTransform.position, _firePointTransform.right);
-    _wwOnShoot.Post(gameObject);
+    if (_wwOnShoot.IsValid()) {
+      _wwOnShoot.Post(gameObject);
+    }
   }
 
   virtual protected void InstantiateProjectile( Vector3 position, Vector3 direction )

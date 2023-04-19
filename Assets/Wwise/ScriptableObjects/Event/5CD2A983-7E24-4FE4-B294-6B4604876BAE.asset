@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87cd56146330a57438e7d54b7dfe2e2e, type: 3}
-  m_Name: 87C08474-66AA-4F0E-B64B-4EB156E50831
+  m_Name: 5CD2A983-7E24-4FE4-B294-6B4604876BAE
   m_EditorClassIdentifier: 
-  objectName: ui_game_start
-  id: 374915857
-  guid: 87C08474-66AA-4F0E-B64B-4EB156E50831
+  objectName: ui_mouse_click
+  id: 2359679562
+  guid: 5CD2A983-7E24-4FE4-B294-6B4604876BAE

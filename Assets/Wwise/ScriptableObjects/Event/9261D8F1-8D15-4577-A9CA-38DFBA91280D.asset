@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87cd56146330a57438e7d54b7dfe2e2e, type: 3}
-  m_Name: 87C08474-66AA-4F0E-B64B-4EB156E50831
+  m_Name: 9261D8F1-8D15-4577-A9CA-38DFBA91280D
   m_EditorClassIdentifier: 
-  objectName: ui_game_start
-  id: 374915857
-  guid: 87C08474-66AA-4F0E-B64B-4EB156E50831
+  objectName: ww_bazooka_impact
+  id: 3662259936
+  guid: 9261D8F1-8D15-4577-A9CA-38DFBA91280D
