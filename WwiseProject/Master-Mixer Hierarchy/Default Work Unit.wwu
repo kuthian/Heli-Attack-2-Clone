@@ -12,6 +12,17 @@
 					<ChildrenList>
 						<Bus Name="Music" ID="{753EAF5A-12CE-451F-AD27-BB79E0D54221}">
 							<ObjectLists/>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="Ambience" ID="{76676931-D12A-497C-93A5-58082C756D95}"/>
+									<DuckingParam>
+										<Volume>-5</Volume>
+										<FadeInTime>1</FadeInTime>
+										<FadeOutTime>1</FadeOutTime>
+										<FadeCurve>FadeLinear</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
 						</Bus>
 						<Bus Name="Rifle" ID="{98EE210D-8713-46B6-A5BC-14D359BFCFD6}">
 							<ObjectLists/>
@@ -24,6 +35,29 @@
 							</ReferenceList>
 							<ObjectLists/>
 						</AuxBus>
+						<Bus Name="Ambience" ID="{76676931-D12A-497C-93A5-58082C756D95}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Rocket Shoot" ID="{EDD86D3E-D345-4B7A-922E-8EBD7C2B3AF9}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Rocket Impact" ID="{DAD97176-A377-4A45-9765-8AAB18976D83}">
+							<PropertyList>
+								<Property Name="RecoveryTime" Type="Real64" Value="0"/>
+							</PropertyList>
+							<ObjectLists/>
+							<DuckingList>
+								<DuckItem>
+									<BusRef Name="Rocket Shoot" ID="{EDD86D3E-D345-4B7A-922E-8EBD7C2B3AF9}"/>
+									<DuckingParam>
+										<Volume>-5</Volume>
+										<FadeInTime>0.100000001490116</FadeInTime>
+										<FadeOutTime>0.100000001490116</FadeOutTime>
+										<FadeCurve>FadeLog3</FadeCurve>
+									</DuckingParam>
+								</DuckItem>
+							</DuckingList>
+						</Bus>
 					</ChildrenList>
 					<ObjectLists/>
 				</Bus>

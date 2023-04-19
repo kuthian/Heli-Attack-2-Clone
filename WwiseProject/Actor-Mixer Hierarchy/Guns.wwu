@@ -257,6 +257,189 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
+				<Folder Name="Bazooka" ID="{D20BC5F8-1275-4BF3-A8ED-92330A473CA2}" ShortID="860190304">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Bazooka Fire" ID="{0D698B97-11EF-48E0-A158-A322A2613D5F}" ShortID="964588415">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{7D6129B9-D9C7-473B-AB6B-2F3DBA4D24A8}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Rocket Shoot" ID="{EDD86D3E-D345-4B7A-922E-8EBD7C2B3AF9}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="bazooka_fire_01" ID="{40ED1661-99A5-4828-90F6-65874344B6C0}" ShortID="576865800">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="bazooka_fire_01" ID="{B6D04916-FC6F-4880-A041-14B6CEA971DE}">
+											<Language>SFX</Language>
+											<AudioFile>bazooka_fire_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="835708748"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="bazooka_fire_01" ID="{B6D04916-FC6F-4880-A041-14B6CEA971DE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Bazooka Cruise" ID="{C979CA32-5644-4EB8-9DA6-F8F42068CF53}" ShortID="753204856">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9E0DCB9C-B2E0-405F-8680-3CFEE1175119}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="126"/>
+													<Property Name="Min" Type="Real64" Value="-126"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="missile_cruise_01" ID="{B4691CD1-F0CE-4860-9560-498791CCC258}" ShortID="171047439">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsZeroLantency" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="missile_cruise_01" ID="{A66AB6E8-3EAB-43C8-B292-0A1E3F6ED79B}">
+											<Language>SFX</Language>
+											<AudioFile>missile_cruise_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="157323760"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="missile_cruise_01" ID="{A66AB6E8-3EAB-43C8-B292-0A1E3F6ED79B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Bazooka Impact" ID="{9F988E39-65F7-4A11-A5FF-83ED831AE14D}" ShortID="13306957">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{23CF55C8-4E25-45A2-887F-00410E92957C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Rocket Impact" ID="{DAD97176-A377-4A45-9765-8AAB18976D83}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="missile_impact_01" ID="{6A6B6609-2E7D-401E-95B0-9346015ED116}" ShortID="588877966">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="missile_impact_01" ID="{8DA8757B-ECDE-4F75-A924-5316F064862B}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.60847460710128"/>
+												<Property Name="FadeOutShape" Type="int16" Value="4"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.46040696546372"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>missile_impact_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="514478316"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="missile_impact_01" ID="{8DA8757B-ECDE-4F75-A924-5316F064862B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

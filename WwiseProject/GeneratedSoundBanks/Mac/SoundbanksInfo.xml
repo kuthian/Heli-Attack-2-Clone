@@ -8,10 +8,23 @@
 		<ExternalSourcesOutputRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
+	<StreamedFiles>
+		<File Id="102136994" Language="SFX">
+			<ShortName>heli_locomotion_loop.wav</ShortName>
+			<Path>SFX\heli_locomotion_loop_D79FB2B7.wem</Path>
+		</File>
+		<File Id="157323760" Language="SFX">
+			<ShortName>missile_cruise_01.wav</ShortName>
+			<Path>SFX\missile_cruise_01_D79FB2B7.wem</Path>
+		</File>
+		<File Id="660176924" Language="SFX">
+			<ShortName>ambience_loop.wav</ShortName>
+			<Path>SFX\ambience_loop_D79FB2B7.wem</Path>
+		</File>
+	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1356995867">
+		<SoundBank Id="1355168291" Language="SFX" Hash="156229120">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -19,29 +32,39 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3570134104">
+		<SoundBank Id="2228651116" Language="SFX" Hash="988338367">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2359679562" Name="ui_mouse_click" ObjectPath="\Events\UI\ui_mouse_click" DurationType="OneShot" DurationMin="4.685396" DurationMax="4.685396"/>
+				<Event Id="2359679562" Name="ui_mouse_click" ObjectPath="\Events\UI\ui_mouse_click" DurationType="OneShot" DurationMin="4.675396" DurationMax="4.675396"/>
 				<Event Id="1201739520" Name="ui_mouse_hover" ObjectPath="\Events\UI\ui_mouse_hover" DurationType="OneShot" DurationMin="0.117432" DurationMax="0.139974"/>
+				<Event Id="3662259936" Name="ww_bazooka_impact" ObjectPath="\Events\Gunfire\Bazooka\ww_bazooka_impact" DurationType="OneShot" DurationMin="2.354733" DurationMax="2.570823"/>
+				<Event Id="60321222" Name="ww_bazooka_shot" ObjectPath="\Events\Gunfire\Bazooka\ww_bazooka_shot" DurationType="Infinite"/>
+				<Event Id="655812923" Name="ww_heli_start" ObjectPath="\Events\Enemies\Helicopter\ww_heli_start" DurationType="Infinite"/>
 				<Event Id="2045634255" Name="ww_music" ObjectPath="\Events\Music\ww_music" DurationType="Infinite">
 					<ActionSetState>
 						<ActionSetStateEntry Id="2005704188" Name="main_menu" ObjectPath="\States\Default Work Unit\gameplay_state\main_menu"/>
 					</ActionSetState>
 				</Event>
+				<Event Id="48068017" Name="ww_player_fs" ObjectPath="\Events\Player\ww_player_fs" DurationType="OneShot" DurationMin="0.117432" DurationMax="0.206831"/>
+				<Event Id="3290493012" Name="ww_player_jump" ObjectPath="\Events\Player\ww_player_jump" DurationType="OneShot" DurationMin="0.120943" DurationMax="0.271821"/>
 				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Gunfire\ww_rifle_shot" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479"/>
 				<Event Id="1701460811" Name="ww_shotgun_cock" ObjectPath="\Events\Reloads\ww_shotgun_cock" DurationType="OneShot" DurationMin="0.560917" DurationMax="0.560917"/>
 				<Event Id="1650400503" Name="ww_shotgun_shell" ObjectPath="\Events\Reloads\ww_shotgun_shell" DurationType="OneShot" DurationMin="0.224375" DurationMax="0.272438"/>
 				<Event Id="1587775315" Name="ww_shotgun_shot" ObjectPath="\Events\Gunfire\ww_shotgun_shot" DurationType="OneShot" DurationMin="0.860473" DurationMax="1.303356"/>
-				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\ww_uzi_shot_loop" DurationType="OneShot" DurationMin="4.198729" DurationMax="4.198729"/>
-				<Event Id="795925999" Name="ww_uzi_stop" ObjectPath="\Events\Gunfire\ww_uzi_stop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3895319721" Name="ww_uzi_stop_empty" ObjectPath="\Events\Gunfire\ww_uzi_stop_empty" DurationType="OneShot" DurationMin="0.128208" DurationMax="0.128208"/>
+				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_shot_loop" DurationType="OneShot" DurationMin="4.198729" DurationMax="4.198729"/>
+				<Event Id="795925999" Name="ww_uzi_stop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_stop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3895319721" Name="ww_uzi_stop_empty" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_stop_empty" DurationType="OneShot" DurationMin="0.128208" DurationMax="0.128208"/>
 			</IncludedEvents>
 			<IncludedAuxBusses>
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
+			<ReferencedStreamedFiles>
+				<File Id="102136994"/>
+				<File Id="157323760"/>
+				<File Id="660176924"/>
+			</ReferencedStreamedFiles>
 			<IncludedMemoryFiles>
 				<File Id="12940122" Language="SFX">
 					<ShortName>shotgun_load_shell_02.wav</ShortName>
@@ -55,6 +78,16 @@
 					<ShortName>rifle_fire_01.wav</ShortName>
 					<Path>SFX\rifle_fire_01_10C4C929.wem</Path>
 				</File>
+				<File Id="102136994" Language="SFX">
+					<ShortName>heli_locomotion_loop.wav</ShortName>
+					<Path>SFX\heli_locomotion_loop_D79FB2B7.wem</Path>
+					<PrefetchSize>19264</PrefetchSize>
+				</File>
+				<File Id="157323760" Language="SFX">
+					<ShortName>missile_cruise_01.wav</ShortName>
+					<Path>SFX\missile_cruise_01_D79FB2B7.wem</Path>
+					<PrefetchSize>19264</PrefetchSize>
+				</File>
 				<File Id="183273539" Language="SFX">
 					<ShortName>gameplay_lead_var_01.wav</ShortName>
 					<Path>SFX\gameplay_lead_var_01_D79FB2B7.wem</Path>
@@ -62,6 +95,10 @@
 				<File Id="186017570" Language="SFX">
 					<ShortName>gameplay_lead_var_02.wav</ShortName>
 					<Path>SFX\gameplay_lead_var_02_D79FB2B7.wem</Path>
+				</File>
+				<File Id="222196184" Language="SFX">
+					<ShortName>lose_stinger.wav</ShortName>
+					<Path>SFX\lose_stinger_D79FB2B7.wem</Path>
 				</File>
 				<File Id="235667579" Language="SFX">
 					<ShortName>shotgun_cock.wav</ShortName>
@@ -79,6 +116,10 @@
 					<ShortName>gameplay_hats_var_01.wav</ShortName>
 					<Path>SFX\gameplay_hats_var_01_D79FB2B7.wem</Path>
 				</File>
+				<File Id="324383162" Language="SFX">
+					<ShortName>player_jump_01.wav</ShortName>
+					<Path>SFX\player_jump_01_10C4C929.wem</Path>
+				</File>
 				<File Id="348128673" Language="SFX">
 					<ShortName>gameplay_drums.wav</ShortName>
 					<Path>SFX\gameplay_drums_D79FB2B7.wem</Path>
@@ -87,9 +128,25 @@
 					<ShortName>ui_play_stinger.wav</ShortName>
 					<Path>SFX\ui_play_stinger_10C4C929.wem</Path>
 				</File>
+				<File Id="477091832" Language="SFX">
+					<ShortName>grassFS_01.wav</ShortName>
+					<Path>SFX\grassFS_01_10C4C929.wem</Path>
+				</File>
+				<File Id="514478316" Language="SFX">
+					<ShortName>missile_impact_01.wav</ShortName>
+					<Path>SFX\missile_impact_01_7B8063AD.wem</Path>
+				</File>
 				<File Id="520519977" Language="SFX">
 					<ShortName>gameplay_arp_var_01.wav</ShortName>
 					<Path>SFX\gameplay_arp_var_01_D79FB2B7.wem</Path>
+				</File>
+				<File Id="525450841" Language="SFX">
+					<ShortName>grassFS_02.wav</ShortName>
+					<Path>SFX\grassFS_02_10C4C929.wem</Path>
+				</File>
+				<File Id="577070922" Language="SFX">
+					<ShortName>player_jump_02.wav</ShortName>
+					<Path>SFX\player_jump_02_10C4C929.wem</Path>
 				</File>
 				<File Id="597570077" Language="SFX">
 					<ShortName>sfx_ui_click_generic.wav</ShortName>
@@ -103,9 +160,18 @@
 					<ShortName>shotgun_shot_03.wav</ShortName>
 					<Path>SFX\shotgun_shot_03_10C4C929.wem</Path>
 				</File>
+				<File Id="660176924" Language="SFX">
+					<ShortName>ambience_loop.wav</ShortName>
+					<Path>SFX\ambience_loop_D79FB2B7.wem</Path>
+					<PrefetchSize>19264</PrefetchSize>
+				</File>
 				<File Id="694052461" Language="SFX">
 					<ShortName>gameplay_hats.wav</ShortName>
 					<Path>SFX\gameplay_hats_D79FB2B7.wem</Path>
+				</File>
+				<File Id="742568617" Language="SFX">
+					<ShortName>grassFS_03.wav</ShortName>
+					<Path>SFX\grassFS_03_10C4C929.wem</Path>
 				</File>
 				<File Id="772319303" Language="SFX">
 					<ShortName>shotgun_shot_01.wav</ShortName>
@@ -114,6 +180,14 @@
 				<File Id="788969360" Language="SFX">
 					<ShortName>gameplay_drums_metal_117bpm.wav</ShortName>
 					<Path>SFX\gameplay_drums_metal_117bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="804163719" Language="SFX">
+					<ShortName>player_jump_03.wav</ShortName>
+					<Path>SFX\player_jump_03_10C4C929.wem</Path>
+				</File>
+				<File Id="835708748" Language="SFX">
+					<ShortName>bazooka_fire_01.wav</ShortName>
+					<Path>SFX\bazooka_fire_01_10C4C929.wem</Path>
 				</File>
 				<File Id="882975028" Language="SFX">
 					<ShortName>gameplay_lead.wav</ShortName>
@@ -141,8 +215,8 @@
 				</File>
 			</IncludedMemoryFiles>
 			<GameParameters>
-				<GameParameter Id="72790338" Name="low_health" ObjectPath="\Game Parameters\Default Work Unit\low_health"/>
 				<GameParameter Id="2398231425" Name="score" ObjectPath="\Game Parameters\Default Work Unit\score"/>
+				<GameParameter Id="3677180323" Name="health" ObjectPath="\Game Parameters\Default Work Unit\health"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="762757699" Name="gameplay_state" ObjectPath="\States\Default Work Unit\gameplay_state" GUID="{E5A62C64-624B-4A96-9A89-81842F483229}">
@@ -151,6 +225,7 @@
 						<State Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\gameplay_state\gameplay" GUID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
 						<State Id="319258907" Name="paused" ObjectPath="\States\Default Work Unit\gameplay_state\paused" GUID="{95491A7E-01AC-4766-A593-BA6FA8AC0FFD}"/>
 						<State Id="2005704188" Name="main_menu" ObjectPath="\States\Default Work Unit\gameplay_state\main_menu" GUID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}"/>
+						<State Id="1432716332" Name="game_over" ObjectPath="\States\Default Work Unit\gameplay_state\game_over" GUID="{73C0ECBB-CC18-4E53-8CC3-ED0C86C04847}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="2005704188" Name="main_menu" ObjectPath="\States\Default Work Unit\gameplay_state\main_menu" GUID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}">

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B06BEB81-A4A5-4AAF-B868-7EEDABCC25D2}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Enemies" ID="{B06BEB81-A4A5-4AAF-B868-7EEDABCC25D2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Helicopter" ID="{72460CDC-2A72-460A-9134-3028001058B7}" ShortID="1013938800">
+					<ChildrenList>
+						<Event Name="ww_heli_start" ID="{90D86200-23FA-4BE7-86B6-D29D7A98A123}">
+							<ChildrenList>
+								<Action Name="" ID="{F4548AEF-895B-4E0F-B838-2AEAEBE17083}" ShortID="680465699">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Helicopter Locomotion" ID="{A4215975-8B7C-4BE2-AB6C-69135C52B135}" WorkUnitID="{27A671FD-9861-4E83-9F3C-BF0CD686D9B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F187D226-80F7-4E42-948D-FB20313E771C}" ShortID="993086068">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="36"/>
+										<Property Name="SeekPercent" Type="Real64" Value="90">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6B1A6B5D-9037-4103-8BB7-6DDE5B4865B4}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-90"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Helicopter Locomotion" ID="{A4215975-8B7C-4BE2-AB6C-69135C52B135}" WorkUnitID="{27A671FD-9861-4E83-9F3C-BF0CD686D9B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Squirrel" ID="{EA2D7DC9-6A12-416F-9218-B87F681A9476}" ShortID="283420862"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

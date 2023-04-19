@@ -17,54 +17,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="ww_uzi_shot_loop" ID="{039A5705-0B4B-4861-9A53-6BEEE6965F31}">
-					<ChildrenList>
-						<Action Name="" ID="{826964F7-EC02-4471-A519-18ADF0BA006F}" ShortID="752790577">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="ww_uzi_stop_empty" ID="{1A5D5A3B-86D6-439F-896B-57AB04F8CE7E}">
-					<ChildrenList>
-						<Action Name="" ID="{0A6CB7CE-4A0C-4249-8345-990541D9EE1E}" ShortID="399034034">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{2CDF915E-04B1-422E-B149-6CB542064BAD}" ShortID="500797894">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="uzi_empty" ID="{6A4EF48B-81FA-4E9C-AC00-787D2C17F4B1}" WorkUnitID="{18BC388D-B94C-4362-BD31-FB9AA3EFE568}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="ww_uzi_stop" ID="{C92D6F75-F248-40E4-8703-E9C691BFAF9D}">
-					<ChildrenList>
-						<Action Name="" ID="{F7647963-4A49-4362-8DE5-18B2BAD4BD0C}" ShortID="183128476">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="ww_shotgun_shot" ID="{05D90798-F1AC-49F0-81E3-8A66CCCA4640}">
 					<ChildrenList>
 						<Action Name="" ID="{03458385-5DFF-474A-8D1D-A6BE79382EFC}" ShortID="393423923">
@@ -76,6 +28,127 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Bazooka" ID="{CF5616DF-0501-4D63-9B96-20976EFD552B}" ShortID="830037984">
+					<ChildrenList>
+						<Event Name="ww_bazooka_impact" ID="{9261D8F1-8D15-4577-A9CA-38DFBA91280D}">
+							<ChildrenList>
+								<Action Name="" ID="{F2FB098F-8D28-49C9-9844-CC79C84AD989}" ShortID="350588336">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bazooka Impact" ID="{9F988E39-65F7-4A11-A5FF-83ED831AE14D}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{DD0DCC93-144C-49DF-96A4-1863F1582AC7}" ShortID="771992052">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bazooka Cruise" ID="{C979CA32-5644-4EB8-9DA6-F8F42068CF53}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ww_bazooka_shot" ID="{4CC0DDEB-1E33-4563-A691-87F400EAA45E}">
+							<ChildrenList>
+								<Action Name="" ID="{25451D92-1E4C-43C2-BD87-49867D363750}" ShortID="491517747">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bazooka Fire" ID="{0D698B97-11EF-48E0-A158-A322A2613D5F}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B9DDA9C9-0A9F-4A3F-AEAA-90AE32684063}" ShortID="850605449">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bazooka Cruise" ID="{C979CA32-5644-4EB8-9DA6-F8F42068CF53}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4628BF5F-88EE-4E26-89D2-A8496BCD5A34}" ShortID="730658424">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="36"/>
+										<Property Name="SeekPercent" Type="Real64" Value="90">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3FEA7228-D63A-4553-860D-00FED705C5AA}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-90"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bazooka Cruise" ID="{C979CA32-5644-4EB8-9DA6-F8F42068CF53}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Uzi" ID="{7DBDF892-E7BF-4837-946D-DC816548486D}" ShortID="830761646">
+					<ChildrenList>
+						<Event Name="ww_uzi_stop" ID="{C92D6F75-F248-40E4-8703-E9C691BFAF9D}">
+							<ChildrenList>
+								<Action Name="" ID="{F7647963-4A49-4362-8DE5-18B2BAD4BD0C}" ShortID="183128476">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ww_uzi_stop_empty" ID="{1A5D5A3B-86D6-439F-896B-57AB04F8CE7E}">
+							<ChildrenList>
+								<Action Name="" ID="{0A6CB7CE-4A0C-4249-8345-990541D9EE1E}" ShortID="399034034">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2CDF915E-04B1-422E-B149-6CB542064BAD}" ShortID="500797894">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="uzi_empty" ID="{6A4EF48B-81FA-4E9C-AC00-787D2C17F4B1}" WorkUnitID="{18BC388D-B94C-4362-BD31-FB9AA3EFE568}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ww_uzi_shot_loop" ID="{039A5705-0B4B-4861-9A53-6BEEE6965F31}">
+							<ChildrenList>
+								<Action Name="" ID="{826964F7-EC02-4471-A519-18ADF0BA006F}" ShortID="752790577">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

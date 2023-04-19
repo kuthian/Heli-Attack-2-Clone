@@ -14,7 +14,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="ui_mouse_click" ID="{87C08474-66AA-4F0E-B64B-4EB156E50831}">
+				<Event Name="ui_game_start" ID="{87C08474-66AA-4F0E-B64B-4EB156E50831}">
 					<ChildrenList>
 						<Action Name="" ID="{4D291593-0F49-4F27-B841-362833E6D87F}" ShortID="301593038">
 							<ReferenceList>
@@ -25,7 +25,7 @@
 						</Action>
 						<Action Name="" ID="{0CE604A0-E378-47DB-BA98-72762F5E285B}" ShortID="833946979">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.07"/>
+								<Property Name="Delay" Type="Real64" Value="0.06"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -35,6 +35,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ui_mouse_click" ID="{5CD2A983-7E24-4FE4-B294-6B4604876BAE}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
