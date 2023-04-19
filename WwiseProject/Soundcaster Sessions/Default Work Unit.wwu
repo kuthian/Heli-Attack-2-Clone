@@ -4,18 +4,28 @@
 		<WorkUnit Name="Default Work Unit" ID="{9500869E-F52D-4E2F-89AD-6D696A2297C1}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="New Soundcaster Session" ID="{8A8ED7BC-5F3A-4922-A015-DA6A45F4BE16}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="ww_bazooka_shot" ID="{4CC0DDEB-1E33-4563-A691-87F400EAA45E}" WorkUnitID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ww_bazooka_impact" ID="{9261D8F1-8D15-4577-A9CA-38DFBA91280D}" WorkUnitID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="score" ID="{2E64B58B-3C59-4B78-9105-25E18E25CD8A}"/>
-							<Value>5</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="health" ID="{14542769-B3B2-4DA1-A204-AE3FE99BE382}"/>
-							<Value>100</Value>
+							<Value>29.5348837209302</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="gameplay" ID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
+						<CurrentStateRef Name="game_over" ID="{73C0ECBB-CC18-4E53-8CC3-ED0C86C04847}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="switch_2" ID="{6487540E-EA87-44B4-B788-66529BE069FE}"/>

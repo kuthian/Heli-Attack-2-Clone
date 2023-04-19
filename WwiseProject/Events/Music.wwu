@@ -17,11 +17,44 @@
 						</Action>
 						<Action Name="" ID="{1943A941-CC44-4470-82BD-137FCA6846F0}" ShortID="1013469359">
 							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Master Music Container" ID="{F5CB3645-D8F6-4CAA-AB59-27EC685D4C08}" WorkUnitID="{48089242-6501-413A-9C66-44DDDA85A9AD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{37CA295F-F67F-46F0-8A44-A9B55C72A75A}" ShortID="17848686">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Night Ambience" ID="{B3DCEEB7-9B03-481C-BC2D-3D5A9D39D989}" WorkUnitID="{F43312C3-3F8B-467C-9D5B-28FD305462DC}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{28E5C917-40FF-4593-8CEF-FCD4E72719CF}" ShortID="362595723">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="36"/>
+								<Property Name="SeekPercent" Type="Real64" Value="90">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1E1ADE17-8BBD-4160-A8CD-20FBC4B53F78}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-90"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Night Ambience" ID="{B3DCEEB7-9B03-481C-BC2D-3D5A9D39D989}" WorkUnitID="{F43312C3-3F8B-467C-9D5B-28FD305462DC}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

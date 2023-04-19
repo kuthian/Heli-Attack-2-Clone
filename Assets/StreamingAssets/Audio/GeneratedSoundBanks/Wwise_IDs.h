@@ -15,7 +15,12 @@ namespace AK
     {
         static const AkUniqueID UI_MOUSE_CLICK = 2359679562U;
         static const AkUniqueID UI_MOUSE_HOVER = 1201739520U;
+        static const AkUniqueID WW_BAZOOKA_IMPACT = 3662259936U;
+        static const AkUniqueID WW_BAZOOKA_SHOT = 60321222U;
+        static const AkUniqueID WW_HELI_START = 655812923U;
         static const AkUniqueID WW_MUSIC = 2045634255U;
+        static const AkUniqueID WW_PLAYER_FS = 48068017U;
+        static const AkUniqueID WW_PLAYER_JUMP = 3290493012U;
         static const AkUniqueID WW_RIFLE_SHOT = 2496926511U;
         static const AkUniqueID WW_SHOTGUN_COCK = 1701460811U;
         static const AkUniqueID WW_SHOTGUN_SHELL = 1650400503U;
@@ -33,6 +38,7 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID GAME_OVER = 1432716332U;
                 static const AkUniqueID GAMEPLAY = 89505537U;
                 static const AkUniqueID MAIN_MENU = 2005704188U;
                 static const AkUniqueID NONE = 748895195U;
@@ -59,7 +65,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
-        static const AkUniqueID LOW_HEALTH = 72790338U;
+        static const AkUniqueID HEALTH = 3677180323U;
         static const AkUniqueID SCORE = 2398231425U;
     } // namespace GAME_PARAMETERS
 
@@ -71,9 +77,12 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID RIFLE = 4262674733U;
+        static const AkUniqueID ROCKET_IMPACT = 3495485381U;
+        static const AkUniqueID ROCKET_SHOOT = 903067976U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES
