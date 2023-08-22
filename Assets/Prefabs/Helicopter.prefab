@@ -198,12 +198,12 @@ MonoBehaviour:
     acceleration: {x: 6, y: 5}
     decceleration: {x: 5, y: 5}
     tolerance: 1
-    durationSeconds: 3
+    durationSeconds: 2
   _returning:
-    maxSpeed: {x: 4, y: 2.5}
+    maxSpeed: {x: 4.4, y: 2.5}
     acceleration: {x: 5, y: 5}
     decceleration: {x: 5, y: 4}
-    tolerance: 1
+    tolerance: 0.7
     durationSeconds: 10
   _cruisingPositionY: 1
   _cruisingToleranceY: 0.2
@@ -221,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 100
   <CurrentHealth>k__BackingField: 0
+  <Invincible>k__BackingField: 0
 --- !u!114 &6501264673782278908
 MonoBehaviour:
   m_ObjectHideFlags: 0

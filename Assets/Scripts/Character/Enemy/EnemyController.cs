@@ -71,6 +71,8 @@ public class EnemyController : MonoBehaviour {
 
   void Awake()
   {
+    _state = State.WakingUp;
+    _nextStateTime = DateTime.Now;
     _rb = GetComponent<Rigidbody2D>();
     _player = GameObject.Find("Player").transform;
     _gunController = GetComponentInChildren<EnemyGunController>();
@@ -94,9 +96,10 @@ public class EnemyController : MonoBehaviour {
 
   private void GoToNextState()
   {
+    var previous_state = _state;
     switch (_state) {
       case State.WakingUp:
-        GoToState( State.Idle );
+        GoToState( State.Returning );
         break;
       case State.Idle:
         GoToState( IdleOnly ? State.Idle : State.Leaving );
@@ -112,9 +115,11 @@ public class EnemyController : MonoBehaviour {
 
   void GoToState( State nextState )
   {
+    // var previous_state = _state;
     _gunController.ShootingEnabled = ( nextState == State.Idle );
     _nextStateTime = DateTime.Now.AddSeconds( GetStateParameters(nextState).durationSeconds );
     _state = nextState;
+    // Debug.Log(previous_state + " -> " + _state );
   }
 
   private StateParameters GetStateParameters( State state )
@@ -303,6 +308,7 @@ public class EnemyController : MonoBehaviour {
     else
     {
       SlowDownX();
+      _gunController.ShootingEnabled = true;
       // if (SpeedX < 3) {
       //   GoToState( State.Idle );
       // }
@@ -326,9 +332,8 @@ public class EnemyController : MonoBehaviour {
       SlowDownY();
     }
 
-
     if (withinToleranceY && withinToleranceX &&
-        SpeedX < 1 && SpeedY < 1 ) {
+        SpeedX < 1.3 && SpeedY < 1.3 ) {
       GoToState( State.Idle );
     }
   }
