@@ -9,6 +9,9 @@ public class Health : MonoBehaviour {
   [field:SerializeField]
   public int CurrentHealth { get; set; }
 
+  [field:SerializeField]
+  public bool Invincible { get; set; }
+
   public delegate void _OnHealthChanged(int health);
   public event _OnHealthChanged OnHealthChanged; 
 
@@ -22,6 +25,8 @@ public class Health : MonoBehaviour {
 
   public void Damage( int points )
   {
+    if ( Invincible ) return;
+
     if (CurrentHealth > 0)
     {
       CurrentHealth -= points;
