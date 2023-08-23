@@ -162,8 +162,8 @@ MonoBehaviour:
   _wwOnStart:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: c5d2f3fe2b596f34ebc6c36927f7a6da, type: 2}
   _wwOnDestroy:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: cca0ccf10ca7242409c8eab028366d60, type: 2}
