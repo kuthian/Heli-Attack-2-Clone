@@ -95,6 +95,21 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="ww_bazooka_end" ID="{5C8D26FA-0925-4EEC-BEBA-3C41139987F2}">
+							<ChildrenList>
+								<Action Name="" ID="{6D4BB268-F74A-4177-A736-83D265AC8C00}" ShortID="518529341">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="3.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bazooka Cruise" ID="{C979CA32-5644-4EB8-9DA6-F8F42068CF53}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Uzi" ID="{7DBDF892-E7BF-4837-946D-DC816548486D}" ShortID="830761646">
@@ -108,7 +123,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+											<ObjectRef Name="Uzi_Spray" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -123,7 +138,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+											<ObjectRef Name="Uzi_Spray" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -141,7 +156,18 @@
 								<Action Name="" ID="{826964F7-EC02-4471-A519-18ADF0BA006F}" ShortID="752790577">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+											<ObjectRef Name="Uzi_Spray" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ww_uzi_bullet_hit" ID="{F897DD40-9898-45D2-849B-CB0A334E2EA8}">
+							<ChildrenList>
+								<Action Name="" ID="{EA997B65-4C5F-4B76-B3A1-0A22C007BBA7}" ShortID="671753694">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bullet Impacts" ID="{67708619-F65C-4B84-A2E9-E9F230157B04}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

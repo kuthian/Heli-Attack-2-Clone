@@ -11,6 +11,7 @@ State	ID	Name	State Group			Notes
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
 	903067976	Rocket Shoot			\Default Work Unit\Master Audio Bus\Rocket Shoot	
+	2167849898	Helicopter			\Default Work Unit\Master Audio Bus\Helicopter	
 	3495485381	Rocket Impact			\Default Work Unit\Master Audio Bus\Rocket Impact	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	

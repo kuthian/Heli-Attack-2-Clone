@@ -50,13 +50,19 @@
 								<DuckItem>
 									<BusRef Name="Rocket Shoot" ID="{EDD86D3E-D345-4B7A-922E-8EBD7C2B3AF9}"/>
 									<DuckingParam>
-										<Volume>-5</Volume>
+										<Volume>-2</Volume>
 										<FadeInTime>0.100000001490116</FadeInTime>
 										<FadeOutTime>0.100000001490116</FadeOutTime>
 										<FadeCurve>FadeLog3</FadeCurve>
 									</DuckingParam>
 								</DuckItem>
 							</DuckingList>
+						</Bus>
+						<Bus Name="Helicopter" ID="{88A84664-C9F3-466A-AA31-087A9BF98351}">
+							<PropertyList>
+								<Property Name="RecoveryTime" Type="Real64" Value="0"/>
+							</PropertyList>
+							<ObjectLists/>
 						</Bus>
 					</ChildrenList>
 					<ObjectLists/>

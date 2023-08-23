@@ -2,6 +2,10 @@
 <WwiseDocument Type="WorkUnit" ID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}" SchemaVersion="103">
 	<AudioObjects>
 		<WorkUnit Name="Guns" ID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<RandomSequenceContainer Name="Rifle" ID="{06D2245E-25FE-412A-B0C1-FF1378489679}" ShortID="319906279">
 					<PropertyList>
@@ -63,74 +67,6 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="rifle_fire_01" ID="{5A5C19CE-FEEE-4B5A-BC78-A45309E132C2}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-					<ObjectLists/>
-				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="Uzi" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" ShortID="385000842">
-					<PropertyList>
-						<Property Name="MaxSoundPerInstance" Type="int16">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{54A20F6E-6D49-43DC-BFB5-BFC2A40A1835}"/>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="UseMaxSoundPerInstance" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="UserAuxSendVolume0" Type="Real64">
-							<ValueList>
-								<Value>-13</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-5</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
-						</Reference>
-						<Reference Name="UserAuxSend0">
-							<ObjectRef Name="Outdoor_Verb" ID="{1EE370B1-5ADB-4CE0-9F89-3D161AFF3307}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="uzi_spray" ID="{0FEF9CD5-32BD-41FC-9944-9C0D1C331FFC}" ShortID="1018285511">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="uzi_spray" ID="{D10DA32B-9A76-4055-B375-274A2F8B868B}">
-									<Language>SFX</Language>
-									<AudioFile>uzi_spray.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1059951826"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="uzi_spray" ID="{D10DA32B-9A76-4055-B375-274A2F8B868B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -261,6 +197,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="Bazooka Fire" ID="{0D698B97-11EF-48E0-A158-A322A2613D5F}" ShortID="964588415">
 							<PropertyList>
+								<Property Name="HoldEmitterPositionOrientation" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -313,6 +250,11 @@
 						<RandomSequenceContainer Name="Bazooka Cruise" ID="{C979CA32-5644-4EB8-9DA6-F8F42068CF53}" ShortID="753204856">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -326,13 +268,17 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Rocket Cruise" ID="{634B44AE-DE94-4BFF-ADC4-165DB2FDDC38}" WorkUnitID="{D7EB2D5A-697B-497F-9C09-C1412E098A81}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
 								</Reference>
@@ -383,6 +329,12 @@
 						<RandomSequenceContainer Name="Bazooka Impact" ID="{9F988E39-65F7-4A11-A5FF-83ED831AE14D}" ShortID="13306957">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -396,8 +348,17 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Rocket Impact" ID="{F5CBDCC2-E606-4845-AC7D-AFDFB56CBCB5}" WorkUnitID="{D7EB2D5A-697B-497F-9C09-C1412E098A81}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
 								</Reference>
@@ -436,8 +397,311 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{CFD2A580-4839-4828-958E-EC00F961DA78}"/>
+								<Position Name="" ID="{B98FCE9E-3FCA-4939-8DC4-9FBA7C1E93DD}"/>
+							</PositioningInfo>
 							<ObjectLists/>
 						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Uzi" ID="{A9690E60-BF42-45C0-9A8D-A28A0997163E}" ShortID="1049540095">
+					<ChildrenList>
+						<RandomSequenceContainer Name="Uzi_Spray" ID="{A4A1AF77-0FC7-4781-97E5-F5B801C57E29}" ShortID="385000842">
+							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{54A20F6E-6D49-43DC-BFB5-BFC2A40A1835}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Outdoor_Verb" ID="{1EE370B1-5ADB-4CE0-9F89-3D161AFF3307}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="uzi_spray" ID="{0FEF9CD5-32BD-41FC-9944-9C0D1C331FFC}" ShortID="1018285511">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="uzi_spray" ID="{D10DA32B-9A76-4055-B375-274A2F8B868B}">
+											<Language>SFX</Language>
+											<AudioFile>uzi_spray.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1059951826"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="uzi_spray" ID="{D10DA32B-9A76-4055-B375-274A2F8B868B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
+						<BlendContainer Name="Bullet Impacts" ID="{67708619-F65C-4B84-A2E9-E9F230157B04}" ShortID="352080172">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>15</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>22</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-1140</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5E96AF4F-2F33-4C17-8E3B-FCC46348909F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+													<Property Name="Min" Type="Real64" Value="-51"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Uzi Hit Low" ID="{C88D150F-FFC3-48B9-8FCF-35CE39E5D512}" ShortID="651542522">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E5D1A8A1-FD0D-4C52-9D6E-9F59BA2B4B1A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="328"/>
+															<Property Name="Min" Type="Real64" Value="-253"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="uzi_impact_01" ID="{FCB275B0-BC67-4AC1-833C-02DE2169CC72}" ShortID="738761175">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="uzi_impact_01" ID="{0FCDDCBF-599F-4042-9DE1-13C263066909}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.120727697495183"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.120727697495183"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>uzi_impact_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="957239109"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="uzi_impact_01" ID="{0FCDDCBF-599F-4042-9DE1-13C263066909}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="uzi_impact_02" ID="{2779A5C0-6745-4C42-8C17-505B469E0C9B}" ShortID="313834532">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="uzi_impact_02" ID="{206790CF-B98E-4791-832F-EB8904C6FD27}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0560263005780347"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.154739306358381"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>uzi_impact_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="191393311"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="uzi_impact_02" ID="{206790CF-B98E-4791-832F-EB8904C6FD27}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Uzi Hit High" ID="{6764F9BC-31D7-4ED0-A2D5-10E86423D7B7}" ShortID="916997319">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-330</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{1BC67850-206C-45BA-8386-BB3A08DCFE42}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="202"/>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="uzi_impact_lay01" ID="{B69844B5-8118-47A9-9864-6350F789C7B1}" ShortID="960596243">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="uzi_impact_lay01" ID="{A43DB7B5-A252-4412-807D-9D4224EB1045}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.133400770712909"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.218443762042389"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>uzi_impact_lay01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="960456348"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="uzi_impact_lay01" ID="{A43DB7B5-A252-4412-807D-9D4224EB1045}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="uzi_impact_lay02" ID="{3B730527-A96B-4BE5-AE29-43CD753597E9}" ShortID="293953884">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="uzi_impact_lay02" ID="{17336EA5-DCA5-4E3D-9FF5-2F201E270CBE}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0592909441233141"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.0937538053949903"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>uzi_impact_lay02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="333889851"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="uzi_impact_lay02" ID="{17336EA5-DCA5-4E3D-9FF5-2F201E270CBE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</BlendContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

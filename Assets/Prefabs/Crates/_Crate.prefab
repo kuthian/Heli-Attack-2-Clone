@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7548195870152774238}
   - component: {fileID: 7548195870152774226}
   - component: {fileID: 2994299481215064284}
+  - component: {fileID: -6223437926608127981}
   m_Layer: 0
   m_Name: _Crate
   m_TagString: Untagged
@@ -206,6 +207,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dfd6403726ac14a906b5080bfb31db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6223437926608127981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548195870152774228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e7df1f17ecad6489e4872c27f9f5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wwOnStart:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  _wwOnDestroy:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b3ef97d14c5fd084782e3cbf85f00588, type: 2}
 --- !u!1 &9110575096431194141
 GameObject:
   m_ObjectHideFlags: 0
