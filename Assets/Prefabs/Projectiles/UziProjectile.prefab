@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: _damage
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -7133862975253113648, guid: 4965d607913209248a64dff351753ff2, type: 3}
+      propertyPath: _wwOnImpactEnemy.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: a29ed12054876e747984fe995f9141fc, type: 2}
     - target: {fileID: 92056171148992293, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Name
       value: UziProjectile

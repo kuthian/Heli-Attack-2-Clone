@@ -38,4 +38,14 @@ public class HUDManager : Singleton<HUDManager> {
     }
   }
 
+  public static void ShowHUD()
+  {
+    Instance.gameObject.SetActive(true);
+  }
+
+  public static void HideHUD()
+  {
+    Instance.gameObject.SetActive(false);
+  }
+
 };

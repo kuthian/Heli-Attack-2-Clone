@@ -21,6 +21,15 @@ public class EnemyManager : MonoBehaviour {
     }
   }
 
+  public void End()
+  {
+    foreach ( GameObject obj in _enemies )
+    {
+      obj.GetComponent<EnemyController>().LeaveForever = true;
+      obj.GetComponent<EnemyController>().GoToState( EnemyController.State.Leaving );
+    }
+  }
+
   private void OnEnable()
   {
     foreach ( GameObject obj in _enemies )

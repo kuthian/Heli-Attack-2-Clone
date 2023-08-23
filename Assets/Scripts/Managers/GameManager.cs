@@ -4,16 +4,21 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager> {
 
   private GameObject _player;
+  private EnemyManager _enemyManager;
   [SerializeField]
   private GameObject _pauseMenuUI;
+  [SerializeField]
+  private GameObject _deathScreenUI;
 
   public void Start()
   {
     _player = GameObject.Find("Player");
+    _enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     _player.GetComponent<PlayerController>().AddWeapon( 
         ItemManager.GetRiflePrefab()
      );
-  }  
+    _player.GetComponent<Health>().OnHealthZero += GameOver;
+  }
 
   static public bool Paused => Time.timeScale == 0;
 
@@ -33,8 +38,18 @@ public class GameManager : Singleton<GameManager> {
 
   public void StartMenu()
   {
+    _deathScreenUI.SetActive(false);
     SceneManager.LoadScene("StartMenu");
     Time.timeScale = 1;
+  }
+
+  public static void GameOver()
+  {
+    Time.timeScale = 0.1f;
+    Instance._deathScreenUI.SetActive(true);
+    Instance._player.GetComponent<PlayerController>().BlockInput = true;
+    Instance._enemyManager.End();
+    HUDManager.HideHUD();
   }
 
   public void Quit()

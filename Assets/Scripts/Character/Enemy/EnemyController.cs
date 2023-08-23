@@ -9,17 +9,15 @@ public class EnemyController : MonoBehaviour {
   private Transform _player;
 
   public bool IdleOnly = false;
+  public bool LeaveForever = false;
 
-  enum State
+  public enum State
   {
     WakingUp,
     Idle,
     Leaving,
-    // Left,
     Returning
   }
-
-  // Vector2
 
   [Serializable]
   struct StateParameters {
@@ -49,6 +47,10 @@ public class EnemyController : MonoBehaviour {
   private bool MovingTowardsPlayerY => DirectionToPlayerY == DirectionY;
 
   [SerializeField]
+  private float _cruisingPositionMinY = 1.5f;
+  [SerializeField]
+  private float _cruisingPositionMaxY = 3.5f;
+  [SerializeField]
   private float _cruisingPositionY = 1.0f;
   [SerializeField]
   private float _cruisingToleranceY = 0.2f;
@@ -68,6 +70,8 @@ public class EnemyController : MonoBehaviour {
   private bool NotMovingY => SpeedY == 0;
   private bool MovingX => SpeedX > 0;
   private bool MovingY => SpeedY > 0;
+
+  bool ShootingEnabled => GetComponentInChildren<EnemyGunController>().ShootingEnabled;
 
   void Awake()
   {
@@ -96,7 +100,6 @@ public class EnemyController : MonoBehaviour {
 
   private void GoToNextState()
   {
-    var previous_state = _state;
     switch (_state) {
       case State.WakingUp:
         GoToState( State.Returning );
@@ -105,7 +108,10 @@ public class EnemyController : MonoBehaviour {
         GoToState( IdleOnly ? State.Idle : State.Leaving );
         break;
       case State.Leaving:
-        GoToState( State.Returning );
+        // Update cruising position so that the helicopter
+        // always returns to a different cruising distance
+        _cruisingPositionY = UnityEngine.Random.Range(_cruisingPositionMinY, _cruisingPositionMaxY);
+        GoToState( LeaveForever ? State.Leaving : State.Returning );
         break;
       case State.Returning:
         GoToState( State.Idle );
@@ -113,7 +119,7 @@ public class EnemyController : MonoBehaviour {
     }
   }
 
-  void GoToState( State nextState )
+  public void GoToState( State nextState )
   {
     // var previous_state = _state;
     _gunController.ShootingEnabled = ( nextState == State.Idle );
@@ -245,13 +251,6 @@ public class EnemyController : MonoBehaviour {
     if ( !withinToleranceY )
     {
       MoveToCruising();
-      // if ( MovingTowardsCruising || NotMovingY )
-      // {
-      // }
-      // else
-      // {
-      //   SlowDownY();
-      // }
     }
     else
     if ( MovingY )
@@ -262,38 +261,8 @@ public class EnemyController : MonoBehaviour {
 
   void LeavingMovement()
   {
-    var m = _leaving;
-
     MoveAwayFromPlayerY();
     MoveAwayFromPlayerX();
-
-    // float speed = SpeedX + m.acceleration * Time.fixedDeltaTime;
-    // if (speed > m.maxSpeed) speed = m.maxSpeed;
-    // // int direction = MathF.Sign(_rb.velocity.x);
-    // // if (direction == 0) direction = Math.Sign(UnityEngine.Random.Range(-100,100));
-    // _rb.velocity = new Vector2(DirectionX * speed, VelocityY);
-
-    // float speed = _rb.velocity.x + Math.Sign(_rb.velocity.x) * m.acceleration * Time.fixedDeltaTime;
-    // if (speed > m.maxSpeed) speed = m.maxSpeed;
-    // _rb.velocity = new Vector2(speed, _rb.velocity.y);
-
-
-    // MathF.Sign(_rb.velocity.x) * 
-    // if ( velocityX > 0 )
-    // {
-    //   velocityX += m.acceleration * Time.fixedDeltaTime;
-    //   if (velocityX > m.maxSpeed) velocityX = m.maxSpeed;
-    // }
-    // else
-    // {
-    //   velocityX -= m.acceleration * Time.fixedDeltaTime;
-    // }
-    // float speed = Mathf.Abs(_rb.velocity.x) + _MoveAcceleration * Time.fixedDeltaTime;
-    // // if (speed > _maxSpeed) speed = _maxSpeed;
-    // float xDistance = transform.position.x - _player.position.x;
-    // int direction = xDistance > 0 ? 1 : -1;
-    // Debug.Log("horizontal=" + _horizontal + ", direction=" + direction);
-    // _rb.velocity = new Vector2(velocityX, _rb.velocity.y);
   }
 
   void ReturningMovement()
@@ -309,22 +278,12 @@ public class EnemyController : MonoBehaviour {
     {
       SlowDownX();
       _gunController.ShootingEnabled = true;
-      // if (SpeedX < 3) {
-      //   GoToState( State.Idle );
-      // }
     }
 
     bool withinToleranceY = Mathf.Abs(DistanceFromCruisingY) < m.tolerance;
     if ( !withinToleranceY )
     {
-        MoveToCruising();
-      // if ( MovingTowardsCruising || NotMovingY )
-      // {
-      // }
-      // else
-      // {
-      //   SlowDownY();
-      // }
+      MoveToCruising();
     }
     else
     if ( MovingY )

@@ -13,7 +13,13 @@ public class Projectile : MonoBehaviour {
   public float MaxLifetimeSeconds { get; set; } = 5;
 
   [SerializeField]
-  private AK.Wwise.Event _wwOnImpact;
+  private AK.Wwise.Event _wwOnImpactPlayer;
+
+  [SerializeField]
+  private AK.Wwise.Event _wwOnImpactEnemy;
+
+  [SerializeField]
+  private AK.Wwise.Event _wwOnImpactMap;
 
   [SerializeField]
   private AK.Wwise.Event _wwOnLeaveGameArea;
@@ -30,10 +36,10 @@ public class Projectile : MonoBehaviour {
     Destroy(gameObject, MaxLifetimeSeconds);
   }
 
-  private void PlayImpactSound()
+  private void wwPostEvent( AK.Wwise.Event ww_event )
   {
-    if (_wwOnImpact.IsValid()) {
-      _wwOnImpact.Post(gameObject);
+    if (ww_event.IsValid()) {
+      ww_event.Post(gameObject);
     }
   }
 
@@ -42,14 +48,14 @@ public class Projectile : MonoBehaviour {
     if (other.CompareTag("Map"))
     {
       // Any Projectile hits a map object
-      PlayImpactSound();
+      wwPostEvent( _wwOnImpactMap );
       Destroy(gameObject);
     }
     else 
     if (CompareTag("EnemyProjectile") && other.CompareTag("Player")) 
     {
       // Enemy projectile hits Player
-      PlayImpactSound();
+      wwPostEvent( _wwOnImpactPlayer );
       other.gameObject.SendMessage("Damage", Damage);
       Destroy(gameObject);
     }
@@ -57,7 +63,7 @@ public class Projectile : MonoBehaviour {
     if (CompareTag("PlayerProjectile") && other.CompareTag("Enemy")) 
     {
       // Player projectile hits Enemy
-      PlayImpactSound();
+      wwPostEvent( _wwOnImpactEnemy );
       other.gameObject.SendMessage("Damage", Damage);
       Destroy(gameObject);
     }
@@ -67,9 +73,7 @@ public class Projectile : MonoBehaviour {
   {
     if (other.CompareTag("GameArea"))
     {
-      if (_wwOnLeaveGameArea.IsValid()) {
-        _wwOnLeaveGameArea.Post(gameObject);
-      }
+      wwPostEvent( _wwOnLeaveGameArea );
       Destroy(gameObject);
     }
   }
