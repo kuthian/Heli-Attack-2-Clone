@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: _wwOnImpact.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: a8dca42b5e152544e9f82267e8a255ec, type: 2}
+    - target: {fileID: -7133862975253113648, guid: 4965d607913209248a64dff351753ff2, type: 3}
+      propertyPath: _wwOnLeaveGameArea.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 6137f6e53ca77974c9adb474b10829f3, type: 2}
     - target: {fileID: 92056171148992293, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Name
       value: BazookaProjectile
@@ -129,4 +133,4 @@ MonoBehaviour:
   _wwOnDestroy:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 6137f6e53ca77974c9adb474b10829f3, type: 2}

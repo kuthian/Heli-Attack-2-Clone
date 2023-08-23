@@ -6,11 +6,11 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{8A8ED7BC-5F3A-4922-A015-DA6A45F4BE16}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="ww_bazooka_shot" ID="{4CC0DDEB-1E33-4563-A691-87F400EAA45E}" WorkUnitID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}"/>
+							<ObjectRef Name="ww_destroyed_heli_start" ID="{DF50B76A-725C-4289-9382-FD583D0F2F3E}" WorkUnitID="{B06BEB81-A4A5-4AAF-B868-7EEDABCC25D2}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="ww_bazooka_impact" ID="{9261D8F1-8D15-4577-A9CA-38DFBA91280D}" WorkUnitID="{4F1ACE0F-CAF1-44B8-88D6-6BDDF96E795E}"/>
+							<ObjectRef Name="ww_destroyed_heli_end" ID="{1FD131F9-DC18-4833-9167-641AD85EE410}" WorkUnitID="{B06BEB81-A4A5-4AAF-B868-7EEDABCC25D2}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
@@ -25,7 +25,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="game_over" ID="{73C0ECBB-CC18-4E53-8CC3-ED0C86C04847}"/>
+						<CurrentStateRef Name="gameplay" ID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="switch_2" ID="{6487540E-EA87-44B4-B788-66529BE069FE}"/>

@@ -13,6 +13,11 @@
 						</Property>
 						<Property Name="Mode" Type="int16" Value="1"/>
 						<Property Name="Tempo" Type="Real64" Value="117"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -501,7 +506,7 @@
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-6</Value>
+														<Value>-2</Value>
 													</ValueList>
 													<RTPCList>
 														<RTPC Name="" ID="{DC87C0E6-F57A-42E9-AE13-8ABC771258A0}" ShortID="17616231">
@@ -989,7 +994,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-6</Value>
+														<Value>-2</Value>
 													</ValueList>
 													<RTPCList>
 														<RTPC Name="" ID="{0ED9A164-88B8-4841-A638-1E38039F50B0}" ShortID="11753152">

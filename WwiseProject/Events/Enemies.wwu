@@ -41,6 +41,74 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="ww_heli_end" ID="{754EB07B-2988-41FB-9B1C-7AE015EE2449}">
+							<ChildrenList>
+								<Action Name="" ID="{FD2D4D23-4560-42BB-B780-9BBF97C8075E}" ShortID="544577899">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Helicopter Locomotion" ID="{A4215975-8B7C-4BE2-AB6C-69135C52B135}" WorkUnitID="{27A671FD-9861-4E83-9F3C-BF0CD686D9B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ww_destroyed_heli_start" ID="{DF50B76A-725C-4289-9382-FD583D0F2F3E}">
+							<ChildrenList>
+								<Action Name="" ID="{58EC5A24-ECF1-45B5-BA85-A33AA35AF020}" ShortID="542282388">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Helicopter Destroyed" ID="{3456E4FF-C9FC-466E-8701-19C2636230BE}" WorkUnitID="{27A671FD-9861-4E83-9F3C-BF0CD686D9B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BC442B52-CDFA-4899-AB33-6BFC7598A236}" ShortID="1044375058">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bazooka Impact" ID="{9F988E39-65F7-4A11-A5FF-83ED831AE14D}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BD20DB7E-72CE-4C39-A700-EC8ACED469DE}" ShortID="35874731">
+									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bazooka Fire" ID="{0D698B97-11EF-48E0-A158-A322A2613D5F}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ww_destroyed_heli_end" ID="{1FD131F9-DC18-4833-9167-641AD85EE410}">
+							<ChildrenList>
+								<Action Name="" ID="{DC46EE40-1D27-49AA-97DF-62C5300F5995}" ShortID="195299181">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Helicopter Destroyed" ID="{3456E4FF-C9FC-466E-8701-19C2636230BE}" WorkUnitID="{27A671FD-9861-4E83-9F3C-BF0CD686D9B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{0D727ACC-175B-4FA4-A1E4-78AAE920E506}" ShortID="161638186">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="missile_impact_01" ID="{6A6B6609-2E7D-401E-95B0-9346015ED116}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Squirrel" ID="{EA2D7DC9-6A12-416F-9218-B87F681A9476}" ShortID="283420862"/>

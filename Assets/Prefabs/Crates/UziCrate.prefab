@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: gunPrefab
       value: 
       objectReference: {fileID: 4618725055357171476, guid: 0621b605af99586429c207fe8439aff0, type: 3}
+    - target: {fileID: 943332191663260066, guid: 97154dc62ed973f4f8d041d98f0dd3ec, type: 3}
+      propertyPath: _wwOnDestroy.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b3ef97d14c5fd084782e3cbf85f00588, type: 2}
     - target: {fileID: 5509626010415754208, guid: 97154dc62ed973f4f8d041d98f0dd3ec, type: 3}
       propertyPath: m_SpriteTilingProperty.border.w
       value: 0

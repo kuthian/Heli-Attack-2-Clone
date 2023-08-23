@@ -24,7 +24,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="156229120">
+		<SoundBank Id="1355168291" Language="SFX" Hash="493799691">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -32,30 +32,37 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="988338367">
+		<SoundBank Id="2228651116" Language="SFX" Hash="3876559862">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2359679562" Name="ui_mouse_click" ObjectPath="\Events\UI\ui_mouse_click" DurationType="OneShot" DurationMin="4.675396" DurationMax="4.675396"/>
+				<Event Id="374915857" Name="ui_game_start" ObjectPath="\Events\UI\ui_game_start" DurationType="OneShot" DurationMin="4.675396" DurationMax="4.675396"/>
 				<Event Id="1201739520" Name="ui_mouse_hover" ObjectPath="\Events\UI\ui_mouse_hover" DurationType="OneShot" DurationMin="0.117432" DurationMax="0.139974"/>
-				<Event Id="3662259936" Name="ww_bazooka_impact" ObjectPath="\Events\Gunfire\Bazooka\ww_bazooka_impact" DurationType="OneShot" DurationMin="2.354733" DurationMax="2.570823"/>
+				<Event Id="1590435213" Name="ww_bazooka_end" ObjectPath="\Events\Gunfire\Bazooka\ww_bazooka_end" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3662259936" Name="ww_bazooka_impact" ObjectPath="\Events\Gunfire\Bazooka\ww_bazooka_impact" MaxAttenuation="100." DurationType="OneShot" DurationMin="2.354733" DurationMax="2.570823"/>
 				<Event Id="60321222" Name="ww_bazooka_shot" ObjectPath="\Events\Gunfire\Bazooka\ww_bazooka_shot" DurationType="Infinite"/>
-				<Event Id="655812923" Name="ww_heli_start" ObjectPath="\Events\Enemies\Helicopter\ww_heli_start" DurationType="Infinite"/>
+				<Event Id="3198183028" Name="ww_destroyed_heli_end" ObjectPath="\Events\Enemies\Helicopter\ww_destroyed_heli_end" MaxAttenuation="100." DurationType="OneShot" DurationMin="2.354733" DurationMax="2.570823"/>
+				<Event Id="2745238759" Name="ww_destroyed_heli_start" ObjectPath="\Events\Enemies\Helicopter\ww_destroyed_heli_start" MaxAttenuation="100." DurationType="Infinite"/>
+				<Event Id="3440669485" Name="ww_healthCrate" ObjectPath="\Events\Crates\ww_healthCrate" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479"/>
+				<Event Id="1364848480" Name="ww_heli_end" ObjectPath="\Events\Enemies\Helicopter\ww_heli_end" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="655812923" Name="ww_heli_start" ObjectPath="\Events\Enemies\Helicopter\ww_heli_start" MaxAttenuation="100." DurationType="Infinite"/>
 				<Event Id="2045634255" Name="ww_music" ObjectPath="\Events\Music\ww_music" DurationType="Infinite">
 					<ActionSetState>
 						<ActionSetStateEntry Id="2005704188" Name="main_menu" ObjectPath="\States\Default Work Unit\gameplay_state\main_menu"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="48068017" Name="ww_player_fs" ObjectPath="\Events\Player\ww_player_fs" DurationType="OneShot" DurationMin="0.117432" DurationMax="0.206831"/>
-				<Event Id="3290493012" Name="ww_player_jump" ObjectPath="\Events\Player\ww_player_jump" DurationType="OneShot" DurationMin="0.120943" DurationMax="0.271821"/>
+				<Event Id="48068017" Name="ww_player_fs" ObjectPath="\Events\Player\ww_player_fs" DurationType="OneShot" DurationMin="0.146255" DurationMax="0.257598"/>
+				<Event Id="3290493012" Name="ww_player_jump" ObjectPath="\Events\Player\ww_player_jump" DurationType="OneShot" DurationMin="0.091763" DurationMax="0.276093"/>
 				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Gunfire\ww_rifle_shot" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479"/>
-				<Event Id="1701460811" Name="ww_shotgun_cock" ObjectPath="\Events\Reloads\ww_shotgun_cock" DurationType="OneShot" DurationMin="0.560917" DurationMax="0.560917"/>
-				<Event Id="1650400503" Name="ww_shotgun_shell" ObjectPath="\Events\Reloads\ww_shotgun_shell" DurationType="OneShot" DurationMin="0.224375" DurationMax="0.272438"/>
+				<Event Id="1701460811" Name="ww_shotgun_cock" ObjectPath="\Events\Reloads\ww_shotgun_cock" DurationType="OneShot" DurationMin="0.521543" DurationMax="0.603263"/>
+				<Event Id="1650400503" Name="ww_shotgun_shell" ObjectPath="\Events\Reloads\ww_shotgun_shell" DurationType="OneShot" DurationMin="0.214738" DurationMax="0.293005"/>
 				<Event Id="1587775315" Name="ww_shotgun_shot" ObjectPath="\Events\Gunfire\ww_shotgun_shot" DurationType="OneShot" DurationMin="0.860473" DurationMax="1.303356"/>
+				<Event Id="2234905433" Name="ww_uzi_bullet_hit" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_bullet_hit" DurationType="OneShot" DurationMin="0.186643" DurationMax="0.590974"/>
 				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_shot_loop" DurationType="OneShot" DurationMin="4.198729" DurationMax="4.198729"/>
 				<Event Id="795925999" Name="ww_uzi_stop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_stop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3895319721" Name="ww_uzi_stop_empty" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_stop_empty" DurationType="OneShot" DurationMin="0.128208" DurationMax="0.128208"/>
+				<Event Id="1524103511" Name="ww_weaponCrate" ObjectPath="\Events\Crates\ww_weaponCrate" DurationType="OneShot" DurationMin="0.293577" DurationMax="0.692048"/>
 			</IncludedEvents>
 			<IncludedAuxBusses>
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
@@ -96,6 +103,10 @@
 					<ShortName>gameplay_lead_var_02.wav</ShortName>
 					<Path>SFX\gameplay_lead_var_02_D79FB2B7.wem</Path>
 				</File>
+				<File Id="191393311" Language="SFX">
+					<ShortName>uzi_impact_02.wav</ShortName>
+					<Path>SFX\uzi_impact_02_701599F7.wem</Path>
+				</File>
 				<File Id="222196184" Language="SFX">
 					<ShortName>lose_stinger.wav</ShortName>
 					<Path>SFX\lose_stinger_D79FB2B7.wem</Path>
@@ -120,6 +131,10 @@
 					<ShortName>player_jump_01.wav</ShortName>
 					<Path>SFX\player_jump_01_10C4C929.wem</Path>
 				</File>
+				<File Id="333889851" Language="SFX">
+					<ShortName>uzi_impact_lay02.wav</ShortName>
+					<Path>SFX\uzi_impact_lay02_C6062CD2.wem</Path>
+				</File>
 				<File Id="348128673" Language="SFX">
 					<ShortName>gameplay_drums.wav</ShortName>
 					<Path>SFX\gameplay_drums_D79FB2B7.wem</Path>
@@ -128,13 +143,17 @@
 					<ShortName>ui_play_stinger.wav</ShortName>
 					<Path>SFX\ui_play_stinger_10C4C929.wem</Path>
 				</File>
+				<File Id="361248435" Language="SFX">
+					<ShortName>Pickup_Crate 1.wav</ShortName>
+					<Path>SFX\Pickup_Crate 1_7317FDD0.wem</Path>
+				</File>
 				<File Id="477091832" Language="SFX">
 					<ShortName>grassFS_01.wav</ShortName>
 					<Path>SFX\grassFS_01_10C4C929.wem</Path>
 				</File>
 				<File Id="514478316" Language="SFX">
 					<ShortName>missile_impact_01.wav</ShortName>
-					<Path>SFX\missile_impact_01_7B8063AD.wem</Path>
+					<Path>SFX\missile_impact_01_75503585.wem</Path>
 				</File>
 				<File Id="520519977" Language="SFX">
 					<ShortName>gameplay_arp_var_01.wav</ShortName>
@@ -169,6 +188,10 @@
 					<ShortName>gameplay_hats.wav</ShortName>
 					<Path>SFX\gameplay_hats_D79FB2B7.wem</Path>
 				</File>
+				<File Id="696176337" Language="SFX">
+					<ShortName>Pickup_Crate 2.wav</ShortName>
+					<Path>SFX\Pickup_Crate 2_E578AFAC.wem</Path>
+				</File>
 				<File Id="742568617" Language="SFX">
 					<ShortName>grassFS_03.wav</ShortName>
 					<Path>SFX\grassFS_03_10C4C929.wem</Path>
@@ -185,6 +208,10 @@
 					<ShortName>player_jump_03.wav</ShortName>
 					<Path>SFX\player_jump_03_10C4C929.wem</Path>
 				</File>
+				<File Id="827205688" Language="SFX">
+					<ShortName>Pickup_HealthCrate.wav</ShortName>
+					<Path>SFX\Pickup_HealthCrate_10C4C929.wem</Path>
+				</File>
 				<File Id="835708748" Language="SFX">
 					<ShortName>bazooka_fire_01.wav</ShortName>
 					<Path>SFX\bazooka_fire_01_10C4C929.wem</Path>
@@ -200,6 +227,14 @@
 				<File Id="942672928" Language="SFX">
 					<ShortName>uzi_empty.wav</ShortName>
 					<Path>SFX\uzi_empty_10C4C929.wem</Path>
+				</File>
+				<File Id="957239109" Language="SFX">
+					<ShortName>uzi_impact_01.wav</ShortName>
+					<Path>SFX\uzi_impact_01_2986993B.wem</Path>
+				</File>
+				<File Id="960456348" Language="SFX">
+					<ShortName>uzi_impact_lay01.wav</ShortName>
+					<Path>SFX\uzi_impact_lay01_CCD20B05.wem</Path>
 				</File>
 				<File Id="1029407437" Language="SFX">
 					<ShortName>main_menu_117bpm.wav</ShortName>

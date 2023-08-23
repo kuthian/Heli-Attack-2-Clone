@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cd56146330a57438e7d54b7dfe2e2e, type: 3}
+  m_Name: 5C8D26FA-0925-4EEC-BEBA-3C41139987F2
+  m_EditorClassIdentifier: 
+  objectName: ww_bazooka_end
+  id: 1590435213
+  guid: 5C8D26FA-0925-4EEC-BEBA-3C41139987F2

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2F54B3FB-C134-436C-9CD6-7DAB127865E9}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Crates" ID="{2F54B3FB-C134-436C-9CD6-7DAB127865E9}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="ww_weaponCrate" ID="{FF966DD8-805E-4E2B-8CC8-3155258C283F}">
+					<ChildrenList>
+						<Action Name="" ID="{CB957D94-844F-4963-BC6D-28BB7DA868C2}" ShortID="71715894">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Crate Pickup" ID="{DF3D3619-A6D3-4149-86A5-19C3DDCA5F03}" WorkUnitID="{0455F0AB-5AC4-480D-887C-39960695F2D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ww_healthCrate" ID="{191F0969-CE36-42D3-82FC-1CFBE5A81C5E}">
+					<ChildrenList>
+						<Action Name="" ID="{91DF1749-0B6B-4AD3-809D-0F7C8B3ADBF9}" ShortID="39778198">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Health Crate Pickup" ID="{C9D48691-B387-4A35-91EB-DB5C7CDE8394}" WorkUnitID="{0455F0AB-5AC4-480D-887C-39960695F2D7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -13,10 +13,15 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID UI_MOUSE_CLICK = 2359679562U;
+        static const AkUniqueID UI_GAME_START = 374915857U;
         static const AkUniqueID UI_MOUSE_HOVER = 1201739520U;
+        static const AkUniqueID WW_BAZOOKA_END = 1590435213U;
         static const AkUniqueID WW_BAZOOKA_IMPACT = 3662259936U;
         static const AkUniqueID WW_BAZOOKA_SHOT = 60321222U;
+        static const AkUniqueID WW_DESTROYED_HELI_END = 3198183028U;
+        static const AkUniqueID WW_DESTROYED_HELI_START = 2745238759U;
+        static const AkUniqueID WW_HEALTHCRATE = 3440669485U;
+        static const AkUniqueID WW_HELI_END = 1364848480U;
         static const AkUniqueID WW_HELI_START = 655812923U;
         static const AkUniqueID WW_MUSIC = 2045634255U;
         static const AkUniqueID WW_PLAYER_FS = 48068017U;
@@ -25,9 +30,11 @@ namespace AK
         static const AkUniqueID WW_SHOTGUN_COCK = 1701460811U;
         static const AkUniqueID WW_SHOTGUN_SHELL = 1650400503U;
         static const AkUniqueID WW_SHOTGUN_SHOT = 1587775315U;
+        static const AkUniqueID WW_UZI_BULLET_HIT = 2234905433U;
         static const AkUniqueID WW_UZI_SHOT_LOOP = 1852187988U;
         static const AkUniqueID WW_UZI_STOP = 795925999U;
         static const AkUniqueID WW_UZI_STOP_EMPTY = 3895319721U;
+        static const AkUniqueID WW_WEAPONCRATE = 1524103511U;
     } // namespace EVENTS
 
     namespace STATES
@@ -78,6 +85,7 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AMBIENCE = 85412153U;
+        static const AkUniqueID HELICOPTER = 2167849898U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID RIFLE = 4262674733U;

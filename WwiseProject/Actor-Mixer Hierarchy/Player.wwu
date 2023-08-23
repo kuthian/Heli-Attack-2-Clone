@@ -2,15 +2,22 @@
 <WwiseDocument Type="WorkUnit" ID="{5A12731A-D948-4742-A3EB-7C70D5DC8FCB}" SchemaVersion="103">
 	<AudioObjects>
 		<WorkUnit Name="Player" ID="{5A12731A-D948-4742-A3EB-7C70D5DC8FCB}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="2"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<RandomSequenceContainer Name="Footsteps" ID="{613CE400-BFFD-4047-B816-77C416D5AE3F}" ShortID="207590964">
 					<PropertyList>
-						<Property Name="Highpass" Type="int16">
+						<Property Name="Lowpass" Type="int16">
 							<ValueList>
-								<Value>28</Value>
+								<Value>36</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-380</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{EE09B448-3730-4C2E-9E4A-5576DC4F4F61}">
@@ -25,7 +32,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-11</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
@@ -117,18 +124,31 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Jump" ID="{0C4BB8CE-0643-4FA9-9940-FF7023EA063D}" ShortID="60754566">
 					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>36</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>200</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{9817B474-7CFB-4DE6-A92F-5B20F341CCF5}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="101"/>
-											<Property Name="Min" Type="Real64" Value="-101"/>
+											<Property Name="Max" Type="Real64" Value="379"/>
+											<Property Name="Min" Type="Real64" Value="-328"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
