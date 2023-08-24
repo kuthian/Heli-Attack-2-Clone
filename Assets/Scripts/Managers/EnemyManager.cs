@@ -63,6 +63,9 @@ public class EnemyManager : MonoBehaviour {
     //   Quaternion r = transform.rotation;
     //   obj.transform.rotation = new Quaternion(r.x, 180, r.z, r.w);
     // }
+    foreach ( GameObject enemy in _enemies ) {
+      Physics2D.IgnoreCollision(enemy.GetComponent<Collider2D>(), obj.GetComponent<Collider2D>());
+    }
     _enemies.Add( obj );
   }
 
@@ -71,6 +74,11 @@ public class EnemyManager : MonoBehaviour {
     _enemies.RemoveAll(HasHealthZero);
     HUDManager.ScoreCount.Add(1);
     CreateEnemyRandom();
+
+    // Increase the difficulty when 
+    if (HUDManager.ScoreCount.Score == 5) {
+      CreateEnemyRandom();
+    }
   }
 
   private static bool HasHealthZero(GameObject obj) 

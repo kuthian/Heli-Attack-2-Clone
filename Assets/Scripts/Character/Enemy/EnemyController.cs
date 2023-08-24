@@ -1,4 +1,3 @@
-// using System.Collections;
 using System;
 using UnityEngine;
 
@@ -39,17 +38,23 @@ public class EnemyController : MonoBehaviour {
   [SerializeField]
   private StateParameters _returning;
 
-  private int DirectionToPlayerX => (int)Mathf.Sign(_player.position.x - transform.position.x);
-  private int DirectionToPlayerY => (int)Mathf.Sign(_player.position.y - transform.position.y);
-  private float DistanceFromPlayerX => transform.position.x - _player.position.x;
-  private float DistanceFromPlayerY => transform.position.y - _player.position.y;
+  [SerializeField]
+  private float[] _possibleTrackingOffsetsX;
+  [SerializeField]
+  private float _trackingOffsetX = 0;
+
+  private float PlayerPosX => _player.position.x + _trackingOffsetX;
+  private float PlayerPosY => _player.position.y;
+
+  private int DirectionToPlayerX => (int)Mathf.Sign(PlayerPosX - transform.position.x);
+  private int DirectionToPlayerY => (int)Mathf.Sign(PlayerPosY - transform.position.y);
+  private float DistanceFromPlayerX => transform.position.x - PlayerPosX;
+  private float DistanceFromPlayerY => transform.position.y - PlayerPosY;
   private bool MovingTowardsPlayerX => DirectionToPlayerX == DirectionX;
   private bool MovingTowardsPlayerY => DirectionToPlayerY == DirectionY;
 
   [SerializeField]
-  private float _cruisingPositionMinY = 1.5f;
-  [SerializeField]
-  private float _cruisingPositionMaxY = 3.5f;
+  private float[] _possibleCruisingPositionsY;
   [SerializeField]
   private float _cruisingPositionY = 1.0f;
   [SerializeField]
@@ -77,6 +82,7 @@ public class EnemyController : MonoBehaviour {
   {
     _state = State.WakingUp;
     _nextStateTime = DateTime.Now;
+    _trackingOffsetX = Utils.RandomInRange( _possibleTrackingOffsetsX );
     _rb = GetComponent<Rigidbody2D>();
     _player = GameObject.Find("Player").transform;
     _gunController = GetComponentInChildren<EnemyGunController>();
@@ -86,6 +92,24 @@ public class EnemyController : MonoBehaviour {
 
   void Update()
   {
+    // Debug.DrawLine(transform.position, _player.position, Color.white);
+    // Debug.DrawLine(_player.position, new Vector2(PlayerPosX, transform.position.y), Color.white);
+    // Debug.DrawLine(transform.position, new Vector2(PlayerPosX, transform.position.y), Color.white);
+    // // Tolerance lines
+    // {
+    //   var posX = PlayerPosX + GetStateParameters(_state).tolerance;
+    //   var negX = PlayerPosX - GetStateParameters(_state).tolerance;
+    //   Debug.DrawLine(new Vector2(posX, PlayerPosY), new Vector2(posX, transform.position.y), Color.green);
+    //   Debug.DrawLine(new Vector2(negX, PlayerPosY), new Vector2(negX, transform.position.y), Color.green);
+    // }
+
+    // // Tolerance lines 
+    // {
+    //   var posX = PlayerPosX + GetStateParameters(_state).tolerance + _trackingOffsetX;
+    //   var negX = PlayerPosX - (GetStateParameters(_state).tolerance + _trackingOffsetX);
+    //   Debug.DrawLine(new Vector2(posX, PlayerPosY), new Vector2(posX, transform.position.y), Color.red);
+    //   Debug.DrawLine(new Vector2(negX, PlayerPosY), new Vector2(negX, transform.position.y), Color.red);
+    // }
   }
 
   void FixedUpdate()
@@ -110,7 +134,7 @@ public class EnemyController : MonoBehaviour {
       case State.Leaving:
         // Update cruising position so that the helicopter
         // always returns to a different cruising distance
-        _cruisingPositionY = UnityEngine.Random.Range(_cruisingPositionMinY, _cruisingPositionMaxY);
+        _cruisingPositionY = Utils.RandomInRange( _possibleCruisingPositionsY );
         GoToState( LeaveForever ? State.Leaving : State.Returning );
         break;
       case State.Returning:
@@ -137,6 +161,9 @@ public class EnemyController : MonoBehaviour {
       default: return _idle;
     }    
   }
+
+  // Note: These movement functions might be able to be replaced by :
+  // Vector2.SmoothDamp, Vector2.MoveTowards, and Vector2.ClampMagnitude 
 
   private void MoveTowardsPlayerX()
   {
@@ -235,9 +262,7 @@ public class EnemyController : MonoBehaviour {
     var m = GetStateParameters(State.Idle);
 
     bool withinToleranceX = Mathf.Abs(DistanceFromPlayerX) < m.tolerance;
-
     if ( !withinToleranceX )
-    // && (MovingTowardsPlayerX || NotMovingX)  )
     {
       MoveTowardsPlayerX();
     }

@@ -5,18 +5,18 @@ using UnityEngine.UI;
 public class ScoreCount : MonoBehaviour {
 
   [SerializeField] private TextMeshProUGUI scoreCountText;
-  private int scoreCount = 0;
+  public int Score { get; private set; }
 
   private void Start()
   {
-    AkSoundEngine.SetRTPCValue("score", scoreCount);
+    AkSoundEngine.SetRTPCValue("score", Score);
   } 
 
   public void Add( int count )
   {
-    scoreCount += count;
-    scoreCountText.SetText(scoreCount.ToString());
-    AkSoundEngine.SetRTPCValue("score", scoreCount);
+    Score += count;
+    scoreCountText.SetText(Score.ToString());
+    AkSoundEngine.SetRTPCValue("score", Score);
   }
 
 }

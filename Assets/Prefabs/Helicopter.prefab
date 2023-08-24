@@ -187,13 +187,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IdleOnly: 0
+  LeaveForever: 0
   _state: 1
   _idle:
     maxSpeed: {x: 2.5, y: 2.5}
     acceleration: {x: 4, y: 2}
     decceleration: {x: 4, y: 3}
     tolerance: 1.5
-    durationSeconds: 10
+    durationSeconds: 5
   _leaving:
     maxSpeed: {x: 4, y: 3}
     acceleration: {x: 6, y: 5}
@@ -201,11 +202,27 @@ MonoBehaviour:
     tolerance: 1
     durationSeconds: 2
   _returning:
-    maxSpeed: {x: 4.4, y: 2.5}
+    maxSpeed: {x: 6, y: 2.5}
     acceleration: {x: 5, y: 5}
     decceleration: {x: 5, y: 4}
-    tolerance: 0.7
+    tolerance: 1.5
     durationSeconds: 10
+  _possibleTrackingOffsetsX:
+  - -3
+  - -2
+  - -1
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  _trackingOffsetX: 0
+  _possibleCruisingPositionsY:
+  - 3
+  - 3.5
+  - 4
+  - 4.5
+  - 5
   _cruisingPositionY: 1
   _cruisingToleranceY: 0.2
 --- !u!114 &7921896769568558857
