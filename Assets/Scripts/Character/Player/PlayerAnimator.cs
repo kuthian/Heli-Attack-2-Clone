@@ -28,4 +28,9 @@ public class PlayerAnimator : MonoBehaviour {
     }
   }
 
+  public void StartDeathSequence()
+  {
+    _animator.SetTrigger("Dies");
+  }
+
 }

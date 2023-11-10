@@ -49,10 +49,10 @@ public class PlayerController : MonoBehaviour {
 
   private void Update()
   {
-    if (GameManager.Paused || BlockInput) return;
+    if (GameManager.Paused) return;
 
-    InputX = Input.GetAxisRaw("Horizontal");
-    Crouched = Input.GetAxisRaw("Vertical") == -1;
+    InputX = BlockInput ? 0 : Input.GetAxisRaw("Horizontal");
+    Crouched = BlockInput ? false : Input.GetAxisRaw("Vertical") == -1;
 
     _headCollider.enabled = !Crouched;
 
@@ -67,6 +67,8 @@ public class PlayerController : MonoBehaviour {
       _jumpCounter = _maxJumpCount;
       if (Crouched) InputX = 0;
     }
+
+    if (BlockInput) return;
     
     if (Input.GetButtonDown("Jump") && _jumpCounter > 0 && !Crouched)
     {
@@ -128,6 +130,12 @@ public class PlayerController : MonoBehaviour {
   public void AddWeapon( GameObject weapon )
   {
     _inventory.AddWeapon( weapon );
+  }
+
+  public void HideWeapon()
+  {
+    // A hack to hide the weapon
+    _inventory.gameObject.SetActive(false);
   }
 
   public void Damage( int var )

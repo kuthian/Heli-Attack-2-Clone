@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading;
 
 public class GameManager : Singleton<GameManager> {
 
@@ -45,10 +46,14 @@ public class GameManager : Singleton<GameManager> {
 
   public static void GameOver()
   {
-    Time.timeScale = 0.1f;
+    // TODO: Slow time down after death sequence is played 
+    // Time.timeScale = 0.7f;
     Instance._deathScreenUI.SetActive(true);
+    Instance._player.GetComponent<PlayerAnimator>().StartDeathSequence();
     Instance._player.GetComponent<PlayerController>().BlockInput = true;
+    Instance._player.GetComponent<PlayerController>().HideWeapon();
     Instance._enemyManager.End();
+    // Time.timeScale = 0.1f;
     HUDManager.HideHUD();
   }
 
