@@ -92,24 +92,6 @@ public class EnemyController : MonoBehaviour {
 
   void Update()
   {
-    // Debug.DrawLine(transform.position, _player.position, Color.white);
-    // Debug.DrawLine(_player.position, new Vector2(PlayerPosX, transform.position.y), Color.white);
-    // Debug.DrawLine(transform.position, new Vector2(PlayerPosX, transform.position.y), Color.white);
-    // // Tolerance lines
-    // {
-    //   var posX = PlayerPosX + GetStateParameters(_state).tolerance;
-    //   var negX = PlayerPosX - GetStateParameters(_state).tolerance;
-    //   Debug.DrawLine(new Vector2(posX, PlayerPosY), new Vector2(posX, transform.position.y), Color.green);
-    //   Debug.DrawLine(new Vector2(negX, PlayerPosY), new Vector2(negX, transform.position.y), Color.green);
-    // }
-
-    // // Tolerance lines 
-    // {
-    //   var posX = PlayerPosX + GetStateParameters(_state).tolerance + _trackingOffsetX;
-    //   var negX = PlayerPosX - (GetStateParameters(_state).tolerance + _trackingOffsetX);
-    //   Debug.DrawLine(new Vector2(posX, PlayerPosY), new Vector2(posX, transform.position.y), Color.red);
-    //   Debug.DrawLine(new Vector2(negX, PlayerPosY), new Vector2(negX, transform.position.y), Color.red);
-    // }
   }
 
   void FixedUpdate()

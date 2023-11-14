@@ -9,10 +9,15 @@ public class GameManager : Singleton<GameManager> {
   [SerializeField]
   private GameObject _pauseMenuUI;
   [SerializeField]
-  private GameObject _deathScreenUI;
+  private DeathScreen _deathScreen;
+
+  private float timePlayed;
+
+  static public bool Paused => Time.timeScale == 0;
 
   public void Start()
   {
+    timePlayed = 0;
     _player = GameObject.Find("Player");
     _enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
     _player.GetComponent<PlayerController>().AddWeapon( 
@@ -20,8 +25,6 @@ public class GameManager : Singleton<GameManager> {
      );
     _player.GetComponent<Health>().OnHealthZero += GameOver;
   }
-
-  static public bool Paused => Time.timeScale == 0;
 
   public void PauseGame()
   {
@@ -39,22 +42,30 @@ public class GameManager : Singleton<GameManager> {
 
   public void StartMenu()
   {
-    _deathScreenUI.SetActive(false);
+    Instance._deathScreen.Hide();
     SceneManager.LoadScene("StartMenu");
     Time.timeScale = 1;
   }
 
-  public static void GameOver()
+  private void _GameOver()
   {
-    // TODO: Slow time down after death sequence is played 
-    // Time.timeScale = 0.7f;
-    Instance._deathScreenUI.SetActive(true);
-    Instance._player.GetComponent<PlayerAnimator>().StartDeathSequence();
-    Instance._player.GetComponent<PlayerController>().BlockInput = true;
-    Instance._player.GetComponent<PlayerController>().HideWeapon();
-    Instance._enemyManager.End();
+    _deathScreen.Show();
+
+    _deathScreen.ScoreText.SetText( HUDManager.ScoreCount.Score.ToString() );
+    _deathScreen.TimePlayedText.SetText( timePlayed.ToString("F0") + "s" );
+    _deathScreen.AccuracyText.SetText( StatsManager.AccuracyPercentage().ToString("F2") + "%" );
+
+    _player.GetComponent<PlayerAnimator>().StartDeathSequence();
+    _player.GetComponent<PlayerController>().BlockInput = true;
+    _player.GetComponent<PlayerController>().HideWeapon();
+    _enemyManager.End();
     // Time.timeScale = 0.1f;
     HUDManager.HideHUD();
+  }
+
+  public static void GameOver()
+  {
+    Instance._GameOver();
   }
 
   public void Quit()
@@ -64,6 +75,10 @@ public class GameManager : Singleton<GameManager> {
 
   public void Update()
   {
+    if (!Paused) {
+      timePlayed += Time.deltaTime;
+    }
+
     if (Input.GetKeyDown("escape"))
     {
       if (!Paused)

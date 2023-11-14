@@ -65,6 +65,7 @@ public class Projectile : MonoBehaviour {
       // Player projectile hits Enemy
       wwPostEvent( _wwOnImpactEnemy );
       other.gameObject.SendMessage("Damage", Damage);
+      StatsManager.RegisterBulletHit(); // TODO: Move this elsewhere?
       Destroy(gameObject);
     }
   }

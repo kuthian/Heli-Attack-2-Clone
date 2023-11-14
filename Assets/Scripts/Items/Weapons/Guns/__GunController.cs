@@ -78,6 +78,8 @@ public class __GunController : MonoBehaviour {
     projectile.GetComponent<Projectile>().Speed = _projectile.speed;
     projectile.GetComponent<Projectile>().MaxLifetimeSeconds = _projectile.maxLifetime;
     projectile.GetComponent<Projectile>().Shoot(direction);
+
+    StatsManager.RegisterBulletFired();
   }
 
   private void Update()
