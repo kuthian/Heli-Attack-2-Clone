@@ -59,6 +59,9 @@ TagManager:
   - name: GroundObjects
     uniqueID: 1945094201
     locked: 0
+  - name: Crates
+    uniqueID: 478075689
+    locked: 0
   - name: Player
     uniqueID: 1909111527
     locked: 0
