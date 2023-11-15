@@ -51,7 +51,7 @@ public class __GunController : MonoBehaviour {
   {
     HUDManager.ReloadBar.SetCooldownTime(_cooldownTime);
     HUDManager.ReloadBar.SetTimeRemaining(0);
-    _animator.SetBool("OnCooldown", _onCooldown);
+    AnimatorSetBool("OnCooldown", _onCooldown);
   }
 
   private void OnDisable()
@@ -92,7 +92,7 @@ public class __GunController : MonoBehaviour {
       if (timeRemaining < 0)
       {
         _onCooldown = false;
-        _animator.SetBool("OnCooldown", _onCooldown);
+        AnimatorSetBool("OnCooldown", false);
         timeRemaining = 0;
       }
       HUDManager.ReloadBar.SetTimeRemaining(timeRemaining);
@@ -115,8 +115,8 @@ public class __GunController : MonoBehaviour {
 
       _cooldownOffTime = DateTime.Now.AddSeconds(_cooldownTime);
       _cooldownTimeRemaining = _cooldownTime;
-      _animator.SetBool("OnCooldown", true);
       _onCooldown = true;
+      AnimatorSetBool("OnCooldown", true);
 
       _ammo.Remove(_ammoPerShot);
       if (_ammo.Empty())
@@ -131,6 +131,13 @@ public class __GunController : MonoBehaviour {
     if (_onCooldown)
     {
       _cooldownTimeRemaining -= Time.fixedDeltaTime;
+    }
+  }
+
+  private void AnimatorSetBool(string name, bool value)
+  {
+    if (_animator.runtimeAnimatorController) {
+      _animator.SetBool(name, value);
     }
   }
 
