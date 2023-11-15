@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F12A3F22-CDB1-40B7-BD00-838D9AEDDB12}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Environment" ID="{F12A3F22-CDB1-40B7-BD00-838D9AEDDB12}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Streetlight_buzz" ID="{74740EBB-336F-4D2E-8C81-92D813208320}">
+					<ChildrenList>
+						<Action Name="" ID="{11E7E760-4AE5-4CC1-BDC7-CD9B8460B79F}" ShortID="764636615">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Light Flicker" ID="{1FF3BA77-4A58-4EF8-9CE7-CC5837118A01}" WorkUnitID="{9AF3D851-6A7D-4CA8-96AB-A217AC37B68A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

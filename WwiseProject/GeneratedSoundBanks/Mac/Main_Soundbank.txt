@@ -16,6 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2234905433	ww_uzi_bullet_hit			\Gunfire\Uzi\ww_uzi_bullet_hit	
 	2496926511	ww_rifle_shot			\Gunfire\ww_rifle_shot	
 	2745238759	ww_destroyed_heli_start			\Enemies\Helicopter\ww_destroyed_heli_start	
+	2811027312	Streetlight_buzz			\Environment\Streetlight_buzz	
 	3198183028	ww_destroyed_heli_end			\Enemies\Helicopter\ww_destroyed_heli_end	
 	3290493012	ww_player_jump			\Player\ww_player_jump	
 	3440669485	ww_healthCrate			\Crates\ww_healthCrate	
@@ -57,10 +58,14 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	82869615	Wwise Meter (Custom)	Wwise Meter			
+	207633941	Wwise Gain (Custom)	Wwise Gain			
+	661782316	Wwise Gain (Custom)	Wwise Gain			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	12940122	shotgun_load_shell_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\shotgun_load_shell_02_10C4C929.wem		\Actor-Mixer Hierarchy\Guns Reloads\Shotgun\Shotgun Shell\shotgun_load_shell_02		52372
 	21967293	gameplay_arp	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\gameplay_arp_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay Arp\gameplay_arp		3544680
+	43387985	Streetlight_buzz_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Streetlight_buzz_02_10C4C929.wem		\Actor-Mixer Hierarchy\Environment\Light Flicker\Streetlight_buzz_02		35188
 	51274058	rifle_fire_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\rifle_fire_01_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Rifle\rifle_fire_01		295452
 	102136994	Helicopter Locomotion	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\heli_locomotion_loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Enemies\Helicopter Locomotion		19264
 	157323760	missile_cruise_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\missile_cruise_01_D79FB2B7.wem		\Actor-Mixer Hierarchy\Guns\Bazooka\Bazooka Cruise\missile_cruise_01		19264
@@ -77,11 +82,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	348128673	gameplay_drums	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\gameplay_drums_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay\gameplay_drums		3544680
 	349521609	ui_play_stinger	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\ui_play_stinger_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Mouse Click Stinger\ui_play_stinger		886220
 	361248435	Pickup_Crate 1	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Pickup_Crate 1_7317FDD0.wem		\Actor-Mixer Hierarchy\Crates\Crate Pickup\Pickup_Crate 1		64328
+	472976467	Streetlight_buzz_03	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Streetlight_buzz_03_10C4C929.wem		\Actor-Mixer Hierarchy\Environment\Light Flicker\Streetlight_buzz_03		35824
 	477091832	grassFS_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\grassFS_01_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Footsteps\grassFS_01		24680
 	514478316	missile_impact_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\missile_impact_01_75503585.wem		\Actor-Mixer Hierarchy\Guns\Bazooka\Bazooka Impact\missile_impact_01		472464
 	520519977	gameplay_arp	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\gameplay_arp_var_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay Arp\gameplay_arp		3544680
 	525450841	grassFS_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\grassFS_02_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Footsteps\grassFS_02		36988
 	577070922	player_jump_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\player_jump_02_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Jump\player_jump_02		30836
+	593880374	Streetlight_buzz_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Streetlight_buzz_01_10C4C929.wem		\Actor-Mixer Hierarchy\Environment\Light Flicker\Streetlight_buzz_01		35456
 	597570077	sfx_ui_click_generic	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\sfx_ui_click_generic_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Mouse Click\sfx_ui_click_generic		24680
 	653811676	gameplay_bass	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\gameplay_bass_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay\gameplay_bass		3544680
 	659578000	shotgun_shot_03	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\shotgun_shot_03_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_03		243044

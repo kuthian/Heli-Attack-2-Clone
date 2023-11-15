@@ -13,6 +13,10 @@
 							<ObjectRef Name="ww_destroyed_heli_end" ID="{1FD131F9-DC18-4833-9167-641AD85EE410}" WorkUnitID="{B06BEB81-A4A5-4AAF-B868-7EEDABCC25D2}"/>
 							<Position X="1" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Master Music Container" ID="{F5CB3645-D8F6-4CAA-AB59-27EC685D4C08}" WorkUnitID="{48089242-6501-413A-9C66-44DDDA85A9AD}"/>
+							<Position X="2" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
@@ -21,7 +25,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="health" ID="{14542769-B3B2-4DA1-A204-AE3FE99BE382}"/>
-							<Value>29.5348837209302</Value>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">

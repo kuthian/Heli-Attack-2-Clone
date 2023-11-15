@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2B746B1E-FAAD-4E39-9DC7-04155A690317}" SchemaVersion="103">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{2B746B1E-FAAD-4E39-9DC7-04155A690317}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{2B746B1E-FAAD-4E39-9DC7-04155A690317}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Wwise_Expander" ID="{B468E09C-1832-4665-89E7-E4506502B475}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
+					<PropertyList>
+						<Property Name="OutputGain" Type="Real32" Value="5.7"/>
+						<Property Name="ProcessLFE" Type="bool" Value="False"/>
+						<Property Name="Threshold" Type="Real32" Value="-96.3"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>
