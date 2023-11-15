@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1909111527
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 4
   m_Sprite: {fileID: -840680789, guid: 179c7d9c8afe6c240929583972b283cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -284,6 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1786696879887992435}
   - component: {fileID: 1786696879887992437}
+  - component: {fileID: 3758690310631361250}
   m_Layer: 0
   m_Name: Gunner
   m_TagString: Enemy
@@ -299,7 +300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786696879887992436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -0.34000003, z: -0.097994044}
+  m_LocalPosition: {x: -0.05, y: -0.105, z: -0.097994044}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -346,19 +347,39 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1909111527
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 5
-  m_Sprite: {fileID: -863026806, guid: e725a53537273f64da9bc06e3ab50ce6, type: 3}
+  m_Sprite: {fileID: 1225714550, guid: 9b573994791ce2347a37645d19331ae8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5777778, y: 1.1111112}
+  m_Size: {x: 1, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3758690310631361250
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786696879887992436}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2af3804c06f8cd45b5006f9a0475695, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5873766657071057095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371,12 +392,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2626382947646229092, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2626382947646229092, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2626382947646229092, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2626382947646229092, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.418
       objectReference: {fileID: 0}
     - target: {fileID: 2626382947646229092, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: m_LocalPosition.z
