@@ -49,6 +49,16 @@ public class GameManager : Singleton<GameManager> {
 
   private void _GameOver()
   {
+
+    int previousHighScore = SteamCloud.GetHighScore();
+    Debug.Log($"High Score: {previousHighScore}");
+
+    if (HUDManager.ScoreCount.Score > previousHighScore) {
+      SteamCloud.SaveHighScore(HUDManager.ScoreCount.Score);
+      Debug.Log($"New High Score: {HUDManager.ScoreCount.Score}");
+    }
+
+
     _deathScreen.Show();
 
     _deathScreen.ScoreText.SetText( HUDManager.ScoreCount.Score.ToString() );
