@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StatsManager : Singleton<StatsManager> {
+public class StatsManager : SCPSingleton<StatsManager> {
 
   public int BulletsFired { get; private set; }
   public int BulletsHit { get; private set; }
