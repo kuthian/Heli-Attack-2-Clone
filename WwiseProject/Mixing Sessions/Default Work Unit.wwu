@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{87ED1647-6A43-4CE9-9468-F6B65C7D0900}" SchemaVersion="103">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{87ED1647-6A43-4CE9-9468-F6B65C7D0900}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{87ED1647-6A43-4CE9-9468-F6B65C7D0900}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="New Mixing Session" ID="{73DB709E-1BA8-43CD-B8AC-C77EE3253B4B}">
+					<ObjectList>
+						<ObjectRef Name="Light Flicker" ID="{1FF3BA77-4A58-4EF8-9CE7-CC5837118A01}" WorkUnitID="{9AF3D851-6A7D-4CA8-96AB-A217AC37B68A}"/>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+					</ObjectList>
+				</MixingSession>
+				<MixingSession Name="v" ID="{3DB21154-ABB8-4B75-928B-6954981BA01A}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

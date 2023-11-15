@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID STREETLIGHT_BUZZ = 2811027312U;
         static const AkUniqueID UI_GAME_START = 374915857U;
         static const AkUniqueID UI_MOUSE_HOVER = 1201739520U;
         static const AkUniqueID WW_BAZOOKA_END = 1590435213U;
