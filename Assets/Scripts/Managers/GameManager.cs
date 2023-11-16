@@ -24,6 +24,11 @@ public class GameManager : Singleton<GameManager> {
         ItemManager.GetRiflePrefab()
      );
     _player.GetComponent<Health>().OnHealthZero += GameOver;
+
+    if (SteamCloud.isAccessible)
+    {
+      HUDManager.ScoreCount.SetHighScore(SteamCloud.GetHighScore());
+    }
   }
 
   public void PauseGame()

@@ -4,12 +4,12 @@ using System.Collections;
 using System.Text;
 using Steamworks;
 
-public class SteamCloud : SCPSingleton<SteamCloud> {
+public class SteamCloud : Singleton<SteamCloud> {
 
 	public static bool isAccessible;
 	public static string DefaultSaveFileName = "HighScoreSaveFile";
 
-    void Start()
+    public void Start()
     {
         if (SteamManager.Initialized)
         {

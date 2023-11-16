@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class ScoreCount : MonoBehaviour {
 
-  [SerializeField] private TextMeshProUGUI scoreCountText;
+  [SerializeField] private TextMeshProUGUI scoreText;
+  [SerializeField] private TextMeshProUGUI highScoreText;
   public int Score { get; private set; }
 
   private void Start()
@@ -15,8 +16,13 @@ public class ScoreCount : MonoBehaviour {
   public void Add( int count )
   {
     Score += count;
-    scoreCountText.SetText(Score.ToString());
+    scoreText.SetText(Score.ToString());
     AkSoundEngine.SetRTPCValue("score", Score);
+  }
+
+  public void SetHighScore( int count )
+  {
+    highScoreText.SetText(count.ToString());
   }
 
 }
