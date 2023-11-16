@@ -9,7 +9,7 @@ public class SteamCloud : Singleton<SteamCloud> {
 	public static bool isAccessible;
 	public static string DefaultSaveFileName = "HighScoreSaveFile";
 
-    public void Start()
+    override protected void Awake()
     {
         if (SteamManager.Initialized)
         {
