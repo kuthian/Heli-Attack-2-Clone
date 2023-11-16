@@ -6,9 +6,32 @@ using Steamworks;
 
 public class SteamCloud : SCPSingleton<SteamCloud> {
 
+	public static bool isAccessible;
 	public static string DefaultSaveFileName = "HighScoreSaveFile";
 
-	public static int GetHighScore()
+    void Start()
+    {
+        if (SteamManager.Initialized)
+        {
+            string username = SteamFriends.GetPersonaName();
+            Debug.Log($"Steam Username: {username}");
+            if (SteamRemoteStorage.IsCloudEnabledForApp())
+            {
+                Debug.Log("Steam Cloud is enabled.");
+                isAccessible = true;
+            } else
+            {
+                Debug.Log("Steam Cloud is not enabled.");
+                isAccessible = false;
+            }
+        }
+        else
+        {
+            Debug.Log("Steam API is not initialized.");
+        }
+    }
+
+    public static int GetHighScore()
 	{
 		int fileSize = SteamRemoteStorage.GetFileSize(DefaultSaveFileName);
 		if (fileSize == 0) 
