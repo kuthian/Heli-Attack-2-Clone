@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using static UnityEditor.FilePathAttribute;
 
 public class ParticleManager : Singleton<ParticleManager> {
 
@@ -10,6 +12,11 @@ public class ParticleManager : Singleton<ParticleManager> {
   public static void PlayDamagedPlayerEffect( Transform parent )
   {
     __StartEffect( ParticleAssets.i.DamagedPlayerEffect, parent, 1.0f );
+  }
+
+  public static void PlayHealedPlayerEffect( Transform parent )
+  {
+    __StartEffect( ParticleAssets.i.HealedPlayerEffect, parent, 1.0f );
   }
 
   public static void PlayExplodedHeliEffect( Transform parent )

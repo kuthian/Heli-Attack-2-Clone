@@ -5360,7 +5360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e959f1d76c1c3041be7a2afa806aeef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemiesEnabled: 1
+  EnemiesEnabled: 0
   _pfEnemy: {fileID: 1786696879855725082, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
   _spawnPoints:
   - {fileID: 792703629}

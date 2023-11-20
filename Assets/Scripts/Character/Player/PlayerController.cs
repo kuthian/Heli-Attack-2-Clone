@@ -142,5 +142,9 @@ public class PlayerController : MonoBehaviour {
   {
     ParticleManager.PlayDamagedPlayerEffect( transform );
   }
+  public void Heal( int var )
+  {
+    ParticleManager.PlayHealedPlayerEffect( transform );
+  }
 
 }
