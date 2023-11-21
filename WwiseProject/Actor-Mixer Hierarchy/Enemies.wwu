@@ -17,6 +17,11 @@
 								<Value>True</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -99,7 +104,7 @@
 						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="75"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>3</Value>
+								<Value>12</Value>
 							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{5812B6AC-F4F2-4E1C-948C-52BBBE2FC378}" ShortID="125204252">

@@ -59,6 +59,9 @@ TagManager:
   - name: Front Buildings
     uniqueID: 2415830471
     locked: 0
+  - name: Apartments
+    uniqueID: 1681634203
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

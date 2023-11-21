@@ -48,7 +48,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: _startingAmmo
-      value: 40
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -174,7 +174,7 @@ MonoBehaviour:
   _projectile:
     prefab: {fileID: 1994916729556804204, guid: 3db81ebe9647a914988c4d52bc0cb240, type: 3}
     damage: 3
-    speed: 4
+    speed: 4.5
     maxLifetime: 10
   _ammoPerShot: 2
   _cooldownTime: 0.1

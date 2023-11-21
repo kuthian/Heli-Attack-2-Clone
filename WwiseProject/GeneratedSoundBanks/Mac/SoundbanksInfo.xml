@@ -32,7 +32,7 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3867076163">
+		<SoundBank Id="2228651116" Language="SFX" Hash="4100134471">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
@@ -176,6 +176,10 @@
 					<ShortName>player_jump_02.wav</ShortName>
 					<Path>SFX\player_jump_02_10C4C929.wem</Path>
 				</File>
+				<File Id="591686444" Language="SFX">
+					<ShortName>Intensity.wav</ShortName>
+					<Path>SFX\Intensity_D79FB2B7.wem</Path>
+				</File>
 				<File Id="593880374" Language="SFX">
 					<ShortName>Streetlight_buzz_01.wav</ShortName>
 					<Path>SFX\Streetlight_buzz_01_10C4C929.wem</Path>
@@ -264,7 +268,6 @@
 			</IncludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="2398231425" Name="score" ObjectPath="\Game Parameters\Default Work Unit\score"/>
-				<GameParameter Id="3677180323" Name="health" ObjectPath="\Game Parameters\Default Work Unit\health"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="762757699" Name="gameplay_state" ObjectPath="\States\Default Work Unit\gameplay_state" GUID="{E5A62C64-624B-4A96-9A89-81842F483229}">

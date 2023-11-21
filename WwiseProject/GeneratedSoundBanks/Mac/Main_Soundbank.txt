@@ -38,7 +38,6 @@ Custom State	ID	Name	State Group	Owner		Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2398231425	score			\Default Work Unit\score	
-	3677180323	health			\Default Work Unit\health	
 
 Modulator Time	ID	Name			Wwise Object Path	Notes
 	635643177	Modulator Time (Custom)				
@@ -88,6 +87,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	520519977	gameplay_arp	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\gameplay_arp_var_01_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay Arp\gameplay_arp		3544680
 	525450841	grassFS_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\grassFS_02_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Footsteps\grassFS_02		36988
 	577070922	player_jump_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\player_jump_02_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Jump\player_jump_02		30836
+	591686444	Intensity	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Intensity_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Intensity\Intensity		13963704
 	593880374	Streetlight_buzz_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Streetlight_buzz_01_10C4C929.wem		\Actor-Mixer Hierarchy\Environment\Light Flicker\Streetlight_buzz_01		35456
 	597570077	sfx_ui_click_generic	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\sfx_ui_click_generic_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Mouse Click\sfx_ui_click_generic		24680
 	653811676	gameplay_bass	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\gameplay_bass_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\Gameplay\gameplay_bass		3544680
