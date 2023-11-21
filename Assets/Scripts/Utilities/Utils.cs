@@ -6,47 +6,36 @@ using System.Collections.Generic;
 static class Utils
 { 
 
-  public static float GetAngleFromVectorFloat(Vector3 dir)
-  {
-    dir = dir.normalized;
-    float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-    if (n < 0) n += 360;
-    return n;
-  }
+    public static float GetAngleFromVectorFloat(Vector3 dir)
+    {
+        dir = dir.normalized;
+        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (n < 0) n += 360;
+        return n;
+    }
 
-  public static T RandomInRange<T>( T[] array )
-  {
-    return array[UnityEngine.Random.Range(0, array.Length)];
-  }
+    public static T RandomInRange<T>( T[] array )
+    {
+        return array[UnityEngine.Random.Range(0, array.Length)];
+    }
 
-  // public static void Accelerate( Vector2 velocity, Vector2 acceleration, Vector2 maxSpeed )
-  // {
-  //   float velocityX = velocity.x;
-  //   if (acceleration.x > 0) {
-  //     velocityX += MathF.Sign(velocity.x) * acceleration.x * Time.fixedDeltaTime;
-  //     if (velocityX > maxVelocity.x) velocityX = maxVelocity.x;
-  //   } 
-  //   float velocityY = velocity.y;
-  //   if (acceleration.y > 0) {
-  //     velocityY += MathF.Sign(velocity.y) * acceleration.y * Time.fixedDeltaTime;
-  //     if (velocityY > maxVelocity.y) velocityY = maxVelocity.y;
-  //   } 
-  //   velocity = new Vector2(velocityX, velocityY);
-  // }
+    // Function to draw a square
+    public static void DrawSquare(Vector3 center, float width)
+    {
+        // Half of the width to calculate corners
+        float halfWidth = width / 2;
 
-  // public static void AccelerateX( Vector2 velocity, float accelerationX, float maxVelocityX )
-  // {
-  //   Accelerate( velocity, new Vector2(accelerationX, 0.0f),  new Vector2(maxVelocityX, 0.0f) );
-  //   float velocityX = velocity.x;
-  //   if (accelerationX > 0) velocityX += MathF.Sign(velocity.x) * accelerationX * Time.fixedDeltaTime;
-  //   float velocityY = velocity.y;
-  //   if (accelerationY > 0) velocityY += MathF.Sign(velocity.y) * accelerationY * Time.fixedDeltaTime;
-  //   velocity = new Vector2(velocityX, velocityY);
-  // }
+        // Calculate the corners of the square
+        Vector3 topLeft = center + new Vector3(-halfWidth, halfWidth, 0);
+        Vector3 topRight = center + new Vector3(halfWidth, halfWidth, 0);
+        Vector3 bottomLeft = center + new Vector3(-halfWidth, -halfWidth, 0);
+        Vector3 bottomRight = center + new Vector3(halfWidth, -halfWidth, 0);
 
-  // public static float CalculateVelocity( float currentVelocity, float acceleration  )
-  // {
-  //   return CalculateVelocity( currentVelocity, acceleration, Time.fixedDeltaTime);
-  // }
+        // Draw the lines between the corners
+        Debug.DrawLine(topLeft, topRight, Color.red, duration: 0f, depthTest: false);
+        Debug.DrawLine(topRight, bottomRight, Color.red, duration: 0f, depthTest: false);
+        Debug.DrawLine(bottomRight, bottomLeft, Color.red, duration: 0f, depthTest: false);
+        Debug.DrawLine(bottomLeft, topLeft, Color.red, duration: 0f, depthTest: false);
+    }
 
 };
