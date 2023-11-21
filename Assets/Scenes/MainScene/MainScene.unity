@@ -27155,8 +27155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84dd541565e872b4bb07d97746009324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 519420031}
   subject: {fileID: 633469997}
+  useSmoothing: 0
+  smoothing: 0.5
 --- !u!212 &570326597
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31088,8 +31089,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84dd541565e872b4bb07d97746009324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 519420031}
   subject: {fileID: 633469997}
+  useSmoothing: 0
+  smoothing: 0.5
 --- !u!1 &657543312
 GameObject:
   m_ObjectHideFlags: 0
@@ -33679,8 +33681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84dd541565e872b4bb07d97746009324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 519420031}
   subject: {fileID: 633469997}
+  useSmoothing: 0
+  smoothing: 0.5
 --- !u!212 &694847503
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51943,7 +51946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e959f1d76c1c3041be7a2afa806aeef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemiesEnabled: 0
+  EnemiesEnabled: 1
   _pfEnemy: {fileID: 1786696879855725082, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
   _spawnPoints:
   - {fileID: 792703629}
@@ -58750,8 +58753,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84dd541565e872b4bb07d97746009324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 519420031}
   subject: {fileID: 633469997}
+  useSmoothing: 0
+  smoothing: 0.5
 --- !u!212 &1258314291
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -69646,8 +69650,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84dd541565e872b4bb07d97746009324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 519420031}
   subject: {fileID: 633469997}
+  useSmoothing: 0
+  smoothing: 0.5
 --- !u!212 &1479468796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -92630,8 +92635,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84dd541565e872b4bb07d97746009324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 519420031}
   subject: {fileID: 633469997}
+  useSmoothing: 0
+  smoothing: 0.5
 --- !u!212 &1966979932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -97182,8 +97188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84dd541565e872b4bb07d97746009324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 519420031}
   subject: {fileID: 633469997}
+  useSmoothing: 0
+  smoothing: 0.5
 --- !u!212 &2080462860
 SpriteRenderer:
   m_ObjectHideFlags: 0
