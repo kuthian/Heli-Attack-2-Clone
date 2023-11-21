@@ -44,11 +44,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Black Background
+    uniqueID: 318304639
+    locked: 0
   - name: Background
     uniqueID: 2261285445
     locked: 0
-  - name: Foreground
+  - name: Far Buildings
     uniqueID: 4200315025
+    locked: 0
+  - name: Middle Buildings
+    uniqueID: 4275714503
+    locked: 0
+  - name: Front Buildings
+    uniqueID: 2415830471
     locked: 0
   - name: Default
     uniqueID: 0
