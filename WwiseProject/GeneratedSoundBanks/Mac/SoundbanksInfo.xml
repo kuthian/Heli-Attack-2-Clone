@@ -32,7 +32,7 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="4100134471">
+		<SoundBank Id="2228651116" Language="SFX" Hash="1000305482">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
@@ -60,7 +60,7 @@
 				<Event Id="1650400503" Name="ww_shotgun_shell" ObjectPath="\Events\Reloads\ww_shotgun_shell" DurationType="OneShot" DurationMin="0.214738" DurationMax="0.293005"/>
 				<Event Id="1587775315" Name="ww_shotgun_shot" ObjectPath="\Events\Gunfire\ww_shotgun_shot" DurationType="OneShot" DurationMin="0.860473" DurationMax="1.303356"/>
 				<Event Id="2234905433" Name="ww_uzi_bullet_hit" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_bullet_hit" DurationType="OneShot" DurationMin="0.186643" DurationMax="0.590974"/>
-				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_shot_loop" DurationType="OneShot" DurationMin="4.198729" DurationMax="4.198729"/>
+				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_shot_loop" DurationType="Infinite"/>
 				<Event Id="795925999" Name="ww_uzi_stop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_stop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3895319721" Name="ww_uzi_stop_empty" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_stop_empty" DurationType="OneShot" DurationMin="0.128208" DurationMax="0.128208"/>
 				<Event Id="1524103511" Name="ww_weaponCrate" ObjectPath="\Events\Crates\ww_weaponCrate" DurationType="OneShot" DurationMin="0.293577" DurationMax="0.692048"/>
