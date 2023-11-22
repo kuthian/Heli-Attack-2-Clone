@@ -6,6 +6,6 @@ class AddWeaponAction : __CrateAction {
 
   override public void Do( GameObject obj )
   {
-    obj.SendMessage("AddWeapon", gunPrefab);
+    obj.BroadcastMessage("AddWeapon", gunPrefab);
   }
 }
