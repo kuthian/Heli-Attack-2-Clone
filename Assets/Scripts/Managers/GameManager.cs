@@ -20,7 +20,7 @@ public class GameManager : Singleton<GameManager> {
     timePlayed = 0;
     _player = GameObject.Find("Player");
     _enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
-    _player.GetComponent<PlayerController>().AddWeapon( 
+    _player.GetComponentInChildren<InventoryController>().AddWeapon( 
         ItemManager.GetRiflePrefab()
      );
     _player.GetComponent<Health>().OnHealthZero += GameOver;
@@ -73,7 +73,7 @@ public class GameManager : Singleton<GameManager> {
 
     _player.GetComponent<PlayerAnimator>().StartDeathSequence();
     _player.GetComponent<PlayerController>().BlockInput = true;
-    _player.GetComponent<PlayerController>().HideWeapon();
+    _player.GetComponentInChildren<InventoryController>().HideWeapon();
     _enemyManager.End();
     // Time.timeScale = 0.1f;
     HUDManager.HideHUD();

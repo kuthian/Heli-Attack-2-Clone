@@ -28880,6 +28880,7 @@ GameObject:
   - component: {fileID: 633470003}
   - component: {fileID: 633470008}
   - component: {fileID: 633470007}
+  - component: {fileID: 633470009}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -29057,7 +29058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 100
   <CurrentHealth>k__BackingField: 0
-  <Invincible>k__BackingField: 1
+  <Invincible>k__BackingField: 0
 --- !u!114 &633470008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29068,6 +29069,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7b99e203107dad48afe31a28e603454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &633470009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633469995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f063d9f7940a24b80b002ee7055870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &635811295

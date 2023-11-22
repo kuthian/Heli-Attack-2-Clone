@@ -12,6 +12,7 @@ public class PlayerAnimator : MonoBehaviour {
     _renderer = GetComponent<SpriteRenderer>();
     _animator = GetComponent<Animator>();
     _player = GetComponent<PlayerController>();
+        _animator.SetBool("isDead", false);
   }
 
   private void Update()
@@ -28,9 +29,15 @@ public class PlayerAnimator : MonoBehaviour {
     }
   }
 
+  public void jump()
+  {
+    _animator.SetTrigger("Jump");
+  }
+
   public void StartDeathSequence()
   {
     _animator.SetTrigger("Dies");
+    _animator.SetBool("isDead", true);
   }
 
 }

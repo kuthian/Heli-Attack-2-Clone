@@ -5,12 +5,12 @@ public class PlayerController : MonoBehaviour {
 
   public bool BlockInput = false;
 
-  private InventoryController _inventory;
   private Transform _groundCheck;
   private LayerMask _groundLayer;
 
   internal Rigidbody2D _rb;
   internal Collider2D _headCollider;
+  internal PlayerAnimator _playerAnimator;
 
   private float _maxSpeed = 3f;
   private float _jumpingPower = 8f;
@@ -40,9 +40,9 @@ public class PlayerController : MonoBehaviour {
 
   private void Awake()
   {
-    _headCollider = GetComponent<CircleCollider2D>();
     _rb = GetComponent<Rigidbody2D>();
-    _inventory = GetComponentInChildren<InventoryController>();
+    _headCollider = GetComponent<CircleCollider2D>();
+    _playerAnimator = GetComponent<PlayerAnimator>();
     _groundCheck = transform.Find("GroundCheck");
     _groundLayer = LayerMask.GetMask("Ground");
   }
@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour {
     
     if (Input.GetButtonDown("Jump") && _jumpCounter > 0 && !Crouched)
     {
+      _playerAnimator.jump();
       _jump = true;
       Grounded = false;
       StartCoroutine(PauseGroundCheck(0.4f));
@@ -111,8 +112,6 @@ public class PlayerController : MonoBehaviour {
       _stopJump = false;
     }
 
-    // _inventory.GunController().Steady = SpeedX != 0.0f || SpeedY != 0.0f;
-
   }
 
   private bool IsGrounded()
@@ -127,21 +126,11 @@ public class PlayerController : MonoBehaviour {
     _pauseGroundCheck = false;
   }
 
-  public void AddWeapon( GameObject weapon )
-  {
-    _inventory.AddWeapon( weapon );
-  }
-
-  public void HideWeapon()
-  {
-    // A hack to hide the weapon
-    _inventory.gameObject.SetActive(false);
-  }
-
   public void Damage( int var )
   {
     ParticleManager.PlayDamagedPlayerEffect( transform );
   }
+
   public void Heal( int var )
   {
     ParticleManager.PlayHealedPlayerEffect( transform );
