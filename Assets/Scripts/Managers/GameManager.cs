@@ -16,8 +16,6 @@ public class GameManager : Singleton<GameManager>
     {
         enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
         player = GameObject.Find("Player");
-        pauseMenu = GameObject.Find("Menu");
-        deathScreen = GameObject.Find("DeathScreen").GetComponent<DeathScreen>(); ;
     }
 
     public void Start()

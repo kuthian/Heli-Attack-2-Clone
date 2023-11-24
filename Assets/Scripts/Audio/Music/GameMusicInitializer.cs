@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class GameMusicInitializer : MonoBehaviour
 {
-  [SerializeField] private AK.Wwise.State _state;
+    [SerializeField] private AK.Wwise.State _state;
 
-  void Start()
-  {
-    if (_state.IsValid())
+    void Start()
     {
-      GameMusic.i.Init(_state);
+        if (_state.IsValid())
+        {
+            GameMusic.i.Init(_state);
+        }
+        else
+        {
+            GameMusic.i.Init();
+        }
     }
-    else 
-    {
-      GameMusic.i.Init();
-    }
-  }
 }

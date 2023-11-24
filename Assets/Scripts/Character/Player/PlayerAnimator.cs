@@ -1,43 +1,43 @@
 using System.Collections;
 using UnityEngine;
 
-public class PlayerAnimator : MonoBehaviour {
+public class PlayerAnimator : MonoBehaviour
+{
+    internal SpriteRenderer spriteRenderer;
+    internal Animator animator;
+    internal PlayerController player;
 
-  internal SpriteRenderer _renderer;
-  internal Animator _animator;
-  internal PlayerController _player;
-
-  private void Awake()
-  {
-    _renderer = GetComponent<SpriteRenderer>();
-    _animator = GetComponent<Animator>();
-    _player = GetComponent<PlayerController>();
-        _animator.SetBool("isDead", false);
-  }
-
-  private void Update()
-  {
-    if (GameManager.Paused) return;
-
-    _animator.SetBool("Crouched", _player.Crouched);
-    _animator.SetInteger("JumpCount", _player.JumpCount);
-    _animator.SetBool("Grounded", _player.Grounded);
-    _animator.SetFloat("VelocityX", _player.SpeedX);
-    if (_player.InputX != 0)
+    private void Awake()
     {
-      _renderer.flipX = _player.InputX == -1;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        player = GetComponent<PlayerController>();
+        animator.SetBool("isDead", false);
     }
-  }
 
-  public void jump()
-  {
-    _animator.SetTrigger("Jump");
-  }
+    private void Update()
+    {
+        if (GameManager.Paused) return;
 
-  public void StartDeathSequence()
-  {
-    _animator.SetTrigger("Dies");
-    _animator.SetBool("isDead", true);
-  }
+        animator.SetBool("Crouched", player.Crouched);
+        animator.SetInteger("JumpCount", player.JumpCount);
+        animator.SetBool("Grounded", player.Grounded);
+        animator.SetFloat("VelocityX", player.SpeedX);
+        if (player.InputX != 0)
+        {
+            spriteRenderer.flipX = player.InputX == -1;
+        }
+    }
+
+    public void jump()
+    {
+        animator.SetTrigger("Jump");
+    }
+
+    public void StartDeathSequence()
+    {
+        animator.SetTrigger("Dies");
+        animator.SetBool("isDead", true);
+    }
 
 }

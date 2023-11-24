@@ -2,34 +2,35 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryHUD : MonoBehaviour {
+public class InventoryHUD : MonoBehaviour
+{
+    private static int INFINITE_AMMO = -1;
 
-  internal Image _activeWeapon;
-  internal TextMeshProUGUI _ammoText;
-  private int _InfiniteAmmo = -1;
+    internal Image activeWeapon;
+    internal TextMeshProUGUI ammoText;
 
-  public void Start()
-  {
-    _activeWeapon = GetComponentInChildren<Image>();
-    _ammoText = GetComponentInChildren<TextMeshProUGUI>();
-  }
-
-  public void SetActiveWeapon( Sprite sprite )
-  {
-    _activeWeapon.sprite = sprite;
-  }
-
-  public void SetAmmoCount( int ammoCount )
-  {
-    if (_InfiniteAmmo == ammoCount)
+    public void Start()
     {
-      _ammoText.fontSize = 70;
-      _ammoText.SetText("\u221E");
+        activeWeapon = GetComponentInChildren<Image>();
+        ammoText = GetComponentInChildren<TextMeshProUGUI>();
     }
-    else
+
+    public void SetActiveWeapon(Sprite sprite)
     {
-      _ammoText.fontSize = 50;
-      _ammoText.SetText(ammoCount.ToString());
+        activeWeapon.sprite = sprite;
     }
-  }
+
+    public void SetAmmoCount(int ammoCount)
+    {
+        if (ammoCount == INFINITE_AMMO)
+        {
+            ammoText.fontSize = 70;
+            ammoText.SetText("\u221E"); // infinity symbol
+        }
+        else
+        {
+            ammoText.fontSize = 50;
+            ammoText.SetText(ammoCount.ToString());
+        }
+    }
 }

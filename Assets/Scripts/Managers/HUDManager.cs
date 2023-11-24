@@ -1,51 +1,59 @@
 using UnityEngine;
 
-public class HUDManager : Singleton<HUDManager> {
+public class HUDManager : Singleton<HUDManager>
+{
+    [SerializeField]
+    private HealthBar healthBar;
 
-  [SerializeField]
-  private HealthBar healthBar;
+    [SerializeField]
+    private ReloadBar reloadBar;
 
-  [SerializeField]
-  private ReloadBar reloadBar;
+    [SerializeField]
+    private InventoryHUD inventoryHUD;
 
-  [SerializeField]
-  private InventoryHUD inventoryHUD;
+    [SerializeField]
+    private ScoreCount scoreCount;
 
-  [SerializeField]
-  private ScoreCount scoreCount;
-
-  public static HealthBar HealthBar {
-    get {
-      return Instance.healthBar;
+    public static HealthBar HealthBar
+    {
+        get
+        {
+            return Instance.healthBar;
+        }
     }
-  }
 
-  public static ReloadBar ReloadBar {
-    get {
-      return Instance.reloadBar;
+    public static ReloadBar ReloadBar
+    {
+        get
+        {
+            return Instance.reloadBar;
+        }
     }
-  }
 
-  public static InventoryHUD Inventory {
-    get {
-      return Instance.inventoryHUD;
+    public static InventoryHUD Inventory
+    {
+        get
+        {
+            return Instance.inventoryHUD;
+        }
     }
-  }
 
-  public static ScoreCount ScoreCount {
-    get {
-      return Instance.scoreCount;
+    public static ScoreCount ScoreCount
+    {
+        get
+        {
+            return Instance.scoreCount;
+        }
     }
-  }
 
-  public static void ShowHUD()
-  {
-    Instance.gameObject.SetActive(true);
-  }
+    public static void ShowHUD()
+    {
+        Instance.gameObject.SetActive(true);
+    }
 
-  public static void HideHUD()
-  {
-    Instance.gameObject.SetActive(false);
-  }
+    public static void HideHUD()
+    {
+        Instance.gameObject.SetActive(false);
+    }
 
 };

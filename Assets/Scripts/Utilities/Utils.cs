@@ -4,8 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 static class Utils
-{ 
-
+{
     public static float GetAngleFromVectorFloat(Vector3 dir)
     {
         dir = dir.normalized;
@@ -14,7 +13,7 @@ static class Utils
         return n;
     }
 
-    public static T RandomInRange<T>( T[] array )
+    public static T RandomInRange<T>(T[] array)
     {
         return array[UnityEngine.Random.Range(0, array.Length)];
     }
