@@ -89,11 +89,11 @@ public class EnemyManager : MonoBehaviour
         HUDManager.ScoreCount.Add(1);
         CreateEnemyRandom();
 
-        // Increase the difficulty when 
-        //if (HUDManager.ScoreCount.Score == 5)
-        //{
+        //Increase the difficulty when
+        if (HUDManager.ScoreCount.Score == 5)
+        {
             CreateEnemyRandom();
-        //}
+        }
     }
 
     private static bool HasHealthZero(GameObject obj)
