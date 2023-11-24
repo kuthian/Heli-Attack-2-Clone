@@ -3,14 +3,17 @@ using UnityEngine;
 public class BlockInputUntilGrounded : MonoBehaviour
 {
     internal PlayerController player;
+    internal __GunController gun;
 
-    void Awake()
+    private void Awake()
     {
         player = GetComponent<PlayerController>();
+        gun = GetComponentInChildren<__GunController>();
     }
 
     void Start()
     {
+        gun.ShootingDisabled = true;
         player.BlockInput = true;
     }
 
@@ -19,6 +22,7 @@ public class BlockInputUntilGrounded : MonoBehaviour
         if (player.Grounded)
         {
             player.BlockInput = false;
+            gun.ShootingDisabled = false;
             enabled = false;
         }
     }

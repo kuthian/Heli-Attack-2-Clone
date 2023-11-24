@@ -11,7 +11,7 @@ public class __GunController : MonoBehaviour {
   [field:SerializeField] 
   public Sprite InventorySprite { get; set; }
 
-  public bool Steady { get; set; } = false;
+  public bool ShootingDisabled { get; set; } = false;
 
   internal protected Ammo _ammo;
   internal protected Animator _animator;
@@ -31,7 +31,6 @@ public class __GunController : MonoBehaviour {
   [SerializeField] protected int _ammoPerShot = 1;
   [SerializeField] private float _cooldownTime = 0.5f;
   private DateTime _cooldownOffTime;
-  private float _cooldownTimeRemaining;
   private bool _onCooldown = false;
   private bool _shoot = false;
 
@@ -44,7 +43,6 @@ public class __GunController : MonoBehaviour {
     _animator = GetComponent<Animator>();
     _firePointTransform = transform.Find("FirePoint");
     _ammo = GetComponent<Ammo>();
-    _cooldownTimeRemaining = 0;
   }
 
   private void OnEnable()
@@ -98,12 +96,12 @@ public class __GunController : MonoBehaviour {
       HUDManager.ReloadBar.SetTimeRemaining(timeRemaining);
     }
 
-    if (Input.GetMouseButtonDown(0))
+    if (Input.GetMouseButtonDown(0) && !ShootingDisabled)
     {
       _shoot = true;
       OnShootStart();
     }
-    if (Input.GetMouseButtonUp(0))
+    if (Input.GetMouseButtonUp(0) || ShootingDisabled)
     {
       _shoot = false;
       OnShootEnd();
@@ -114,7 +112,6 @@ public class __GunController : MonoBehaviour {
       Shoot();
 
       _cooldownOffTime = DateTime.Now.AddSeconds(_cooldownTime);
-      _cooldownTimeRemaining = _cooldownTime;
       _onCooldown = true;
       AnimatorSetBool("OnCooldown", true);
 
@@ -123,14 +120,6 @@ public class __GunController : MonoBehaviour {
       {
         OnAmmoEmpty();
       }
-    }
-  }
-
-  private void FixedUpdate()
-  {
-    if (_onCooldown)
-    {
-      _cooldownTimeRemaining -= Time.fixedDeltaTime;
     }
   }
 
