@@ -36,7 +36,7 @@ public class CrateParachute : MonoBehaviour
         spriteRenderer.enabled = false;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (crate.Grounded)
         {

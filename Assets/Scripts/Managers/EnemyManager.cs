@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -59,17 +60,27 @@ public class EnemyManager : MonoBehaviour
     {
         GameObject obj = Instantiate(_pfEnemy, p.position, Quaternion.identity, transform);
         obj.GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
-        // TODO: Fix random enemy facing
-        // if (Random.Range(0, 2) == 1) {
-        //   // Flip the transform
-        //   Quaternion r = transform.rotation;
-        //   obj.transform.rotation = new Quaternion(r.x, 180, r.z, r.w);
-        // }
-        foreach (GameObject enemy in enemies)
-        {
-            Physics2D.IgnoreCollision(enemy.GetComponent<Collider2D>(), obj.GetComponent<Collider2D>());
-        }
+        obj.GetComponent<EnemyController>().IsFlipped = Random.Range(0, 2) == 1;
         enemies.Add(obj);
+
+        int sortingOrder = 4; // base sorting order for the heli
+        for (int i = 0; i < enemies.Count; i++)
+        {
+            // Fix Z-fighting issue between multiple enemies
+            enemies[i].transform.position = new Vector3(enemies[i].transform.position.x, enemies[i].transform.position.y, i);
+
+            // Hack to prevent gunners from being sorted over other helicopters
+            var gunner = obj.transform.GetChild(0);
+            obj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
+            gunner.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
+            gunner.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++; // the gun!
+
+            if (obj != enemies[i])
+            {
+                // Enemies shouldn't be able to interact
+                Physics2D.IgnoreCollision(enemies[i].GetComponent<Collider2D>(), obj.GetComponent<Collider2D>());
+            }
+        }
     }
 
     void HandleOnHealthZero()
@@ -79,10 +90,10 @@ public class EnemyManager : MonoBehaviour
         CreateEnemyRandom();
 
         // Increase the difficulty when 
-        if (HUDManager.ScoreCount.Score == 5)
-        {
+        //if (HUDManager.ScoreCount.Score == 5)
+        //{
             CreateEnemyRandom();
-        }
+        //}
     }
 
     private static bool HasHealthZero(GameObject obj)

@@ -225,6 +225,7 @@ MonoBehaviour:
   - 5
   _cruisingPositionY: 1
   _cruisingToleranceY: 0.2
+  <IsFlipped>k__BackingField: 0
 --- !u!114 &7921896769568558857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,7 +301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786696879887992436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -0.105, z: -0.097994044}
+  m_LocalPosition: {x: -0.05, y: -0.105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -417,7 +418,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2626382947646229092, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2626382947646229092, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: m_LocalRotation.w

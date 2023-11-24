@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    internal Rigidbody2D _rb;
-    private EnemyGunController _gunController;
-    private Transform _player;
+    internal Rigidbody2D rb;
+    private EnemyGunController gunController;
+    private Transform player;
 
     public bool IdleOnly = false;
     public bool LeaveForever = false;
+    public bool ShootingEnabled => GetComponentInChildren<EnemyGunController>().ShootingEnabled;
 
     public enum State
     {
@@ -42,10 +43,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private float[] _possibleTrackingOffsetsX;
     [SerializeField]
-    private float _trackingOffsetX = 0;
+    public float TrackingOffsetX = 0;
 
-    private float PlayerPosX => _player.position.x + _trackingOffsetX;
-    private float PlayerPosY => _player.position.y;
+    private float PlayerPosX => player.position.x + TrackingOffsetX;
+    private float PlayerPosY => player.position.y;
 
     private int DirectionToPlayerX => (int)Mathf.Sign(PlayerPosX - transform.position.x);
     private int DirectionToPlayerY => (int)Mathf.Sign(PlayerPosY - transform.position.y);
@@ -65,8 +66,8 @@ public class EnemyController : MonoBehaviour
     private int DirectionToCruisingY => (int)Mathf.Sign(_cruisingPositionY - transform.position.y);
     private bool MovingTowardsCruising => DirectionToCruisingY == DirectionY;
 
-    private float VelocityX => _rb.velocity.x;
-    private float VelocityY => _rb.velocity.y;
+    private float VelocityX => rb.velocity.x;
+    private float VelocityY => rb.velocity.y;
     private float SpeedX => Mathf.Abs(VelocityX);
     private float SpeedY => Mathf.Abs(VelocityY);
     private int DirectionX => VelocityX == 0 ? 0 : (int)Mathf.Sign(VelocityX);
@@ -77,22 +78,19 @@ public class EnemyController : MonoBehaviour
     private bool MovingX => SpeedX > 0;
     private bool MovingY => SpeedY > 0;
 
-    bool ShootingEnabled => GetComponentInChildren<EnemyGunController>().ShootingEnabled;
+    [field: SerializeField]
+    public bool IsFlipped { get; set; }
 
     void Awake()
     {
         _state = State.WakingUp;
         _nextStateTime = DateTime.Now;
-        _trackingOffsetX = Utils.RandomInRange(_possibleTrackingOffsetsX);
-        _rb = GetComponent<Rigidbody2D>();
-        _player = GameObject.Find("Player").transform;
-        _gunController = GetComponentInChildren<EnemyGunController>();
-        GetComponentInChildren<AimAtTransform>().Target = _player;
+        TrackingOffsetX = Utils.RandomInRange(_possibleTrackingOffsetsX);
+        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.Find("Player").transform;
+        gunController = GetComponentInChildren<EnemyGunController>();
+        GetComponentInChildren<AimAtTransform>().Target = player;
         GetComponentInChildren<EnemyGunController>().ObjectToIgnore = gameObject;
-    }
-
-    void Update()
-    {
     }
 
     void FixedUpdate()
@@ -130,7 +128,7 @@ public class EnemyController : MonoBehaviour
     public void GoToState(State nextState)
     {
         // var previous_state = _state;
-        _gunController.ShootingEnabled = (nextState == State.Idle);
+        gunController.ShootingEnabled = (nextState == State.Idle);
         _nextStateTime = DateTime.Now.AddSeconds(GetStateParameters(nextState).durationSeconds);
         _state = nextState;
         // Debug.Log(previous_state + " -> " + _state );
@@ -158,7 +156,7 @@ public class EnemyController : MonoBehaviour
             var m = GetStateParameters(_state);
             float speed = SpeedX + m.acceleration.x * Time.fixedDeltaTime;
             if (speed > m.maxSpeed.x) speed = m.maxSpeed.x;
-            _rb.velocity = new Vector2(DirectionToPlayerX * speed, VelocityY);
+            rb.velocity = new Vector2(DirectionToPlayerX * speed, VelocityY);
         }
         else
         {
@@ -174,7 +172,7 @@ public class EnemyController : MonoBehaviour
             var m = GetStateParameters(_state);
             float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
             if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
-            _rb.velocity = new Vector2(VelocityX, DirectionToPlayerY * speed);
+            rb.velocity = new Vector2(VelocityX, DirectionToPlayerY * speed);
         }
         else
         {
@@ -193,7 +191,7 @@ public class EnemyController : MonoBehaviour
         var m = GetStateParameters(_state);
         float speed = SpeedX + m.acceleration.x * Time.fixedDeltaTime;
         if (speed > m.maxSpeed.x) speed = m.maxSpeed.x;
-        _rb.velocity = new Vector2(-1 * DirectionToPlayerX * speed, VelocityY);
+        rb.velocity = new Vector2(-1 * DirectionToPlayerX * speed, VelocityY);
     }
 
     private void MoveAwayFromPlayerY()
@@ -207,7 +205,7 @@ public class EnemyController : MonoBehaviour
         var m = GetStateParameters(_state);
         float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
         if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
-        _rb.velocity = new Vector2(VelocityX, -1 * DirectionToPlayerY * speed);
+        rb.velocity = new Vector2(VelocityX, -1 * DirectionToPlayerY * speed);
     }
 
     private void SlowDownX()
@@ -216,7 +214,7 @@ public class EnemyController : MonoBehaviour
         var m = GetStateParameters(_state);
         float speed = SpeedX - m.decceleration.x * Time.fixedDeltaTime;
         if (speed < 0) speed = 0;
-        _rb.velocity = new Vector2(DirectionX * speed, VelocityY);
+        rb.velocity = new Vector2(DirectionX * speed, VelocityY);
     }
 
     private void SlowDownY()
@@ -225,7 +223,7 @@ public class EnemyController : MonoBehaviour
         var m = GetStateParameters(_state);
         float speed = SpeedY - m.decceleration.y * Time.fixedDeltaTime;
         if (speed < 0) speed = 0;
-        _rb.velocity = new Vector2(VelocityX, DirectionY * speed);
+        rb.velocity = new Vector2(VelocityX, DirectionY * speed);
     }
 
     private void MoveToCruising()
@@ -236,7 +234,7 @@ public class EnemyController : MonoBehaviour
             var m = GetStateParameters(_state);
             float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
             if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
-            _rb.velocity = new Vector2(VelocityX, DirectionToCruisingY * speed);
+            rb.velocity = new Vector2(VelocityX, DirectionToCruisingY * speed);
         }
         else
         {
@@ -289,7 +287,7 @@ public class EnemyController : MonoBehaviour
         else
         {
             SlowDownX();
-            _gunController.ShootingEnabled = true;
+            gunController.ShootingEnabled = true;
         }
 
         bool withinToleranceY = Mathf.Abs(DistanceFromCruisingY) < m.tolerance;
@@ -328,8 +326,11 @@ public class EnemyController : MonoBehaviour
 
     void CalculateRotation()
     {
+        int direction = IsFlipped ? 1 : -1;
+        int rotationY = IsFlipped ? 180 : 0; // Flip the sprite
         Quaternion r = transform.rotation;
-        r.eulerAngles = new Vector3(r.eulerAngles.x, r.eulerAngles.y, -5.0f * VelocityX);
+        r = new Quaternion(r.x, rotationY, r.z, r.w);
+        r.eulerAngles = new Vector3(r.eulerAngles.x, r.eulerAngles.y, direction * 5.0f * VelocityX);
         transform.rotation = new Quaternion(r.x, r.y, r.z, r.w);
     }
 

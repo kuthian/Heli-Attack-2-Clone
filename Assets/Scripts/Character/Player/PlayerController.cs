@@ -5,46 +5,46 @@ public class PlayerController : MonoBehaviour
 {
     public bool BlockInput = false;
 
-    private Transform _groundCheck;
-    private LayerMask _groundLayer;
+    private Transform groundCheck;
+    private LayerMask groundLayer;
 
-    internal Rigidbody2D _rb;
-    internal Collider2D _headCollider;
-    internal PlayerAnimator _playerAnimator;
+    internal Rigidbody2D rb;
+    internal Collider2D headCollider;
+    internal PlayerAnimator playerAnimator;
 
-    private float _maxSpeed = 3f;
-    private float _jumpingPower = 8f;
-    private float _jumpingDeceleration = 0.5f;
-    private float _MoveAcceleration = 20;
-    private float _MoveDecceleration = 12;
+    private float maxSpeed = 3f;
+    private float jumpingPower = 8f;
+    private float jumpingDeceleration = 0.5f;
+    private float MoveAcceleration = 20;
+    private float MoveDecceleration = 12;
 
-    private bool _pauseGroundCheck = false;
-    private bool _jump = false;
-    private bool _stopJump = false;
-    private bool _jumping = false;
-    private int _jumpCounter = 2;
-    private int _maxJumpCount = 2;
+    private bool pauseGroundCheck = false;
+    private bool jump = false;
+    private bool stopJump = false;
+    private bool jumping = false;
+    private int  jumpCounter = 2;
+    private int  maxJumpCount = 2;
 
     public float InputX { get; private set; }
     public bool Crouched { get; private set; }
     public bool Grounded { get; private set; }
 
-    public Rigidbody2D Rigidbody => _rb;
-    public int JumpCount => _maxJumpCount - _jumpCounter;
+    public Rigidbody2D Rigidbody => rb;
+    public int JumpCount => maxJumpCount - jumpCounter;
 
-    public float VelocityX => _rb.velocity.x;
-    public float VelocityY => _rb.velocity.y;
+    public float VelocityX => rb.velocity.x;
+    public float VelocityY => rb.velocity.y;
     public float SpeedX => Mathf.Abs(VelocityX);
     public float SpeedY => Mathf.Abs(VelocityY);
     public float DirectionX => Mathf.Sign(VelocityX);
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _headCollider = GetComponent<CircleCollider2D>();
-        _playerAnimator = GetComponent<PlayerAnimator>();
-        _groundCheck = transform.Find("GroundCheck");
-        _groundLayer = LayerMask.GetMask("Ground");
+        rb = GetComponent<Rigidbody2D>();
+        headCollider = GetComponent<CircleCollider2D>();
+        playerAnimator = GetComponent<PlayerAnimator>();
+        groundCheck = transform.Find("GroundCheck");
+        groundLayer = LayerMask.GetMask("Ground");
     }
 
     private void Update()
@@ -54,33 +54,33 @@ public class PlayerController : MonoBehaviour
         InputX = BlockInput ? 0 : Input.GetAxisRaw("Horizontal");
         Crouched = BlockInput ? false : Input.GetAxisRaw("Vertical") == -1;
 
-        _headCollider.enabled = !Crouched;
+        headCollider.enabled = !Crouched;
 
-        if (!_pauseGroundCheck)
+        if (!pauseGroundCheck)
         {
             Grounded = IsGrounded();
         }
 
         if (Grounded)
         {
-            _jumping = false;
-            _jumpCounter = _maxJumpCount;
+            jumping = false;
+            jumpCounter = maxJumpCount;
             if (Crouched) InputX = 0;
         }
 
         if (BlockInput) return;
 
-        if (Input.GetButtonDown("Jump") && _jumpCounter > 0 && !Crouched)
+        if (Input.GetButtonDown("Jump") && jumpCounter > 0 && !Crouched)
         {
-            _playerAnimator.jump();
-            _jump = true;
+            playerAnimator.jump();
+            jump = true;
             Grounded = false;
             StartCoroutine(PauseGroundCheck(0.4f));
         }
 
-        if (Input.GetButtonUp("Jump") && _jumping && VelocityY > 0f)
+        if (Input.GetButtonUp("Jump") && jumping && VelocityY > 0f)
         {
-            _stopJump = true;
+            stopJump = true;
         }
     }
 
@@ -88,42 +88,42 @@ public class PlayerController : MonoBehaviour
     {
         if (InputX != 0)
         {
-            float speed = SpeedX + _MoveAcceleration * Time.fixedDeltaTime;
-            if (speed > _maxSpeed) speed = _maxSpeed;
-            _rb.velocity = new Vector2(InputX * speed, VelocityY);
+            float speed = SpeedX + MoveAcceleration * Time.fixedDeltaTime;
+            if (speed > maxSpeed) speed = maxSpeed;
+            rb.velocity = new Vector2(InputX * speed, VelocityY);
         }
         else
         {
-            float speed = SpeedX - _MoveDecceleration * Time.fixedDeltaTime;
+            float speed = SpeedX - MoveDecceleration * Time.fixedDeltaTime;
             if (speed < 0) speed = 0;
-            _rb.velocity = new Vector2(DirectionX * speed, VelocityY);
+            rb.velocity = new Vector2(DirectionX * speed, VelocityY);
         }
 
-        if (_jump)
+        if (jump)
         {
-            _rb.velocity = new Vector2(VelocityX, _jumpingPower);
-            _jumpCounter--;
-            _jumping = true;
-            _jump = false;
+            rb.velocity = new Vector2(VelocityX, jumpingPower);
+            jumpCounter--;
+            jumping = true;
+            jump = false;
         }
-        if (_stopJump)
+        if (stopJump)
         {
-            _rb.velocity = new Vector2(VelocityX, VelocityY * _jumpingDeceleration);
-            _stopJump = false;
+            rb.velocity = new Vector2(VelocityX, VelocityY * jumpingDeceleration);
+            stopJump = false;
         }
 
     }
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(_groundCheck.position, 0.2f, _groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
     private IEnumerator PauseGroundCheck(float pauseTime)
     {
-        _pauseGroundCheck = true;
+        pauseGroundCheck = true;
         yield return new WaitForSeconds(pauseTime);
-        _pauseGroundCheck = false;
+        pauseGroundCheck = false;
     }
 
     public void Damage(int var)
