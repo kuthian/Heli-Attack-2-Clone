@@ -89,7 +89,7 @@ public class EnemyManager : MonoBehaviour
         HUDManager.ScoreCount.Add(1);
         CreateEnemyRandom();
 
-        //Increase the difficulty when
+        // Increase the difficulty when
         if (HUDManager.ScoreCount.Score == 5)
         {
             CreateEnemyRandom();
