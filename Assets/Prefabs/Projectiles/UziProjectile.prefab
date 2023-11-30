@@ -35,6 +35,10 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4622716945185236742, guid: 4965d607913209248a64dff351753ff2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8547701279384925765, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_RootOrder
       value: 0
