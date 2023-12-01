@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b237c040c078410499f88845e013331c, type: 3}
     - target: {fileID: 795742884974927933, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 795742884974927934, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: gunType
@@ -205,11 +205,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148923621895001315}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9e701c76619ee14e8cea99dc5e29a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Target: {x: 0, y: 0, z: 0}
   radius: 2
   circleCenter: {fileID: 6148923621895001314}
   aimAction:
