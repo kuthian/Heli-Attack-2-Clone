@@ -14,14 +14,14 @@ public class BlockInputUntilGrounded : MonoBehaviour
     void Start()
     {
         gun.ShootingDisabled = true;
-        player.BlockInput = true;
+        player.BlockInput();
     }
 
     void Update()
     {
         if (player.Grounded)
         {
-            player.BlockInput = false;
+            player.EnableInput();
             gun.ShootingDisabled = false;
             enabled = false;
         }

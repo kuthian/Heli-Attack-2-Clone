@@ -1,9 +1,16 @@
 using System.Collections;
+using UnityEngine.InputSystem;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool BlockInput = false;
+    //public bool BlockInput = false;
+
+    private PlayerInputActions playerControls;
+    private InputAction moveAction;
+    private InputAction crouchAction;
+    private InputAction jumpAction;
 
     private Transform groundCheck;
     private LayerMask groundLayer;
@@ -21,9 +28,8 @@ public class PlayerController : MonoBehaviour
     private bool pauseGroundCheck = false;
     private bool jump = false;
     private bool stopJump = false;
-    private bool jumping = false;
-    private int  jumpCounter = 2;
-    private int  maxJumpCount = 2;
+    private int jumpCounter = 2;
+    private int maxJumpCount = 2;
 
     public float InputX { get; private set; }
     public bool Crouched { get; private set; }
@@ -43,16 +49,49 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         headCollider = GetComponent<CircleCollider2D>();
         playerAnimator = GetComponent<PlayerAnimator>();
+        playerControls = new PlayerInputActions();
         groundCheck = transform.Find("GroundCheck");
         groundLayer = LayerMask.GetMask("Ground");
+    }
+
+    private void OnEnable()
+    {
+        moveAction = playerControls.Player.Move;
+        moveAction.Enable();
+
+        crouchAction = playerControls.Player.Crouch;
+        crouchAction.performed += _ => Crouched = true;
+        crouchAction.canceled += _ => Crouched = false;
+        crouchAction.Enable();
+
+        jumpAction = playerControls.Player.Jump;
+        jumpAction.performed += JumpStart;
+        jumpAction.canceled += JumpEnd;
+        jumpAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        moveAction.Disable();
+        crouchAction.Disable();
+        jumpAction.Disable();
+    }
+
+    public void BlockInput()
+    {
+        playerControls.Disable();
+    }
+
+    public void EnableInput()
+    {
+        playerControls.Enable();
     }
 
     private void Update()
     {
         if (GameManager.Paused) return;
 
-        InputX = BlockInput ? 0 : Input.GetAxisRaw("Horizontal");
-        Crouched = BlockInput ? false : Input.GetAxisRaw("Vertical") == -1;
+        InputX = moveAction.ReadValue<Vector2>().x;
 
         headCollider.enabled = !Crouched;
 
@@ -63,24 +102,8 @@ public class PlayerController : MonoBehaviour
 
         if (Grounded)
         {
-            jumping = false;
             jumpCounter = maxJumpCount;
             if (Crouched) InputX = 0;
-        }
-
-        if (BlockInput) return;
-
-        if (Input.GetButtonDown("Jump") && jumpCounter > 0 && !Crouched)
-        {
-            playerAnimator.jump();
-            jump = true;
-            Grounded = false;
-            StartCoroutine(PauseGroundCheck(0.4f));
-        }
-
-        if (Input.GetButtonUp("Jump") && jumping && VelocityY > 0f)
-        {
-            stopJump = true;
         }
     }
 
@@ -103,9 +126,9 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(VelocityX, jumpingPower);
             jumpCounter--;
-            jumping = true;
             jump = false;
         }
+
         if (stopJump)
         {
             rb.velocity = new Vector2(VelocityX, VelocityY * jumpingDeceleration);
@@ -124,6 +147,23 @@ public class PlayerController : MonoBehaviour
         pauseGroundCheck = true;
         yield return new WaitForSeconds(pauseTime);
         pauseGroundCheck = false;
+    }
+
+    private void JumpStart(InputAction.CallbackContext context)
+    {
+        if (jumpCounter > 0 && !Crouched)
+        {
+            playerAnimator.jump();
+            jump = true;
+            Grounded = false;
+            StartCoroutine(PauseGroundCheck(0.4f));
+        }
+    }
+
+    private void JumpEnd(InputAction.CallbackContext context)
+    {
+        rb.velocity = new Vector2(VelocityX, VelocityY * jumpingDeceleration);
+        stopJump = true;
     }
 
     public void Damage(int var)

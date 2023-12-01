@@ -25,7 +25,8 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetFloat("VelocityX", player.SpeedX);
         if (player.InputX != 0)
         {
-            spriteRenderer.flipX = player.InputX == -1;
+            Debug.Log(player.InputX);
+            spriteRenderer.flipX = Mathf.Sign(player.InputX) < 0;
         }
     }
 

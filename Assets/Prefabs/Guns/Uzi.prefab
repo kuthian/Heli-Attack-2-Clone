@@ -276,6 +276,31 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   <InventorySprite>k__BackingField: {fileID: 21300000, guid: ad163887787454442bbe7db6dda6b465, type: 3}
+  shootAction:
+    m_Name: Shoot
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: c5789605-7809-4322-81f1-57f3270f90d9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: ae8b43ba-3b1f-4c3c-a9fb-f5479b27db81
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shoot
+      m_Flags: 0
+    - m_Name: 
+      m_Id: aea96162-cc92-4fbf-8cea-04f314d419e8
+      m_Path: <Gamepad>/rightTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shoot
+      m_Flags: 0
+    m_Flags: 0
   _projectile:
     prefab: {fileID: 1994916729556804204, guid: 3db81ebe9647a914988c4d52bc0cb240, type: 3}
     damage: 3
