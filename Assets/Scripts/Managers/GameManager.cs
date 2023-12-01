@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
     static public bool Paused => Time.timeScale == 0;
+
+    public InputAction pause;
 
     private GameObject player;
     private EnemyManager enemyManager;
@@ -16,6 +19,18 @@ public class GameManager : Singleton<GameManager>
     {
         enemyManager = GameObject.Find("EnemyManager").GetComponent<EnemyManager>();
         player = GameObject.Find("Player");
+    }
+
+    public void OnEnable()
+    {
+        pause.Enable();
+        pause.performed += Pause;
+    }
+
+    public void OnDisable()
+    {
+        pause.Disable();
+        pause.performed -= Pause;
     }
 
     public void Start()
@@ -71,7 +86,7 @@ public class GameManager : Singleton<GameManager>
         deathScreen.AccuracyText.SetText(StatsManager.AccuracyPercentage().ToString("F2") + "%");
 
         player.GetComponent<PlayerAnimator>().StartDeathSequence();
-        player.GetComponent<PlayerController>().BlockInput = true;
+        player.GetComponent<PlayerController>().BlockInput();
         player.GetComponentInChildren<InventoryController>().HideWeapon();
         enemyManager.End();
         HUDManager.HideHUD();
@@ -93,17 +108,17 @@ public class GameManager : Singleton<GameManager>
         {
             timePlayed += Time.deltaTime;
         }
+    }
 
-        if (Input.GetKeyDown("escape"))
+    private void Pause(InputAction.CallbackContext context)
+    {
+        if (!Paused)
         {
-            if (!Paused)
-            {
-                PauseGame();
-            }
-            else
-            {
-                ResumeGame();
-            }
+            PauseGame();
+        }
+        else
+        {
+            ResumeGame();
         }
     }
 

@@ -31,22 +31,22 @@ public class InventoryController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("q"))
-        {
-            SelectPreviousWeapon();
-        }
-        if (Input.GetKeyDown("e"))
-        {
-            SelectNextWeapon();
-        }
-        if (Input.mouseScrollDelta.y > 0)
-        {
-            SelectNextWeapon();
-        }
-        if (Input.mouseScrollDelta.y < 0)
-        {
-            SelectPreviousWeapon();
-        }
+        //if (Input.GetKeyDown("q"))
+        //{
+        //    SelectPreviousWeapon();
+        //}
+        //if (Input.GetKeyDown("e"))
+        //{
+        //    SelectNextWeapon();
+        //}
+        //if (Input.mouseScrollDelta.y > 0)
+        //{
+        //    SelectNextWeapon();
+        //}
+        //if (Input.mouseScrollDelta.y < 0)
+        //{
+        //    SelectPreviousWeapon();
+        //}
 
         CheckActiveWeaponAmmo();
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class __GunController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class __GunController : MonoBehaviour
     public Sprite InventorySprite { get; set; }
 
     public bool ShootingDisabled { get; set; } = false;
+
+    public InputAction shootAction;
 
     internal protected Ammo ammo;
     internal protected Animator animator;
@@ -48,6 +51,10 @@ public class __GunController : MonoBehaviour
 
     private void OnEnable()
     {
+        shootAction.performed += ShootStart;
+        shootAction.canceled += ShootEnd;
+        shootAction.Enable();
+
         HUDManager.ReloadBar.SetCooldownTime(_cooldownTime);
         HUDManager.ReloadBar.SetTimeRemaining(0);
         AnimatorSetBool("OnCooldown", onCooldown);
@@ -55,6 +62,9 @@ public class __GunController : MonoBehaviour
 
     private void OnDisable()
     {
+        shootAction.performed -= ShootStart;
+        shootAction.canceled -= ShootEnd;
+        shootAction.Disable();
         shoot = false;
     }
 
@@ -98,17 +108,6 @@ public class __GunController : MonoBehaviour
             HUDManager.ReloadBar.SetTimeRemaining(timeRemaining);
         }
 
-        if (Input.GetMouseButtonDown(0) && !ShootingDisabled)
-        {
-            shoot = true;
-            OnShootStart();
-        }
-        if (Input.GetMouseButtonUp(0) || ShootingDisabled)
-        {
-            shoot = false;
-            OnShootEnd();
-        }
-
         if (!onCooldown && shoot && !ammo.Empty())
         {
             Shoot();
@@ -132,5 +131,19 @@ public class __GunController : MonoBehaviour
             animator.SetBool(name, value);
         }
     }
+
+    private void ShootStart(InputAction.CallbackContext context)
+    {
+        shoot = !ShootingDisabled;
+        OnShootStart();
+    }
+
+    private void ShootEnd(InputAction.CallbackContext context)
+    {
+        shoot = false;
+        OnShootEnd();
+    }
+
+
 
 }
