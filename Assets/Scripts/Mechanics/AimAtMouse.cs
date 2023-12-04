@@ -8,7 +8,6 @@ public class AimAtMouse : AimAtTarget
 {
     protected override Vector3 GetTargetPosition()
     {
-        Debug.Log("GetTargetPosition");
         return Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
     }
 }

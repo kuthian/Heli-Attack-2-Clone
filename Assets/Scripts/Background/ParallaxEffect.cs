@@ -13,6 +13,12 @@ public class ParallaxEffect : MonoBehaviour
     [Tooltip("Enable smoothing.")]
     public bool useSmoothing = false;
 
+    [Tooltip("Enable parallax in the X direction.")]
+    public bool parallaxX = true;
+
+    [Tooltip("Enable parallax in the Y direction.")]
+    public bool parallaxY = true;
+
     [Tooltip("Determines how smooth the parallax movement should be when moving from point A to B. " +
              "If the smoothing factor is high, you take larger steps and reach point B faster, " +
              "but the movement can look abrupt. If the smoothing factor is low, you take smaller steps, " +
@@ -50,7 +56,7 @@ public class ParallaxEffect : MonoBehaviour
         // Calculate the new position based on the original position, camera movement, and parallax factor
         Vector2 travel = (Vector2)cam.transform.position - startPosition;
         Vector2 pos = startPosition + travel * parallaxFactor;
-        Vector3 targetPosition = new Vector3(pos.x, pos.y, transform.position.z);
+        Vector3 targetPosition = new Vector3( parallaxX ? pos.x : startPosition.x, parallaxY ? pos.y : startPosition.y, transform.position.z);
 
         if (useSmoothing && smoothing != 0)
         {
