@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7921896769568558857}
   - component: {fileID: 6501264673782278908}
   - component: {fileID: 8284893127219562504}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Helicopter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ MonoBehaviour:
   - 2
   - 3
   - 4
-  _trackingOffsetX: 0
+  TrackingOffsetX: 0
   _possibleCruisingPositionsY:
   - 3
   - 3.5
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 1786696879887992435}
   - component: {fileID: 1786696879887992437}
   - component: {fileID: 3758690310631361250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gunner
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -396,6 +396,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.244
       objectReference: {fileID: 0}
+    - target: {fileID: 2626382947550654999, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2626382947646229092, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -439,6 +443,10 @@ PrefabInstance:
     - target: {fileID: 2626382947646229093, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: m_Name
       value: EnemyGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2626382947646229093, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: _cooldownTime
