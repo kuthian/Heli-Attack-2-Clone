@@ -134,7 +134,6 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(VelocityX, VelocityY * jumpingDeceleration);
             stopJump = false;
         }
-
     }
 
     private bool IsGrounded()
