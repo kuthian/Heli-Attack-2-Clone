@@ -53444,10 +53444,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 30.044542, y: 6.178173}
-      - {x: -10, y: 6.222717}
-      - {x: -10.048623, y: -5.465141}
-      - {x: 30, y: -5.4651403}
+    - - {x: 30, y: 6}
+      - {x: -10, y: 6}
+      - {x: -10, y: -5.5}
+      - {x: 30, y: -5.5}
 --- !u!1 &1199771991
 GameObject:
   m_ObjectHideFlags: 0
