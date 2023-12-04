@@ -25892,7 +25892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570326594}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.95, y: 13.73, z: 38.9}
+  m_LocalPosition: {x: 6.1, y: 9.63, z: 38.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25915,7 +25915,7 @@ MonoBehaviour:
   subject: {fileID: 633469997}
   useSmoothing: 1
   parallaxX: 1
-  parallaxY: 1
+  parallaxY: 0
   smoothing: 40
 --- !u!212 &570326597
 SpriteRenderer:
@@ -27816,7 +27816,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618253179}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.21, y: 6.29, z: 15.48}
+  m_LocalPosition: {x: 7.98, y: 7.03, z: 15.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27840,7 +27840,7 @@ MonoBehaviour:
   subject: {fileID: 633469997}
   useSmoothing: 1
   parallaxX: 1
-  parallaxY: 1
+  parallaxY: 0
   smoothing: 40
 --- !u!212 &618253182
 SpriteRenderer:
@@ -31972,7 +31972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694847500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.09, y: 5.52, z: 6.93}
+  m_LocalPosition: {x: 3.09, y: 6.01, z: 6.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31994,7 +31994,7 @@ MonoBehaviour:
   subject: {fileID: 633469997}
   useSmoothing: 1
   parallaxX: 1
-  parallaxY: 1
+  parallaxY: 0
   smoothing: 40
 --- !u!212 &694847503
 SpriteRenderer:
@@ -56455,7 +56455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258314288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.9451, y: 9.95, z: 36.85}
+  m_LocalPosition: {x: 14.56, y: 9.2, z: 36.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -56482,7 +56482,7 @@ MonoBehaviour:
   subject: {fileID: 633469997}
   useSmoothing: 1
   parallaxX: 1
-  parallaxY: 1
+  parallaxY: 0
   smoothing: 40
 --- !u!212 &1258314291
 SpriteRenderer:
@@ -89410,7 +89410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966979929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.4, y: 7.09, z: 26.34}
+  m_LocalPosition: {x: 7.4, y: 6.94, z: 26.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -89438,7 +89438,7 @@ MonoBehaviour:
   subject: {fileID: 633469997}
   useSmoothing: 1
   parallaxX: 1
-  parallaxY: 1
+  parallaxY: 0
   smoothing: 40
 --- !u!212 &1966979932
 SpriteRenderer:
@@ -93962,7 +93962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2080462858
 Transform:
   m_ObjectHideFlags: 0
