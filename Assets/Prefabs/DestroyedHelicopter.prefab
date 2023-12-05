@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1328479410968822437}
   - component: {fileID: 3780362253892901899}
   - component: {fileID: 1051924193892909169}
+  - component: {fileID: 8256714345090203667}
   m_Layer: 0
   m_Name: DestroyedHelicopter
   m_TagString: Untagged
@@ -168,6 +169,26 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: cca0ccf10ca7242409c8eab028366d60, type: 2}
+--- !u!95 &8256714345090203667
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328479410968822439}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8dae0f2bbca8cef41b764c5a41fb28b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1110839651267231393
 PrefabInstance:
   m_ObjectHideFlags: 0

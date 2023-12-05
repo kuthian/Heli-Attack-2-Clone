@@ -132,10 +132,10 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 45
-        width: 25
-        height: 15
-      alignment: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -152,19 +152,19 @@ TextureImporter:
       name: HelicopterDestroyedParts_1
       rect:
         serializedVersion: 2
-        x: 50
-        y: 45
-        width: 25
-        height: 15
-      alignment: 0
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: deeedc95c8d5bc34f8d448c509efd4e1
-      internalID: 2049670246
+      spriteID: fd7c55c3f54b67e489c6833ae5e8f5b5
+      internalID: -1515342870
       vertices: []
       indices: 
       edges: []
@@ -173,19 +173,19 @@ TextureImporter:
       name: HelicopterDestroyedParts_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 30
-        width: 25
-        height: 15
-      alignment: 0
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4710a5bc9560ce0408e9567364517d99
-      internalID: 1131520771
+      spriteID: c3ec37e9fec58a54bb43ee4da3def573
+      internalID: -1496570954
       vertices: []
       indices: 
       edges: []
@@ -194,19 +194,19 @@ TextureImporter:
       name: HelicopterDestroyedParts_3
       rect:
         serializedVersion: 2
-        x: 25
-        y: 30
-        width: 25
-        height: 15
-      alignment: 0
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a28285878c408f24bafd3a4e0ebc7020
-      internalID: -352598315
+      spriteID: 771d199a1a2437f4bb2ac1ac34b19a8d
+      internalID: 788625414
       vertices: []
       indices: 
       edges: []
@@ -215,19 +215,19 @@ TextureImporter:
       name: HelicopterDestroyedParts_4
       rect:
         serializedVersion: 2
-        x: 50
-        y: 30
-        width: 25
-        height: 15
-      alignment: 0
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f12141b25f2ffa4fa72758674f9a192
-      internalID: -1661413997
+      spriteID: dba3f4568cb7813458da4fd9941809fa
+      internalID: -1970047503
       vertices: []
       indices: 
       edges: []
@@ -236,19 +236,19 @@ TextureImporter:
       name: HelicopterDestroyedParts_5
       rect:
         serializedVersion: 2
-        x: 75
-        y: 30
-        width: 25
-        height: 15
-      alignment: 0
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bc45bc9c3a807748b73ca45c2f7a326
-      internalID: -630035358
+      spriteID: 8c0abbb2318ccc547b1575510ad1b559
+      internalID: 1788525448
       vertices: []
       indices: 
       edges: []
@@ -258,18 +258,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 15
-        width: 25
-        height: 15
-      alignment: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 307b3b7a0ce49af418fe16f29b11d3de
-      internalID: -347385525
+      spriteID: 3602ab814d442d445b383d2ae1c1cf4c
+      internalID: -281736956
       vertices: []
       indices: 
       edges: []
@@ -278,19 +278,19 @@ TextureImporter:
       name: HelicopterDestroyedParts_7
       rect:
         serializedVersion: 2
-        x: 25
-        y: 15
-        width: 25
-        height: 15
-      alignment: 0
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e354b50c70389494ba48269d5aaf058f
-      internalID: -1922326933
+      spriteID: a9012732e20e9114d84a536118078091
+      internalID: 1779457100
       vertices: []
       indices: 
       edges: []
@@ -299,19 +299,19 @@ TextureImporter:
       name: HelicopterDestroyedParts_8
       rect:
         serializedVersion: 2
-        x: 50
-        y: 15
-        width: 25
-        height: 15
-      alignment: 0
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b85ac0cdec804c2478ab01f885d525ac
-      internalID: -1109076582
+      spriteID: 174a6a08b29ab1544ad85e82a23cd5eb
+      internalID: -1534093736
       vertices: []
       indices: 
       edges: []
@@ -320,19 +320,19 @@ TextureImporter:
       name: HelicopterDestroyedParts_9
       rect:
         serializedVersion: 2
-        x: 75
-        y: 15
-        width: 25
-        height: 15
-      alignment: 0
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bc5201475dcd2e4887c1b3680f439de
-      internalID: -568594404
+      spriteID: bd9e6ca2f0973a843a51ed47c57d0a8c
+      internalID: -22865269
       vertices: []
       indices: 
       edges: []
@@ -341,19 +341,19 @@ TextureImporter:
       name: HelicopterDestroyedParts_10
       rect:
         serializedVersion: 2
-        x: 25
-        y: 0
-        width: 25
-        height: 15
-      alignment: 0
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1208d8c4475d7a246a29b3fbb2ec3dbe
-      internalID: -1421291284
+      spriteID: 2363caef1fdcaac49b9d9379b2c00ad6
+      internalID: 1454151269
       vertices: []
       indices: 
       edges: []
@@ -362,19 +362,19 @@ TextureImporter:
       name: HelicopterDestroyedParts_11
       rect:
         serializedVersion: 2
-        x: 50
-        y: 0
-        width: 25
-        height: 15
-      alignment: 0
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c937004c0a6f9c49a1d95819f88785d
-      internalID: 106714661
+      spriteID: d591db1417962fd4d9f03c248786bd00
+      internalID: -1059889591
       vertices: []
       indices: 
       edges: []
@@ -383,19 +383,124 @@ TextureImporter:
       name: HelicopterDestroyedParts_12
       rect:
         serializedVersion: 2
-        x: 75
+        x: 0
         y: 0
-        width: 25
-        height: 15
-      alignment: 0
+        width: 16
+        height: 16
+      alignment: 9
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: decfb2a91e7f5a74784898ccd44b55d3
-      internalID: 415912526
+      spriteID: e6706964cdc898f47b71e7b937a24670
+      internalID: 1801080578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HelicopterDestroyedParts_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ad209452b0981468e25af153b3fcf8
+      internalID: 236067929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HelicopterDestroyedParts_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0316b7a82ce3604e81a4e409eae0ab6
+      internalID: 1245992580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HelicopterDestroyedParts_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebb19d572522754ea24de800dedadb7
+      internalID: 1050553679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HelicopterDestroyedParts_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0ec9e585957444f875490048d37ae8
+      internalID: 722446745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HelicopterDestroyedParts_17
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8caa0812a0dacd4e9077069caae9fbf
+      internalID: 1476307828
       vertices: []
       indices: 
       edges: []
@@ -411,18 +516,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HelicopterDestroyedParts_9: -568594404
-      HelicopterDestroyedParts_12: 415912526
-      HelicopterDestroyedParts_5: -630035358
-      HelicopterDestroyedParts_7: -1922326933
-      HelicopterDestroyedParts_1: 2049670246
-      HelicopterDestroyedParts_2: 1131520771
-      HelicopterDestroyedParts_4: -1661413997
-      HelicopterDestroyedParts_11: 106714661
-      HelicopterDestroyedParts_6: -347385525
-      HelicopterDestroyedParts_8: -1109076582
-      HelicopterDestroyedParts_10: -1421291284
-      HelicopterDestroyedParts_3: -352598315
+      HelicopterDestroyedParts_14: 1245992580
+      HelicopterDestroyedParts_9: -22865269
+      HelicopterDestroyedParts_12: 1801080578
+      HelicopterDestroyedParts_13: 236067929
+      HelicopterDestroyedParts_16: 722446745
+      HelicopterDestroyedParts_5: 1788525448
+      HelicopterDestroyedParts_15: 1050553679
+      HelicopterDestroyedParts_7: 1779457100
+      HelicopterDestroyedParts_1: -1515342870
+      HelicopterDestroyedParts_2: -1496570954
+      HelicopterDestroyedParts_4: -1970047503
+      HelicopterDestroyedParts_11: -1059889591
+      HelicopterDestroyedParts_17: 1476307828
+      HelicopterDestroyedParts_6: -281736956
+      HelicopterDestroyedParts_8: -1534093736
+      HelicopterDestroyedParts_10: 1454151269
+      HelicopterDestroyedParts_3: 788625414
       HelicopterDestroyedParts_0: 74808559
   spritePackingTag: 
   pSDRemoveMatte: 0

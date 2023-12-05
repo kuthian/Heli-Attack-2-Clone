@@ -133,7 +133,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 101
+        width: 96
         height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -152,9 +152,9 @@ TextureImporter:
       name: Helicopter_1
       rect:
         serializedVersion: 2
-        x: 101
+        x: 96
         y: 0
-        width: 101
+        width: 96
         height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,9 +173,9 @@ TextureImporter:
       name: Helicopter_2
       rect:
         serializedVersion: 2
-        x: 202
+        x: 192
         y: 0
-        width: 101
+        width: 96
         height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,9 +194,9 @@ TextureImporter:
       name: Helicopter_3
       rect:
         serializedVersion: 2
-        x: 303
+        x: 288
         y: 0
-        width: 101
+        width: 96
         height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
