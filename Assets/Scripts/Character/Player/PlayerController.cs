@@ -5,8 +5,6 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    //public bool BlockInput = false;
-
     private PlayerInputActions playerControls;
     private InputAction moveAction;
     private InputAction crouchAction;

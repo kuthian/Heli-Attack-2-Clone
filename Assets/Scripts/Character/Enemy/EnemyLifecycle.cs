@@ -4,18 +4,18 @@ using UnityEngine;
 public class EnemyLifecycle : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _pfDestroyedHelicopter;
+    private GameObject pfDestroyedHelicopter;
 
     [SerializeField]
-    private GameObject _pfDestroyedGunner;
+    private GameObject pfDestroyedGunner;
 
-    internal Rigidbody2D _rb;
-    internal SpriteRenderer _spriteRenderer;
+    internal Rigidbody2D rb;
+    internal SpriteRenderer spriteRenderer;
 
     void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable()
@@ -32,14 +32,14 @@ public class EnemyLifecycle : MonoBehaviour
 
     private void HandleOnHealthZero()
     {
-        GameObject destroyedGunner = Instantiate(_pfDestroyedGunner, transform.position, transform.rotation);
+        GameObject destroyedGunner = Instantiate(pfDestroyedGunner, transform.position, transform.rotation);
         destroyedGunner.GetComponent<Rigidbody2D>().velocity = new Vector3(0.0f, 3.0f, 0.0f);
         destroyedGunner.GetComponent<Rigidbody2D>().angularVelocity = 20.0f;
         Destroy(destroyedGunner, 2);
 
-        GameObject destroyedHeli = Instantiate(_pfDestroyedHelicopter, transform.position, transform.rotation);
-        destroyedHeli.GetComponent<Rigidbody2D>().velocity = _rb.velocity;
-        int direction = _rb.velocity.x >= 0 ? -1 : 1;
+        GameObject destroyedHeli = Instantiate(pfDestroyedHelicopter, transform.position, transform.rotation);
+        destroyedHeli.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+        int direction = rb.velocity.x >= 0 ? -1 : 1;
         destroyedHeli.GetComponent<Rigidbody2D>().angularVelocity = direction * 11.0f;
 
         ParticleManager.PlayExplodedEffect(destroyedHeli.transform);
@@ -51,9 +51,9 @@ public class EnemyLifecycle : MonoBehaviour
 
     private IEnumerator FlashWhite()
     {
-        _spriteRenderer.color = new Color(0.75f, 0.75f, 0.75f, 1.0f);
+        spriteRenderer.color = new Color(0.75f, 0.75f, 0.75f, 1.0f);
         yield return new WaitForSeconds(0.05f);
-        _spriteRenderer.color = Color.white;
+        spriteRenderer.color = Color.white;
     }
 
     private void HandleOnHealthChanged(int health)

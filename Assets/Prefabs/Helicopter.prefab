@@ -129,7 +129,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.15625, y: 1.875}
+    oldSize: {x: 3, y: 1.875}
     newSize: {x: 3.15625, y: 1.875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -188,35 +188,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IdleOnly: 0
   LeaveForever: 0
-  _state: 1
-  _idle:
+  state: 0
+  idle:
     maxSpeed: {x: 2.5, y: 2.5}
     acceleration: {x: 4, y: 2}
     decceleration: {x: 4, y: 3}
     tolerance: 1.5
     durationSeconds: 5
-  _leaving:
+  leaving:
     maxSpeed: {x: 4, y: 3}
     acceleration: {x: 6, y: 5}
     decceleration: {x: 5, y: 5}
     tolerance: 1
     durationSeconds: 2
-  _returning:
-    maxSpeed: {x: 6, y: 2.5}
+  returning:
+    maxSpeed: {x: 6.25, y: 2.5}
     acceleration: {x: 5, y: 5}
-    decceleration: {x: 5, y: 4}
+    decceleration: {x: 5.25, y: 4}
     tolerance: 1.5
     durationSeconds: 10
-  _possibleTrackingOffsetsX:
-  - -3
-  - -2
-  - -1
-  - 0
-  - 1
-  - 2
-  - 3
-  - 4
-  TrackingOffsetX: 0
+  A0: 0
+  Freq: 0.2
+  Amplitude: 3
   _possibleCruisingPositionsY:
   - 3
   - 3.5
@@ -253,8 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5440483c73783a847968bf0e19cebd60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pfDestroyedHelicopter: {fileID: 1328479410968822439, guid: c08f37f8f5129d0418319aff7143a71e, type: 3}
-  _pfDestroyedGunner: {fileID: 8951443885998499864, guid: b4184f840eb43a04a903de192cf8ef6e, type: 3}
+  pfDestroyedHelicopter: {fileID: 1328479410968822439, guid: c08f37f8f5129d0418319aff7143a71e, type: 3}
+  pfDestroyedGunner: {fileID: 8951443885998499864, guid: b4184f840eb43a04a903de192cf8ef6e, type: 3}
 --- !u!114 &8284893127219562504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,6 +442,10 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: cooldownTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: _cooldownTime
       value: 0.4
       objectReference: {fileID: 0}
@@ -457,8 +454,40 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: pfProjectile.speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: pfProjectile.damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: pfProjectile.prefab
+      value: 
+      objectReference: {fileID: 8130383542522873335, guid: f4b1b4166042f144ead58cf263f33f8b, type: 3}
+    - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: projectilePrefab.speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: _projectile.maxLifetime
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: projectilePrefab.damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: projectilePrefab.prefab
+      value: 
+      objectReference: {fileID: 8130383542522873335, guid: f4b1b4166042f144ead58cf263f33f8b, type: 3}
+    - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: pfProjectile.maxLifetime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
+      propertyPath: projectilePrefab.maxLifetime
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}

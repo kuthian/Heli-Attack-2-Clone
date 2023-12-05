@@ -19,29 +19,28 @@ public class EnemyGunController : MonoBehaviour
     }
 
     [SerializeField]
-    private projectile _projectile;
+    private projectile pfProjectile;
 
-    [field: HideInInspector]
-    private DateTime _lastShotTime = DateTime.Now;
+    private DateTime lastShotTime = DateTime.Now;
 
     [SerializeField]
-    private float _cooldownTime = 2f;
+    private float cooldownTime = 2f;
 
 
     [field: HideInInspector]
-    private Transform _firePointTransform;
+    private Transform firePointTransform;
 
-    private bool OnCoolDown => (_lastShotTime).AddSeconds(_cooldownTime) > DateTime.Now;
+    private bool OnCoolDown => (lastShotTime).AddSeconds(cooldownTime) > DateTime.Now;
 
     private void Start()
     {
-        _firePointTransform = transform.Find("FirePoint");
+        firePointTransform = transform.Find("FirePoint");
     }
 
     private void ShootProjectile()
     {
         Transform projectile =
-          Instantiate(_projectile.prefab, _firePointTransform.position, Quaternion.identity, DynamicObjects.Projectiles);
+          Instantiate(pfProjectile.prefab, firePointTransform.position, Quaternion.identity, DynamicObjects.Projectiles);
 
         if (ObjectToIgnore)
         {
@@ -52,10 +51,10 @@ public class EnemyGunController : MonoBehaviour
             }
         }
 
-        projectile.GetComponent<Projectile>().Damage = _projectile.damage;
-        projectile.GetComponent<Projectile>().Speed = _projectile.speed;
-        projectile.GetComponent<Projectile>().MaxLifetimeSeconds = _projectile.maxLifetime;
-        projectile.GetComponent<Projectile>().Shoot(_firePointTransform.right);
+        projectile.GetComponent<Projectile>().Damage = pfProjectile.damage;
+        projectile.GetComponent<Projectile>().Speed = pfProjectile.speed;
+        projectile.GetComponent<Projectile>().MaxLifetimeSeconds = pfProjectile.maxLifetime;
+        projectile.GetComponent<Projectile>().Shoot(firePointTransform.right);
     }
 
     private void Update()
@@ -65,7 +64,7 @@ public class EnemyGunController : MonoBehaviour
         if (ShootingEnabled && !OnCoolDown)
         {
             ShootProjectile();
-            _lastShotTime = DateTime.Now.AddSeconds(_cooldownTime);
+            lastShotTime = DateTime.Now.AddSeconds(cooldownTime);
         }
     }
 

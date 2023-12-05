@@ -30,22 +30,24 @@ public class EnemyController : MonoBehaviour
     };
 
     [SerializeField]
-    private State _state = State.WakingUp;
-    private DateTime _nextStateTime = DateTime.Now;
+    private State state = State.WakingUp;
+    private DateTime nextStateTime = DateTime.Now;
 
     [SerializeField]
-    private StateParameters _idle;
+    private StateParameters idle;
     [SerializeField]
-    private StateParameters _leaving;
+    private StateParameters leaving;
     [SerializeField]
-    private StateParameters _returning;
+    private StateParameters returning;
 
-    [SerializeField]
-    private float[] _possibleTrackingOffsetsX;
-    [SerializeField]
-    public float TrackingOffsetX = 0;
+    [Header("X Tracking parameters")]
+    public float A0 = 0;
+    public float Freq = 1;
+    public float Amplitude = 1;
+    private float trackingOffsetX = 0;
+    private float time = 0;
 
-    private float PlayerPosX => player.position.x + TrackingOffsetX;
+    private float PlayerPosX => player.position.x + trackingOffsetX;
     private float PlayerPosY => player.position.y;
 
     private int DirectionToPlayerX => (int)Mathf.Sign(PlayerPosX - transform.position.x);
@@ -83,9 +85,8 @@ public class EnemyController : MonoBehaviour
 
     void Awake()
     {
-        _state = State.WakingUp;
-        _nextStateTime = DateTime.Now;
-        TrackingOffsetX = Utils.RandomInRange(_possibleTrackingOffsetsX);
+        state = State.WakingUp;
+        nextStateTime = DateTime.Now;
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.Find("Player").transform;
         gunController = GetComponentInChildren<EnemyGunController>();
@@ -95,7 +96,7 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (DateTime.Now > _nextStateTime)
+        if (DateTime.Now > nextStateTime)
         {
             GoToNextState();
         }
@@ -105,7 +106,7 @@ public class EnemyController : MonoBehaviour
 
     private void GoToNextState()
     {
-        switch (_state)
+        switch (state)
         {
             case State.WakingUp:
                 GoToState(State.Returning);
@@ -129,8 +130,8 @@ public class EnemyController : MonoBehaviour
     {
         // var previous_state = _state;
         gunController.ShootingEnabled = (nextState == State.Idle);
-        _nextStateTime = DateTime.Now.AddSeconds(GetStateParameters(nextState).durationSeconds);
-        _state = nextState;
+        nextStateTime = DateTime.Now.AddSeconds(GetStateParameters(nextState).durationSeconds);
+        state = nextState;
         // Debug.Log(previous_state + " -> " + _state );
     }
 
@@ -138,10 +139,10 @@ public class EnemyController : MonoBehaviour
     {
         switch (state)
         {
-            case State.Idle: return _idle;
-            case State.Leaving: return _leaving;
-            case State.Returning: return _returning;
-            default: return _idle;
+            case State.Idle: return idle;
+            case State.Leaving: return leaving;
+            case State.Returning: return returning;
+            default: return idle;
         }
     }
 
@@ -153,7 +154,7 @@ public class EnemyController : MonoBehaviour
         if (MovingTowardsPlayerX || NotMovingX)
         {
             //Debug.Log("MoveTowardsPlayerX");
-            var m = GetStateParameters(_state);
+            var m = GetStateParameters(state);
             float speed = SpeedX + m.acceleration.x * Time.fixedDeltaTime;
             if (speed > m.maxSpeed.x) speed = m.maxSpeed.x;
             rb.velocity = new Vector2(DirectionToPlayerX * speed, VelocityY);
@@ -169,7 +170,7 @@ public class EnemyController : MonoBehaviour
         if (MovingTowardsPlayerY || NotMovingY)
         {
             //Debug.Log("MoveTowardsPlayerY");
-            var m = GetStateParameters(_state);
+            var m = GetStateParameters(state);
             float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
             if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
             rb.velocity = new Vector2(VelocityX, DirectionToPlayerY * speed);
@@ -188,7 +189,7 @@ public class EnemyController : MonoBehaviour
             return;
         }
         //Debug.Log("MoveAwayFromPlayerX");
-        var m = GetStateParameters(_state);
+        var m = GetStateParameters(state);
         float speed = SpeedX + m.acceleration.x * Time.fixedDeltaTime;
         if (speed > m.maxSpeed.x) speed = m.maxSpeed.x;
         rb.velocity = new Vector2(-1 * DirectionToPlayerX * speed, VelocityY);
@@ -202,7 +203,7 @@ public class EnemyController : MonoBehaviour
             return;
         }
         //Debug.Log("MoveAwayFromPlayerY");
-        var m = GetStateParameters(_state);
+        var m = GetStateParameters(state);
         float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
         if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
         rb.velocity = new Vector2(VelocityX, -1 * DirectionToPlayerY * speed);
@@ -211,7 +212,7 @@ public class EnemyController : MonoBehaviour
     private void SlowDownX()
     {
         // Debug.Log("SlowDownX");
-        var m = GetStateParameters(_state);
+        var m = GetStateParameters(state);
         float speed = SpeedX - m.decceleration.x * Time.fixedDeltaTime;
         if (speed < 0) speed = 0;
         rb.velocity = new Vector2(DirectionX * speed, VelocityY);
@@ -220,7 +221,7 @@ public class EnemyController : MonoBehaviour
     private void SlowDownY()
     {
         // Debug.Log("SlowDownY");
-        var m = GetStateParameters(_state);
+        var m = GetStateParameters(state);
         float speed = SpeedY - m.decceleration.y * Time.fixedDeltaTime;
         if (speed < 0) speed = 0;
         rb.velocity = new Vector2(VelocityX, DirectionY * speed);
@@ -231,7 +232,7 @@ public class EnemyController : MonoBehaviour
         if (MovingTowardsPlayerY || NotMovingY)
         {
             // Debug.Log("MoveToCruisingY");
-            var m = GetStateParameters(_state);
+            var m = GetStateParameters(state);
             float speed = SpeedY + m.acceleration.y * Time.fixedDeltaTime;
             if (speed > m.maxSpeed.y) speed = m.maxSpeed.y;
             rb.velocity = new Vector2(VelocityX, DirectionToCruisingY * speed);
@@ -245,6 +246,10 @@ public class EnemyController : MonoBehaviour
     void IdleMovement()
     {
         var m = GetStateParameters(State.Idle);
+
+        //float w = 
+        time += Time.fixedDeltaTime;
+        trackingOffsetX = A0 + Amplitude * (float)Math.Sin(Freq * 2 * Math.PI * time);
 
         bool withinToleranceX = Mathf.Abs(DistanceFromPlayerX) < m.tolerance;
         if (!withinToleranceX)
@@ -277,7 +282,7 @@ public class EnemyController : MonoBehaviour
 
     void ReturningMovement()
     {
-        var m = _returning;
+        var m = returning;
 
         bool withinToleranceX = Mathf.Abs(DistanceFromPlayerX) < m.tolerance;
         if (!withinToleranceX)
@@ -310,7 +315,7 @@ public class EnemyController : MonoBehaviour
 
     void CalculateMovement()
     {
-        switch (_state)
+        switch (state)
         {
             case State.Idle:
                 IdleMovement();
