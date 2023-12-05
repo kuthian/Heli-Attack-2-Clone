@@ -1,7 +1,12 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InventoryController : MonoBehaviour
 {
+    public InputAction nextWeapon;
+    public InputAction previousWeapon;
+    public InputAction scrollAction;
+
     private static int NoWeaponSelected = -99;
 
     public void AddWeapon(GameObject weapon)
@@ -31,23 +36,6 @@ public class InventoryController : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown("q"))
-        //{
-        //    SelectPreviousWeapon();
-        //}
-        //if (Input.GetKeyDown("e"))
-        //{
-        //    SelectNextWeapon();
-        //}
-        //if (Input.mouseScrollDelta.y > 0)
-        //{
-        //    SelectNextWeapon();
-        //}
-        //if (Input.mouseScrollDelta.y < 0)
-        //{
-        //    SelectPreviousWeapon();
-        //}
-
         CheckActiveWeaponAmmo();
     }
 
@@ -127,6 +115,45 @@ public class InventoryController : MonoBehaviour
             }
         }
         return index;
+    }
+
+    private void OnScroll(float scroll)
+    {
+        if (scroll > 0)
+        {
+            // Scrolling up
+            SelectNextWeapon();
+        }
+        else if (scroll < 0)
+        {
+            // Scrolling down
+            SelectPreviousWeapon();
+        }
+    }
+
+    private void OnEnable()
+    {
+        scrollAction.Enable();
+        scrollAction.performed += context => OnScroll(context.ReadValue<float>());
+
+        nextWeapon.Enable();
+        nextWeapon.performed += _ => SelectNextWeapon();
+
+        previousWeapon.Enable();
+        previousWeapon.performed += _ => SelectPreviousWeapon();
+
+    }
+
+    private void OnDisable()
+    {
+        scrollAction.Disable();
+        scrollAction.performed -= context => OnScroll(context.ReadValue<float>());
+
+        nextWeapon.Disable();
+        nextWeapon.performed -= _ => SelectNextWeapon();
+
+        previousWeapon.Disable();
+        previousWeapon.performed -= _ => SelectPreviousWeapon();
     }
 
 }

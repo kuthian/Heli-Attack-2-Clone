@@ -23251,6 +23251,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749d5df10996ddb4582f8d7d079cac4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextWeapon:
+    m_Name: Next Weapon
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 161d9025-a4a7-43c5-9098-bdfb86ae97d9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 9d951d3e-5205-4ac8-ae87-0cbd9d03a0b9
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Next Weapon
+      m_Flags: 0
+    m_Flags: 0
+  previousWeapon:
+    m_Name: Previous Weapon
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7f9a87ad-160e-49c6-a236-17f1acaaaad0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: dd7cfec4-23f4-430e-9638-32364f34149b
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Previous Weapon
+      m_Flags: 0
+    m_Flags: 0
+  scrollAction:
+    m_Name: Scroll
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0b73c944-67f6-46e0-8a6c-03af319fa7e0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 0ab748dc-7d8c-4c42-9cdf-df91b84e61ff
+      m_Path: <Mouse>/scroll/y
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Scroll
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &512116073
 GameObject:
   m_ObjectHideFlags: 0
