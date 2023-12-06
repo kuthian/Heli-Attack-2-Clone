@@ -54,6 +54,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
+        if (playerControls == null)
+        {
+            playerControls = new PlayerInputActions();
+        }
+
         moveAction = playerControls.Player.Move;
         moveAction.Enable();
 
