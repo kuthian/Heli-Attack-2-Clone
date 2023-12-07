@@ -7,7 +7,8 @@ using Steamworks;
 public class SteamCloud : Singleton<SteamCloud>
 {
     public static bool isAccessible;
-    public static string DefaultSaveFileName = "HighScoreSaveFile";
+    public static string HighscoreSaveFileName = "HighScoreSaveFile";
+    public static string VolumeSettingsSaveFileName = "VolumeSettingsSaveFile";
 
     override protected void Awake()
     {
@@ -34,12 +35,12 @@ public class SteamCloud : Singleton<SteamCloud>
 
     public static int GetHighScore()
     {
-        int fileSize = SteamRemoteStorage.GetFileSize(DefaultSaveFileName);
+        int fileSize = SteamRemoteStorage.GetFileSize(HighscoreSaveFileName);
         if (fileSize == 0)
             return 0;
 
         byte[] data = new byte[fileSize];
-        SteamRemoteStorage.FileRead(DefaultSaveFileName, data, fileSize);
+        SteamRemoteStorage.FileRead(HighscoreSaveFileName, data, fileSize);
 
         return BitConverter.ToInt32(data, 0);
     }
@@ -47,7 +48,24 @@ public class SteamCloud : Singleton<SteamCloud>
     public static void SaveHighScore(int highScore)
     {
         byte[] data = BitConverter.GetBytes(highScore);
-        SteamRemoteStorage.FileWrite(DefaultSaveFileName, data, data.Length);
+        SteamRemoteStorage.FileWrite(HighscoreSaveFileName, data, data.Length);
     }
 
+    public static VolumeSettings GetVolumeSettings()
+    {
+        int fileSize = SteamRemoteStorage.GetFileSize(VolumeSettingsSaveFileName);
+        if (fileSize == 0)
+            return new VolumeSettings();
+
+        byte[] data = new byte[fileSize];
+        SteamRemoteStorage.FileRead(VolumeSettingsSaveFileName, data, fileSize);
+
+        return VolumeSettings.FromByteArray(data);
+    }
+
+    public static void SaveVolumeSettings(VolumeSettings volumeSettings)
+    {
+        byte[] data = volumeSettings.ToByteArray();
+        SteamRemoteStorage.FileWrite(VolumeSettingsSaveFileName, data, data.Length);
+    }
 }
