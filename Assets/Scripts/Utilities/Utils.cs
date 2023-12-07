@@ -1,7 +1,4 @@
 using UnityEngine;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 
 static class Utils
 {
@@ -15,7 +12,12 @@ static class Utils
 
     public static T RandomInRange<T>(T[] array)
     {
-        return array[UnityEngine.Random.Range(0, array.Length)];
+        return array[Random.Range(0, array.Length)];
+    }
+
+    public static bool RandomBool()
+    {
+        return Random.Range(0, 2) == 1;
     }
 
     // Function to draw a square

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Leaderboard : MonoBehaviour
 {
-    public GameObject textPrefab; // Assign a Text prefab with desired formatting.
-    public Transform contentPanel; // Assign the Content panel of your Scroll View.
+    public GameObject textPrefab;
+    public Transform contentPanel;
 
     public void Show()
     {

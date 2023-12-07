@@ -1,3 +1,4 @@
+using UnityEditor.U2D;
 using UnityEngine;
 
 public class UziController : __GunController
@@ -22,6 +23,7 @@ public class UziController : __GunController
     {
         _wwShootEnd.Post(gameObject);
         gunfireAnimation.SetBool("isShooting", false);
+        gunfireAnimation.GetComponent<SpriteRenderer>().sprite = null;
     }
 
     override protected void OnAmmoEmpty()

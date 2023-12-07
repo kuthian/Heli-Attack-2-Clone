@@ -6,7 +6,6 @@ public class EnvironmentSounds : MonoBehaviour
 {
     public AK.Wwise.Event lightFlicker;
 
-
     public void wwLightFlicker()
     {
         lightFlicker.Post(gameObject);

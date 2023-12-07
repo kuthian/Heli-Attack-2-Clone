@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -59,7 +58,7 @@ public class EnemyManager : MonoBehaviour
     {
         GameObject obj = Instantiate(pfEnemy, p.position, Quaternion.identity, transform);
         obj.GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
-        obj.GetComponent<EnemyController>().IsFlipped = Random.Range(0, 2) == 1;
+        obj.GetComponent<EnemyController>().IsFlipped = Utils.RandomBool();
         enemies.Add(obj);
 
         int sortingOrder = 4; // base sorting order for the heli

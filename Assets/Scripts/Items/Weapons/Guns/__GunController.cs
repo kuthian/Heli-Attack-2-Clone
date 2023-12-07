@@ -66,6 +66,7 @@ public class __GunController : MonoBehaviour
         shootAction.canceled -= ShootEnd;
         shootAction.Disable();
         shoot = false;
+        OnShootEnd();
     }
 
     virtual protected void Shoot()

@@ -5,6 +5,19 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
+    public float InputX { get; private set; }
+    public bool Crouched { get; private set; }
+    public bool Grounded { get; private set; }
+
+    public Rigidbody2D Rigidbody => rb;
+    public int JumpCount => maxJumpCount - jumpCounter;
+
+    public float VelocityX => rb.velocity.x;
+    public float VelocityY => rb.velocity.y;
+    public float SpeedX => Mathf.Abs(VelocityX);
+    public float SpeedY => Mathf.Abs(VelocityY);
+    public float DirectionX => Mathf.Sign(VelocityX);
+
     private PlayerInputActions playerControls;
     private InputAction moveAction;
     private InputAction crouchAction;
@@ -28,19 +41,6 @@ public class PlayerController : MonoBehaviour
     private bool stopJump = false;
     private int jumpCounter = 2;
     private int maxJumpCount = 2;
-
-    public float InputX { get; private set; }
-    public bool Crouched { get; private set; }
-    public bool Grounded { get; private set; }
-
-    public Rigidbody2D Rigidbody => rb;
-    public int JumpCount => maxJumpCount - jumpCounter;
-
-    public float VelocityX => rb.velocity.x;
-    public float VelocityY => rb.velocity.y;
-    public float SpeedX => Mathf.Abs(VelocityX);
-    public float SpeedY => Mathf.Abs(VelocityY);
-    public float DirectionX => Mathf.Sign(VelocityX);
 
     private void Awake()
     {
