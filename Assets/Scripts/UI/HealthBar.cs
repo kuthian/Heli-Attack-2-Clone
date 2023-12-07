@@ -3,26 +3,26 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private Health _health;
+    [SerializeField] private Health health;
     internal Slider slider;
 
     public void Start()
     {
         slider = GetComponent<Slider>();
-        slider.maxValue = _health.MaxHealth;
-        slider.value = _health.CurrentHealth;
-        _health.OnHealthChanged += HandleOnHealthChanged;
+        slider.maxValue = health.MaxHealth;
+        slider.value = health.CurrentHealth;
+        health.OnHealthChanged += HandleOnHealthChanged;
         AkSoundEngine.SetRTPCValue("health", slider.value);
     }
 
     private void OnEnable()
     {
-        _health.OnHealthChanged += HandleOnHealthChanged;
+        health.OnHealthChanged += HandleOnHealthChanged;
     }
 
     private void OnDisable()
     {
-        _health.OnHealthChanged -= HandleOnHealthChanged;
+        health.OnHealthChanged -= HandleOnHealthChanged;
     }
 
     private void HandleOnHealthChanged(int health)

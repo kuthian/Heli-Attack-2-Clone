@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     public bool IdleOnly = false;
     public bool LeaveForever = false;
     public bool ShootingEnabled => GetComponentInChildren<EnemyGunController>().ShootingEnabled;
+    public bool IsFlipped = false;
 
     public enum State
     {
@@ -29,10 +30,12 @@ public class EnemyController : MonoBehaviour
         public float durationSeconds;
     };
 
+    [Header("Current State")]
     [SerializeField]
     private State state = State.WakingUp;
     private DateTime nextStateTime = DateTime.Now;
 
+    [Header("State Parameters")]
     [SerializeField]
     private StateParameters idle;
     [SerializeField]
@@ -40,12 +43,21 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private StateParameters returning;
 
-    [Header("X Tracking parameters")]
+    [Header("X Tracking Parameters")]
     public float A0 = 0;
     public float Freq = 1;
     public float Amplitude = 1;
+    public float Phase = 0;
     private float trackingOffsetX = 0;
     private float time = 0;
+
+    [Header("Y Tracking Parameters")]
+    [SerializeField]
+    private float[] _possibleCruisingPositionsY;
+    [SerializeField]
+    private float cruisingPositionY = 1.0f;
+    [SerializeField]
+    private float cruisingToleranceY = 0.2f;
 
     private float PlayerPosX => player.position.x + trackingOffsetX;
     private float PlayerPosY => player.position.y;
@@ -57,15 +69,8 @@ public class EnemyController : MonoBehaviour
     private bool MovingTowardsPlayerX => DirectionToPlayerX == DirectionX;
     private bool MovingTowardsPlayerY => DirectionToPlayerY == DirectionY;
 
-    [SerializeField]
-    private float[] _possibleCruisingPositionsY;
-    [SerializeField]
-    private float _cruisingPositionY = 1.0f;
-    [SerializeField]
-    private float _cruisingToleranceY = 0.2f;
-
-    private float DistanceFromCruisingY => MathF.Abs(_cruisingPositionY - transform.position.y);
-    private int DirectionToCruisingY => (int)Mathf.Sign(_cruisingPositionY - transform.position.y);
+    private float DistanceFromCruisingY => MathF.Abs(cruisingPositionY - transform.position.y);
+    private int DirectionToCruisingY => (int)Mathf.Sign(cruisingPositionY - transform.position.y);
     private bool MovingTowardsCruising => DirectionToCruisingY == DirectionY;
 
     private float VelocityX => rb.velocity.x;
@@ -79,9 +84,6 @@ public class EnemyController : MonoBehaviour
     private bool NotMovingY => SpeedY == 0;
     private bool MovingX => SpeedX > 0;
     private bool MovingY => SpeedY > 0;
-
-    [field: SerializeField]
-    public bool IsFlipped { get; set; }
 
     void Awake()
     {
@@ -117,7 +119,7 @@ public class EnemyController : MonoBehaviour
             case State.Leaving:
                 // Update cruising position so that the helicopter
                 // always returns to a different cruising distance
-                _cruisingPositionY = Utils.RandomInRange(_possibleCruisingPositionsY);
+                cruisingPositionY = Utils.RandomInRange(_possibleCruisingPositionsY);
                 GoToState(LeaveForever ? State.Leaving : State.Returning);
                 break;
             case State.Returning:
@@ -247,9 +249,8 @@ public class EnemyController : MonoBehaviour
     {
         var m = GetStateParameters(State.Idle);
 
-        //float w = 
         time += Time.fixedDeltaTime;
-        trackingOffsetX = A0 + Amplitude * (float)Math.Sin(Freq * 2 * Math.PI * time);
+        trackingOffsetX = A0 + Amplitude * (float)Math.Sin(Freq * 2 * Math.PI * time + Phase);
 
         bool withinToleranceX = Mathf.Abs(DistanceFromPlayerX) < m.tolerance;
         if (!withinToleranceX)
@@ -262,7 +263,7 @@ public class EnemyController : MonoBehaviour
             SlowDownX();
         }
 
-        bool withinToleranceY = Mathf.Abs(DistanceFromCruisingY) < _cruisingToleranceY;
+        bool withinToleranceY = Mathf.Abs(DistanceFromCruisingY) < cruisingToleranceY;
         if (!withinToleranceY)
         {
             MoveToCruising();

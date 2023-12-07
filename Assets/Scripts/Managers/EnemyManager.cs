@@ -4,10 +4,9 @@ using UnityEngine.UIElements;
 
 public class EnemyManager : MonoBehaviour
 {
-
     public bool EnemiesEnabled = true;
-    [SerializeField] private GameObject _pfEnemy;
-    public Transform[] _spawnPoints;
+    public GameObject pfEnemy;
+    public Transform[] spawnPoints;
     internal List<GameObject> enemies;
 
     void Awake()
@@ -53,12 +52,12 @@ public class EnemyManager : MonoBehaviour
 
     private void CreateEnemyRandom()
     {
-        CreateEnemy(Utils.RandomInRange(_spawnPoints));
+        CreateEnemy(Utils.RandomInRange(spawnPoints));
     }
 
     private void CreateEnemy(Transform p)
     {
-        GameObject obj = Instantiate(_pfEnemy, p.position, Quaternion.identity, transform);
+        GameObject obj = Instantiate(pfEnemy, p.position, Quaternion.identity, transform);
         obj.GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
         obj.GetComponent<EnemyController>().IsFlipped = Random.Range(0, 2) == 1;
         enemies.Add(obj);
@@ -74,6 +73,10 @@ public class EnemyManager : MonoBehaviour
             obj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
             gunner.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
             gunner.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++; // the gun!
+
+            // Enemy x tracking is out of phase so that they don't perform the exact same tracking behaviour
+            enemies[i].GetComponent<EnemyController>().A0 = enemies.Count > 1 ? - 2 + 4*i : 0;
+            enemies[i].GetComponent<EnemyController>().Phase = 90 * i;
 
             if (obj != enemies[i])
             {
