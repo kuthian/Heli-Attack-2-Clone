@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
 
-  internal Rigidbody2D _rb;
+  internal Rigidbody2D rb;
   [field:HideInInspector]
   public float Damage { get; set; } = 10;
   [field:HideInInspector]
@@ -26,12 +26,12 @@ public class Projectile : MonoBehaviour {
 
   private void Awake()
   {
-    _rb = GetComponent<Rigidbody2D>();
+    rb = GetComponent<Rigidbody2D>();
   }
 
   public void Shoot( Vector3 direction )
   {
-    _rb.velocity = direction.normalized * Speed;
+    rb.velocity = direction.normalized * Speed;
     transform.eulerAngles = new Vector3(0, 0, Utils.GetAngleFromVectorFloat(direction));
     Destroy(gameObject, MaxLifetimeSeconds);
   }
