@@ -36,6 +36,10 @@ public class ParallaxEffect : MonoBehaviour
     {
         cam = Camera.main;
         startPosition = transform.position;
+        if (subject == null)
+        {
+            subject = cam.transform;
+        }
     }
 
     /// <summary>
