@@ -15,20 +15,27 @@ public class UziController : __GunController
 
     override protected void OnShootStart()
     {
+        // Play the shooting sound
         _wwShootStart.Post(gameObject);
+        // Start the animation
         gunfireAnimation.SetBool("isShooting", true);
     }
 
     override protected void OnShootEnd()
     {
+        // Stop the shooting sound
         _wwShootEnd.Post(gameObject);
+        // Stop the animation
         gunfireAnimation.SetBool("isShooting", false);
-        gunfireAnimation.GetComponent<SpriteRenderer>().sprite = null;
+        // Reset the sprite in case the animation didn't finish
+        gunfireAnimation.GetComponent<SpriteRenderer>().sprite = null; 
     }
 
     override protected void OnAmmoEmpty()
     {
+        // stop the shooting sound
         _wwAmmoEmpty.Post(gameObject);
+        // Stop the animation
         gunfireAnimation.SetBool("isShooting", false);
     }
 
