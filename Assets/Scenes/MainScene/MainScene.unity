@@ -29679,6 +29679,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709ee11994a2f44658e5fc9887c45081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpingDeceleration: 0.5
+  MoveAcceleration: 20
+  MoveDecceleration: 12
+  tumbleForce: 100
+  tumbleGravity: 1.5
+  tumbleTime: 0.5
+  tumbleDecceleration: 20
 --- !u!58 &633470005
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29738,6 +29745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b99e203107dad48afe31a28e603454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsFacingRight: 0
 --- !u!114 &633470009
 MonoBehaviour:
   m_ObjectHideFlags: 0

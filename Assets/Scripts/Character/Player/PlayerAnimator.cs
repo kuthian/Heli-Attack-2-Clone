@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
+    public bool IsFacingRight = true;
+
     internal SpriteRenderer spriteRenderer;
     internal Animator animator;
     internal PlayerController player;
@@ -25,13 +27,19 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetFloat("VelocityX", player.SpeedX);
         if (player.InputX != 0)
         {
-            spriteRenderer.flipX = Mathf.Sign(player.InputX) < 0;
+            IsFacingRight = Mathf.Sign(player.InputX) > 0;
+            spriteRenderer.flipX = !IsFacingRight;
         }
     }
 
-    public void jump()
+    public void Jump()
     {
         animator.SetTrigger("Jump");
+    }
+
+    public void Tumble()
+    {
+        animator.SetTrigger("Tumble");
     }
 
     public void StartDeathSequence()

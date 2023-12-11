@@ -17,12 +17,12 @@ public class CameraScroll : MonoBehaviour
 
     void Start()
     {
-        startPosition = transform.position; // Store the starting position of the camera
+        startPosition = transform.position;
     }
 
     void Update()
     {
-        elapsedTime += Time.deltaTime; // Increment time
+        elapsedTime += Time.deltaTime;
 
         // Calculate new position for each axis
         float newX = startPosition.x + Mathf.Sin(elapsedTime * frequencyX) * amplitudeX;

@@ -5,9 +5,10 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    public float InputX { get; private set; }
-    public bool Crouched { get; private set; }
-    public bool Grounded { get; private set; }
+    public float InputX { get; private set; } = 0.0f;
+    public bool Crouched { get; private set; } = false;
+    public bool Grounded { get; private set; } = false;
+    public bool Tumble { get; private set; } = false;
 
     public Rigidbody2D Rigidbody => rb;
     public int JumpCount => maxJumpCount - jumpCounter;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private InputAction moveAction;
     private InputAction crouchAction;
     private InputAction jumpAction;
+    private InputAction tumbleAction;
 
     private Transform groundCheck;
     private LayerMask groundLayer;
@@ -32,15 +34,20 @@ public class PlayerController : MonoBehaviour
 
     private float maxSpeed = 3f;
     private float jumpingPower = 8f;
-    private float jumpingDeceleration = 0.5f;
-    private float MoveAcceleration = 20;
-    private float MoveDecceleration = 12;
+    public float jumpingDeceleration = 0.5f;
+    public float MoveAcceleration = 20;
+    public float MoveDecceleration = 12;
 
     private bool pauseGroundCheck = false;
     private bool jump = false;
     private bool stopJump = false;
     private int jumpCounter = 2;
     private int maxJumpCount = 2;
+
+    public float tumbleForce= 100;
+    public float tumbleGravity = 1.5f;
+    public float tumbleTime = 0.5f;
+    public float tumbleDecceleration = 20;
 
     private void Awake()
     {
@@ -68,16 +75,31 @@ public class PlayerController : MonoBehaviour
         crouchAction.Enable();
 
         jumpAction = playerControls.Player.Jump;
-        jumpAction.performed += JumpStart;
-        jumpAction.canceled += JumpEnd;
+        jumpAction.performed += _ => JumpStart();
+        jumpAction.canceled += _ => JumpEnd();
         jumpAction.Enable();
+
+        tumbleAction = playerControls.Player.Tumble;
+        tumbleAction.performed += _ => TumbleStart();
+        tumbleAction.canceled += _ => TumbleEnd();
+        tumbleAction.Enable();
     }
 
     private void OnDisable()
     {
         moveAction.Disable();
+
         crouchAction.Disable();
+        crouchAction.performed -= _ => Crouched = true;
+        crouchAction.canceled -= _ => Crouched = false;
+
         jumpAction.Disable();
+        jumpAction.performed -= _ => JumpStart();
+        jumpAction.canceled -= _ => JumpEnd();
+
+        tumbleAction.Disable();
+        tumbleAction.performed -= _ => TumbleStart();
+        tumbleAction.canceled -= _ => TumbleEnd();
     }
 
     public void BlockInput()
@@ -115,7 +137,19 @@ public class PlayerController : MonoBehaviour
         if (InputX != 0)
         {
             float speed = SpeedX + MoveAcceleration * Time.fixedDeltaTime;
-            if (speed > maxSpeed) speed = maxSpeed;
+            if (speed > maxSpeed)
+            {
+                // FIXME: This can be fixed
+                if (Tumble)
+                {
+                    speed = speed - tumbleDecceleration * Time.fixedDeltaTime;
+                }
+                else
+                {
+                   speed = maxSpeed;
+                }
+            } 
+
             rb.velocity = new Vector2(InputX * speed, VelocityY);
         }
         else
@@ -151,21 +185,44 @@ public class PlayerController : MonoBehaviour
         pauseGroundCheck = false;
     }
 
-    private void JumpStart(InputAction.CallbackContext context)
+    private void JumpStart()
     {
         if (jumpCounter > 0 && !Crouched)
         {
-            playerAnimator.jump();
+            playerAnimator.Jump();
             jump = true;
             Grounded = false;
             StartCoroutine(PauseGroundCheck(0.4f));
         }
     }
 
-    private void JumpEnd(InputAction.CallbackContext context)
+    private void JumpEnd()
     {
-        rb.velocity = new Vector2(VelocityX, VelocityY * jumpingDeceleration);
         stopJump = true;
+    }
+
+    private void TumbleStart()
+    {
+        playerAnimator.Tumble();
+        Vector3 forceDirection = new Vector3(playerAnimator.IsFacingRight ? 1 : -1, 0, 0); // in the direction the player is facing
+        rb.AddForce(forceDirection * tumbleForce, ForceMode2D.Impulse);
+        StartCoroutine(PerformTumble());
+    }
+
+    private IEnumerator PerformTumble()
+    {
+        Tumble = true;
+        float gravityBefore = rb.gravityScale;
+        rb.gravityScale = 1.5f;
+
+        yield return new WaitForSeconds(tumbleTime);
+        Tumble = false;
+        rb.gravityScale = gravityBefore;
+    }
+
+    private void TumbleEnd()
+    {
+        // TODO
     }
 
     public void Damage(int var)
