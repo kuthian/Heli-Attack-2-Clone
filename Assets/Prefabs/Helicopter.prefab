@@ -188,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IdleOnly: 0
   LeaveForever: 0
+  IsFlipped: 0
   state: 0
   idle:
     maxSpeed: {x: 2.5, y: 2.5}
@@ -210,15 +211,15 @@ MonoBehaviour:
   A0: 0
   Freq: 0.2
   Amplitude: 3
+  Phase: 0
   _possibleCruisingPositionsY:
   - 3
   - 3.5
   - 4
   - 4.5
   - 5
-  _cruisingPositionY: 1
-  _cruisingToleranceY: 0.2
-  <IsFlipped>k__BackingField: 0
+  cruisingPositionY: 1
+  cruisingToleranceY: 0.2
 --- !u!114 &7921896769568558857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,8 +295,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786696879887992436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -0.105, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.05, y: -0.22, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8498581425184424611}
