@@ -1,50 +1,13 @@
 using System;
 using UnityEngine;
 
-public abstract class ProgressBar : MonoBehaviour
+public class VProgressBar : ProgressBar
 {
-    public float Percentage
+    override protected void SetPercentFill(float value)
     {
-        get => percentFill.Value;
-        set
-        {
-            percentFill.Value = value;
-        }
+        Vector2 sizeDelta = mask.sizeDelta;
+        sizeDelta.y = (value / 100) * fill.rect.height;
+        mask.sizeDelta = sizeDelta;
     }
-
-    [Range(0, 100)]
-    [SerializeField]
-    protected float _percentageValue;
-
-    [SerializeField]
-    protected RectTransform mask;
-    [SerializeField]
-    protected RectTransform fill;
-
-    protected ObservableValue<float> percentFill = new ObservableValue<float>(100.0f);
-
-    private void OnValidate()
-    {
-        Percentage = _percentageValue;
-    }
-
-    private void OnEnable()
-    {
-        percentFill.OnValueChanged += SetPercentFill;
-    }
-
-    private void OnDisable()
-    {
-        percentFill.OnValueChanged -= SetPercentFill;
-    }
-
-    private void Start()
-    {
-
-        Percentage = _percentageValue;
-        SetPercentFill(_percentageValue);
-    }
-
-    abstract protected void SetPercentFill(float value);
 
 }
