@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1298805899437269515}
   - component: {fileID: 1298805899437269514}
-  - component: {fileID: 1298805899437269513}
+  - component: {fileID: 1579630742232505786}
   m_Layer: 5
   m_Name: VProgressBar
   m_TagString: Untagged
@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 816.56055, y: 416.6775}
-  m_SizeDelta: {x: 37.2125, y: 118.167}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 37.2125, y: 118.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1298805899437269514
 CanvasRenderer:
@@ -48,7 +48,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298805899437269516}
   m_CullTransparentMesh: 1
---- !u!114 &1298805899437269513
+--- !u!114 &1579630742232505786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298805899437269516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c872e53e149de3240ad1204c7e3f648e, type: 3}
+  m_Script: {fileID: 11500000, guid: 636881e402c93df4abf7a4514c96032d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _percentageValue: 100
