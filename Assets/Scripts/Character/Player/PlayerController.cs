@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
     private int jumpCounter = 2;
     private int maxJumpCount = 2;
 
+    public bool canTumble = false;
     public float tumbleForce= 100;
     public float tumbleGravity = 1.5f;
     public float tumbleTime = 0.5f;
@@ -127,6 +128,7 @@ public class PlayerController : MonoBehaviour
 
         if (Grounded)
         {
+            canTumble = true;
             jumpCounter = maxJumpCount;
             if (Crouched) InputX = 0;
         }
@@ -203,17 +205,23 @@ public class PlayerController : MonoBehaviour
 
     private void TumbleStart()
     {
-        playerAnimator.Tumble();
-        Vector3 forceDirection = new Vector3(playerAnimator.IsFacingRight ? 1 : -1, 0, 0); // in the direction the player is facing
-        rb.AddForce(forceDirection * tumbleForce, ForceMode2D.Impulse);
-        StartCoroutine(PerformTumble());
+        if (canTumble)
+        {
+            playerAnimator.Tumble();
+            // Apply 
+            Vector3 forceDirection = new Vector3(playerAnimator.IsFacingRight ? 1 : -1, 0, 0); // in the direction the player is facing
+            rb.AddForce(forceDirection * tumbleForce, ForceMode2D.Impulse);
+            canTumble = false; // Reenabled when grounded
+            
+            StartCoroutine(PerformTumble());
+        }
     }
 
     private IEnumerator PerformTumble()
     {
         Tumble = true;
         float gravityBefore = rb.gravityScale;
-        rb.gravityScale = 1.5f;
+        rb.gravityScale = tumbleGravity;
 
         yield return new WaitForSeconds(tumbleTime);
         Tumble = false;

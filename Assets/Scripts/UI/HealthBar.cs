@@ -4,15 +4,14 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Health health;
-    internal Slider slider;
+    internal ProgressBar bar;
 
     public void Start()
     {
-        slider = GetComponent<Slider>();
-        slider.maxValue = health.MaxHealth;
-        slider.value = health.CurrentHealth;
+        bar = GetComponent<ProgressBar>();
+        bar.Percentage = health.CurrentHealth;
         health.OnHealthChanged += HandleOnHealthChanged;
-        AkSoundEngine.SetRTPCValue("health", slider.value);
+        AkSoundEngine.SetRTPCValue("health", bar.Percentage);
     }
 
     private void OnEnable()
@@ -27,8 +26,8 @@ public class HealthBar : MonoBehaviour
 
     private void HandleOnHealthChanged(int health)
     {
-        slider.value = health;
-        AkSoundEngine.SetRTPCValue("health", slider.value);
+        bar.Percentage = health;
+        AkSoundEngine.SetRTPCValue("health", bar.Percentage);
     }
 
 }
