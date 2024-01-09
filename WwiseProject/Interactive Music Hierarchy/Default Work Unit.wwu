@@ -33,9 +33,9 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicSegment Name="Chorus" ID="{9DE4AF4C-EACA-478C-8800-9A6A0EFAB54C}" ShortID="673274400">
+								<MusicSegment Name="MainTheme" ID="{9DE4AF4C-EACA-478C-8800-9A6A0EFAB54C}" ShortID="673274400">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="12750"/>
+										<Property Name="EndPosition" Type="Real64" Value="103500"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -46,23 +46,23 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="Bemmy_Chorus_160bpm" ID="{2ACEEB88-4829-4DE1-A9D7-D356FA03A1D0}" ShortID="277831767">
+										<MusicTrack Name="Bemmy_full_track_160bpm" ID="{15CBEF6C-375B-4465-8CD1-400EB1F90AF9}" ShortID="723716720">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Bemmy_Chorus_160bpm" ID="{395EB545-B312-4DA3-8DEE-A82A10CC04D1}">
+												<AudioFileSource Name="Bemmy_full_track_160bpm" ID="{885D7380-EDBF-4415-B56A-0FE279F5B5C3}">
 													<Language>SFX</Language>
-													<AudioFile>Bemmy_Chorus_160bpm.wav</AudioFile>
+													<AudioFile>Bemmy_full_track_160bpm.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="844066515"/>
+														<MediaID ID="751901830"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
-												<MusicTransition Name="Root" ID="{851E71A4-25E1-4187-BF01-671B740A375E}">
+												<MusicTransition Name="Root" ID="{B9FAB6D2-23D1-4E8D-A9CD-5A412A085A66}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -73,18 +73,18 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{7462DEE4-2FD2-4B1B-9D5A-7AFFA37B2DDB}">
+															<MusicTrackSequence Name="" ID="{26E4D98E-DB65-4D74-BD9D-11BC276B89E6}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="Bemmy_Chorus_160bpm" ID="{5FC7758F-66C7-4EA6-94A4-DB7CA8880B0B}">
+																				<MusicClip Name="Bemmy_full_track_160bpm" ID="{40182CCA-85CB-4FD4-A0D2-1DC773DBB03C}">
 																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="12750"/>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="103500"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="Bemmy_Chorus_160bpm" ID="{395EB545-B312-4DA3-8DEE-A82A10CC04D1}"/>
+																					<AudioSourceRef Name="Bemmy_full_track_160bpm" ID="{885D7380-EDBF-4415-B56A-0FE279F5B5C3}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -109,91 +109,7 @@
 													<MusicCue Name="Exit Cue" ID="{4EADB9C7-0507-4190-90AD-5C3B17D457C4}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="12000"/>
-														</PropertyList>
-													</MusicCue>
-												</Local>
-											</Reference>
-										</ObjectList>
-									</ObjectLists>
-								</MusicSegment>
-								<MusicSegment Name="PreChorus" ID="{76C1B9C2-8040-493D-BB37-98BCFE9A4DC0}" ShortID="926658569">
-									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="12750"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<MusicTrack Name="Bemmy_PreChorus_160bpm" ID="{0F3078FB-EC12-45DA-86B5-425A9DD77E7C}" ShortID="933051098">
-											<ReferenceList>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Bemmy_PreChorus_160bpm" ID="{5D87E7D7-C5C9-4ED6-9BA8-824336A378BA}">
-													<Language>SFX</Language>
-													<AudioFile>Bemmy_PreChorus_160bpm.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="755382356"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<TransitionList>
-												<MusicTransition Name="Root" ID="{98FC56B8-4BBA-4B5A-8F00-AB0E0AAEA595}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</TransitionList>
-											<ObjectLists>
-												<ObjectList Name="Sequences">
-													<Reference>
-														<Local>
-															<MusicTrackSequence Name="" ID="{5C0AB99C-EED1-402D-BC73-36C7254F451C}">
-																<ObjectLists>
-																	<ObjectList Name="Clips">
-																		<Reference>
-																			<Local>
-																				<MusicClip Name="Bemmy_PreChorus_160bpm" ID="{254F1401-A9D8-47CE-B2BD-A199CA067F5D}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="12750"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
-																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
-																					</PropertyList>
-																					<AudioSourceRef Name="Bemmy_PreChorus_160bpm" ID="{5D87E7D7-C5C9-4ED6-9BA8-824336A378BA}"/>
-																				</MusicClip>
-																			</Local>
-																		</Reference>
-																	</ObjectList>
-																</ObjectLists>
-															</MusicTrackSequence>
-														</Local>
-													</Reference>
-												</ObjectList>
-											</ObjectLists>
-										</MusicTrack>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="Cues">
-											<Reference>
-												<Local>
-													<MusicCue Name="Entry Cue" ID="{F745D116-05CE-4DBA-A9C3-EB1B05DF135C}"/>
-												</Local>
-											</Reference>
-											<Reference>
-												<Local>
-													<MusicCue Name="Exit Cue" ID="{9FBD2881-7E86-488A-B4DA-F3EB3A7E0587}">
-														<PropertyList>
-															<Property Name="CueType" Type="int16" Value="1"/>
-															<Property Name="TimeMs" Type="Real64" Value="12000"/>
+															<Property Name="TimeMs" Type="Real64" Value="102000"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
@@ -222,18 +138,11 @@
 										<Property Name="LoopCount" Type="int16" Value="0"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{96909655-8B2E-4A57-8874-E274AC5F032E}" ShortID="793044524">
+										<MusicPlaylistItem Name="" ID="{E53D9372-4ED6-4BFC-AB7C-7DF0B245F276}" ShortID="379398851">
 											<PropertyList>
 												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 											</PropertyList>
-											<SegmentRef Name="Chorus" ID="{9DE4AF4C-EACA-478C-8800-9A6A0EFAB54C}"/>
-										</MusicPlaylistItem>
-										<MusicPlaylistItem Name="" ID="{16C2EBB1-E162-4538-86D9-B6A5EFD0A4C2}" ShortID="35778119">
-											<PropertyList>
-												<Property Name="LoopCount" Type="int16" Value="2"/>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="PreChorus" ID="{76C1B9C2-8040-493D-BB37-98BCFE9A4DC0}"/>
+											<SegmentRef Name="MainTheme" ID="{9DE4AF4C-EACA-478C-8800-9A6A0EFAB54C}"/>
 										</MusicPlaylistItem>
 									</ChildrenList>
 								</MusicPlaylistItem>
