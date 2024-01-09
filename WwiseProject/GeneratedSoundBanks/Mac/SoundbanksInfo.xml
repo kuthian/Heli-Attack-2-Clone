@@ -32,7 +32,7 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3708665196">
+		<SoundBank Id="2228651116" Language="SFX" Hash="3321589320">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
@@ -78,10 +78,6 @@
 					<ShortName>shotgun_load_shell_02.wav</ShortName>
 					<Path>SFX\shotgun_load_shell_02_10C4C929.wem</Path>
 				</File>
-				<File Id="21967293" Language="SFX">
-					<ShortName>gameplay_arp.wav</ShortName>
-					<Path>SFX\gameplay_arp_D79FB2B7.wem</Path>
-				</File>
 				<File Id="43387985" Language="SFX">
 					<ShortName>Streetlight_buzz_02.wav</ShortName>
 					<Path>SFX\Streetlight_buzz_02_10C4C929.wem</Path>
@@ -99,14 +95,6 @@
 					<ShortName>missile_cruise_01.wav</ShortName>
 					<Path>SFX\missile_cruise_01_D79FB2B7.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
-				</File>
-				<File Id="183273539" Language="SFX">
-					<ShortName>gameplay_lead_var_01.wav</ShortName>
-					<Path>SFX\gameplay_lead_var_01_D79FB2B7.wem</Path>
-				</File>
-				<File Id="186017570" Language="SFX">
-					<ShortName>gameplay_lead_var_02.wav</ShortName>
-					<Path>SFX\gameplay_lead_var_02_D79FB2B7.wem</Path>
 				</File>
 				<File Id="191393311" Language="SFX">
 					<ShortName>uzi_impact_02.wav</ShortName>
@@ -128,10 +116,6 @@
 					<ShortName>ui_mouse_hover.wav</ShortName>
 					<Path>SFX\ui_mouse_hover_10C4C929.wem</Path>
 				</File>
-				<File Id="286259284" Language="SFX">
-					<ShortName>gameplay_hats_var_01.wav</ShortName>
-					<Path>SFX\gameplay_hats_var_01_D79FB2B7.wem</Path>
-				</File>
 				<File Id="324383162" Language="SFX">
 					<ShortName>player_jump_01.wav</ShortName>
 					<Path>SFX\player_jump_01_10C4C929.wem</Path>
@@ -139,10 +123,6 @@
 				<File Id="333889851" Language="SFX">
 					<ShortName>uzi_impact_lay02.wav</ShortName>
 					<Path>SFX\uzi_impact_lay02_C6062CD2.wem</Path>
-				</File>
-				<File Id="348128673" Language="SFX">
-					<ShortName>gameplay_drums.wav</ShortName>
-					<Path>SFX\gameplay_drums_D79FB2B7.wem</Path>
 				</File>
 				<File Id="349521609" Language="SFX">
 					<ShortName>ui_play_stinger.wav</ShortName>
@@ -164,10 +144,6 @@
 					<ShortName>missile_impact_01.wav</ShortName>
 					<Path>SFX\missile_impact_01_75503585.wem</Path>
 				</File>
-				<File Id="520519977" Language="SFX">
-					<ShortName>gameplay_arp_var_01.wav</ShortName>
-					<Path>SFX\gameplay_arp_var_01_D79FB2B7.wem</Path>
-				</File>
 				<File Id="525450841" Language="SFX">
 					<ShortName>grassFS_02.wav</ShortName>
 					<Path>SFX\grassFS_02_10C4C929.wem</Path>
@@ -176,10 +152,6 @@
 					<ShortName>player_jump_02.wav</ShortName>
 					<Path>SFX\player_jump_02_10C4C929.wem</Path>
 				</File>
-				<File Id="591686444" Language="SFX">
-					<ShortName>Intensity.wav</ShortName>
-					<Path>SFX\Intensity_D79FB2B7.wem</Path>
-				</File>
 				<File Id="593880374" Language="SFX">
 					<ShortName>Streetlight_buzz_01.wav</ShortName>
 					<Path>SFX\Streetlight_buzz_01_10C4C929.wem</Path>
@@ -187,10 +159,6 @@
 				<File Id="597570077" Language="SFX">
 					<ShortName>sfx_ui_click_generic.wav</ShortName>
 					<Path>SFX\sfx_ui_click_generic_10C4C929.wem</Path>
-				</File>
-				<File Id="653811676" Language="SFX">
-					<ShortName>gameplay_bass.wav</ShortName>
-					<Path>SFX\gameplay_bass_D79FB2B7.wem</Path>
 				</File>
 				<File Id="659578000" Language="SFX">
 					<ShortName>shotgun_shot_03.wav</ShortName>
@@ -201,10 +169,6 @@
 					<Path>SFX\ambience_loop_D79FB2B7.wem</Path>
 					<PrefetchSize>19264</PrefetchSize>
 				</File>
-				<File Id="694052461" Language="SFX">
-					<ShortName>gameplay_hats.wav</ShortName>
-					<Path>SFX\gameplay_hats_D79FB2B7.wem</Path>
-				</File>
 				<File Id="696176337" Language="SFX">
 					<ShortName>Pickup_Crate 2.wav</ShortName>
 					<Path>SFX\Pickup_Crate 2_E578AFAC.wem</Path>
@@ -213,13 +177,13 @@
 					<ShortName>grassFS_03.wav</ShortName>
 					<Path>SFX\grassFS_03_10C4C929.wem</Path>
 				</File>
+				<File Id="755382356" Language="SFX">
+					<ShortName>Bemmy_PreChorus_160bpm.wav</ShortName>
+					<Path>SFX\Bemmy_PreChorus_160bpm_D79FB2B7.wem</Path>
+				</File>
 				<File Id="772319303" Language="SFX">
 					<ShortName>shotgun_shot_01.wav</ShortName>
 					<Path>SFX\shotgun_shot_01_10C4C929.wem</Path>
-				</File>
-				<File Id="788969360" Language="SFX">
-					<ShortName>gameplay_drums_metal_117bpm.wav</ShortName>
-					<Path>SFX\gameplay_drums_metal_117bpm_D79FB2B7.wem</Path>
 				</File>
 				<File Id="804163719" Language="SFX">
 					<ShortName>player_jump_03.wav</ShortName>
@@ -233,13 +197,9 @@
 					<ShortName>bazooka_fire_01.wav</ShortName>
 					<Path>SFX\bazooka_fire_01_10C4C929.wem</Path>
 				</File>
-				<File Id="882975028" Language="SFX">
-					<ShortName>gameplay_lead.wav</ShortName>
-					<Path>SFX\gameplay_lead_D79FB2B7.wem</Path>
-				</File>
-				<File Id="913002348" Language="SFX">
-					<ShortName>main_menu_var_01.wav</ShortName>
-					<Path>SFX\main_menu_var_01_D79FB2B7.wem</Path>
+				<File Id="844066515" Language="SFX">
+					<ShortName>Bemmy_Chorus_160bpm.wav</ShortName>
+					<Path>SFX\Bemmy_Chorus_160bpm_D79FB2B7.wem</Path>
 				</File>
 				<File Id="942672928" Language="SFX">
 					<ShortName>uzi_empty.wav</ShortName>
@@ -253,10 +213,6 @@
 					<ShortName>uzi_impact_lay01.wav</ShortName>
 					<Path>SFX\uzi_impact_lay01_CCD20B05.wem</Path>
 				</File>
-				<File Id="1029407437" Language="SFX">
-					<ShortName>main_menu_117bpm.wav</ShortName>
-					<Path>SFX\main_menu_117bpm_D79FB2B7.wem</Path>
-				</File>
 				<File Id="1046341244" Language="SFX">
 					<ShortName>shotgun_shot_02.wav</ShortName>
 					<Path>SFX\shotgun_shot_02_10C4C929.wem</Path>
@@ -266,9 +222,6 @@
 					<Path>SFX\uzi_spray_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
-			<GameParameters>
-				<GameParameter Id="2398231425" Name="score" ObjectPath="\Game Parameters\Default Work Unit\score"/>
-			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="762757699" Name="gameplay_state" ObjectPath="\States\Default Work Unit\gameplay_state" GUID="{E5A62C64-624B-4A96-9A89-81842F483229}">
 					<States>
@@ -283,14 +236,6 @@
 					<States/>
 				</StateGroup>
 			</StateGroups>
-			<SwitchGroups>
-				<SwitchGroup Id="534996730" Name="gameplay_score" ObjectPath="\Switches\Default Work Unit\gameplay_score" GUID="{0E67270A-9D3D-4963-BB78-D30A16F1B835}">
-					<Switches>
-						<Switch Id="1510941266" Name="switch_2" ObjectPath="\Switches\Default Work Unit\gameplay_score\switch_2" GUID="{6487540E-EA87-44B4-B788-66529BE069FE}"/>
-						<Switch Id="1510941265" Name="switch_1" ObjectPath="\Switches\Default Work Unit\gameplay_score\switch_1" GUID="{403F8205-A9AD-492F-AEBC-449397B95617}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
