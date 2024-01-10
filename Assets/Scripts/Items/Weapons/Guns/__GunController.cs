@@ -95,7 +95,15 @@ public class __GunController : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Paused) return;
+        if (GameManager.Paused)
+        {
+            if (shoot)
+            {
+                shoot = false;
+                OnShootEnd();
+            }
+            return;
+        }
 
         if (onCooldown)
         {
@@ -136,7 +144,7 @@ public class __GunController : MonoBehaviour
     private void ShootStart(InputAction.CallbackContext context)
     {
         shoot = !ShootingDisabled;
-        OnShootStart();
+        if (shoot) OnShootStart();
     }
 
     private void ShootEnd(InputAction.CallbackContext context)
