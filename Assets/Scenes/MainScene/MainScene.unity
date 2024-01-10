@@ -31194,7 +31194,7 @@ SpriteRenderer:
   m_SortingLayerID: 1909111527
   m_SortingLayer: 5
   m_SortingOrder: 3
-  m_Sprite: {fileID: -1632524850, guid: ab6f1471b1bbaff45b0d82657ecf7535, type: 3}
+  m_Sprite: {fileID: -837952854, guid: 7af85f0011aea8e4c99d132fdca04b41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -31293,7 +31293,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633469995}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 42d45d732acc04744aaf50845acf238f, type: 2}
   m_IsTrigger: 0

@@ -24,6 +24,7 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool("Crouched", player.Crouched);
         animator.SetInteger("JumpCount", player.JumpCount);
         animator.SetBool("Grounded", player.Grounded);
+        animator.SetBool("IsTumbling", player.IsTumbling);
         animator.SetFloat("VelocityX", player.SpeedX);
         if (player.InputX != 0)
         {

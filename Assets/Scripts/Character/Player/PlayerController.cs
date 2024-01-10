@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float InputX { get; private set; } = 0.0f;
     public bool Crouched { get; private set; } = false;
     public bool Grounded { get; private set; } = false;
-    public bool Tumble { get; private set; } = false;
+    public bool IsTumbling { get; private set; } = false;
 
     public Rigidbody2D Rigidbody => rb;
     public int JumpCount => maxJumpCount - jumpCounter;
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
             Grounded = IsGrounded();
         }
 
-        if (Grounded)
+        if (Grounded && !IsTumbling)
         {
             canTumble = true;
             jumpCounter = maxJumpCount;
@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
             if (speed > maxSpeed)
             {
                 // FIXME: This can be fixed
-                if (Tumble)
+                if (IsTumbling)
                 {
                     speed = speed - tumbleDecceleration * Time.fixedDeltaTime;
                 }
@@ -210,7 +210,7 @@ public class PlayerController : MonoBehaviour
         if (canTumble)
         {
             playerAnimator.Tumble();
-            // Apply 
+            // Apply force in the direction the player is facing
             Vector3 forceDirection = new Vector3(playerAnimator.IsFacingRight ? 1 : -1, 0, 0); // in the direction the player is facing
             rb.AddForce(forceDirection * tumbleForce, ForceMode2D.Impulse);
             canTumble = false; // Reenabled when grounded
@@ -221,12 +221,12 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator PerformTumble()
     {
-        Tumble = true;
+        IsTumbling = true;
         rb.gravityScale = tumbleGravity;
 
         yield return new WaitForSeconds(tumbleTime);
 
-        Tumble = false;
+        IsTumbling = false;
         rb.gravityScale = normalGravity;
     }
 
