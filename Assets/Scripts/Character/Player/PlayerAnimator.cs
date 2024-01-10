@@ -48,4 +48,10 @@ public class PlayerAnimator : MonoBehaviour
         animator.SetBool("isDead", true);
     }
 
+    public IEnumerator FlashWhite()
+    {
+        spriteRenderer.color = new Color(0.75f, 0.75f, 0.75f, 1.0f);
+        yield return new WaitForSeconds(0.05f);
+        spriteRenderer.color = Color.white;
+    }
 }

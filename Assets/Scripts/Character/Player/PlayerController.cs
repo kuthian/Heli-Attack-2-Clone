@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     private bool stopJump = false;
     private int jumpCounter = 2;
     private int maxJumpCount = 2;
+    private float normalGravity;
 
     public bool canTumble = false;
     public float tumbleForce= 100;
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
         playerControls = new PlayerInputActions();
         groundCheck = transform.Find("GroundCheck");
         groundLayer = LayerMask.GetMask("Ground");
+        normalGravity = rb.gravityScale;
     }
 
     private void OnEnable()
@@ -220,12 +222,12 @@ public class PlayerController : MonoBehaviour
     private IEnumerator PerformTumble()
     {
         Tumble = true;
-        float gravityBefore = rb.gravityScale;
         rb.gravityScale = tumbleGravity;
 
         yield return new WaitForSeconds(tumbleTime);
+
         Tumble = false;
-        rb.gravityScale = gravityBefore;
+        rb.gravityScale = normalGravity;
     }
 
     private void TumbleEnd()
@@ -236,6 +238,7 @@ public class PlayerController : MonoBehaviour
     public void Damage(int var)
     {
         ParticleManager.PlayDamagedPlayerEffect(transform);
+        StartCoroutine(playerAnimator.FlashWhite());
     }
 
     public void Heal(int var)
