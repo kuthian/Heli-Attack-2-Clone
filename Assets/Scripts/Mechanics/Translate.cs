@@ -4,12 +4,14 @@ public class Translate: MonoBehaviour
 {
     // Speed of movement in each direction
     [Header("Speeds")]
-    [Range(0, 10)]
-    public float speedX = 5f;
-    [Range(0, 10)]
-    public float speedY = 5f;
-    [Range(0, 10)]
-    public float speedZ = 5f;
+    [Range(-10, 10)]
+    public float speedX = 0f;
+    [Range(-10, 10)]
+    public float speedY = 0f;
+    [Range(-10, 10)]
+    public float speedZ = 0f;
+
+    public bool reset = false;
 
     private Vector3 startPosition;
     private float elapsedTime = 0f;
@@ -21,6 +23,13 @@ public class Translate: MonoBehaviour
 
     void Update()
     {
+        if (reset)
+        {
+            transform.position = startPosition;
+            reset = false;
+            return;
+        }
+
         elapsedTime += Time.deltaTime;
 
         // Calculate new position for each axis
