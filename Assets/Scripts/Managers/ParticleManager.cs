@@ -10,7 +10,7 @@ public class ParticleManager : Singleton<ParticleManager>
 
     public static void PlayDamagedPlayerEffect(Transform parent)
     {
-        __StartEffect(ParticleAssets.i.DamagedPlayerEffect, parent, 1.0f);
+        __StartEffectOrphan(ParticleAssets.i.DamagedPlayerEffect, parent, 1.0f);
     }
 
     public static void PlayHealedPlayerEffect(Transform parent)
