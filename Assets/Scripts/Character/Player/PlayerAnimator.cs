@@ -51,8 +51,8 @@ public class PlayerAnimator : MonoBehaviour
 
     public IEnumerator FlashWhite()
     {
-        spriteRenderer.color = new Color(0.75f, 0.75f, 0.75f, 1.0f);
-        yield return new WaitForSeconds(0.05f);
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
     }
 }
