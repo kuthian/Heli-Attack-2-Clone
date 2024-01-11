@@ -48,6 +48,7 @@ namespace AK
             {
                 static const AkUniqueID GAME_OVER = 1432716332U;
                 static const AkUniqueID GAMEPLAY = 89505537U;
+                static const AkUniqueID INTRO = 1125500713U;
                 static const AkUniqueID MAIN_MENU = 2005704188U;
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID PAUSED = 319258907U;

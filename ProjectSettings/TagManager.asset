@@ -50,11 +50,20 @@ TagManager:
   - name: Background
     uniqueID: 2261285445
     locked: 0
+  - name: Far Buildings 2
+    uniqueID: 2355747929
+    locked: 0
+  - name: Far Clouds
+    uniqueID: 1731234597
+    locked: 0
   - name: Far Buildings
     uniqueID: 4200315025
     locked: 0
   - name: Middle Buildings
     uniqueID: 4275714503
+    locked: 0
+  - name: Clouds
+    uniqueID: 2062671325
     locked: 0
   - name: Front Buildings
     uniqueID: 2415830471
