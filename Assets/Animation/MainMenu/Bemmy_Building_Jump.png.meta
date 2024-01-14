@@ -133,8 +133,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 624
-        height: 400
+        width: 96
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: Bemmy_Building_Jump_1
       rect:
         serializedVersion: 2
-        x: 624
+        x: 96
         y: 0
-        width: 624
-        height: 400
+        width: 96
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: Bemmy_Building_Jump_2
       rect:
         serializedVersion: 2
-        x: 1248
+        x: 192
         y: 0
-        width: 624
-        height: 400
+        width: 96
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: Bemmy_Building_Jump_3
       rect:
         serializedVersion: 2
-        x: 1872
+        x: 288
         y: 0
-        width: 624
-        height: 400
+        width: 96
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: Bemmy_Building_Jump_4
       rect:
         serializedVersion: 2
-        x: 2496
+        x: 384
         y: 0
-        width: 624
-        height: 400
+        width: 96
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: Bemmy_Building_Jump_5
       rect:
         serializedVersion: 2
-        x: 3120
+        x: 480
         y: 0
-        width: 624
-        height: 400
+        width: 96
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: Bemmy_Building_Jump_6
       rect:
         serializedVersion: 2
-        x: 3744
+        x: 576
         y: 0
-        width: 624
-        height: 400
+        width: 96
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: Bemmy_Building_Jump_7
       rect:
         serializedVersion: 2
-        x: 4368
+        x: 672
         y: 0
-        width: 624
-        height: 400
+        width: 96
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,10 +299,10 @@ TextureImporter:
       name: Bemmy_Building_Jump_8
       rect:
         serializedVersion: 2
-        x: 4992
+        x: 768
         y: 0
-        width: 624
-        height: 400
+        width: 96
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,10 +320,10 @@ TextureImporter:
       name: Bemmy_Building_Jump_9
       rect:
         serializedVersion: 2
-        x: 5616
+        x: 864
         y: 0
-        width: 624
-        height: 400
+        width: 96
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,6 +333,69 @@ TextureImporter:
       bones: []
       spriteID: f7cdbb031f3467b47ae50c1ee5b572f5
       internalID: 726876743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bemmy_Building_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d03f82d6ab75a46a3610bbf0e4e373
+      internalID: -836288402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bemmy_Building_Jump_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e66d09c76deb954989c4cd9ee5cbbb7
+      internalID: -1840238652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bemmy_Building_Jump_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2614d3248765f45820ff03121aac73
+      internalID: 445797254
       vertices: []
       indices: 
       edges: []
@@ -350,14 +413,17 @@ TextureImporter:
     nameFileIdTable:
       Bemmy_Building_Jump_2: -710026759
       Bemmy_Building_Jump_9: 726876743
+      Bemmy_Building_Jump_11: -1840238652
       Bemmy_Building_Jump_0: -1006111440
       Bemmy_Building_Jump_6: 2105420992
       Bemmy_Building_Jump_4: -1039241472
+      Bemmy_Building_Jump_10: -836288402
       Bemmy_Building_Jump_1: 439764862
       Bemmy_Building_Jump_3: 177518797
       Bemmy_Building_Jump_8: 381645821
       Bemmy_Building_Jump_7: 44797962
       Bemmy_Building_Jump_5: 2091540553
+      Bemmy_Building_Jump_12: 445797254
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
