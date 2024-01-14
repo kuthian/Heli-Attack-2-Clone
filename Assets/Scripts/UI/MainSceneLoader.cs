@@ -3,9 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MainSceneLoader : MonoBehaviour
 {
-    public void LoadMainScene()
+    public void OnEnable()
     {
-        GameObject.Find("MainMenu").GetComponent<MainMenu>().LoadMainScene();
-        //SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("MainScene");
     }
 }

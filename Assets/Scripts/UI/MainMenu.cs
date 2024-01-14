@@ -1,44 +1,28 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Collections;
+using UnityEngine.Playables;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject fadeOutCanvas;
-    private Animator bemmySilhouetteAnimator;
+    public PlayableDirector launchArcadeModeTimeline;
     internal ImageFaderGroup mainMenuFader;
 
     private void Start()
     {
-        mainMenuFader = GetComponent<ImageFaderGroup>();
-        bemmySilhouetteAnimator = GameObject.Find("Bemmy").GetComponent<Animator>();
+        launchArcadeModeTimeline = GameObject.Find("LaunchArcadeMode").GetComponent<PlayableDirector>();
     }
 
-    public float waitTime1 = 1.5f;
-    public float waitTime2 = 0.5f;
-
-    public IEnumerator _StartTransitionToMainScene()
+    public void StartArcadeMode()
     {
-        mainMenuFader.FadeOut();
-        fadeOutCanvas.SetActive(true);
-        yield return new WaitForSeconds(waitTime1);
-        bemmySilhouetteAnimator.SetTrigger("Jump");
-        yield return new WaitForSeconds(waitTime2);
-        fadeOutCanvas.GetComponent<ImageFader>().FadeIn();
+        launchArcadeModeTimeline.Play();
     }
 
     public void StartTransitionToMainScene()
     {
-        StartCoroutine(_StartTransitionToMainScene());
     }
 
     public void LoadMainScene()
     {
-        Debug.Log("LoadMainScene");
-        //mainMenuFader.FadeIn();
-        //fadeOutCanvas.GetComponent<UnityEngine.UI.Image>().GetComponent<CanvasRenderer>().SetAlpha(0f); ;
-        //fadeOutCanvas.SetActive(false);
-            //SceneManager.LoadScene("MainScene");
     }
 
     public void OpenLeaderBoard()
