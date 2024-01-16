@@ -276,10 +276,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 2
+    m_Start: 2.433333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 8531569092628740658}
-    m_Duration: 2
+    m_Duration: 2.0000000000000004
     m_TimeScale: 1
     m_ParentTrack: {fileID: -6190605048482710475}
     m_EaseInDuration: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 2
+    m_PreExtrapolationTime: 2.433333333333333
     m_DisplayName: SceneFadeOut
   m_Markers:
     m_Objects: []
@@ -557,7 +557,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 1390529527027614291}
-    m_Duration: 4
+    m_Duration: 4.433333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4275753416596984548}
     m_EaseInDuration: 0
@@ -1228,7 +1228,7 @@ MonoBehaviour:
     m_Start: 2
     m_ClipIn: 0
     m_Asset: {fileID: -8968005003332015029}
-    m_Duration: 1.0833333333333333
+    m_Duration: 1.333333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: -831836584512890347}
     m_EaseInDuration: 0
@@ -1769,7 +1769,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 3.9000000000000004
+    m_Start: 4.333333333333334
     m_ClipIn: 0
     m_Asset: {fileID: -6832420068639220274}
     m_Duration: 0.09999999999999964
@@ -2373,7 +2373,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 0.15000007
         value: -0.0026410548
         inSlope: 0
         outSlope: 0
@@ -2382,7 +2382,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.64999974
         value: 0.2509804
         inSlope: 0.50460184
         outSlope: 0.50460184
@@ -2391,7 +2391,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 1.15
         value: 0.5019608
         inSlope: 0.49803922
         outSlope: 0.49803922
@@ -2400,7 +2400,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1.6499997
         value: 0.7490196
         inSlope: 0.4980392
         outSlope: 0.4980392
@@ -2409,7 +2409,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 2
+        time: 2.1499994
         value: 1
         inSlope: 0
         outSlope: 0
@@ -2445,7 +2445,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2
+    m_StopTime: 2.1499994
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -2465,7 +2465,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 0.15000007
         value: -0.0026410548
         inSlope: 0
         outSlope: 0
@@ -2474,7 +2474,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.64999974
         value: 0.2509804
         inSlope: 0.50460184
         outSlope: 0.50460184
@@ -2483,7 +2483,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 1.15
         value: 0.5019608
         inSlope: 0.49803922
         outSlope: 0.49803922
@@ -2492,7 +2492,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1.6499997
         value: 0.7490196
         inSlope: 0.4980392
         outSlope: 0.4980392
@@ -2501,7 +2501,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 2
+        time: 2.1499994
         value: 1
         inSlope: 0
         outSlope: 0
