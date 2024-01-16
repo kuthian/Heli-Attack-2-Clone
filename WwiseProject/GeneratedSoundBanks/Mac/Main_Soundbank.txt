@@ -30,6 +30,7 @@ State	ID	Name	State Group			Notes
 	89505537	gameplay	gameplay_state			
 	319258907	paused	gameplay_state			
 	748895195	None	gameplay_state			
+	1125500713	Intro	gameplay_state			
 	1432716332	game_over	gameplay_state			
 	2005704188	main_menu	gameplay_state			
 
@@ -67,6 +68,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	191393311	uzi_impact_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\uzi_impact_02_701599F7.wem		\Actor-Mixer Hierarchy\Guns\Uzi\Bullet Impacts\Uzi Hit Low\uzi_impact_02		29772
 	222196184	lose_stinger	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\lose_stinger_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Lose Stinger\lose_stinger		1181604
 	235667579	shotgun_cock	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\shotgun_cock_10C4C929.wem		\Actor-Mixer Hierarchy\Guns Reloads\Shotgun\Shotgun Cock\shotgun_cock		107760
+	243617317	Bemmy_MainMenu_160bpm	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Bemmy_MainMenu_160bpm_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Main Menu Music Playlist\Menu\Bemmy_MainMenu_160bpm		5760064
 	253870176	shotgun_load_shell_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\shotgun_load_shell_01_10C4C929.wem		\Actor-Mixer Hierarchy\Guns Reloads\Shotgun\Shotgun Shell\shotgun_load_shell_01		43144
 	273001963	ui_mouse_hover	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\ui_mouse_hover_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Mouse Hover\ui_mouse_hover		24680
 	324383162	player_jump_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\player_jump_01_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Jump\player_jump_01		24680
@@ -85,7 +87,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	696176337	Pickup_Crate 2	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Pickup_Crate 2_E578AFAC.wem		\Actor-Mixer Hierarchy\Crates\Crate Pickup\Pickup_Crate 2		120024
 	742568617	grassFS_03	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\grassFS_03_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Footsteps\grassFS_03		24680
 	751901830	Bemmy_full_track_160bpm	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Bemmy_full_track_160bpm_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Gameplay Music Playlist\MainTheme\Bemmy_full_track_160bpm		19872064
-	755382356	Bemmy_PreChorus_160bpm	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Bemmy_PreChorus_160bpm_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Master Music Container\Main Menu Music Playlist\Menu\Bemmy_PreChorus_160bpm		2448064
 	772319303	shotgun_shot_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\shotgun_shot_01_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_01		180436
 	804163719	player_jump_03	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\player_jump_03_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Jump\player_jump_03		49296
 	827205688	Health Crate Pickup	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Pickup_HealthCrate_10C4C929.wem		\Actor-Mixer Hierarchy\Crates\Health Crate Pickup		295452

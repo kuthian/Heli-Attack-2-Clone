@@ -10,6 +10,7 @@
 						<State Name="paused" ID="{95491A7E-01AC-4766-A593-BA6FA8AC0FFD}"/>
 						<State Name="main_menu" ID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}"/>
 						<State Name="game_over" ID="{73C0ECBB-CC18-4E53-8CC3-ED0C86C04847}"/>
+						<State Name="Intro" ID="{4B4E2A62-B328-4EED-AF6C-DCD29CEDB887}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

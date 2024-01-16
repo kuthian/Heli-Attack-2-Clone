@@ -5,6 +5,7 @@ State	ID	Name	State Group			Notes
 	89505537	gameplay	gameplay_state			
 	319258907	paused	gameplay_state			
 	748895195	None	gameplay_state			
+	1125500713	Intro	gameplay_state			
 	1432716332	game_over	gameplay_state			
 	2005704188	main_menu	gameplay_state			
 
