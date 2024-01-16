@@ -30139,8 +30139,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019505471, y: -0.097911656}
-  m_Size: {x: 0.75575405, y: 0.80836856}
+  m_Offset: {x: -0.05966103, y: -0.097911656}
+  m_Size: {x: 0.6078131, y: 0.80836856}
   m_Direction: 0
 --- !u!114 &633470007
 MonoBehaviour:
@@ -43571,7 +43571,7 @@ MonoBehaviour:
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 51a9db225da3bbc4b958974f91cde201, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: f24b9da13a0cc474c82d4a961f37e708, type: 2}
 --- !u!4 &944810295
 Transform:
   m_ObjectHideFlags: 0
