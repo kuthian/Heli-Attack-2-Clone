@@ -24,7 +24,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1163456897">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2300034923">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -32,7 +32,7 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="174015478">
+		<SoundBank Id="2228651116" Language="SFX" Hash="767802287">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
@@ -108,6 +108,10 @@
 					<ShortName>shotgun_cock.wav</ShortName>
 					<Path>SFX\shotgun_cock_10C4C929.wem</Path>
 				</File>
+				<File Id="243617317" Language="SFX">
+					<ShortName>Bemmy_MainMenu_160bpm.wav</ShortName>
+					<Path>SFX\Bemmy_MainMenu_160bpm_D79FB2B7.wem</Path>
+				</File>
 				<File Id="253870176" Language="SFX">
 					<ShortName>shotgun_load_shell_01.wav</ShortName>
 					<Path>SFX\shotgun_load_shell_01_10C4C929.wem</Path>
@@ -181,10 +185,6 @@
 					<ShortName>Bemmy_full_track_160bpm.wav</ShortName>
 					<Path>SFX\Bemmy_full_track_160bpm_D79FB2B7.wem</Path>
 				</File>
-				<File Id="755382356" Language="SFX">
-					<ShortName>Bemmy_PreChorus_160bpm.wav</ShortName>
-					<Path>SFX\Bemmy_PreChorus_160bpm_D79FB2B7.wem</Path>
-				</File>
 				<File Id="772319303" Language="SFX">
 					<ShortName>shotgun_shot_01.wav</ShortName>
 					<Path>SFX\shotgun_shot_01_10C4C929.wem</Path>
@@ -230,6 +230,7 @@
 						<State Id="319258907" Name="paused" ObjectPath="\States\Default Work Unit\gameplay_state\paused" GUID="{95491A7E-01AC-4766-A593-BA6FA8AC0FFD}"/>
 						<State Id="2005704188" Name="main_menu" ObjectPath="\States\Default Work Unit\gameplay_state\main_menu" GUID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}"/>
 						<State Id="1432716332" Name="game_over" ObjectPath="\States\Default Work Unit\gameplay_state\game_over" GUID="{73C0ECBB-CC18-4E53-8CC3-ED0C86C04847}"/>
+						<State Id="1125500713" Name="Intro" ObjectPath="\States\Default Work Unit\gameplay_state\Intro" GUID="{4B4E2A62-B328-4EED-AF6C-DCD29CEDB887}"/>
 					</States>
 				</StateGroup>
 				<StateGroup Id="2005704188" Name="main_menu" ObjectPath="\States\Default Work Unit\gameplay_state\main_menu" GUID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}">

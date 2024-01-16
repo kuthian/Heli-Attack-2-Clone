@@ -134,7 +134,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,7 +155,7 @@ TextureImporter:
         x: 96
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,7 +176,7 @@ TextureImporter:
         x: 192
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,7 +197,7 @@ TextureImporter:
         x: 288
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,7 +218,7 @@ TextureImporter:
         x: 384
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,7 +239,7 @@ TextureImporter:
         x: 480
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,7 +260,7 @@ TextureImporter:
         x: 576
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,7 +281,7 @@ TextureImporter:
         x: 672
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,7 +302,7 @@ TextureImporter:
         x: 768
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,7 +323,7 @@ TextureImporter:
         x: 864
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,7 +344,7 @@ TextureImporter:
         x: 960
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -365,7 +365,7 @@ TextureImporter:
         x: 1056
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,7 +386,7 @@ TextureImporter:
         x: 1152
         y: 0
         width: 96
-        height: 160
+        height: 304
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,6 +396,69 @@ TextureImporter:
       bones: []
       spriteID: cc2614d3248765f45820ff03121aac73
       internalID: 445797254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bemmy_Building_Jump_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 0
+        width: 96
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae42bed4a257d1449720ab803aca708
+      internalID: -946083513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bemmy_Building_Jump_14
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 96
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b38d996c2ccd543807a9c61c191295
+      internalID: 1374950934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bemmy_Building_Jump_15
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 96
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5af0b1178797c4c85dc0fff1c54536
+      internalID: -1447046846
       vertices: []
       indices: 
       edges: []
@@ -421,6 +484,9 @@ TextureImporter:
       Bemmy_Building_Jump_1: 439764862
       Bemmy_Building_Jump_3: 177518797
       Bemmy_Building_Jump_8: 381645821
+      Bemmy_Building_Jump_13: -946083513
+      Bemmy_Building_Jump_15: -1447046846
+      Bemmy_Building_Jump_14: 1374950934
       Bemmy_Building_Jump_7: 44797962
       Bemmy_Building_Jump_5: 2091540553
       Bemmy_Building_Jump_12: 445797254
