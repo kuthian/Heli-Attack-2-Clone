@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
 
         if (Grounded && !IsTumbling)
         {
-            canTumble = true;
+            canTumble = !Crouched;
             jumpCounter = maxJumpCount;
             if (Crouched) InputX = 0;
         }
