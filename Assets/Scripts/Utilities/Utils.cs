@@ -20,6 +20,17 @@ static class Utils
         return Random.Range(0, 2) == 1;
     }
 
+    // This function returns true based on a given percentage chance.
+    // The chance is provided as an integer from 0 to 100.
+    public static bool Chance(int percentage)
+    {
+        // Generate a random number between 0 and 100
+        int randomNumber = Random.Range(0, 101);
+
+        // Check if the random number is less than or equal to the given chance
+        return randomNumber <= percentage;
+    }
+
     // Function to draw a square
     public static void DrawSquare(Vector3 center, float width)
     {

@@ -29,8 +29,12 @@ public class ItemAssets : MonoBehaviour
 
     public GameObject ShotgunPrefab => _shotgunPrefab;
 
-    [SerializeField] private GameObject[] _cratePrefabs;
+    [SerializeField] private GameObject[] _weaponCratePrefabs;
 
-    public GameObject[] CratePrefabs => _cratePrefabs;
+    public GameObject[] WeaponCratePrefabs => _weaponCratePrefabs;
+
+    [SerializeField] private GameObject _healthCratePrefab;
+
+    public GameObject HealthCratePrefab => _healthCratePrefab;
 
 }

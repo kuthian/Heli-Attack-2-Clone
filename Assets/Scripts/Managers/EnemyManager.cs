@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyManager : MonoBehaviour
 {
     public bool EnemiesEnabled = true;
     public GameObject pfEnemy;
-    public Transform[] spawnPoints;
+    public Transform[] enemySpawnPoints;
+    public Transform healthCrateSpawnPoint;
     internal List<GameObject> enemies;
 
     void Awake()
@@ -51,7 +53,12 @@ public class EnemyManager : MonoBehaviour
 
     private void CreateEnemyRandom()
     {
-        CreateEnemy(Utils.RandomInRange(spawnPoints));
+        CreateEnemy(Utils.RandomInRange(enemySpawnPoints));
+    }
+
+    private void DropHealthCrate()
+    {
+        CrateGenerator.SpawnHealthCrate(healthCrateSpawnPoint.position);
     }
 
     private void CreateEnemy(Transform p)
@@ -90,6 +97,11 @@ public class EnemyManager : MonoBehaviour
         enemies.RemoveAll(HasHealthZero);
         HUDManager.ScoreCount.Add(1);
         CreateEnemyRandom();
+
+        if (HUDManager.ScoreCount.Score % 10 == 0)
+        {
+            DropHealthCrate();
+        }
 
         // Increase the difficulty when
         if (HUDManager.ScoreCount.Score == 5)

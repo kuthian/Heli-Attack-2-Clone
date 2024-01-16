@@ -9,6 +9,9 @@ public class EnemyLifecycle : MonoBehaviour
     [SerializeField]
     private GameObject pfDestroyedGunner;
 
+    [Range(0, 1)]
+    public float crateDropRate = 0.5f;
+
     internal Rigidbody2D rb;
     internal SpriteRenderer spriteRenderer;
 
@@ -44,7 +47,10 @@ public class EnemyLifecycle : MonoBehaviour
 
         ParticleManager.PlayExplodedEffect(destroyedHeli.transform);
 
-        CrateGenerator.SpawnCrateRandom(transform.position);
+        if (Utils.Chance((int)(crateDropRate*100)))
+        {
+            CrateGenerator.SpawnWeaponCrateRandom(transform.position);
+        }
 
         Destroy(gameObject);
     }

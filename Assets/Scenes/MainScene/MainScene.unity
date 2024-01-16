@@ -11927,6 +11927,37 @@ MonoBehaviour:
   - {x: 0.13372117, y: 0.036361694, z: 0}
   - {x: 0.13414657, y: 0.063350916, z: 0}
   - {x: 0.11652839, y: 0.062350273, z: 0}
+--- !u!1 &268837026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268837027}
+  m_Layer: 0
+  m_Name: HealthCrateSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &268837027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268837026}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 633469997}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &271856029
 GameObject:
   m_ObjectHideFlags: 0
@@ -30014,6 +30045,7 @@ Transform:
   - {fileID: 346669496}
   - {fileID: 792703629}
   - {fileID: 1263156733}
+  - {fileID: 268837027}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36291,7 +36323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 792703629}
   m_Layer: 0
-  m_Name: SpawnPointLeft
+  m_Name: EnemySpawnPointLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51121,9 +51153,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemiesEnabled: 1
   pfEnemy: {fileID: 1786696879855725082, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
-  spawnPoints:
+  enemySpawnPoints:
   - {fileID: 792703629}
   - {fileID: 1263156733}
+  healthCrateSpawnPoint: {fileID: 268837027}
 --- !u!4 &1124044573
 Transform:
   m_ObjectHideFlags: 0
@@ -58561,7 +58594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1263156733}
   m_Layer: 0
-  m_Name: SpawnPointRight
+  m_Name: EnemySpawnPointRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
