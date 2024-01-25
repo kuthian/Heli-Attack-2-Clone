@@ -169,6 +169,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Bemmy_Dbl_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ccc63113427d3469a1363fcf7ba032
+      internalID: -166225157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -182,6 +203,7 @@ TextureImporter:
     nameFileIdTable:
       Bemmy_Dbl_Jump_0: 301594325
       Bemmy_Dbl_Jump_1: -2135587582
+      Bemmy_Dbl_Jump_2: -166225157
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
