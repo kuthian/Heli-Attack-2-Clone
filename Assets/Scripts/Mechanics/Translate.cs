@@ -11,31 +11,14 @@ public class Translate: MonoBehaviour
     [Range(-10, 10)]
     public float speedZ = 0f;
 
-    public bool reset = false;
-
-    private Vector3 startPosition;
-    private float elapsedTime = 0f;
-
-    void Start()
+    void LateUpdate()
     {
-        startPosition = transform.position;
-    }
-
-    void Update()
-    {
-        if (reset)
-        {
-            transform.position = startPosition;
-            reset = false;
-            return;
-        }
-
-        elapsedTime += Time.deltaTime;
+        Vector3 pos = transform.position;
 
         // Calculate new position for each axis
-        float newX = startPosition.x + speedX * elapsedTime;
-        float newY = startPosition.y + speedY * elapsedTime;
-        float newZ = startPosition.z + speedZ * elapsedTime;
+        float newX = pos.x + speedX * Time.deltaTime;
+        float newY = pos.y + speedY * Time.deltaTime;
+        float newZ = pos.z + speedZ * Time.deltaTime;
 
         // Update the position of the GameObject
         transform.position = new Vector3(newX, newY, newZ);

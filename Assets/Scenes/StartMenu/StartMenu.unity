@@ -7950,6 +7950,7 @@ MonoBehaviour:
   parallaxX: 1
   parallaxY: 0
   smoothing: 40
+  startPosition: {x: 0, y: 0}
 --- !u!212 &199870836
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12090,6 +12091,7 @@ MonoBehaviour:
   parallaxX: 1
   parallaxY: 0
   smoothing: 40
+  startPosition: {x: 0, y: 0}
 --- !u!212 &317917273
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12129,7 +12131,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2033681851
-  m_SortingLayer: -8
+  m_SortingLayer: -9
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3f618c373c7b7734bb7178273191a460, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -23582,6 +23584,7 @@ MonoBehaviour:
   parallaxX: 1
   parallaxY: 0
   smoothing: 40
+  startPosition: {x: 0, y: 0}
 --- !u!212 &580545913
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43095,7 +43098,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 318304639
-  m_SortingLayer: -9
+  m_SortingLayer: -10
   m_SortingOrder: 1
   m_Sprite: {fileID: -5177388603050735206, guid: cc35afd292fc349128b36a291fb3a165, type: 3}
   m_Color: {r: 0.1254902, g: 0.09411765, b: 0.16078432, a: 1}
@@ -48591,6 +48594,7 @@ MonoBehaviour:
   parallaxX: 1
   parallaxY: 1
   smoothing: 40
+  startPosition: {x: 0, y: 0}
 --- !u!212 &1139102274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -50455,6 +50459,7 @@ MonoBehaviour:
   parallaxX: 1
   parallaxY: 0
   smoothing: 40
+  startPosition: {x: 0, y: 0}
 --- !u!212 &1176040967
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -81197,7 +81202,7 @@ PrefabInstance:
     - target: {fileID: 1520425614489372143, guid: 5856db3f56b57e641b04b8653b4ecaba, type: 3}
       propertyPath: m_SpriteState.m_PressedSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6decc336a285fa44cb8a054d211548f5, type: 3}
+      objectReference: {fileID: 21300000, guid: 998f1f9dc98a1fa4e8ff96e95ad98b26, type: 3}
     - target: {fileID: 1520425614489372143, guid: 5856db3f56b57e641b04b8653b4ecaba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -88686,6 +88691,7 @@ MonoBehaviour:
   parallaxX: 1
   parallaxY: 0
   smoothing: 40
+  startPosition: {x: 0, y: 0}
 --- !u!212 &2070552313
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -88725,7 +88731,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -94652271
-  m_SortingLayer: -5
+  m_SortingLayer: -6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 83a6713b4a0b0f9469b43d07dfda66a8, type: 3}
   m_Color: {r: 0.4066504, g: 0.2794144, b: 0.6509434, a: 1}

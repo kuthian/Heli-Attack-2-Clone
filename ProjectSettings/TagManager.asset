@@ -59,6 +59,9 @@ TagManager:
   - name: Far Buildings
     uniqueID: 4200315025
     locked: 0
+  - name: Middle Clouds
+    uniqueID: 2335899061
+    locked: 0
   - name: Middle Buildings
     uniqueID: 4275714503
     locked: 0

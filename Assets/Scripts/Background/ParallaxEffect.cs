@@ -27,7 +27,7 @@ public class ParallaxEffect : MonoBehaviour
 
     private Camera cam;
 
-    private Vector2 startPosition;
+    public Vector2 startPosition;
 
     private float parallaxFactor; // Factor by which the parallax effect is scaled
     private float clippingPlane; // The clipping plane distance used to adjust the parallax effect
