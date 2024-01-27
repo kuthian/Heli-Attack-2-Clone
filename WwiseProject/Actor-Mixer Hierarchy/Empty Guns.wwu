@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<Sound Name="uzi_empty" ID="{6A4EF48B-81FA-4E9C-AC00-787D2C17F4B1}" ShortID="989394400">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>32</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-4</Value>

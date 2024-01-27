@@ -25,11 +25,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="health" ID="{14542769-B3B2-4DA1-A204-AE3FE99BE382}"/>
-							<Value>0</Value>
+							<Value>100</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Intro" ID="{4B4E2A62-B328-4EED-AF6C-DCD29CEDB887}"/>
+						<CurrentStateRef Name="game_over" ID="{73C0ECBB-CC18-4E53-8CC3-ED0C86C04847}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="switch_2" ID="{6487540E-EA87-44B4-B788-66529BE069FE}"/>

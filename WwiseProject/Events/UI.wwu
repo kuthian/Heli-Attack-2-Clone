@@ -8,7 +8,7 @@
 						<Action Name="" ID="{EF19AF08-2752-4708-86CF-A05F0D1C2356}" ShortID="110305444">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mouse Hover" ID="{3FED400B-560D-43CA-8D3B-5D21F3C5A449}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
+									<ObjectRef Name="MouseHover" ID="{A8734B7D-10D9-44B0-BA8E-F015A4020751}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -16,26 +16,48 @@
 				</Event>
 				<Event Name="ui_game_start" ID="{87C08474-66AA-4F0E-B64B-4EB156E50831}">
 					<ChildrenList>
-						<Action Name="" ID="{4D291593-0F49-4F27-B841-362833E6D87F}" ShortID="301593038">
+						<Action Name="" ID="{44CB571C-4649-4F35-BFB0-D42856F87CAB}" ShortID="711309115">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mouse Click" ID="{4CD3291D-EEAC-41E6-B9F7-6333CA31810C}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{0CE604A0-E378-47DB-BA98-72762F5E285B}" ShortID="833946979">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.06"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Mouse Click Stinger" ID="{16D34F05-EFB7-45A4-B10E-34F9BEC98A00}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
+									<ObjectRef Name="ClickArcade" ID="{2DE297BC-72FF-4B01-AF52-1D9443FDF235}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="ui_mouse_click" ID="{5CD2A983-7E24-4FE4-B294-6B4604876BAE}"/>
+				<Event Name="ui_mouse_click" ID="{5CD2A983-7E24-4FE4-B294-6B4604876BAE}">
+					<ChildrenList>
+						<Action Name="" ID="{444C733E-13CE-4E45-A948-F36E35A7F737}" ShortID="80466966">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MouseClick" ID="{04A28FB5-2CF6-44D4-9643-6E385A613F88}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_forward_tone" ID="{EDB2271B-8867-43B7-BBE4-4879C2FDDEB9}">
+					<ChildrenList>
+						<Action Name="" ID="{F716353A-D81C-4C2A-AE29-12F979B3D3E0}" ShortID="494233298">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Forward Tone" ID="{16004CA5-9799-46AC-8B92-834B9D5408CA}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_backwards_tone" ID="{01113B50-5F4A-4CAF-878C-92AB4CD29285}">
+					<ChildrenList>
+						<Action Name="" ID="{5B7AEC42-3B8B-4616-A7CE-8897E661A40D}" ShortID="913701189">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Backwards Tone" ID="{F7550FE8-F657-45C9-82BF-EAFFBF8EF9F6}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

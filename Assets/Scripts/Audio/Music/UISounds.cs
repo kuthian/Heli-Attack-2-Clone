@@ -8,7 +8,18 @@ public class UISounds : MonoBehaviour
     [SerializeField]
     private AK.Wwise.Event _wwMouseHover;
 
+    [SerializeField]
+    private AK.Wwise.Event _wwPressArcade;
+
+    [SerializeField]
+    private AK.Wwise.Event _wwButtonForwardTone;
+
+    [SerializeField]
+    private AK.Wwise.Event _wwButtonBackwardsTone;
+
     private static UISounds _i;
+
+
 
     public static UISounds i
     {
@@ -41,5 +52,20 @@ public class UISounds : MonoBehaviour
     public static void MouseHover()
     {
         i._wwMouseHover.Post(i.gameObject);
+    }
+
+    public static void PressArcade()
+    {
+        i._wwPressArcade.Post(i.gameObject);
+    }
+
+    public static void ButtonForwardTone()
+    {
+        i._wwButtonForwardTone.Post(i.gameObject);
+    }
+
+    public static void ButtonBackwardsTone()
+    {
+        i._wwButtonBackwardsTone.Post(i.gameObject);
     }
 }

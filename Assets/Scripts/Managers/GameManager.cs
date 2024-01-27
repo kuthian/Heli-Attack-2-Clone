@@ -79,6 +79,10 @@ public class GameManager : Singleton<GameManager>
             }
         }
 
+        //setting the state to game over in Wwise
+
+        AkSoundEngine.SetState("gameplay_state", "game_over");
+
         deathScreen.Show();
 
         deathScreen.ScoreText.SetText(HUDManager.ScoreCount.Score.ToString());

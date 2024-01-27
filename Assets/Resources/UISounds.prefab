@@ -47,8 +47,20 @@ MonoBehaviour:
   _wwMouseClick:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a3da165870d2448428f8a3bdde83ca94, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: ebbbe2bc32da68b4ab6324abadd23e69, type: 2}
   _wwMouseHover:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ed1d2e4fdd0e8d442b04885a09477f3d, type: 2}
+  _wwPressArcade:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a3da165870d2448428f8a3bdde83ca94, type: 2}
+  _wwButtonForwardTone:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 54cae28aa58b6cf44a380a0219c14a0c, type: 2}
+  _wwButtonBackwardsTone:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: fdc9379fb84a3214b890637e0eaa30b5, type: 2}
