@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<Sound Name="Night Ambience" ID="{B3DCEEB7-9B03-481C-BC2D-3D5A9D39D989}" ShortID="455442020">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="IsStreamingEnabled" Type="bool">
 							<ValueList>
@@ -14,6 +19,11 @@
 						<Property Name="IsZeroLantency" Type="bool">
 							<ValueList>
 								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

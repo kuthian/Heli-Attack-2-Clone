@@ -17,6 +17,11 @@
 								<Value>True</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>44</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>12</Value>
@@ -51,6 +56,11 @@
 				<RandomSequenceContainer Name="Helicopter Destroyed" ID="{3456E4FF-C9FC-466E-8701-19C2636230BE}" ShortID="47878574">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>23</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -104,7 +114,7 @@
 						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="75"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>12</Value>
+								<Value>8</Value>
 							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{5812B6AC-F4F2-4E1C-948C-52BBBE2FC378}" ShortID="125204252">

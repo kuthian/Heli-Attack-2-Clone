@@ -14,7 +14,10 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID STREETLIGHT_BUZZ = 2811027312U;
+        static const AkUniqueID UI_BACKWARDS_TONE = 894451243U;
+        static const AkUniqueID UI_FORWARD_TONE = 32695948U;
         static const AkUniqueID UI_GAME_START = 374915857U;
+        static const AkUniqueID UI_MOUSE_CLICK = 2359679562U;
         static const AkUniqueID UI_MOUSE_HOVER = 1201739520U;
         static const AkUniqueID WW_BAZOOKA_END = 1590435213U;
         static const AkUniqueID WW_BAZOOKA_IMPACT = 3662259936U;

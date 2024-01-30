@@ -24,7 +24,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1688797877">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2452089407">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -32,18 +32,21 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="767802287">
+		<SoundBank Id="2228651116" Language="SFX" Hash="911456580">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2811027312" Name="Streetlight_buzz" ObjectPath="\Events\Environment\Streetlight_buzz" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.180315" DurationMax="0.188959"/>
-				<Event Id="374915857" Name="ui_game_start" ObjectPath="\Events\UI\ui_game_start" DurationType="OneShot" DurationMin="4.675396" DurationMax="4.675396"/>
-				<Event Id="1201739520" Name="ui_mouse_hover" ObjectPath="\Events\UI\ui_mouse_hover" DurationType="OneShot" DurationMin="0.117432" DurationMax="0.139974"/>
+				<Event Id="894451243" Name="ui_backwards_tone" ObjectPath="\Events\UI\ui_backwards_tone" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75"/>
+				<Event Id="32695948" Name="ui_forward_tone" ObjectPath="\Events\UI\ui_forward_tone" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125"/>
+				<Event Id="374915857" Name="ui_game_start" ObjectPath="\Events\UI\ui_game_start" DurationType="OneShot" DurationMin="4.5" DurationMax="4.5"/>
+				<Event Id="2359679562" Name="ui_mouse_click" ObjectPath="\Events\UI\ui_mouse_click" DurationType="OneShot" DurationMin="0.107623" DurationMax="0.144075"/>
+				<Event Id="1201739520" Name="ui_mouse_hover" ObjectPath="\Events\UI\ui_mouse_hover" DurationType="OneShot" DurationMin="0.117432" DurationMax="0.14201"/>
 				<Event Id="1590435213" Name="ww_bazooka_end" ObjectPath="\Events\Gunfire\Bazooka\ww_bazooka_end" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3662259936" Name="ww_bazooka_impact" ObjectPath="\Events\Gunfire\Bazooka\ww_bazooka_impact" MaxAttenuation="100." DurationType="OneShot" DurationMin="2.354733" DurationMax="2.570823"/>
+				<Event Id="3662259936" Name="ww_bazooka_impact" ObjectPath="\Events\Gunfire\Bazooka\ww_bazooka_impact" MaxAttenuation="100." DurationType="OneShot" DurationMin="1.948319" DurationMax="2.847568"/>
 				<Event Id="60321222" Name="ww_bazooka_shot" ObjectPath="\Events\Gunfire\Bazooka\ww_bazooka_shot" DurationType="Infinite"/>
-				<Event Id="3198183028" Name="ww_destroyed_heli_end" ObjectPath="\Events\Enemies\Helicopter\ww_destroyed_heli_end" MaxAttenuation="100." DurationType="OneShot" DurationMin="2.354733" DurationMax="2.570823"/>
+				<Event Id="3198183028" Name="ww_destroyed_heli_end" ObjectPath="\Events\Enemies\Helicopter\ww_destroyed_heli_end" MaxAttenuation="100." DurationType="OneShot" DurationMin="1.948319" DurationMax="2.847568"/>
 				<Event Id="2745238759" Name="ww_destroyed_heli_start" ObjectPath="\Events\Enemies\Helicopter\ww_destroyed_heli_start" MaxAttenuation="100." DurationType="Infinite"/>
 				<Event Id="3440669485" Name="ww_healthCrate" ObjectPath="\Events\Crates\ww_healthCrate" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479"/>
 				<Event Id="1364848480" Name="ww_heli_end" ObjectPath="\Events\Enemies\Helicopter\ww_heli_end" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
@@ -100,10 +103,6 @@
 					<ShortName>uzi_impact_02.wav</ShortName>
 					<Path>SFX\uzi_impact_02_701599F7.wem</Path>
 				</File>
-				<File Id="222196184" Language="SFX">
-					<ShortName>lose_stinger.wav</ShortName>
-					<Path>SFX\lose_stinger_D79FB2B7.wem</Path>
-				</File>
 				<File Id="235667579" Language="SFX">
 					<ShortName>shotgun_cock.wav</ShortName>
 					<Path>SFX\shotgun_cock_10C4C929.wem</Path>
@@ -128,10 +127,6 @@
 					<ShortName>uzi_impact_lay02.wav</ShortName>
 					<Path>SFX\uzi_impact_lay02_C6062CD2.wem</Path>
 				</File>
-				<File Id="349521609" Language="SFX">
-					<ShortName>ui_play_stinger.wav</ShortName>
-					<Path>SFX\ui_play_stinger_10C4C929.wem</Path>
-				</File>
 				<File Id="361248435" Language="SFX">
 					<ShortName>Pickup_Crate 1.wav</ShortName>
 					<Path>SFX\Pickup_Crate 1_7317FDD0.wem</Path>
@@ -147,6 +142,10 @@
 				<File Id="514478316" Language="SFX">
 					<ShortName>missile_impact_01.wav</ShortName>
 					<Path>SFX\missile_impact_01_75503585.wem</Path>
+				</File>
+				<File Id="523089503" Language="SFX">
+					<ShortName>Bemmy_StartGame_Stinger_160bpm.wav</ShortName>
+					<Path>SFX\Bemmy_StartGame_Stinger_160bpm_10C4C929.wem</Path>
 				</File>
 				<File Id="525450841" Language="SFX">
 					<ShortName>grassFS_02.wav</ShortName>
@@ -201,6 +200,14 @@
 					<ShortName>bazooka_fire_01.wav</ShortName>
 					<Path>SFX\bazooka_fire_01_10C4C929.wem</Path>
 				</File>
+				<File Id="873836026" Language="SFX">
+					<ShortName>bemmy_game_over_160bpm.wav</ShortName>
+					<Path>SFX\bemmy_game_over_160bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="874573256" Language="SFX">
+					<ShortName>button_forward_tone.wav</ShortName>
+					<Path>SFX\button_forward_tone_10C4C929.wem</Path>
+				</File>
 				<File Id="942672928" Language="SFX">
 					<ShortName>uzi_empty.wav</ShortName>
 					<Path>SFX\uzi_empty_10C4C929.wem</Path>
@@ -212,6 +219,10 @@
 				<File Id="960456348" Language="SFX">
 					<ShortName>uzi_impact_lay01.wav</ShortName>
 					<Path>SFX\uzi_impact_lay01_CCD20B05.wem</Path>
+				</File>
+				<File Id="976593761" Language="SFX">
+					<ShortName>button_backwards_tone.wav</ShortName>
+					<Path>SFX\button_backwards_tone_10C4C929.wem</Path>
 				</File>
 				<File Id="1046341244" Language="SFX">
 					<ShortName>shotgun_shot_02.wav</ShortName>

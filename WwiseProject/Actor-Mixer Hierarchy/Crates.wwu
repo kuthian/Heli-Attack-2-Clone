@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="Crate Pickup" ID="{DF3D3619-A6D3-4149-86A5-19C3DDCA5F03}" ShortID="1015767789">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>26</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -20,7 +25,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>12</Value>
+								<Value>7</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -96,9 +101,14 @@
 				</RandomSequenceContainer>
 				<Sound Name="Health Crate Pickup" ID="{C9D48691-B387-4A35-91EB-DB5C7CDE8394}" ShortID="764441713">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>26</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>12</Value>
+								<Value>8</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

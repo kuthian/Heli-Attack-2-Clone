@@ -12,4 +12,19 @@ public class UISoundsProxy : MonoBehaviour
         UISounds.MouseHover();
     }
 
+    public static void PressArcade()
+    {
+        UISounds.PressArcade();
+    }
+
+    public static void ButtonForwardTone()
+    {
+        UISounds.ButtonForwardTone();
+    }
+
+    public static void ButtonBackwardsTone()
+    {
+        UISounds.ButtonBackwardsTone();
+    }
+
 }
