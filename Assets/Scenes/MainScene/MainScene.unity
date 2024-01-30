@@ -6782,6 +6782,7 @@ GameObject:
   - component: {fileID: 759732597}
   - component: {fileID: 759732600}
   - component: {fileID: 759732601}
+  - component: {fileID: 759732602}
   m_Layer: 6
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -6835,7 +6836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759732596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2188888, y: 2.8999996, z: 0}
+  m_LocalPosition: {x: -1.2188888, y: 2.3999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6870,6 +6871,18 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1197853123}
   m_Damping: 0.25
   m_MaxWindowSize: -1
+--- !u!114 &759732602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759732596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77486aaa0da6b5a439f6ceb5c11b47f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &792703628
 GameObject:
   m_ObjectHideFlags: 0
@@ -8166,6 +8179,7 @@ GameObject:
   - component: {fileID: 1031610156}
   - component: {fileID: 1031610158}
   - component: {fileID: 1031610159}
+  - component: {fileID: 1031610160}
   m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
@@ -8221,7 +8235,7 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0
+  m_ScreenY: -0.05
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
@@ -8230,7 +8244,7 @@ MonoBehaviour:
   m_SoftZoneWidth: 0.301
   m_SoftZoneHeight: 2
   m_BiasX: -0.0069999816
-  m_BiasY: 0
+  m_BiasY: 0.00000002421439
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
@@ -8243,6 +8257,23 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!114 &1031610160
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031610155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 3ac16c43fb08c15449fce823d4b5f0e4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: -145.60733, y: -614.5797, z: -489.802}
 --- !u!1 &1039425487
 GameObject:
   m_ObjectHideFlags: 0
