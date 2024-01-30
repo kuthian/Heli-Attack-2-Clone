@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ShotgunController : __GunController
 {
+    [SerializeField] private ParticleSystem muzzleFire;
     [SerializeField] private float pStepScalar = 0.1f;
     [SerializeField] private float dStepScalar = 0.075f;
 
@@ -19,6 +20,7 @@ public class ShotgunController : __GunController
             direction = direction + dStep;
         }
         _wwOnShoot.Post(gameObject);
+        muzzleFire.Play();
     }
 
 }

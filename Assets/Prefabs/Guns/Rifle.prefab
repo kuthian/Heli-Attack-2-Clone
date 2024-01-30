@@ -1,5 +1,71 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4175387310069710224
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6148923621935017104}
+    m_Modifications:
+    - target: {fileID: 440689640077423193, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_Name
+      value: MuzzleFlash
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2985423473544645983, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726489019147940457, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+--- !u!198 &8675665826012467193 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4726489019147940457, guid: 19c9161287a868745a6ee557a436b93f, type: 3}
+  m_PrefabInstance: {fileID: 4175387310069710224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6799967615490389201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139,7 +205,7 @@ Animator:
   m_GameObject: {fileID: 6148923621895001315}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c23d97ae82e587a4d898b363cd611c6d, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -198,6 +264,7 @@ MonoBehaviour:
     maxLifetime: 10
   _ammoPerShot: 1
   _cooldownTime: 0.5
+  muzzleFire: {fileID: 8675665826012467193}
 --- !u!114 &7298881893674852066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,3 +329,8 @@ MonoBehaviour:
       m_Action: Aim
       m_Flags: 8
     m_Flags: 0
+--- !u!4 &6148923621935017104 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
+  m_PrefabInstance: {fileID: 6799967615490389201}
+  m_PrefabAsset: {fileID: 0}

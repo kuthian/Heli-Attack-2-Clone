@@ -5935,7 +5935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 100
   <CurrentHealth>k__BackingField: 0
-  <Invincible>k__BackingField: 0
+  <Invincible>k__BackingField: 1
 --- !u!114 &633470008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13341,6 +13341,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 504565668}
     m_Modifications:
+    - target: {fileID: 1197867847814820047, guid: bbfa8272c1a99ae4f9c190ed24f507a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6148923621895001314, guid: bbfa8272c1a99ae4f9c190ed24f507a9, type: 3}
       propertyPath: m_RootOrder
       value: 0

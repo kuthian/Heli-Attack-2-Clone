@@ -46,7 +46,7 @@ public class GameObjectParticles: MonoBehaviour
         {
             var main = onStart.main;
             main.simulationSpace = onStartSimulationSpace;
-            ParticleSystem particle = Instantiate(onStart, transform);
+            ParticleSystem particle = Instantiate(onStart, transform.position, transform.rotation, transform);
             if (onStartLifetimeSeconds > 0)
             {
                 Destroy(particle.gameObject, onStartLifetimeSeconds);
