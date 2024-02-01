@@ -259,11 +259,11 @@ MonoBehaviour:
     m_Flags: 0
   _projectile:
     prefab: {fileID: 8130383542522873335, guid: 57f549212852abd4d9be4f7c8f877d81, type: 3}
-    damage: 100
-    speed: 5
+    damage: 5
+    speed: 3.5
     maxLifetime: 10
   _ammoPerShot: 1
-  _cooldownTime: 0.5
+  _cooldownTime: 0.2
   muzzleFire: {fileID: 8675665826012467193}
 --- !u!114 &7298881893674852066
 MonoBehaviour:

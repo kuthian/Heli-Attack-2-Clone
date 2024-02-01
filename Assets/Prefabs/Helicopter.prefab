@@ -213,11 +213,12 @@ MonoBehaviour:
   Amplitude: 3
   Phase: 0
   _possibleCruisingPositionsY:
+  - 2
+  - 2.5
   - 3
   - 3.5
   - 4
   - 4.5
-  - 5
   cruisingPositionY: 1
   cruisingToleranceY: 0.2
 --- !u!114 &7921896769568558857
@@ -445,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: cooldownTime
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4715869431430264208, guid: 323b95eaf8d8b99419f6b48ff0d21d40, type: 3}
       propertyPath: _cooldownTime
