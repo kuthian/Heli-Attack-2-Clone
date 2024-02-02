@@ -3,19 +3,19 @@ using UnityEngine;
 public class ShotgunSounds : MonoBehaviour
 {
     [SerializeField]
-    private AK.Wwise.Event _wwShotgunLoad;
+    private AK.Wwise.Event wwShotgunLoad;
 
     [SerializeField]
-    private AK.Wwise.Event _wwShotgunCock;
+    private AK.Wwise.Event wwShotgunCock;
 
     public void ShotgunLoad()
     {
-        _wwShotgunLoad.Post(gameObject);
+        wwShotgunLoad.Post(gameObject);
     }
 
     public void ShotgunCock()
     {
-        _wwShotgunCock.Post(gameObject);
+        wwShotgunCock.Post(gameObject);
     }
 
 }

@@ -25,7 +25,7 @@ public class AimWithJoystick : AimAtTarget
         Target = new Vector3();
     }
 
-    private void Update()
+    protected override void Update()
     {
         Vector2 joystickInput = aimAction.ReadValue<Vector2>();
 

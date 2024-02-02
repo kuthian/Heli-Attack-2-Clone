@@ -19,7 +19,7 @@ public class ShotgunController : __GunController
             position = position + pStep;
             direction = direction + dStep;
         }
-        _wwOnShoot.Post(gameObject);
+        wwOnShoot.Post(gameObject);
         muzzleFire.Play();
     }
 

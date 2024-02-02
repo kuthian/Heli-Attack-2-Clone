@@ -9,22 +9,22 @@ public class GameObjectSounds : MonoBehaviour
     /// Wwise Event triggered when the GameObject starts.
     /// </summary>
     [SerializeField]
-    private AK.Wwise.Event _wwOnStart;
+    private AK.Wwise.Event wwOnStart;
 
     /// <summary>
     /// Wwise Event triggered when the GameObject is destroyed.
     /// </summary>
     [SerializeField]
-    private AK.Wwise.Event _wwOnDestroy;
+    private AK.Wwise.Event wwOnDestroy;
 
     /// <summary>
     /// Called when the script is enabled. Triggers the Wwise Event associated with the GameObject's start.
     /// </summary>
     private void Start()
     {
-        if (_wwOnStart.IsValid())
+        if (wwOnStart.IsValid())
         {
-            _wwOnStart.Post(gameObject);
+            wwOnStart.Post(gameObject);
         }
     }
 
@@ -33,9 +33,9 @@ public class GameObjectSounds : MonoBehaviour
     /// </summary>
     private void OnDestroy()
     {
-        if (_wwOnDestroy.IsValid())
+        if (wwOnDestroy.IsValid())
         {
-            _wwOnDestroy.Post(gameObject);
+            wwOnDestroy.Post(gameObject);
         }
     }
 }

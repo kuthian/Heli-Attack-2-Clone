@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameMusic : MonoBehaviour
 {
-    [SerializeField] private AK.Wwise.Event _wwGameMusic;
+    [SerializeField] private AK.Wwise.Event wwGameMusic;
 
-    [SerializeField] private AK.Wwise.State _wwGameplay;
-    [SerializeField] private AK.Wwise.State _wwMainMenu;
-    [SerializeField] private AK.Wwise.State _wwPaused;
+    [SerializeField] private AK.Wwise.State wwGameplay;
+    [SerializeField] private AK.Wwise.State wwMainMenu;
+    [SerializeField] private AK.Wwise.State wwPaused;
 
     private AK.Wwise.State _initState;
 
@@ -41,7 +41,7 @@ public class GameMusic : MonoBehaviour
     {
         name = "GameMusic";
         DontDestroyOnLoad(gameObject);
-        _wwGameMusic.Post(gameObject);
+        wwGameMusic.Post(gameObject);
         if (_initState.IsValid())
         {
             _initState.SetValue();
@@ -50,17 +50,17 @@ public class GameMusic : MonoBehaviour
 
     static public void Gameplay()
     {
-        i._wwGameplay.SetValue();
+        i.wwGameplay.SetValue();
     }
 
     static public void MainMenu()
     {
-        i._wwMainMenu.SetValue();
+        i.wwMainMenu.SetValue();
     }
 
     static public void Paused()
     {
-        i._wwPaused.SetValue();
+        i.wwPaused.SetValue();
     }
 
 }

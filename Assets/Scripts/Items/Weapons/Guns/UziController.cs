@@ -9,14 +9,14 @@ public class UziController : __GunController
     [SerializeField]
     protected Animator gunfireAnimation;
 
-    [SerializeField] private AK.Wwise.Event _wwShootStart;
-    [SerializeField] private AK.Wwise.Event _wwShootEnd;
-    [SerializeField] private AK.Wwise.Event _wwAmmoEmpty;
+    [SerializeField] private AK.Wwise.Event wwShootStart;
+    [SerializeField] private AK.Wwise.Event wwShootEnd;
+    [SerializeField] private AK.Wwise.Event wwAmmoEmpty;
 
     override protected void OnShootStart()
     {
         // Play the shooting sound
-        _wwShootStart.Post(gameObject);
+        wwShootStart.Post(gameObject);
         // Start the animation
         gunfireAnimation.SetBool("isShooting", true);
     }
@@ -24,7 +24,7 @@ public class UziController : __GunController
     override protected void OnShootEnd()
     {
         // Stop the shooting sound
-        _wwShootEnd.Post(gameObject);
+        wwShootEnd.Post(gameObject);
         // Stop the animation
         gunfireAnimation.SetBool("isShooting", false);
         // Reset the sprite in case the animation didn't finish
@@ -34,7 +34,7 @@ public class UziController : __GunController
     override protected void OnAmmoEmpty()
     {
         // stop the shooting sound
-        _wwAmmoEmpty.Post(gameObject);
+        wwAmmoEmpty.Post(gameObject);
         // Stop the animation
         gunfireAnimation.SetBool("isShooting", false);
     }

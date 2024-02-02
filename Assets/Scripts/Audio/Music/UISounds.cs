@@ -3,19 +3,19 @@ using UnityEngine;
 public class UISounds : MonoBehaviour
 {
     [SerializeField]
-    private AK.Wwise.Event _wwMouseClick;
+    private AK.Wwise.Event wwMouseClick;
 
     [SerializeField]
-    private AK.Wwise.Event _wwMouseHover;
+    private AK.Wwise.Event wwMouseHover;
 
     [SerializeField]
-    private AK.Wwise.Event _wwPressArcade;
+    private AK.Wwise.Event wwPressArcade;
 
     [SerializeField]
-    private AK.Wwise.Event _wwButtonForwardTone;
+    private AK.Wwise.Event wwButtonForwardTone;
 
     [SerializeField]
-    private AK.Wwise.Event _wwButtonBackwardsTone;
+    private AK.Wwise.Event wwButtonBackwardsTone;
 
     private static UISounds _i;
 
@@ -46,26 +46,26 @@ public class UISounds : MonoBehaviour
 
     public static void MouseClick()
     {
-        i._wwMouseClick.Post(i.gameObject);
+        i.wwMouseClick.Post(i.gameObject);
     }
 
     public static void MouseHover()
     {
-        i._wwMouseHover.Post(i.gameObject);
+        i.wwMouseHover.Post(i.gameObject);
     }
 
     public static void PressArcade()
     {
-        i._wwPressArcade.Post(i.gameObject);
+        i.wwPressArcade.Post(i.gameObject);
     }
 
     public static void ButtonForwardTone()
     {
-        i._wwButtonForwardTone.Post(i.gameObject);
+        i.wwButtonForwardTone.Post(i.gameObject);
     }
 
     public static void ButtonBackwardsTone()
     {
-        i._wwButtonBackwardsTone.Post(i.gameObject);
+        i.wwButtonBackwardsTone.Post(i.gameObject);
     }
 }

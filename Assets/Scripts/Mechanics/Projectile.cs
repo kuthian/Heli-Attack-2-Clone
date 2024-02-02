@@ -13,16 +13,16 @@ public class Projectile : MonoBehaviour {
   public float MaxLifetimeSeconds { get; set; } = 5;
 
   [SerializeField]
-  private AK.Wwise.Event _wwOnImpactPlayer;
+  private AK.Wwise.Event wwOnImpactPlayer;
 
   [SerializeField]
-  private AK.Wwise.Event _wwOnImpactEnemy;
+  private AK.Wwise.Event wwOnImpactEnemy;
 
   [SerializeField]
-  private AK.Wwise.Event _wwOnImpactMap;
+  private AK.Wwise.Event wwOnImpactMap;
 
   [SerializeField]
-  private AK.Wwise.Event _wwOnLeaveGameArea;
+  private AK.Wwise.Event wwOnLeaveGameArea;
 
   private void Awake()
   {
@@ -48,14 +48,14 @@ public class Projectile : MonoBehaviour {
     if (other.CompareTag("Map"))
     {
       // Any Projectile hits a map object
-      wwPostEvent( _wwOnImpactMap );
+      wwPostEvent( wwOnImpactMap );
       Destroy(gameObject);
     }
     else 
     if (CompareTag("EnemyProjectile") && other.CompareTag("Player")) 
     {
       // Enemy projectile hits Player
-      wwPostEvent( _wwOnImpactPlayer );
+      wwPostEvent( wwOnImpactPlayer );
       other.gameObject.SendMessage("Damage", Damage);
       Destroy(gameObject);
     }
@@ -63,7 +63,7 @@ public class Projectile : MonoBehaviour {
     if (CompareTag("PlayerProjectile") && other.CompareTag("Enemy")) 
     {
       // Player projectile hits Enemy
-      wwPostEvent( _wwOnImpactEnemy );
+      wwPostEvent( wwOnImpactEnemy );
       other.gameObject.SendMessage("Damage", Damage);
       StatsManager.RegisterBulletHit(); // TODO: Move this elsewhere?
       Destroy(gameObject);
@@ -74,7 +74,7 @@ public class Projectile : MonoBehaviour {
   {
     if (other.CompareTag("GameArea"))
     {
-      wwPostEvent( _wwOnLeaveGameArea );
+      wwPostEvent( wwOnLeaveGameArea );
       Destroy(gameObject);
     }
   }

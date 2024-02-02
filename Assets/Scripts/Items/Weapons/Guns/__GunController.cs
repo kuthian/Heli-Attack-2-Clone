@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class __GunController : MonoBehaviour
 {
     [SerializeField]
-    protected AK.Wwise.Event _wwOnShoot;
+    protected AK.Wwise.Event wwOnShoot;
 
     [field: SerializeField]
     public Sprite InventorySprite { get; set; }
@@ -72,9 +72,9 @@ public class __GunController : MonoBehaviour
     virtual protected void Shoot()
     {
         InstantiateProjectile(firePointTransform.position, firePointTransform.right);
-        if (_wwOnShoot.IsValid())
+        if (wwOnShoot.IsValid())
         {
-            _wwOnShoot.Post(gameObject);
+            wwOnShoot.Post(gameObject);
         }
     }
 

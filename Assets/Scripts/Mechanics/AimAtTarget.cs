@@ -1,9 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class AimAtTarget : MonoBehaviour
 {
-    private void Update()
+    virtual protected void Update()
     {
+        if (GameManager.Paused) return;
         HandleAiming();
     }
 
@@ -11,12 +13,11 @@ public abstract class AimAtTarget : MonoBehaviour
 
     protected void HandleAiming()
     {
-        if (GameManager.Paused) return;
-
         Vector3 targetPosition = GetTargetPosition();
         targetPosition.z = 0.0f;
         Vector3 aimDirection = (targetPosition - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+        angle = ModifyAimAngle(angle);
         transform.eulerAngles = new Vector3(0, 0, angle);
 
         bool FacingRight = angle < 90.0f && angle > -90.0f;
@@ -28,5 +29,10 @@ public abstract class AimAtTarget : MonoBehaviour
         {
             transform.localScale = new Vector3(1, -1, 1);
         }
+    }
+
+    virtual protected float ModifyAimAngle(float angle)
+    {
+        return angle;
     }
 }
