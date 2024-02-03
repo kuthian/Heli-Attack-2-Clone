@@ -75,8 +75,8 @@ public class EnemyManager : MonoBehaviour
             enemies[i].transform.position = new Vector3(enemies[i].transform.position.x, enemies[i].transform.position.y, i);
 
             // Hack to prevent gunners from being sorted over other helicopters
-            var gunner = obj.transform.GetChild(0);
-            obj.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
+            var gunner = enemies[i].transform.GetChild(0);
+            enemies[i].GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
             gunner.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
             gunner.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++; // the gun!
 
@@ -104,7 +104,7 @@ public class EnemyManager : MonoBehaviour
         }
 
         // Increase the difficulty when
-        if (HUDManager.ScoreCount.Score == 5)
+        if (HUDManager.ScoreCount.Score == 1)
         {
             CreateEnemyRandom();
         }
