@@ -47,7 +47,7 @@ public class EnemyLifecycle : MonoBehaviour
 
         ParticleManager.PlayExplodedEffect(destroyedHeli.transform);
 
-        if (Utils.Chance((int)(crateDropRate*100)))
+        if (Utils.Chance((int)(crateDropRate * 100)))
         {
             CrateGenerator.SpawnWeaponCrateRandom(transform.position);
         }
