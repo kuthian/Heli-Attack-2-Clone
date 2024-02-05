@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: _infiniteAmmo
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: _startingAmmo
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92d07713bb85654c9cc1c45c20976d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wwOnShoot:
+  wwOnShoot:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}

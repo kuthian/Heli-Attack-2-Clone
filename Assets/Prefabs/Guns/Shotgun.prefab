@@ -95,11 +95,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: _infiniteAmmo
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: _startingAmmo
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -217,14 +217,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c759e4b6708fa244a8e5252d059aa3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wwShotgunLoad:
+  wwShotgunLoad:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: c1fbfe187db7614498750d3cfb89f41c, type: 2}
-  _wwShotgunCock:
+    WwiseObjectReference: {fileID: 0}
+  wwShotgunCock:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: df68a1f7eca5d3946a4c806c62c1ffa2, type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &7161571821667985353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d774e15550b20264d88650445132529a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wwOnShoot:
+  wwOnShoot:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}

@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: _startingAmmo
-      value: 100
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02a5ea08ac621b246b595db893fab4a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wwOnShoot:
+  wwOnShoot:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
@@ -310,18 +310,18 @@ MonoBehaviour:
   _cooldownTime: 0.1
   secondFirePointTransform: {fileID: 3046896726298598983}
   gunfireAnimation: {fileID: 6041437187544858578}
-  _wwShootStart:
+  wwShootStart:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 99e3976c6bd5c5d4f9ecd7686a39eaed, type: 2}
-  _wwShootEnd:
+    WwiseObjectReference: {fileID: 0}
+  wwShootEnd:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 079706faee3c9b64683f7fb7b7ac1e34, type: 2}
-  _wwAmmoEmpty:
+    WwiseObjectReference: {fileID: 0}
+  wwAmmoEmpty:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 9a9e7d61dbacdb24382e906ac5fcc902, type: 2}
+    WwiseObjectReference: {fileID: 0}
 --- !u!4 &4618725055357171477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 795742884974927923, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
