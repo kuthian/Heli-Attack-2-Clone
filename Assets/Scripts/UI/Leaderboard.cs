@@ -1,39 +1,46 @@
 using Steamworks;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class Leaderboard : MonoBehaviour
 {
-    public GameObject textPrefab;
-    public Transform contentPanel;
+    public TextMeshProUGUI title;
+    public LeaderboardUI leaderboardUI;
 
-    public void Show()
+    public void Start()
     {
-        gameObject.SetActive(true);
+        ShowFriends();
     }
 
-    public void Hide()
+    public void ShowFriends()
     {
-        gameObject.SetActive(false);
+        title.text = "Leaderboard - Friends"; 
+        List<LeaderboardEntry> leaderboardEntries = new List<LeaderboardEntry>();
+        for (int i = 1; i <= 10; i++)
+        {
+            LeaderboardEntry entry = new LeaderboardEntry();
+            entry.position = i;
+            entry.name = "Player " + i.ToString();
+            entry.score = i * 10;
+            leaderboardEntries.Add(entry);
+        }
+
+        leaderboardUI.SetLeaderboardEntries(leaderboardEntries);
     }
 
-    void Start()
+    public void ShowWorld()
     {
-        // TODO: Use SteamUserStats to display friend's high scores
-        //int friendCount = SteamFriends.GetFriendCount(EFriendFlags.k_EFriendFlagImmediate);
-        //for (int i = 0; i < friendCount; i++)
-        //{
-        //    CSteamID friendSteamId = SteamFriends.GetFriendByIndex(i, EFriendFlags.k_EFriendFlagImmediate);
-        //    string friendName = SteamFriends.GetFriendPersonaName(friendSteamId);
-        //    AddItemToList(friendName);
-        //    // You can now use friendSteamId and friendName as needed
-        //}
-        //AddItemToList("Item 2");
-    }
-
-    public void AddItemToList(string itemText)
-    {
-        GameObject newText = Instantiate(textPrefab, contentPanel);
-        newText.GetComponent<TextMeshProUGUI>().text = itemText;
+        title.text = "Leaderboard - World";
+        List<LeaderboardEntry> leaderboardEntries = new List<LeaderboardEntry>();
+        for (int i = 1; i <= 10; i++)
+        {
+            LeaderboardEntry entry = new LeaderboardEntry();
+            entry.position = i;
+            entry.name = "Gamer " + i.ToString();
+            entry.score = i * 11;
+            leaderboardEntries.Add(entry);
+        }
+        leaderboardUI.SetLeaderboardEntries(leaderboardEntries);
     }
 }
