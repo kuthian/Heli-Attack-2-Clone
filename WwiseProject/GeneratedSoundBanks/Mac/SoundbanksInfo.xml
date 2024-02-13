@@ -32,11 +32,12 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="911456580">
+		<SoundBank Id="2228651116" Language="SFX" Hash="201262975">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1505803786" Name="BulletHitMap" ObjectPath="\Events\Gunfire\Projectile\BulletHitMap" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.122702" DurationMax="0.133962"/>
 				<Event Id="2811027312" Name="Streetlight_buzz" ObjectPath="\Events\Environment\Streetlight_buzz" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.180315" DurationMax="0.188959"/>
 				<Event Id="894451243" Name="ui_backwards_tone" ObjectPath="\Events\UI\ui_backwards_tone" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75"/>
 				<Event Id="32695948" Name="ui_forward_tone" ObjectPath="\Events\UI\ui_forward_tone" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125"/>
@@ -58,11 +59,11 @@
 				</Event>
 				<Event Id="48068017" Name="ww_player_fs" ObjectPath="\Events\Player\ww_player_fs" DurationType="OneShot" DurationMin="0.146255" DurationMax="0.257598"/>
 				<Event Id="3290493012" Name="ww_player_jump" ObjectPath="\Events\Player\ww_player_jump" DurationType="OneShot" DurationMin="0.091763" DurationMax="0.276093"/>
-				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Gunfire\ww_rifle_shot" DurationType="OneShot" DurationMin="1.538479" DurationMax="1.538479"/>
+				<Event Id="2496926511" Name="ww_rifle_shot" ObjectPath="\Events\Gunfire\ww_rifle_shot" DurationType="OneShot" DurationMin="0.122702" DurationMax="0.133962"/>
 				<Event Id="1701460811" Name="ww_shotgun_cock" ObjectPath="\Events\Reloads\ww_shotgun_cock" DurationType="OneShot" DurationMin="0.521543" DurationMax="0.603263"/>
 				<Event Id="1650400503" Name="ww_shotgun_shell" ObjectPath="\Events\Reloads\ww_shotgun_shell" DurationType="OneShot" DurationMin="0.214738" DurationMax="0.293005"/>
 				<Event Id="1587775315" Name="ww_shotgun_shot" ObjectPath="\Events\Gunfire\ww_shotgun_shot" DurationType="OneShot" DurationMin="0.860473" DurationMax="1.303356"/>
-				<Event Id="2234905433" Name="ww_uzi_bullet_hit" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_bullet_hit" DurationType="OneShot" DurationMin="0.186643" DurationMax="0.590974"/>
+				<Event Id="2234905433" Name="ww_uzi_bullet_hit" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_bullet_hit" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.057667" DurationMax="0.138121"/>
 				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_shot_loop" DurationType="Infinite"/>
 				<Event Id="795925999" Name="ww_uzi_stop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_stop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3895319721" Name="ww_uzi_stop_empty" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_stop_empty" DurationType="OneShot" DurationMin="0.128208" DurationMax="0.128208"/>
@@ -85,10 +86,6 @@
 					<ShortName>Streetlight_buzz_02.wav</ShortName>
 					<Path>SFX\Streetlight_buzz_02_10C4C929.wem</Path>
 				</File>
-				<File Id="51274058" Language="SFX">
-					<ShortName>rifle_fire_01.wav</ShortName>
-					<Path>SFX\rifle_fire_01_10C4C929.wem</Path>
-				</File>
 				<File Id="102136994" Language="SFX">
 					<ShortName>heli_locomotion_loop.wav</ShortName>
 					<Path>SFX\heli_locomotion_loop_D79FB2B7.wem</Path>
@@ -101,7 +98,11 @@
 				</File>
 				<File Id="191393311" Language="SFX">
 					<ShortName>uzi_impact_02.wav</ShortName>
-					<Path>SFX\uzi_impact_02_701599F7.wem</Path>
+					<Path>SFX\uzi_impact_02_8B1E7B93.wem</Path>
+				</File>
+				<File Id="221034775" Language="SFX">
+					<ShortName>Projectile_HitMap_01.wav</ShortName>
+					<Path>SFX\Projectile_HitMap_01_10C4C929.wem</Path>
 				</File>
 				<File Id="235667579" Language="SFX">
 					<ShortName>shotgun_cock.wav</ShortName>
@@ -125,7 +126,7 @@
 				</File>
 				<File Id="333889851" Language="SFX">
 					<ShortName>uzi_impact_lay02.wav</ShortName>
-					<Path>SFX\uzi_impact_lay02_C6062CD2.wem</Path>
+					<Path>SFX\uzi_impact_lay02_4A8CA7F7.wem</Path>
 				</File>
 				<File Id="361248435" Language="SFX">
 					<ShortName>Pickup_Crate 1.wav</ShortName>
@@ -214,15 +215,19 @@
 				</File>
 				<File Id="957239109" Language="SFX">
 					<ShortName>uzi_impact_01.wav</ShortName>
-					<Path>SFX\uzi_impact_01_2986993B.wem</Path>
+					<Path>SFX\uzi_impact_01_5BB1FCFF.wem</Path>
 				</File>
 				<File Id="960456348" Language="SFX">
 					<ShortName>uzi_impact_lay01.wav</ShortName>
-					<Path>SFX\uzi_impact_lay01_CCD20B05.wem</Path>
+					<Path>SFX\uzi_impact_lay01_31B59809.wem</Path>
 				</File>
 				<File Id="976593761" Language="SFX">
 					<ShortName>button_backwards_tone.wav</ShortName>
 					<Path>SFX\button_backwards_tone_10C4C929.wem</Path>
+				</File>
+				<File Id="998029261" Language="SFX">
+					<ShortName>Rifle_Shoot_01.wav</ShortName>
+					<Path>SFX\Rifle_Shoot_01_10C4C929.wem</Path>
 				</File>
 				<File Id="1046341244" Language="SFX">
 					<ShortName>shotgun_shot_02.wav</ShortName>
