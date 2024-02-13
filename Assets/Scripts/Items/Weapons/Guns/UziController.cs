@@ -1,4 +1,3 @@
-using UnityEditor.U2D;
 using UnityEngine;
 
 public class UziController : __GunController

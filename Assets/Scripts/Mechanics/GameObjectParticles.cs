@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.FilePathAttribute;
 
 /// <summary>
 /// Component for triggering Particle Systems associated with the start and destruction of a GameObject.
