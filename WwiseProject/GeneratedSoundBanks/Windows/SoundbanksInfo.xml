@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -32,7 +32,7 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="201262975">
+		<SoundBank Id="2228651116" Language="SFX" Hash="1188392625">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
@@ -63,7 +63,7 @@
 				<Event Id="1701460811" Name="ww_shotgun_cock" ObjectPath="\Events\Reloads\ww_shotgun_cock" DurationType="OneShot" DurationMin="0.521543" DurationMax="0.603263"/>
 				<Event Id="1650400503" Name="ww_shotgun_shell" ObjectPath="\Events\Reloads\ww_shotgun_shell" DurationType="OneShot" DurationMin="0.214738" DurationMax="0.293005"/>
 				<Event Id="1587775315" Name="ww_shotgun_shot" ObjectPath="\Events\Gunfire\ww_shotgun_shot" DurationType="OneShot" DurationMin="0.860473" DurationMax="1.303356"/>
-				<Event Id="2234905433" Name="ww_uzi_bullet_hit" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_bullet_hit" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.057667" DurationMax="0.138121"/>
+				<Event Id="2234905433" Name="ww_uzi_bullet_hit" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_bullet_hit" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.079691" DurationMax="0.190871"/>
 				<Event Id="1852187988" Name="ww_uzi_shot_loop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_shot_loop" DurationType="Infinite"/>
 				<Event Id="795925999" Name="ww_uzi_stop" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_stop" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3895319721" Name="ww_uzi_stop_empty" ObjectPath="\Events\Gunfire\Uzi\ww_uzi_stop_empty" DurationType="OneShot" DurationMin="0.128208" DurationMax="0.128208"/>

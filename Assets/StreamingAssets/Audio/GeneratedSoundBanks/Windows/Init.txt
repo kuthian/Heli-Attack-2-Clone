@@ -1,0 +1,32 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	762757699	gameplay_state			\Default Work Unit\gameplay_state	
+
+State	ID	Name	State Group			Notes
+	89505537	gameplay	gameplay_state			
+	319258907	paused	gameplay_state			
+	748895195	None	gameplay_state			
+	1125500713	Intro	gameplay_state			
+	1432716332	game_over	gameplay_state			
+	2005704188	main_menu	gameplay_state			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\Ambience	
+	903067976	Rocket Shoot			\Default Work Unit\Master Audio Bus\Rocket Shoot	
+	2167849898	Helicopter			\Default Work Unit\Master Audio Bus\Helicopter	
+	3495485381	Rocket Impact			\Default Work Unit\Master Audio Bus\Rocket Impact	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
+	4262674733	Rifle			\Default Work Unit\Master Audio Bus\Rifle	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1211327461	Outdoor_Verb			\Default Work Unit\Master Audio Bus\Outdoor_Verb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	82869615	Wwise Meter (Custom)	Wwise Meter			
+	661782316	Wwise Gain (Custom)	Wwise Gain			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+
