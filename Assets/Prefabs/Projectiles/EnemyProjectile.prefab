@@ -15,6 +15,14 @@ PrefabInstance:
       propertyPath: _speed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -7133862975253113648, guid: 4965d607913209248a64dff351753ff2, type: 3}
+      propertyPath: wwOnImpactMap.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -7133862975253113648, guid: 4965d607913209248a64dff351753ff2, type: 3}
+      propertyPath: wwOnImpactEnemy.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 92056171148992293, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Name
       value: EnemyProjectile
@@ -33,11 +41,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622716945185236742, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Color.b
-      value: 0.48584908
+      value: 0.43867922
       objectReference: {fileID: 0}
     - target: {fileID: 4622716945185236742, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Color.g
-      value: 0.48584908
+      value: 0.48306063
       objectReference: {fileID: 0}
     - target: {fileID: 4622716945185236742, guid: 4965d607913209248a64dff351753ff2, type: 3}
       propertyPath: m_Color.r

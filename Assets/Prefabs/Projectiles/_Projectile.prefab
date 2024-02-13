@@ -136,19 +136,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675c72103a9f5664c9ee73e5f6977e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wwOnImpactPlayer:
+  wwOnImpactPlayer:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  _wwOnImpactEnemy:
+  wwOnImpactEnemy:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  _wwOnImpactMap:
+    WwiseObjectReference: {fileID: 11400000, guid: a29ed12054876e747984fe995f9141fc, type: 2}
+  wwOnImpactMap:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  _wwOnLeaveGameArea:
+    WwiseObjectReference: {fileID: 11400000, guid: 5cae650b1910a9142b90dd4abd3e3308, type: 2}
+  wwOnLeaveGameArea:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}

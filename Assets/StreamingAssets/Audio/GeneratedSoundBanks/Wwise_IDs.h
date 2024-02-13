@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BULLETHITMAP = 1505803786U;
         static const AkUniqueID STREETLIGHT_BUZZ = 2811027312U;
         static const AkUniqueID UI_BACKWARDS_TONE = 894451243U;
         static const AkUniqueID UI_FORWARD_TONE = 32695948U;

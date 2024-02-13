@@ -175,6 +175,21 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Projectile" ID="{99F5D777-8728-4771-82CC-03DEBDD6164B}" ShortID="671041666">
+					<ChildrenList>
+						<Event Name="BulletHitMap" ID="{923EB264-D663-4DEB-AF49-DD7E4F2E22E2}">
+							<ChildrenList>
+								<Action Name="" ID="{AF6C3F60-17D0-46BA-964B-35117A7E0FCB}" ShortID="1050641210">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ProjectileHitMap" ID="{958EEC72-F3B4-40A3-854A-06A1B9B82766}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

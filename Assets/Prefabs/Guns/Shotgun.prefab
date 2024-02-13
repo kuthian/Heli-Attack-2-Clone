@@ -220,11 +220,11 @@ MonoBehaviour:
   wwShotgunLoad:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: c1fbfe187db7614498750d3cfb89f41c, type: 2}
   wwShotgunCock:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: df68a1f7eca5d3946a4c806c62c1ffa2, type: 2}
 --- !u!114 &7161571821667985353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
   wwOnShoot:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f442fb92a7c264346b9737cd8657ff38, type: 2}
   <InventorySprite>k__BackingField: {fileID: 21300000, guid: 654e972ed66035e40953a11645427a36, type: 3}
   shootAction:
     m_Name: Shoot
