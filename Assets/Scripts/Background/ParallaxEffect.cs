@@ -28,6 +28,7 @@ public class ParallaxEffect : MonoBehaviour
     private Camera cam;
 
     public Vector2 startPosition;
+    public Vector2 InitialSubjectPosition;
 
     private float parallaxFactor; // Factor by which the parallax effect is scaled
     private float clippingPlane; // The clipping plane distance used to adjust the parallax effect
@@ -36,10 +37,15 @@ public class ParallaxEffect : MonoBehaviour
     {
         cam = Camera.main;
         startPosition = transform.position;
-        if (subject == null)
-        {
+        //if (subject == null)
+        //{
             subject = cam.transform;
-        }
+        //}
+
+        Debug.Log("near=" + cam.nearClipPlane);
+        Debug.Log("far=" + cam.farClipPlane);
+
+        InitialSubjectPosition = subject.position;
     }
 
     /// <summary>
@@ -48,9 +54,11 @@ public class ParallaxEffect : MonoBehaviour
     /// </summary>
     private void CalculateParallaxFactor()
     {
-        float distanceFromSubject = transform.position.z - subject.position.z;
-        clippingPlane = cam.transform.position.z + (distanceFromSubject > 0 ? cam.farClipPlane : cam.nearClipPlane);
-        parallaxFactor = Mathf.Abs(distanceFromSubject) / clippingPlane;
+        float distanceFromSubject = transform.position.z - cam.transform.position.z;
+        clippingPlane = cam.farClipPlane;
+        parallaxFactor = (Mathf.Abs(distanceFromSubject)) / clippingPlane;
+        //float distanceFromSubject = transform.position.z - subject.position.z;
+        //parallaxFactor = distanceFromSubject != 0 ? 1 / distanceFromSubject : 0;
     }
 
     private void Update()
@@ -58,9 +66,16 @@ public class ParallaxEffect : MonoBehaviour
         CalculateParallaxFactor();
 
         // Calculate the new position based on the original position, camera movement, and parallax factor
-        Vector2 travel = (Vector2)cam.transform.position - startPosition;
+        Vector2 travel = (Vector2)subject.position - (Vector2)InitialSubjectPosition;
+        Debug.Log("Travel=" + travel);
+        //Vector2 subjectPosition = (Vector2)subject.position + subjectStartOffset;
         Vector2 pos = startPosition + travel * parallaxFactor;
-        Vector3 targetPosition = new Vector3( parallaxX ? pos.x : startPosition.x, parallaxY ? pos.y : startPosition.y, transform.position.z);
+        //Vector2 pos = startPosition + travel * GameManager.Instance.factor * parallaxFactor;
+        Vector3 targetPosition = new Vector3( 
+            parallaxX ? pos.x : startPosition.x, 
+            parallaxY ? pos.y : startPosition.y, 
+            transform.position.z
+        );
 
         if (useSmoothing && smoothing != 0)
         {
