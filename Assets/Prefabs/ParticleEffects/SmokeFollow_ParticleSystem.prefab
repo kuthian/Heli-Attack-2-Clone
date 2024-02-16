@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3033127146070673079}
   - component: {fileID: 6830338601111036678}
   m_Layer: 0
-  m_Name: GreenGasFollow_ParticleSystem
+  m_Name: SmokeFollow_ParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,8 +285,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 0.6
+      scalar: 0.8
+      minScalar: 0.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1305,7 +1305,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9150943, g: 0.9095178, b: 0.082013145, a: 0}
+        key0: {r: 0, g: 0, b: 0, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
