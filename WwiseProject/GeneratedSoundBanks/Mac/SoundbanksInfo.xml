@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\migue\HA2_clone\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
@@ -32,7 +32,7 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="1188392625">
+		<SoundBank Id="2228651116" Language="SFX" Hash="3838840657">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>

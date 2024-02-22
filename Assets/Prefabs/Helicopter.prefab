@@ -262,11 +262,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7df1f17ecad6489e4872c27f9f5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wwOnStart:
+  wwOnStart:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4d5b2d8389968f74b923d763844df2e5, type: 2}
-  _wwOnDestroy:
+  wwOnDestroy:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 2d26abe5d50833540993959dffefbbc9, type: 2}

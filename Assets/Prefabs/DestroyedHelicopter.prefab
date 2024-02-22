@@ -167,11 +167,11 @@ MonoBehaviour:
   wwOnStart:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: c5d2f3fe2b596f34ebc6c36927f7a6da, type: 2}
   wwOnDestroy:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: cca0ccf10ca7242409c8eab028366d60, type: 2}
 --- !u!95 &8256714345090203667
 Animator:
   serializedVersion: 4
