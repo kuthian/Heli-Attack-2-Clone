@@ -6,8 +6,6 @@ public class GameManager : Singleton<GameManager>
 {
     static public bool Paused => Time.timeScale == 0;
 
-    public float factor = 0.1f;
-
     public InputAction pause;
 
     private GameObject player;

@@ -7,9 +7,6 @@ using UnityEngine;
 /// </summary>
 public class ParallaxEffect : MonoBehaviour
 {
-    [Tooltip("Reference to the subject (e.g. player) that influences the parallax effect.")]
-    public Transform subject;
-
     [Tooltip("Enable smoothing.")]
     public bool useSmoothing = false;
 
@@ -23,54 +20,39 @@ public class ParallaxEffect : MonoBehaviour
              "If the smoothing factor is high, you take larger steps and reach point B faster, " +
              "but the movement can look abrupt. If the smoothing factor is low, you take smaller steps, " +
              "reaching point B more slowly, but the movement appears smoother.")]
-    public float smoothing = 0.5f;
+    public float smoothing = 30f;
 
-    private Camera cam;
+    private Camera cam; // the main camera in the scene
 
-    public Vector2 startPosition;
-    public Vector2 InitialSubjectPosition;
+    private Vector2 startPosition;
+    private Vector2 initialCameraPosition;
 
     private float parallaxFactor; // Factor by which the parallax effect is scaled
-    private float clippingPlane; // The clipping plane distance used to adjust the parallax effect
 
     private void Start()
     {
         cam = Camera.main;
         startPosition = transform.position;
-        //if (subject == null)
-        //{
-            subject = cam.transform;
-        //}
-
-        Debug.Log("near=" + cam.nearClipPlane);
-        Debug.Log("far=" + cam.farClipPlane);
-
-        InitialSubjectPosition = subject.position;
+        initialCameraPosition = cam.transform.position;
     }
 
     /// <summary>
     /// Calculate the parallax factor based on camera settings and the subject's distance.
-    /// This method is used to adjust the parallax factor dynamically if the camera or subject moves.
+    /// This method is used to adjust the parallax factor dynamically if the camera or object moves.
     /// </summary>
     private void CalculateParallaxFactor()
     {
-        float distanceFromSubject = transform.position.z - cam.transform.position.z;
-        clippingPlane = cam.farClipPlane;
-        parallaxFactor = (Mathf.Abs(distanceFromSubject)) / clippingPlane;
-        //float distanceFromSubject = transform.position.z - subject.position.z;
-        //parallaxFactor = distanceFromSubject != 0 ? 1 / distanceFromSubject : 0;
+        float distanceZ = transform.position.z - cam.transform.position.z;
+        parallaxFactor = cam.farClipPlane > 0 ? Mathf.Abs(distanceZ) / cam.farClipPlane : 0;
     }
 
     private void Update()
     {
         CalculateParallaxFactor();
 
-        // Calculate the new position based on the original position, camera movement, and parallax factor
-        Vector2 travel = (Vector2)subject.position - (Vector2)InitialSubjectPosition;
-        Debug.Log("Travel=" + travel);
-        //Vector2 subjectPosition = (Vector2)subject.position + subjectStartOffset;
+        // Calculate the new position based on the initial camera position, camera movement, and parallax factor
+        Vector2 travel = (Vector2)cam.transform.position - (Vector2)initialCameraPosition;
         Vector2 pos = startPosition + travel * parallaxFactor;
-        //Vector2 pos = startPosition + travel * GameManager.Instance.factor * parallaxFactor;
         Vector3 targetPosition = new Vector3( 
             parallaxX ? pos.x : startPosition.x, 
             parallaxY ? pos.y : startPosition.y, 
