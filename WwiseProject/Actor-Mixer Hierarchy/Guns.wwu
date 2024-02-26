@@ -94,7 +94,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>2</Value>
+								<Value>-4</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -216,7 +216,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>-1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -277,6 +277,11 @@
 									</ModifierList>
 								</Property>
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="50"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -327,6 +332,39 @@
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="gameplay_state" ID="{E5A62C64-624B-4A96-9A89-81842F483229}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="paused" ID="{95491A7E-01AC-4766-A593-BA6FA8AC0FFD}"/>
+										<CustomState Name="" ID="{069F473E-5D3C-4192-81DE-F12F5DA8E667}" ShortID="889885833">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="main_menu" ID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}"/>
+										<CustomState Name="" ID="{92B0760F-B064-433F-9F05-543CBD2EAC3B}" ShortID="795014690"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="gameplay" ID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
+										<CustomState Name="" ID="{AAF3A3DE-367F-4007-9AB6-7B78CB80A2B5}" ShortID="367750633"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="game_over" ID="{73C0ECBB-CC18-4E53-8CC3-ED0C86C04847}"/>
+										<CustomState Name="" ID="{A12310C7-5DFC-4075-8880-95D42775D3B0}" ShortID="281108613"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Intro" ID="{4B4E2A62-B328-4EED-AF6C-DCD29CEDB887}"/>
+										<CustomState Name="" ID="{F758FF18-CD23-4A10-BD64-70E7088A4E9A}" ShortID="951472065"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists/>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Bazooka Impact" ID="{9F988E39-65F7-4A11-A5FF-83ED831AE14D}" ShortID="13306957">
@@ -364,7 +402,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>-1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -453,7 +491,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

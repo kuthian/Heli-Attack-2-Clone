@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6223437926608127981, guid: ab1ff182fad5e044f9a9b4cab44fae9e, type: 3}
+      propertyPath: wwOnDestroy.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e1b260ed1396f0498644302fef8643d, type: 2}
+    - target: {fileID: -6223437926608127981, guid: ab1ff182fad5e044f9a9b4cab44fae9e, type: 3}
       propertyPath: _wwOnDestroy.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 5e1b260ed1396f0498644302fef8643d, type: 2}

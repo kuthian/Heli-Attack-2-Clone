@@ -109,7 +109,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 478075689
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ccf0a8d2da6b23c4a81e95ecbc55a877, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -207,7 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dfd6403726ac14a906b5080bfb31db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crateParachute: {fileID: 867204738448482097}
 --- !u!114 &-6223437926608127981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,11 +219,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e7df1f17ecad6489e4872c27f9f5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wwOnStart:
+  wwOnStart:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  _wwOnDestroy:
+  wwOnDestroy:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: b3ef97d14c5fd084782e3cbf85f00588, type: 2}
@@ -300,7 +299,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 478075689
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 371737e669b51f840b734ea7e1a636c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

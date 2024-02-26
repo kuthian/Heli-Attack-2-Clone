@@ -96,7 +96,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Helicopter Destroyed" ID="{3456E4FF-C9FC-466E-8701-19C2636230BE}" WorkUnitID="{27A671FD-9861-4E83-9F3C-BF0CD686D9B4}"/>
+											<ObjectRef Name="Helicopter Locomotion" ID="{DEBE0391-AE63-4008-8468-99080EFE6C71}" WorkUnitID="{27A671FD-9861-4E83-9F3C-BF0CD686D9B4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -104,6 +104,19 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="missile_impact_01" ID="{6A6B6609-2E7D-401E-95B0-9346015ED116}" WorkUnitID="{6F3DC696-D0AF-4D11-AC71-EB2F00572D42}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D2EEB911-ADEC-47FE-834C-3F0C10A8FEBD}" ShortID="884294460">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="3"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bemmy_Heli_Burning" ID="{1D3C47F2-0EDB-4267-BDAB-D5C69BD4BFA7}" WorkUnitID="{27A671FD-9861-4E83-9F3C-BF0CD686D9B4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

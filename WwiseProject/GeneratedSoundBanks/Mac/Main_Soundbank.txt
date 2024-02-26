@@ -39,7 +39,9 @@ State	ID	Name	State Group			Notes
 	2005704188	main_menu	gameplay_state			
 
 Custom State	ID	Name	State Group	Owner		Notes
+	447898601	paused	gameplay_state	\Actor-Mixer Hierarchy\Enemies\Helicopter Locomotion		
 	552086483	paused	gameplay_state	\Interactive Music Hierarchy\Default Work Unit\Master Music Container		
+	889885833	paused	gameplay_state	\Actor-Mixer Hierarchy\Guns\Bazooka\Bazooka Cruise		
 
 Modulator Time	ID	Name			Wwise Object Path	Notes
 	635643177	Modulator Time (Custom)				
@@ -61,6 +63,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	82869615	Wwise Meter (Custom)	Wwise Meter			
 	207633941	Wwise Gain (Custom)	Wwise Gain			
+	506891147	Plate_Small	Wwise RoomVerb			
 	661782316	Wwise Gain (Custom)	Wwise Gain			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -86,6 +89,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	593880374	Streetlight_buzz_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Streetlight_buzz_01_10C4C929.wem		\Actor-Mixer Hierarchy\Environment\Light Flicker\Streetlight_buzz_01		35456
 	597570077	sfx_ui_click_generic	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\sfx_ui_click_generic_10C4C929.wem		\Actor-Mixer Hierarchy\UI\MouseClick\sfx_ui_click_generic		24680
 	659578000	shotgun_shot_03	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\shotgun_shot_03_10C4C929.wem		\Actor-Mixer Hierarchy\Guns\Shotgun\shotgun_shot_03		243044
+	659907143	Bemmy_Heli_Burning	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Bemmy_Heli_Burning_D79FB2B7.wem		\Actor-Mixer Hierarchy\Enemies\Helicopter Destroyed\Mayday\Bemmy_Heli_Burning		465296
 	660176924	Night Ambience	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\ambience_loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Ambience\Night Ambience		19264
 	696176337	Pickup_Crate 2	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\Pickup_Crate 2_E578AFAC.wem		\Actor-Mixer Hierarchy\Crates\Crate Pickup\Pickup_Crate 2		120024
 	742568617	grassFS_03	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Mac\SFX\grassFS_03_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Footsteps\grassFS_03		24680

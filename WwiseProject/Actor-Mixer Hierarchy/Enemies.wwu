@@ -48,6 +48,39 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="gameplay_state" ID="{E5A62C64-624B-4A96-9A89-81842F483229}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="paused" ID="{95491A7E-01AC-4766-A593-BA6FA8AC0FFD}"/>
+								<CustomState Name="" ID="{F0592754-9D49-498A-9F82-29641B5B10DA}" ShortID="447898601">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-22"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="main_menu" ID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}"/>
+								<CustomState Name="" ID="{7E7F4373-87B1-4350-B35B-1AD67484B894}" ShortID="22257984"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="gameplay" ID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
+								<CustomState Name="" ID="{7139763A-3A10-40E4-8C65-EDEB76A4A881}" ShortID="643722033"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="game_over" ID="{73C0ECBB-CC18-4E53-8CC3-ED0C86C04847}"/>
+								<CustomState Name="" ID="{1863D2AA-F994-469B-A996-017322CBAB9D}" ShortID="561770366"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Intro" ID="{4B4E2A62-B328-4EED-AF6C-DCD29CEDB887}"/>
+								<CustomState Name="" ID="{EF24A660-3CB7-4113-9AE9-867224EE6D9F}" ShortID="294014843"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="heli_locomotion_loop" ID="{423FA26F-5A71-4B91-9028-9665FDAC0B0A}" Platform="Linked"/>
@@ -67,7 +100,7 @@
 									<Modifier Name="" ID="{775627E5-E7A6-4DE8-987E-7C024A90380F}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="328"/>
+											<Property Name="Max" Type="Real64" Value="76"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -79,7 +112,8 @@
 											<Custom>
 												<ModulatorTime Name="Modulator Time (Custom)" ID="{716F4D6E-301B-4363-99F0-AAFE76E70B3B}" ShortID="710339809">
 													<PropertyList>
-														<Property Name="TimeModDuration" Type="Real64" Value="1.7"/>
+														<Property Name="TimeModDuration" Type="Real64" Value="5"/>
+														<Property Name="TimeModLoops" Type="int32" Value="10"/>
 														<Property Name="TimeModPlaybackRate" Type="Real64" Value="0.35"/>
 													</PropertyList>
 												</ModulatorTime>
@@ -93,17 +127,17 @@
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>152</YPos>
+												<YPos>-9</YPos>
 												<Flags>5</Flags>
 											</Point>
 											<Point>
-												<XPos>0.87509</XPos>
-												<YPos>-2072</YPos>
+												<XPos>1.46572</XPos>
+												<YPos>-585</YPos>
 												<Flags>0</Flags>
 											</Point>
 											<Point>
-												<XPos>1.7</XPos>
-												<YPos>-3637</YPos>
+												<XPos>5</XPos>
+												<YPos>-716</YPos>
 												<Flags>37</Flags>
 											</Point>
 										</PointList>
@@ -111,10 +145,10 @@
 								</RTPC>
 							</RTPCList>
 						</Property>
-						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="75"/>
+						<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="90"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>12</Value>
+								<Value>9</Value>
 							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{5812B6AC-F4F2-4E1C-948C-52BBBE2FC378}" ShortID="125204252">
@@ -123,7 +157,7 @@
 											<Custom>
 												<ModulatorTime Name="Modulator Time (Custom)" ID="{C1AE8B04-347E-4038-A303-FFDE64C12305}" ShortID="635643177">
 													<PropertyList>
-														<Property Name="TimeModDuration" Type="Real64" Value="5.9"/>
+														<Property Name="TimeModDuration" Type="Real64" Value="10"/>
 													</PropertyList>
 												</ModulatorTime>
 											</Custom>
@@ -140,7 +174,7 @@
 												<Flags>5</Flags>
 											</Point>
 											<Point>
-												<XPos>5.9</XPos>
+												<XPos>10</XPos>
 												<YPos>9.18417</YPos>
 												<Flags>37</Flags>
 											</Point>
@@ -287,51 +321,243 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Helicopter Locomotion" ID="{DEBE0391-AE63-4008-8468-99080EFE6C71}" ShortID="89127323">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="IsStreamingEnabled" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-								<Property Name="IsZeroLantency" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-1540</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<BlendContainer Name="Mayday" ID="{D8F91859-76A8-4483-B22F-C56003ADF1FA}" ShortID="606350555">
 							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="Helicopter" ID="{F1B45C02-345B-490B-87B7-58E508FE7C52}" WorkUnitID="{D7EB2D5A-697B-497F-9C09-C1412E098A81}"/>
-								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Helicopter" ID="{88A84664-C9F3-466A-AA31-087A9BF98351}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="heli_locomotion_loop" ID="{35D4DFF6-2F45-441F-A389-2633097BE778}">
-									<Language>SFX</Language>
-									<AudioFile>heli_locomotion_loop.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="102136994"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<Sound Name="Helicopter Locomotion" ID="{DEBE0391-AE63-4008-8468-99080EFE6C71}" ShortID="89127323">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsZeroLantency" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-1240</Value>
+											</ValueList>
+										</Property>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="75"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<Custom CreatedFrom="{F1B45C02-345B-490B-87B7-58E508FE7C52}">
+												<Attenuation Name="Helicopter (Custom)" ID="{A0F4AEA8-91AF-40C7-BE22-1EC99B48E2AB}" ShortID="32092793">
+													<CurveUsageInfoList>
+														<VolumeDryUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="VolumeDry" ID="{CC65E51D-7326-431E-997C-AD5DC5714709}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>4.5093</XPos>
+																			<YPos>0</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>12.24226</XPos>
+																			<YPos>-5.70654</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>17.13818</XPos>
+																			<YPos>-13.29617</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>25.77321</XPos>
+																			<YPos>-200</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>-200</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</VolumeDryUsage>
+														<VolumeWetGameUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetGameUsage>
+														<VolumeWetUserUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+														</VolumeWetUserUsage>
+														<LowPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="LowPassFilter" ID="{2259E166-28EA-4A32-80AE-3BE92AC4FF81}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="65537"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>0</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>15.97939</XPos>
+																			<YPos>46</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>21.90722</XPos>
+																			<YPos>65</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>25.3866</XPos>
+																			<YPos>88</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>39.56186</XPos>
+																			<YPos>100</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>100</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</LowPassFilterUsage>
+														<HighPassFilterUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</HighPassFilterUsage>
+														<SpreadUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+																<Curve Name="Spread" ID="{FB179F85-83EF-4667-982F-081168696409}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="1"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>100</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>20.10309</XPos>
+																			<YPos>0</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>0</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</CurveUsageInfo>
+														</SpreadUsage>
+														<FocusUsage>
+															<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+														</FocusUsage>
+													</CurveUsageInfoList>
+												</Attenuation>
+											</Custom>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Helicopter" ID="{88A84664-C9F3-466A-AA31-087A9BF98351}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="heli_locomotion_loop" ID="{35D4DFF6-2F45-441F-A389-2633097BE778}">
+											<Language>SFX</Language>
+											<AudioFile>heli_locomotion_loop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="102136994"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="heli_locomotion_loop" ID="{35D4DFF6-2F45-441F-A389-2633097BE778}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bemmy_Heli_Burning" ID="{1D3C47F2-0EDB-4267-BDAB-D5C69BD4BFA7}" ShortID="1048041382">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>19</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
+										<Property Name="LoopCount" Type="int32" Value="4"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>62</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{734AA446-E45B-484E-A501-17CF52AFBF25}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9159E370-1822-45E3-90E1-19AECC61D418}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bemmy_Heli_Burning" ID="{D5AB2032-6BC3-4D18-BC0E-AFC912349B9A}">
+											<Language>SFX</Language>
+											<AudioFile>Bemmy_Heli_Burning.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="659907143"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Bemmy_Heli_Burning" ID="{D5AB2032-6BC3-4D18-BC0E-AFC912349B9A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="heli_locomotion_loop" ID="{35D4DFF6-2F45-441F-A389-2633097BE778}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</BlendContainer>
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
