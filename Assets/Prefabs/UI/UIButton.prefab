@@ -205,6 +205,7 @@ GameObject:
   - component: {fileID: 1520425614489372143}
   - component: {fileID: 1520425614489372140}
   - component: {fileID: 1520425614489372141}
+  - component: {fileID: 2732773789461940598}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -431,6 +432,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2732773789461940598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520425614489372139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8db52dd0f6dcf489d1008b4c99263c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionCall:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1520425612714076159}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5159521041761365854
 GameObject:
   m_ObjectHideFlags: 0

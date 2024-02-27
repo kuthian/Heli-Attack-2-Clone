@@ -1,6 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -56,6 +56,12 @@ public class EnemyManager : MonoBehaviour
         CreateEnemy(Utils.RandomInRange(enemySpawnPoints));
     }
 
+    private IEnumerator CreateEnemyRandomWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        CreateEnemyRandom();
+    }
+
     private void DropHealthCrate()
     {
         CrateGenerator.SpawnHealthCrate(healthCrateSpawnPoint.position);
@@ -66,7 +72,7 @@ public class EnemyManager : MonoBehaviour
         GameObject obj = Instantiate(pfEnemy, p.position, Quaternion.identity, transform);
         obj.GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
         obj.GetComponent<EnemyController>().IsFlipped = Utils.RandomBool();
-        enemies.Insert(0, obj);
+        enemies.Insert(0, obj); // this keeps us from changing sorting order on remaining heli
 
         int sortingOrder = 4; // base sorting order for the heli
         for (int i = 0; i < enemies.Count; i++)
@@ -82,7 +88,7 @@ public class EnemyManager : MonoBehaviour
             sortingOrder++; // trust me we need this
 
             // Enemy x tracking is out of phase so that they don't perform the exact same tracking behaviour
-            enemies[i].GetComponent<EnemyController>().A0 = enemies.Count > 1 ? - 2 + 4*i : 0;
+            enemies[i].GetComponent<EnemyController>().A0 = enemies.Count > 1 ? -2 + 4 * i : 0;
             enemies[i].GetComponent<EnemyController>().Phase = 90 * i;
 
             if (obj != enemies[i])
@@ -97,7 +103,7 @@ public class EnemyManager : MonoBehaviour
     {
         enemies.RemoveAll(HasHealthZero);
         HUDManager.ScoreCount.Add(1);
-        CreateEnemyRandom();
+        StartCoroutine(CreateEnemyRandomWithDelay(1f));
 
         if (HUDManager.ScoreCount.Score % 10 == 0)
         {
@@ -107,7 +113,7 @@ public class EnemyManager : MonoBehaviour
         // Increase the difficulty when
         if (HUDManager.ScoreCount.Score == 1)
         {
-            CreateEnemyRandom();
+            StartCoroutine(CreateEnemyRandomWithDelay(2f));
         }
     }
 

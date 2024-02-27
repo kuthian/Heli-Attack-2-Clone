@@ -19,6 +19,9 @@ public class ReloadBar : MonoBehaviour
 
     public void SetTimeRemaining(float timeRemaining)
     {
-        progressBar.Percentage = 100 * (1 - (timeRemaining / cooldownTime));
+        if (progressBar)
+        {
+            progressBar.Percentage = 100 * (1 - (timeRemaining / cooldownTime));
+        }
     }
 }
