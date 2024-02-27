@@ -1,19 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class ReloadBar : MonoBehaviour
 {
-    internal Slider slider;
+    internal ProgressBar progressBar;
+    private float cooldownTime;
 
-    public void SetCooldownTime(float cooldownTime)
+    private void Awake()
     {
-        slider = GetComponent<Slider>();
-        slider.maxValue = cooldownTime;
-        slider.value = cooldownTime;
+        progressBar = GetComponentInChildren<ProgressBar>();
+    }
+
+    public void SetCooldownTime(float time)
+    {
+        cooldownTime = time;
     }
 
     public void SetTimeRemaining(float timeRemaining)
     {
-        slider.value = slider.maxValue - timeRemaining;
+        progressBar.Percentage = 100 * (1 - (timeRemaining / cooldownTime));
     }
 }

@@ -66,7 +66,7 @@ public class EnemyManager : MonoBehaviour
         GameObject obj = Instantiate(pfEnemy, p.position, Quaternion.identity, transform);
         obj.GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
         obj.GetComponent<EnemyController>().IsFlipped = Utils.RandomBool();
-        enemies.Add(obj);
+        enemies.Insert(0, obj);
 
         int sortingOrder = 4; // base sorting order for the heli
         for (int i = 0; i < enemies.Count; i++)
@@ -79,6 +79,7 @@ public class EnemyManager : MonoBehaviour
             enemies[i].GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
             gunner.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
             gunner.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++; // the gun!
+            sortingOrder++; // trust me we need this
 
             // Enemy x tracking is out of phase so that they don't perform the exact same tracking behaviour
             enemies[i].GetComponent<EnemyController>().A0 = enemies.Count > 1 ? - 2 + 4*i : 0;

@@ -92,6 +92,9 @@ TagManager:
   - name: Player
     uniqueID: 1909111527
     locked: 0
+  - name: Helicopter
+    uniqueID: 1138511781
+    locked: 0
   - name: UI
     uniqueID: 1691769945
     locked: 0

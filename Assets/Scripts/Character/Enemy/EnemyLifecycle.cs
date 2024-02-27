@@ -38,9 +38,14 @@ public class EnemyLifecycle : MonoBehaviour
         GameObject destroyedGunner = Instantiate(pfDestroyedGunner, transform.position, transform.rotation);
         destroyedGunner.GetComponent<Rigidbody2D>().velocity = new Vector3(0.0f, 3.0f, 0.0f);
         destroyedGunner.GetComponent<Rigidbody2D>().angularVelocity = 20.0f;
+        destroyedGunner.GetComponent<SpriteRenderer>().sortingOrder = spriteRenderer.sortingOrder + 1;
         Destroy(destroyedGunner, 2);
 
         GameObject destroyedHeli = Instantiate(pfDestroyedHelicopter, transform.position, transform.rotation);
+        destroyedHeli.GetComponent<SpriteRenderer>().sortingOrder = spriteRenderer.sortingOrder;
+        ParticleSystemRenderer[] renderers = destroyedHeli.GetComponentsInChildren<ParticleSystemRenderer>();
+        renderers[0].sortingOrder = spriteRenderer.sortingOrder + 1; // explode particle effect
+        renderers[1].sortingOrder = spriteRenderer.sortingOrder - 1; // smoke particle effect
         destroyedHeli.GetComponent<Rigidbody2D>().velocity = rb.velocity;
         int direction = rb.velocity.x >= 0 ? -1 : 1;
         destroyedHeli.GetComponent<Rigidbody2D>().angularVelocity = direction * 11.0f;
