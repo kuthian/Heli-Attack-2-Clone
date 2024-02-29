@@ -10,6 +10,7 @@ TagManager:
   - EnemyProjectile
   - PlayerProjectile
   - PlayerTagAlias
+  - Pavement
   layers:
   - Default
   - TransparentFX
@@ -83,11 +84,11 @@ TagManager:
   - name: Ground
     uniqueID: 178769149
     locked: 0
+  - name: MapObjects
+    uniqueID: 1945094201
+    locked: 0
   - name: Crates
     uniqueID: 478075689
-    locked: 0
-  - name: GroundObjects
-    uniqueID: 1945094201
     locked: 0
   - name: Player
     uniqueID: 1909111527

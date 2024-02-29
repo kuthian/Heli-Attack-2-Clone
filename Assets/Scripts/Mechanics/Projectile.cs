@@ -47,9 +47,9 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Map"))
+        if (other.CompareTag("Map") || other.CompareTag("Pavement"))
         {
-            // Any Projectile hits a map object
+            // Any Projectile hits a map object or the pavement
             wwPostEvent(wwOnImpactMap);
             Destroy(gameObject);
         }

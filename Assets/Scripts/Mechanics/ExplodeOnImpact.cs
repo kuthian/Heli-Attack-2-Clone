@@ -13,7 +13,7 @@ public class ExplodeOnImpact : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Map"))
+        if (other.CompareTag("Pavement"))
         {
             ParticleManager.PlayExplodedHeliEffect(transform);
             CameraShaker.ShakeCamera(cameraShakeAmplitude, cameraShakeDurationSeconds);
