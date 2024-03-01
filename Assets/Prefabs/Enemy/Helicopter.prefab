@@ -189,6 +189,7 @@ MonoBehaviour:
   pfGunners:
   - {fileID: 1722967402138875517, guid: e3e30d1d75fefc8459843ae078668bcd, type: 3}
   - {fileID: 9122756200522902394, guid: 290cfd7662151684fb24ee6b4d4ea9aa, type: 3}
+  - {fileID: 6176562742147738259, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
   IdleOnly: 0
   LeaveForever: 0
   IsFlipped: 0
