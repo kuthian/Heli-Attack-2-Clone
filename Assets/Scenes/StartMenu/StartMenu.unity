@@ -894,12 +894,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84dd541565e872b4bb07d97746009324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subject: {fileID: 1098305775}
   useSmoothing: 1
   parallaxX: 1
   parallaxY: 0
   smoothing: 40
-  startPosition: {x: 0, y: 0}
 --- !u!212 &317917273
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1832,8 +1830,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: db968c5a76a834645b2e152407c8d747, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2177,8 +2175,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 6b3f1618654f7ff459f370edc943b1e7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4884,12 +4882,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84dd541565e872b4bb07d97746009324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subject: {fileID: 1098305775}
   useSmoothing: 1
   parallaxX: 1
   parallaxY: 0
   smoothing: 40
-  startPosition: {x: 0, y: 0}
 --- !u!212 &2070552313
 SpriteRenderer:
   m_ObjectHideFlags: 0

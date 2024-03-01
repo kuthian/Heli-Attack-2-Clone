@@ -1,11 +1,14 @@
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyController : MonoBehaviour
 {
     internal Rigidbody2D rb;
     private EnemyGunController gunController;
     private Transform player;
+
+    public GameObject[] pfGunners;
 
     public bool IdleOnly = false;
     public bool LeaveForever = false;
@@ -87,6 +90,8 @@ public class EnemyController : MonoBehaviour
 
     void Awake()
     {
+        GameObject.Instantiate(Utils.RandomInRange(pfGunners), transform.GetChild(0));
+
         state = State.WakingUp;
         nextStateTime = DateTime.Now;
         rb = GetComponent<Rigidbody2D>();

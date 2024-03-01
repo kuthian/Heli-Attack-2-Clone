@@ -71,6 +71,7 @@ public class EnemyManager : MonoBehaviour
     {
         GameObject obj = Instantiate(pfEnemy, p.position, Quaternion.identity, transform);
         obj.GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
+        //obj.GetComponent<EnemyController>().Init();
         obj.GetComponent<EnemyController>().IsFlipped = Utils.RandomBool();
         enemies.Insert(0, obj); // this keeps us from changing sorting order on remaining heli
 
@@ -81,7 +82,7 @@ public class EnemyManager : MonoBehaviour
             enemies[i].transform.position = new Vector3(enemies[i].transform.position.x, enemies[i].transform.position.y, i);
 
             // Hack to prevent gunners from being sorted over other helicopters
-            var gunner = enemies[i].transform.GetChild(0);
+            var gunner = enemies[i].transform.GetChild(0).GetChild(0);
             enemies[i].GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
             gunner.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
             gunner.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++; // the gun!
