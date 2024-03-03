@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2326844287670779888}
   - component: {fileID: 5203578525439397746}
   m_Layer: 0
-  m_Name: DestroyedGunner
+  m_Name: _DestroyedGunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

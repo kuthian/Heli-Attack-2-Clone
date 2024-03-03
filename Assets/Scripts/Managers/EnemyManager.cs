@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public bool EnemiesEnabled = true;
-    public GameObject pfEnemy;
+    public GameObject[] pfEnemies;
     public Transform[] enemySpawnPoints;
     public Transform healthCrateSpawnPoint;
     internal List<GameObject> enemies;
@@ -69,7 +69,7 @@ public class EnemyManager : MonoBehaviour
 
     private void CreateEnemy(Transform p)
     {
-        GameObject obj = Instantiate(pfEnemy, p.position, Quaternion.identity, transform);
+        GameObject obj = Instantiate(Utils.RandomInRange(pfEnemies), p.position, Quaternion.identity, transform);
         obj.GetComponent<Health>().OnHealthZero += HandleOnHealthZero;
         //obj.GetComponent<EnemyController>().Init();
         obj.GetComponent<EnemyController>().IsFlipped = Utils.RandomBool();

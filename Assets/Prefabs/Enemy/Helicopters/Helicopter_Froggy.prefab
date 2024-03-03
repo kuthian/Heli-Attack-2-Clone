@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4729465871060018334
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3758103889896229745}
+    m_Modifications:
+    - target: {fileID: 6176562742147738259, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_Name
+      value: FroggyGunner
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176562742147738260, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
+--- !u!1001 &7318117856913710726
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1786696879855725082, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_Name
+      value: Helicopter_Froggy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786696879855725083, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501264673782278908, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+      propertyPath: pfDestroyedGunner
+      value: 
+      objectReference: {fileID: 5460998614395825444, guid: e88b4d8da1b0afd4fae8d0fb4fe3c135, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+--- !u!4 &3758103889896229745 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5884052940524590583, guid: 61b8a2295b4b9b348a435613f42362b6, type: 3}
+  m_PrefabInstance: {fileID: 7318117856913710726}
+  m_PrefabAsset: {fileID: 0}

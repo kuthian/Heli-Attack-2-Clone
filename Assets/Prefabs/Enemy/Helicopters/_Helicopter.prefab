@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6501264673782278908}
   - component: {fileID: 8284893127219562504}
   m_Layer: 9
-  m_Name: Helicopter
+  m_Name: _Helicopter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
