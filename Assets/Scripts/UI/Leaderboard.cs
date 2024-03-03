@@ -22,7 +22,7 @@ public class Leaderboard : MonoBehaviour
             LeaderboardEntry entry = new LeaderboardEntry();
             entry.position = i;
             entry.name = "Player " + i.ToString();
-            entry.score = i * 10;
+            entry.score = 100 - i * 10;
             leaderboardEntries.Add(entry);
         }
 
@@ -38,7 +38,7 @@ public class Leaderboard : MonoBehaviour
             LeaderboardEntry entry = new LeaderboardEntry();
             entry.position = i;
             entry.name = "Gamer " + i.ToString();
-            entry.score = i * 11;
+            entry.score = (10 - i) * 11;
             leaderboardEntries.Add(entry);
         }
         leaderboardUI.SetLeaderboardEntries(leaderboardEntries);
