@@ -4,6 +4,8 @@ using TMPro;
 
 public class DeathScreen : MonoBehaviour
 {
+    public TextMeshProUGUI BannerText;
+
     public TextMeshProUGUI ScoreText;
 
     public TextMeshProUGUI TimePlayedText;

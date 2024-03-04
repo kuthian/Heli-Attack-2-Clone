@@ -116,6 +116,10 @@ public class EnemyManager : MonoBehaviour
         {
             StartCoroutine(CreateEnemyRandomWithDelay(2f));
         }
+        if (HUDManager.ScoreCount.Score % 5 == 0)
+        {
+            StartCoroutine(CreateEnemyRandomWithDelay(2f));
+        }
     }
 
     private static bool HasHealthZero(GameObject obj)

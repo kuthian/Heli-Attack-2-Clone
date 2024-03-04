@@ -67,12 +67,14 @@ public class GameManager : Singleton<GameManager>
 
     private void _GameOver()
     {
+        bool newHighscore = false;
         if (SteamCloud.isAccessible)
         {
             int previousHighScore = SteamCloud.GetHighScore();
             Debug.Log($"High Score: {previousHighScore}");
 
-            if (HUDManager.ScoreCount.Score > previousHighScore)
+            newHighscore = HUDManager.ScoreCount.Score > previousHighScore;
+            if (newHighscore)
             {
                 SteamCloud.SaveHighScore(HUDManager.ScoreCount.Score);
                 Debug.Log($"New High Score: {HUDManager.ScoreCount.Score}");
@@ -85,6 +87,10 @@ public class GameManager : Singleton<GameManager>
 
         deathScreen.Show();
 
+        if (newHighscore)
+        {
+            deathScreen.BannerText.text = "New High Score!";
+        }
         deathScreen.ScoreText.SetText(HUDManager.ScoreCount.Score.ToString());
         deathScreen.TimePlayedText.SetText(timePlayed.ToString("F0") + "s");
         deathScreen.AccuracyText.SetText(StatsManager.AccuracyPercentage().ToString("F2") + "%");
