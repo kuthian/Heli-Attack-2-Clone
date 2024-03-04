@@ -2932,6 +2932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9a1e46a18f07442b6a71bee81bf55e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BannerText: {fileID: 572992457}
   ScoreText: {fileID: 1755660448}
   TimePlayedText: {fileID: 1739733554}
   AccuracyText: {fileID: 1994554958}
