@@ -186,10 +186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406d85fb4701f4f43959fd0231e7c8e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfGunners:
-  - {fileID: 1722967402138875517, guid: e3e30d1d75fefc8459843ae078668bcd, type: 3}
-  - {fileID: 9122756200522902394, guid: 290cfd7662151684fb24ee6b4d4ea9aa, type: 3}
-  - {fileID: 6176562742147738259, guid: daf5d9eaa4180ca4db8269494f84f3c2, type: 3}
   IdleOnly: 0
   LeaveForever: 0
   IsFlipped: 0
@@ -253,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfDestroyedHelicopter: {fileID: 1328479410968822439, guid: c08f37f8f5129d0418319aff7143a71e, type: 3}
   pfDestroyedGunner: {fileID: 8951443885998499864, guid: b4184f840eb43a04a903de192cf8ef6e, type: 3}
-  crateDropRate: 0.2
+  crateDropRate: 0.4
 --- !u!114 &8284893127219562504
 MonoBehaviour:
   m_ObjectHideFlags: 0
