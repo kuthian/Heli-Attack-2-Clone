@@ -1388,6 +1388,7 @@ GameObject:
   - component: {fileID: 548621792}
   - component: {fileID: 548621791}
   - component: {fileID: 548621793}
+  - component: {fileID: 548621794}
   m_Layer: 5
   m_Name: LeaderboardPanel
   m_TagString: Untagged
@@ -1470,6 +1471,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: {fileID: 1550444613}
   leaderboardUI: {fileID: 825260899}
+--- !u!114 &548621794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548621789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcd9cffb5e133848b873936fe38a38e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionCall:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 548621789}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  anyKeyAction: {fileID: 7672792323856849462, guid: 1143c2dbf61b21d4989f48771295d2fb, type: 3}
 --- !u!1 &562249063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4066,7 +4095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4105,8 +4134,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   functionCall:
     m_PersistentCalls:
-      m_Calls: []
-  anyKeyAction: {fileID: 0}
+      m_Calls:
+      - m_Target: {fileID: 1221408420}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  anyKeyAction: {fileID: 7672792323856849462, guid: 1143c2dbf61b21d4989f48771295d2fb, type: 3}
 --- !u!1 &1396988059
 GameObject:
   m_ObjectHideFlags: 0
@@ -4222,6 +4263,34 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8749168234173202962, guid: d89b3f22048359045afcef1f1d419b57, type: 3}
   m_PrefabInstance: {fileID: 2141195993}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1427985231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427985224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcd9cffb5e133848b873936fe38a38e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  functionCall:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1427985224}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  anyKeyAction: {fileID: 7672792323856849462, guid: 1143c2dbf61b21d4989f48771295d2fb, type: 3}
 --- !u!114 &1452313460 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1520425614489372142, guid: 5856db3f56b57e641b04b8653b4ecaba, type: 3}
@@ -5063,8 +5132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49b97e9be493aa42a59175fe3901ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutCanvas: {fileID: 362702854}
-  launchArcadeModeTimeline: {fileID: 0}
 --- !u!114 &2107552330
 MonoBehaviour:
   m_ObjectHideFlags: 0
