@@ -27,4 +27,9 @@ public class UISoundsProxy : MonoBehaviour
         UISounds.ButtonBackwardsTone();
     }
 
+    public static void LeaderboardArrows()
+    {
+        UISounds.LeaderboardArrows();
+    }
+
 }

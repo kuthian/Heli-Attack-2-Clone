@@ -19,6 +19,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2234905433	ww_uzi_bullet_hit			\Gunfire\Uzi\ww_uzi_bullet_hit	
 	2359679562	ui_mouse_click			\UI\ui_mouse_click	
 	2496926511	ww_rifle_shot			\Gunfire\ww_rifle_shot	
+	2711224656	ui_arrows			\UI\ui_arrows	
 	2745238759	ww_destroyed_heli_start			\Enemies\Helicopter\ww_destroyed_heli_start	
 	2811027312	Streetlight_buzz			\Environment\Streetlight_buzz	
 	3198183028	ww_destroyed_heli_end			\Enemies\Helicopter\ww_destroyed_heli_end	
@@ -68,6 +69,7 @@ Effect plug-ins	ID	Name	Type				Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	12940122	shotgun_load_shell_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\shotgun_load_shell_02_10C4C929.wem		\Actor-Mixer Hierarchy\Guns Reloads\Shotgun\Shotgun Shell\shotgun_load_shell_02		52372
+	41316874	Leaderboard_arrow_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\Leaderboard_arrow_01_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Leaderboard Arrows\Leaderboard_arrow_01		26204
 	43387985	Streetlight_buzz_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\Streetlight_buzz_02_10C4C929.wem		\Actor-Mixer Hierarchy\Environment\Light Flicker\Streetlight_buzz_02		35188
 	102136994	Helicopter Locomotion	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\heli_locomotion_loop_D79FB2B7.wem		\Actor-Mixer Hierarchy\Enemies\Helicopter Locomotion		19264
 	157323760	missile_cruise_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\missile_cruise_01_D79FB2B7.wem		\Actor-Mixer Hierarchy\Guns\Bazooka\Bazooka Cruise\missile_cruise_01		19264
@@ -80,6 +82,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	324383162	player_jump_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\player_jump_01_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Jump\player_jump_01		24680
 	333889851	uzi_impact_lay02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\uzi_impact_lay02_4A8CA7F7.wem		\Actor-Mixer Hierarchy\Guns\Uzi\Bullet Impacts\Uzi Hit High\uzi_impact_lay02		11780
 	361248435	Pickup_Crate 1	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\Pickup_Crate 1_7317FDD0.wem		\Actor-Mixer Hierarchy\Crates\Crate Pickup\Pickup_Crate 1		64328
+	449964487	Leaderboard_arrow_02	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\Leaderboard_arrow_02_10C4C929.wem		\Actor-Mixer Hierarchy\UI\Leaderboard Arrows\Leaderboard_arrow_02		33296
 	472976467	Streetlight_buzz_03	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\Streetlight_buzz_03_10C4C929.wem		\Actor-Mixer Hierarchy\Environment\Light Flicker\Streetlight_buzz_03		35824
 	477091832	grassFS_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\grassFS_01_10C4C929.wem		\Actor-Mixer Hierarchy\Player\Footsteps\grassFS_01		24680
 	514478316	missile_impact_01	C:\Users\benju\Documents\GitHub\Heli-Attack-2-Clone\WwiseProject\.cache\Windows\SFX\missile_impact_01_75503585.wem		\Actor-Mixer Hierarchy\Guns\Bazooka\Bazooka Impact\missile_impact_01		472464

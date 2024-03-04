@@ -64,3 +64,7 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: fdc9379fb84a3214b890637e0eaa30b5, type: 2}
+  wwLeaderboardArrows:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0a06675a952bd40418d95097502bf390, type: 2}

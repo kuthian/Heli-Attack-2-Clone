@@ -58,6 +58,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ui_arrows" ID="{78255FAE-F951-4636-82F4-E8CCAE3C7861}">
+					<ChildrenList>
+						<Action Name="" ID="{AFCF704E-90B6-4CC2-A7CD-1303CC03918F}" ShortID="385019214">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Leaderboard Arrows" ID="{79FB89CC-F2FA-4E08-8775-E8255471B6E7}" WorkUnitID="{5931C114-23F5-4F67-8A45-482B2A976016}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

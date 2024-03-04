@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID BULLETHITMAP = 1505803786U;
         static const AkUniqueID STREETLIGHT_BUZZ = 2811027312U;
+        static const AkUniqueID UI_ARROWS = 2711224656U;
         static const AkUniqueID UI_BACKWARDS_TONE = 894451243U;
         static const AkUniqueID UI_FORWARD_TONE = 32695948U;
         static const AkUniqueID UI_GAME_START = 374915857U;

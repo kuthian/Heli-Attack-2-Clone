@@ -17,6 +17,9 @@ public class UISounds : MonoBehaviour
     [SerializeField]
     private AK.Wwise.Event wwButtonBackwardsTone;
 
+    [SerializeField]
+    private AK.Wwise.Event wwLeaderboardArrows;
+
     private static UISounds _i;
 
 
@@ -67,5 +70,10 @@ public class UISounds : MonoBehaviour
     public static void ButtonBackwardsTone()
     {
         i.wwButtonBackwardsTone.Post(i.gameObject);
+    }
+
+    public static void LeaderboardArrows()
+    {
+        i.wwLeaderboardArrows.Post(i.gameObject);
     }
 }

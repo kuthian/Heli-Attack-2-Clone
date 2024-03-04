@@ -24,7 +24,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3388741417">
+		<SoundBank Id="1355168291" Language="SFX" Hash="418107441">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -32,13 +32,14 @@
 				<AuxBus Id="1211327461" Name="Outdoor_Verb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Outdoor_Verb"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="1519388772">
+		<SoundBank Id="2228651116" Language="SFX" Hash="2957295307">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Soundbank</ObjectPath>
 			<ShortName>Main_Soundbank</ShortName>
 			<Path>Main_Soundbank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1505803786" Name="BulletHitMap" ObjectPath="\Events\Gunfire\Projectile\BulletHitMap" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.122702" DurationMax="0.133962"/>
 				<Event Id="2811027312" Name="Streetlight_buzz" ObjectPath="\Events\Environment\Streetlight_buzz" MaxAttenuation="100." DurationType="OneShot" DurationMin="0.180315" DurationMax="0.188959"/>
+				<Event Id="2711224656" Name="ui_arrows" ObjectPath="\Events\UI\ui_arrows" DurationType="OneShot" DurationMin="0.121152" DurationMax="0.18615"/>
 				<Event Id="894451243" Name="ui_backwards_tone" ObjectPath="\Events\UI\ui_backwards_tone" DurationType="OneShot" DurationMin="0.75" DurationMax="0.75"/>
 				<Event Id="32695948" Name="ui_forward_tone" ObjectPath="\Events\UI\ui_forward_tone" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125"/>
 				<Event Id="374915857" Name="ui_game_start" ObjectPath="\Events\UI\ui_game_start" DurationType="OneShot" DurationMin="4.5" DurationMax="4.5"/>
@@ -81,6 +82,10 @@
 				<File Id="12940122" Language="SFX">
 					<ShortName>shotgun_load_shell_02.wav</ShortName>
 					<Path>SFX\shotgun_load_shell_02_10C4C929.wem</Path>
+				</File>
+				<File Id="41316874" Language="SFX">
+					<ShortName>Leaderboard_arrow_01.wav</ShortName>
+					<Path>SFX\Leaderboard_arrow_01_10C4C929.wem</Path>
 				</File>
 				<File Id="43387985" Language="SFX">
 					<ShortName>Streetlight_buzz_02.wav</ShortName>
@@ -131,6 +136,10 @@
 				<File Id="361248435" Language="SFX">
 					<ShortName>Pickup_Crate 1.wav</ShortName>
 					<Path>SFX\Pickup_Crate 1_7317FDD0.wem</Path>
+				</File>
+				<File Id="449964487" Language="SFX">
+					<ShortName>Leaderboard_arrow_02.wav</ShortName>
+					<Path>SFX\Leaderboard_arrow_02_10C4C929.wem</Path>
 				</File>
 				<File Id="472976467" Language="SFX">
 					<ShortName>Streetlight_buzz_03.wav</ShortName>

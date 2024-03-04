@@ -16,10 +16,6 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{1943A941-CC44-4470-82BD-137FCA6846F0}" ShortID="1013469359">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="1"/>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Master Music Container" ID="{F5CB3645-D8F6-4CAA-AB59-27EC685D4C08}" WorkUnitID="{48089242-6501-413A-9C66-44DDDA85A9AD}"/>

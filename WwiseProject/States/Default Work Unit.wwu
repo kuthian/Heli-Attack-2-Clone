@@ -4,6 +4,9 @@
 		<WorkUnit Name="Default Work Unit" ID="{66B98053-CA8A-4449-8E12-61A43AD9CD54}" PersistMode="Standalone">
 			<ChildrenList>
 				<StateGroup Name="gameplay_state" ID="{E5A62C64-624B-4A96-9A89-81842F483229}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.3"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{693A9CBB-4702-4795-A426-08D6AF509BEC}"/>
 						<State Name="gameplay" ID="{C7F130B8-8795-4C12-88AB-A52121DFFBCA}"/>
@@ -12,6 +15,14 @@
 						<State Name="game_over" ID="{73C0ECBB-CC18-4E53-8CC3-ED0C86C04847}"/>
 						<State Name="Intro" ID="{4B4E2A62-B328-4EED-AF6C-DCD29CEDB887}"/>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="game_over" ID="{73C0ECBB-CC18-4E53-8CC3-ED0C86C04847}"/>
+							<EndState Name="main_menu" ID="{F368E153-8A72-4AB8-8297-EFB65C9BA832}"/>
+							<Time>0</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
