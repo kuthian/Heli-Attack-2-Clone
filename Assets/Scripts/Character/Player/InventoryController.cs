@@ -46,7 +46,7 @@ public class InventoryController : MonoBehaviour
         var activeWeapon = transform.GetChild(index).gameObject;
         if (activeWeapon.GetComponent<Ammo>().Empty())
         {
-            SelectNextWeapon();
+            SelectDefaultWeapon();
             Destroy(activeWeapon);
         }
     }
@@ -64,6 +64,11 @@ public class InventoryController : MonoBehaviour
         HUDManager.Inventory.SetActiveWeapon(weapon.GetComponent<__GunController>().InventorySprite);
         HUDManager.Inventory.SetAmmoCount(weapon.GetComponent<Ammo>().Count);
         weapon.GetComponent<Ammo>().OnAmmoChanged += HUDManager.Inventory.SetAmmoCount;
+    }
+
+    private void SelectDefaultWeapon()
+    {
+        SelectWeapon(transform.GetChild(0).gameObject);
     }
 
     private void SelectNextWeapon()
