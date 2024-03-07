@@ -384,7 +384,7 @@ MonoBehaviour:
   _projectile:
     prefab: {fileID: 8130383542522873335, guid: 57f549212852abd4d9be4f7c8f877d81, type: 3}
     damage: 5
-    speed: 3.5
+    speed: 5
     maxLifetime: 10
   _ammoPerShot: 1
   _cooldownTime: 0.2
