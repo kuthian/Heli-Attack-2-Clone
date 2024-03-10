@@ -14,11 +14,13 @@ public class EnemyLifecycle : MonoBehaviour
 
     internal Rigidbody2D rb;
     internal SpriteRenderer spriteRenderer;
+    internal EnemyHealthBar healthBar;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        healthBar = GetComponent<EnemyHealthBar>();
     }
 
     private void OnEnable()
@@ -69,6 +71,7 @@ public class EnemyLifecycle : MonoBehaviour
 
     private void HandleOnHealthChanged(int health)
     {
+        healthBar.SetPercentFill(health);
         StartCoroutine(FlashWhite());
     }
 
