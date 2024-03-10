@@ -82,10 +82,18 @@ public class EnemyManager : MonoBehaviour
             enemies[i].transform.position = new Vector3(enemies[i].transform.position.x, enemies[i].transform.position.y, i);
 
             // Hack to prevent gunners from being sorted over other helicopters
-            var gunner = enemies[i].transform.GetChild(0).GetChild(0);
             enemies[i].GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
+            var gunner = enemies[i].transform.GetChild(0).GetChild(0);
             gunner.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
-            gunner.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++; // the gun!
+
+            var gun = gunner.GetChild(0);
+            gun.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder++;
+
+            var healthBarOutline = enemies[i].transform.GetChild(1).GetChild(0);
+            healthBarOutline.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
+
+            var healthBarFill = enemies[i].transform.GetChild(1).GetChild(1).GetChild(0);
+            healthBarFill.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
             sortingOrder++; // trust me we need this
 
             // Enemy x tracking is out of phase so that they don't perform the exact same tracking behaviour
