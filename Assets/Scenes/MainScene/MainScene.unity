@@ -2858,7 +2858,7 @@ SpriteRenderer:
   m_SortingLayerID: 1909111527
   m_SortingLayer: 5
   m_SortingOrder: 3
-  m_Sprite: {fileID: -575831761, guid: 6e5730b2ae2c51f4fa5412c79f0d72a4, type: 3}
+  m_Sprite: {fileID: 1828680569, guid: f0e5df86553439348bd3afa3e825916a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2964,7 +2964,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.027863503, y: 0.53418475}
+  m_Offset: {x: 0, y: 0.35}
   serializedVersion: 2
   m_Radius: 0.22330469
 --- !u!70 &633470006
@@ -2980,8 +2980,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05966103, y: -0.097911656}
-  m_Size: {x: 0.6078131, y: 0.80836856}
+  m_Offset: {x: -0.06, y: -0.15}
+  m_Size: {x: 0.43, y: 0.69}
   m_Direction: 0
 --- !u!114 &633470007
 MonoBehaviour:
@@ -2997,7 +2997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 100
   <CurrentHealth>k__BackingField: 0
-  <Invincible>k__BackingField: 0
+  <Invincible>k__BackingField: 1
 --- !u!114 &633470008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9178,6 +9178,10 @@ PrefabInstance:
     - target: {fileID: 6148923621895001315, guid: bbfa8272c1a99ae4f9c190ed24f507a9, type: 3}
       propertyPath: m_Name
       value: Rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148923621895001315, guid: bbfa8272c1a99ae4f9c190ed24f507a9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbfa8272c1a99ae4f9c190ed24f507a9, type: 3}
