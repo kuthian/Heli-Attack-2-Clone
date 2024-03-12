@@ -14,6 +14,7 @@ public class BlockInputUntilGrounded : MonoBehaviour
     void Start()
     {
         gun.ShootingDisabled = true;
+        gun.gameObject.SetActive(false);
         player.BlockInput();
     }
 
@@ -22,6 +23,7 @@ public class BlockInputUntilGrounded : MonoBehaviour
         if (player.Grounded)
         {
             player.EnableInput();
+            gun.gameObject.SetActive(true);
             gun.ShootingDisabled = false;
             enabled = false;
         }
