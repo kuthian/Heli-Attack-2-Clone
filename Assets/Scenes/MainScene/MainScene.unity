@@ -6461,6 +6461,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1619393687463090759, guid: 34f2211a8d36c594ea7008705a714527, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1619393687463090759, guid: 34f2211a8d36c594ea7008705a714527, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1619393687463090759, guid: 34f2211a8d36c594ea7008705a714527, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1619393688151458349, guid: 34f2211a8d36c594ea7008705a714527, type: 3}
       propertyPath: m_LocalPosition.z
       value: 28.13
@@ -6496,7 +6508,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2719459864202665437, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
       propertyPath: m_Name
-      value: Background_Streetlight (2)
+      value: Streetlight_3
       objectReference: {fileID: 0}
     - target: {fileID: 5774147722123734301, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
       propertyPath: m_RootOrder
@@ -6541,6 +6553,18 @@ PrefabInstance:
     - target: {fileID: 5774147722123734301, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192184079079755053, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
+      propertyPath: m_Color.b
+      value: 0.910365
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192184079079755053, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
+      propertyPath: m_Color.g
+      value: 0.910365
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192184079079755053, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9150943
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
@@ -8247,7 +8271,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1681634203
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e1f6c4aa136b39d4aabc092d80b4bc9c, type: 3}
   m_Color: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 0.6}
   m_FlipX: 0
@@ -9035,7 +9059,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2719459864202665437, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
       propertyPath: m_Name
-      value: Background_Streetlight (1)
+      value: Streetlight_2
       objectReference: {fileID: 0}
     - target: {fileID: 5774147722123734301, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
       propertyPath: m_RootOrder
@@ -9080,6 +9104,18 @@ PrefabInstance:
     - target: {fileID: 5774147722123734301, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192184079079755053, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
+      propertyPath: m_Color.b
+      value: 0.910365
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192184079079755053, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
+      propertyPath: m_Color.g
+      value: 0.910365
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192184079079755053, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9150943
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
@@ -9413,7 +9449,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2719459864202665437, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
       propertyPath: m_Name
-      value: Background_Streetlight
+      value: Streetlight_1
       objectReference: {fileID: 0}
     - target: {fileID: 5774147722123734301, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
       propertyPath: m_RootOrder
@@ -9458,6 +9494,18 @@ PrefabInstance:
     - target: {fileID: 5774147722123734301, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192184079079755053, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
+      propertyPath: m_Color.b
+      value: 0.910365
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192184079079755053, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
+      propertyPath: m_Color.g
+      value: 0.910365
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192184079079755053, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9150943
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc78da1ddb211b46bc784ad6ce90d55, type: 3}
