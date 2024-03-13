@@ -99,11 +99,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3042042246017636319, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: _startingAmmo
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.847
+      value: 0.802
       objectReference: {fileID: 0}
     - target: {fileID: 795742884866758721, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -167,11 +167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 795742884974927932, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_Size.x
-      value: 0.48
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 795742884974927932, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_Size.y
-      value: 0.32
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 795742884974927932, guid: f7256efd5ab44584da0e4e2aa1f8af0f, type: 3}
       propertyPath: m_Sprite
@@ -272,7 +272,7 @@ MonoBehaviour:
     damage: 10
     speed: 3
     maxLifetime: 10
-  _ammoPerShot: 5
+  _ammoPerShot: 7
   _cooldownTime: 2.5
   muzzleFire: {fileID: 7107076186909483038}
   pStepScalar: 0.1
