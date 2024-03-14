@@ -6,6 +6,7 @@ public class InventoryController : MonoBehaviour
     public InputAction nextWeapon;
     public InputAction previousWeapon;
     public InputAction scrollAction;
+    public Transform weapons;
 
     private static int NoWeaponSelected = -99;
 
@@ -13,7 +14,7 @@ public class InventoryController : MonoBehaviour
     {
         // Check if weapon already exists.
         // If it does, increase its ammo count
-        foreach (Transform child in transform)
+        foreach (Transform child in weapons)
         {
             if (child.gameObject.name == string.Format("{0}(Clone)", weapon.name))
             {
@@ -24,8 +25,8 @@ public class InventoryController : MonoBehaviour
         }
 
         // Weapon doesn't already exist, add it
-        bool firstWeapon = transform.childCount == 0;
-        GameObject obj = Instantiate(weapon, transform) as GameObject;
+        bool firstWeapon = weapons.childCount == 0;
+        GameObject obj = Instantiate(weapon, weapons) as GameObject;
         obj.SetActive(firstWeapon);
     }
 
@@ -43,7 +44,7 @@ public class InventoryController : MonoBehaviour
     {
         int index = SelectedWeaponIndex();
         if (NoWeaponSelected == index) return;
-        var activeWeapon = transform.GetChild(index).gameObject;
+        var activeWeapon = weapons.GetChild(index).gameObject;
         if (activeWeapon.GetComponent<Ammo>().Empty())
         {
             SelectDefaultWeapon();
@@ -56,7 +57,7 @@ public class InventoryController : MonoBehaviour
         int index = SelectedWeaponIndex();
         if (NoWeaponSelected != index)
         {
-            var active_weapon = transform.GetChild(index).gameObject;
+            var active_weapon = weapons.GetChild(index).gameObject;
             active_weapon.SetActive(false);
             active_weapon.GetComponent<Ammo>().OnAmmoChanged -= HUDManager.Inventory.SetAmmoCount;
         }
@@ -68,42 +69,42 @@ public class InventoryController : MonoBehaviour
 
     private void SelectDefaultWeapon()
     {
-        SelectWeapon(transform.GetChild(0).gameObject);
+        SelectWeapon(weapons.GetChild(0).gameObject);
     }
 
     private void SelectNextWeapon()
     {
-        if (transform.childCount > 1)
+        if (weapons.gameObject.activeSelf && weapons.childCount > 1)
         {
             int index = SelectedWeaponIndex();
-            if (index + 1 == transform.childCount)
+            if (index + 1 == weapons.childCount)
             {
                 // Last weapon, loop back to start of inventory
-                SelectWeapon(transform.GetChild(0).gameObject);
+                SelectWeapon(weapons.GetChild(0).gameObject);
             }
             else
             {
                 // Move forward in inventory
-                SelectWeapon(transform.GetChild(index + 1).gameObject);
+                SelectWeapon(weapons.GetChild(index + 1).gameObject);
             }
         }
     }
 
     private void SelectPreviousWeapon()
     {
-        if (transform.childCount > 1)
+        if (weapons.gameObject.activeSelf && weapons.childCount > 1)
         {
             int index = SelectedWeaponIndex();
-            transform.GetChild(index).gameObject.SetActive(false);
+            weapons.GetChild(index).gameObject.SetActive(false);
             if (index == 0)
             {
                 // First weapon, loop back to end of inventory
-                SelectWeapon(transform.GetChild(transform.childCount - 1).gameObject);
+                SelectWeapon(weapons.GetChild(weapons.childCount - 1).gameObject);
             }
             else
             {
                 // Move backwards in inventory
-                SelectWeapon(transform.GetChild(index - 1).gameObject);
+                SelectWeapon(weapons.GetChild(index - 1).gameObject);
             }
         }
 
@@ -112,7 +113,7 @@ public class InventoryController : MonoBehaviour
     private int SelectedWeaponIndex()
     {
         int index = NoWeaponSelected;
-        foreach (Transform child in transform)
+        foreach (Transform child in weapons)
         {
             if (child.gameObject.activeSelf)
             {
