@@ -10586,9 +10586,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.277
       objectReference: {fileID: 0}
+    - target: {fileID: 4368073235017779251, guid: fd7032fea1b4fe946bbc253ac340c75c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4368073235017779253, guid: fd7032fea1b4fe946bbc253ac340c75c, type: 3}
       propertyPath: m_Intensity
-      value: 1.18
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4368073235017779253, guid: fd7032fea1b4fe946bbc253ac340c75c, type: 3}
       propertyPath: m_FalloffIntensity
