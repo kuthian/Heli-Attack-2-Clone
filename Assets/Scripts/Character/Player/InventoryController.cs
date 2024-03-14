@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +8,7 @@ public class InventoryController : MonoBehaviour
     public InputAction previousWeapon;
     public InputAction scrollAction;
     public Transform weapons;
+    private bool disableCycling = false;
 
     private static int NoWeaponSelected = -99;
 
@@ -32,7 +34,20 @@ public class InventoryController : MonoBehaviour
 
     public void HideWeapon()
     {
-        gameObject.SetActive(false);
+        int index = SelectedWeaponIndex();
+        if (NoWeaponSelected == index) return;
+        var activeWeapon = weapons.GetChild(index).gameObject;
+        activeWeapon.GetComponent<__GunController>().Hide();
+        disableCycling = true;
+    }
+
+    public void ShowWeapon()
+    {
+        int index = SelectedWeaponIndex();
+        if (NoWeaponSelected == index) return;
+        var activeWeapon = weapons.GetChild(index).gameObject;
+        activeWeapon.GetComponent<__GunController>().Show();
+        disableCycling = false;
     }
 
     private void Update()
@@ -74,7 +89,7 @@ public class InventoryController : MonoBehaviour
 
     private void SelectNextWeapon()
     {
-        if (weapons.gameObject.activeSelf && weapons.childCount > 1)
+        if (!disableCycling && weapons.gameObject.activeSelf && weapons.childCount > 1)
         {
             int index = SelectedWeaponIndex();
             if (index + 1 == weapons.childCount)
@@ -92,7 +107,7 @@ public class InventoryController : MonoBehaviour
 
     private void SelectPreviousWeapon()
     {
-        if (weapons.gameObject.activeSelf && weapons.childCount > 1)
+        if (!disableCycling && weapons.gameObject.activeSelf && weapons.childCount > 1)
         {
             int index = SelectedWeaponIndex();
             weapons.GetChild(index).gameObject.SetActive(false);

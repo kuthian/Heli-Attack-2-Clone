@@ -12,12 +12,14 @@ public class __GunController : MonoBehaviour
     [field: SerializeField]
     public Sprite InventorySprite { get; set; }
 
+    [field: SerializeField]
     public bool ShootingDisabled { get; set; } = false;
 
     public InputAction shootAction;
 
     internal protected Ammo ammo;
     internal protected Animator animator;
+    internal protected SpriteRenderer spriteRenderer;
 
     [Serializable]
     public struct projectile
@@ -42,9 +44,22 @@ public class __GunController : MonoBehaviour
     virtual protected void OnShootEnd() { }
     virtual protected void OnAmmoEmpty() { }
 
+    public void Hide()
+    {
+        spriteRenderer.color = Color.clear;
+        ShootingDisabled = true;
+    }
+
+    public void Show()
+    {
+        spriteRenderer.color = Color.white;
+        ShootingDisabled = false;
+    }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         firePointTransform = transform.Find("FirePoint");
         ammo = GetComponent<Ammo>();
     }
@@ -65,7 +80,6 @@ public class __GunController : MonoBehaviour
         shootAction.performed -= ShootStart;
         shootAction.canceled -= ShootEnd;
         shootAction.Disable();
-        shoot = false;
         OnShootEnd();
     }
 
@@ -115,15 +129,17 @@ public class __GunController : MonoBehaviour
                 timeRemaining = 0;
             }
             HUDManager.ReloadBar.SetTimeRemaining(timeRemaining);
+            return; // return early to let animators handle the OnCooldown false state
         }
 
-        if (!onCooldown && shoot && !ammo.Empty())
+        if (!ShootingDisabled && !onCooldown && shoot && !ammo.Empty())
         {
             Shoot();
 
             cooldownOffTime = DateTime.Now.AddSeconds(_cooldownTime);
             onCooldown = true;
             AnimatorSetBool("OnCooldown", true);
+            AnimatorSetTrigger("Reload");
 
             ammo.Remove(_ammoPerShot);
             if (ammo.Empty())
@@ -138,6 +154,13 @@ public class __GunController : MonoBehaviour
         if (animator.runtimeAnimatorController)
         {
             animator.SetBool(name, value);
+        }
+    }
+    private void AnimatorSetTrigger(string name)
+    {
+        if (animator.runtimeAnimatorController)
+        {
+            animator.SetTrigger(name);
         }
     }
 

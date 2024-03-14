@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
+    public InventoryController inventory;
+
     public float InputX { get; private set; } = 0.0f;
     public bool Crouched { get; private set; } = false;
     public bool Grounded { get; private set; } = false;
@@ -244,6 +246,16 @@ public class PlayerController : MonoBehaviour
     public void Heal(int var)
     {
         ParticleManager.PlayHealedPlayerEffect(transform);
+    }
+
+    public void ShowWeapon()
+    {
+        inventory.ShowWeapon();
+    }
+
+    public void HideWeapon()
+    {
+        inventory.HideWeapon();
     }
 
 }
