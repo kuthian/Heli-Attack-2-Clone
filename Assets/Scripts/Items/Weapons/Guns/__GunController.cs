@@ -48,12 +48,14 @@ public class __GunController : MonoBehaviour
     {
         spriteRenderer.color = Color.clear;
         ShootingDisabled = true;
+        if (shoot) OnShootEnd();
     }
 
     public void Show()
     {
         spriteRenderer.color = Color.white;
         ShootingDisabled = false;
+        if (shoot) OnShootStart();
     }
 
     private void Awake()
