@@ -1229,7 +1229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4368073235017779253, guid: fd7032fea1b4fe946bbc253ac340c75c, type: 3}
       propertyPath: m_FalloffIntensity
-      value: 1
+      value: 0.621
       objectReference: {fileID: 0}
     - target: {fileID: 4368073235017779253, guid: fd7032fea1b4fe946bbc253ac340c75c, type: 3}
       propertyPath: m_OverlapOperation
@@ -1237,19 +1237,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4368073235017779253, guid: fd7032fea1b4fe946bbc253ac340c75c, type: 3}
       propertyPath: m_PointLightInnerAngle
-      value: 109.06623
+      value: 103.60151
       objectReference: {fileID: 0}
     - target: {fileID: 4368073235017779253, guid: fd7032fea1b4fe946bbc253ac340c75c, type: 3}
       propertyPath: m_PointLightOuterAngle
-      value: 145.4977
+      value: 156.42714
       objectReference: {fileID: 0}
     - target: {fileID: 4368073235017779253, guid: fd7032fea1b4fe946bbc253ac340c75c, type: 3}
       propertyPath: m_PointLightInnerRadius
-      value: 3.21
+      value: 3.34
       objectReference: {fileID: 0}
     - target: {fileID: 4368073235017779253, guid: fd7032fea1b4fe946bbc253ac340c75c, type: 3}
       propertyPath: m_PointLightOuterRadius
-      value: 4.68
+      value: 4.17
       objectReference: {fileID: 0}
     - target: {fileID: 4368073235017779253, guid: fd7032fea1b4fe946bbc253ac340c75c, type: 3}
       propertyPath: m_ShadowIntensityEnabled
