@@ -69,6 +69,7 @@ public class __GunController : MonoBehaviour
         shootAction.performed += ShootStart;
         shootAction.canceled += ShootEnd;
         shootAction.Enable();
+        shoot = false;
 
         HUDManager.ReloadBar.SetCooldownTime(_cooldownTime);
         HUDManager.ReloadBar.SetTimeRemaining(0);
