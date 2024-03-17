@@ -169,8 +169,8 @@ public class __GunController : MonoBehaviour
 
     private void ShootStart(InputAction.CallbackContext context)
     {
-        shoot = !ShootingDisabled;
-        if (shoot) OnShootStart();
+        shoot = true;
+        if (shoot && !ShootingDisabled) OnShootStart();
     }
 
     private void ShootEnd(InputAction.CallbackContext context)
