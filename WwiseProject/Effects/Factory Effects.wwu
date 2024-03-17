@@ -1375,7 +1375,7 @@
 								</Effect>
 								<Effect Name="Church_Small_Wood" ID="{940CCB47-F031-4C6A-B0E6-726CAC418C02}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
-										<Property Name="DecayTime" Type="Real32" Value="0.4"/>
+										<Property Name="DecayTime" Type="Real32" Value="0.5"/>
 										<Property Name="Density" Type="Real32" Value="65"/>
 										<Property Name="ERLevel" Type="Real32" Value="-31"/>
 										<Property Name="ERPattern" Type="int32" Value="11"/>
@@ -1385,12 +1385,12 @@
 										<Property Name="Filter2InsertPos" Type="int32" Value="0"/>
 										<Property Name="Filter3Freq" Type="Real32" Value="11000"/>
 										<Property Name="Filter3Gain" Type="Real32" Value="-7"/>
-										<Property Name="HFDamping" Type="Real32" Value="0.5"/>
+										<Property Name="HFDamping" Type="Real32" Value="0.8"/>
 										<Property Name="PreDelay" Type="Real32" Value="200"/>
 										<Property Name="Quality" Type="int32" Value="12"/>
 										<Property Name="ReverbLevel" Type="Real32" Value="-31"/>
 										<Property Name="RoomShape" Type="Real32" Value="6"/>
-										<Property Name="RoomSize" Type="Real32" Value="94"/>
+										<Property Name="RoomSize" Type="Real32" Value="85"/>
 									</PropertyList>
 								</Effect>
 							</ChildrenList>

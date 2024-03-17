@@ -6,6 +6,7 @@
 				<Sound Name="Helicopter Locomotion" ID="{A4215975-8B7C-4BE2-AB6C-69135C52B135}" ShortID="6575074">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="IsStreamingEnabled" Type="bool">
 							<ValueList>
@@ -20,6 +21,16 @@
 						<Property Name="Lowpass" Type="int16">
 							<ValueList>
 								<Value>44</Value>
+							</ValueList>
+						</Property>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
