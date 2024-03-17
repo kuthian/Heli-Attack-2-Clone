@@ -22,8 +22,8 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	1211327461	Outdoor_Verb			\Default Work Unit\Master Audio Bus\Outdoor_Verb	
 
 Effect plug-ins	ID	Name	Type				Notes
-	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	82869615	Wwise Meter (Custom)	Wwise Meter			
+	484890516	Church_Small_Wood	Wwise RoomVerb			
 	661782316	Wwise Gain (Custom)	Wwise Gain			
 
 Audio Devices	ID	Name	Type				Notes

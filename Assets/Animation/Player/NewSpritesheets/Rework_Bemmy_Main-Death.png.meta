@@ -316,6 +316,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Rework_Bemmy_Main-Death_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738cdb963f6cb1f44a358665b59f9f73
+      internalID: -481890153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -327,6 +348,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Rework_Bemmy_Main-Death_9: -481890153
       Rework_Bemmy_Main-Death_8: -411343669
       Rework_Bemmy_Main-Death_5: -722365607
       Rework_Bemmy_Main-Death_0: 65086011
