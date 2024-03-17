@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class EnemyManager : MonoBehaviour
     public GameObject[] pfEnemies;
     public Transform[] enemySpawnPoints;
     public Transform healthCrateSpawnPoint;
+    public int[] increaseDifficultyAtScoreCount;
     internal List<GameObject> enemies;
 
     void Awake()
@@ -120,11 +122,7 @@ public class EnemyManager : MonoBehaviour
         }
 
         // Increase the difficulty when
-        if (HUDManager.ScoreCount.Score == 1)
-        {
-            StartCoroutine(CreateEnemyRandomWithDelay(2f));
-        }
-        if (HUDManager.ScoreCount.Score % 5 == 0)
+        if (Array.Exists(increaseDifficultyAtScoreCount, element => element == HUDManager.ScoreCount.Score))
         {
             StartCoroutine(CreateEnemyRandomWithDelay(2f));
         }
