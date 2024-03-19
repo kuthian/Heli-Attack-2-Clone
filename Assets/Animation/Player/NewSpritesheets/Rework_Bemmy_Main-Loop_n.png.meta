@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f0e5df86553439348bd3afa3e825916a
+guid: 88ad38bb9868ed94bbc8fe9a16537a65
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Loop_0
+      name: Rework_Bemmy_Main-Loop_n_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db657e6d822cfc94cba848c84bdba82e
-      internalID: 1828680569
+      spriteID: 33d4c2489e37a334dbd9f85a40f50653
+      internalID: -1422372581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Loop_1
+      name: Rework_Bemmy_Main-Loop_n_1
       rect:
         serializedVersion: 2
         x: 64
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2686e63ff73c4b469b9ae3ed09f67f4
-      internalID: 1156972782
+      spriteID: a953836794b7c2e4ca19f184d601d629
+      internalID: 1314757050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Loop_2
+      name: Rework_Bemmy_Main-Loop_n_2
       rect:
         serializedVersion: 2
         x: 128
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e4763a6ad5ed064e863eba84631cf8c
-      internalID: 2086772146
+      spriteID: 89f6dbe2eade0cb48a0bc9b4997b5e52
+      internalID: 1855842471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Loop_3
+      name: Rework_Bemmy_Main-Loop_n_3
       rect:
         serializedVersion: 2
         x: 192
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62fdbc978d0d56d47b488c632c687b91
-      internalID: 1587966775
+      spriteID: 026a88bce15880f4cbe4d16d46a4695f
+      internalID: 1962191926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Loop_4
+      name: Rework_Bemmy_Main-Loop_n_4
       rect:
         serializedVersion: 2
         x: 256
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c170e5474f4530444b1d1924b6f1dbc2
-      internalID: -1668146697
+      spriteID: 706ac97c08beddf439fa067f77d2f942
+      internalID: -562518677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Loop_5
+      name: Rework_Bemmy_Main-Loop_n_5
       rect:
         serializedVersion: 2
         x: 320
@@ -247,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1913148d5f1ebd42a56001c14a8b35a
-      internalID: 93723308
+      spriteID: 1593b444320bb144894637f0afdd6902
+      internalID: 1221777884
       vertices: []
       indices: 
       edges: []
@@ -262,16 +262,14 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 88ad38bb9868ed94bbc8fe9a16537a65, type: 3}
-      name: _NormalMap
+    secondaryTextures: []
     nameFileIdTable:
-      Rework_Bemmy_Main-Loop_4: -1668146697
-      Rework_Bemmy_Main-Loop_0: 1828680569
-      Rework_Bemmy_Main-Loop_3: 1587966775
-      Rework_Bemmy_Main-Loop_2: 2086772146
-      Rework_Bemmy_Main-Loop_5: 93723308
-      Rework_Bemmy_Main-Loop_1: 1156972782
+      Rework_Bemmy_Main-Loop_n_0: -1422372581
+      Rework_Bemmy_Main-Loop_n_3: 1962191926
+      Rework_Bemmy_Main-Loop_n_5: 1221777884
+      Rework_Bemmy_Main-Loop_n_2: 1855842471
+      Rework_Bemmy_Main-Loop_n_1: 1314757050
+      Rework_Bemmy_Main-Loop_n_4: -562518677
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
