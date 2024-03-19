@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4368073233727156869}
   - component: {fileID: 4368073233727156866}
-  - component: {fileID: 4368073233727156867}
   m_Layer: 0
   m_Name: Streetlight
   m_TagString: Untagged
@@ -86,22 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4368073233727156867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4368073233727156864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84dd541565e872b4bb07d97746009324, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useSmoothing: 1
-  parallaxX: 1
-  parallaxY: 0
-  smoothing: 30
 --- !u!1 &4368073235017779251
 GameObject:
   m_ObjectHideFlags: 0

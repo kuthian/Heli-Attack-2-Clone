@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITLE
+  m_text: BAD HARE DAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b0ddb7d71a4aa49a04bdfe3f37d796, type: 2}
   m_sharedMaterial: {fileID: 3403415756789758346, guid: b1b0ddb7d71a4aa49a04bdfe3f37d796, type: 2}
@@ -4244,7 +4244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396988059}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.52, y: -1.3999996, z: 1}
+  m_LocalPosition: {x: -11.52, y: 0.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

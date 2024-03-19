@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.ecasillas.missingrefsfinder": "https://github.com/edcasillas/unity-missing-references-finder.git",
     "com.rlabrecque.steamworks.net": "https://github.com/rlabrecque/Steamworks.NET.git?path=/com.rlabrecque.steamworks.net",
     "com.unity.cinemachine": "2.8.4",
     "com.unity.collab-proxy": "1.15.16",

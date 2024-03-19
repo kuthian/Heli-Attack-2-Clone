@@ -15,32 +15,15 @@ public class Leaderboard : MonoBehaviour
 
     public void ShowFriends()
     {
-        title.text = "Leaderboard - Friends"; 
-        List<LeaderboardEntry> leaderboardEntries = new List<LeaderboardEntry>();
-        for (int i = 1; i <= 10; i++)
-        {
-            LeaderboardEntry entry = new LeaderboardEntry();
-            entry.position = i;
-            entry.name = "Player " + i.ToString();
-            entry.score = 100 - i * 10;
-            leaderboardEntries.Add(entry);
-        }
-
+        title.text = "Leaderboard - Friends";
+        var leaderboardEntries = SteamLeaderboard.GetFriendsLeaderboard();
         leaderboardUI.SetLeaderboardEntries(leaderboardEntries);
     }
 
     public void ShowWorld()
     {
         title.text = "Leaderboard - World";
-        List<LeaderboardEntry> leaderboardEntries = new List<LeaderboardEntry>();
-        for (int i = 1; i <= 10; i++)
-        {
-            LeaderboardEntry entry = new LeaderboardEntry();
-            entry.position = i;
-            entry.name = "Gamer " + i.ToString();
-            entry.score = (10 - i) * 11;
-            leaderboardEntries.Add(entry);
-        }
+        var leaderboardEntries = SteamLeaderboard.GetWorldLeaderboard();
         leaderboardUI.SetLeaderboardEntries(leaderboardEntries);
     }
 }

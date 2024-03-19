@@ -12,6 +12,16 @@ public class DeathScreen : MonoBehaviour
 
     public TextMeshProUGUI AccuracyText;
 
+    public RankBadge FriendBadge;
+
+    public RankBadge WorldBadge;
+
+    public void Start()
+    {
+        FriendBadge.SetRank(SteamLeaderboard.GetCurrentFriendLeaderboardPosition());
+        WorldBadge.SetRank(SteamLeaderboard.GetCurrentWorldLeaderboardPosition());
+    }
+
     public void Show()
     {
         gameObject.SetActive(true);
