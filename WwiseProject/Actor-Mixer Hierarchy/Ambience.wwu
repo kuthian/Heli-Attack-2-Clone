@@ -7,7 +7,7 @@
 					<PropertyList>
 						<Property Name="Highpass" Type="int16">
 							<ValueList>
-								<Value>6</Value>
+								<Value>31</Value>
 							</ValueList>
 						</Property>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -21,9 +21,21 @@
 								<Value>True</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{10953B78-365F-41CF-9E86-0B7D92A2257A}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>10</Value>
+								<Value>-4</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
