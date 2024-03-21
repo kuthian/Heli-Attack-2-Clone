@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UISounds : MonoBehaviour
+public class UISounds : PrefabSingleton<UISounds>
 {
     [SerializeField]
     private AK.Wwise.Event wwMouseClick;
@@ -20,60 +20,38 @@ public class UISounds : MonoBehaviour
     [SerializeField]
     private AK.Wwise.Event wwLeaderboardArrows;
 
-    private static UISounds _i;
-
-
-
-    public static UISounds i
-    {
-        get
-        {
-            _i = (UISounds)FindObjectOfType(typeof(UISounds));
-            if (_i == null)
-            {
-                _i = Instantiate(Resources.Load<UISounds>("UISounds"));
-            }
-            return _i;
-        }
-    }
-
     void Start()
     {
-        name = "UISounds";
         DontDestroyOnLoad(gameObject);
     }
 
-    public void Init()
+    public void MouseClick()
     {
+        wwMouseClick.Post(gameObject);
     }
 
-    public static void MouseClick()
+    public void MouseHover()
     {
-        i.wwMouseClick.Post(i.gameObject);
+        wwMouseHover.Post(gameObject);
     }
 
-    public static void MouseHover()
+    public void PressArcade()
     {
-        i.wwMouseHover.Post(i.gameObject);
+        wwPressArcade.Post(gameObject);
     }
 
-    public static void PressArcade()
+    public void ButtonForwardTone()
     {
-        i.wwPressArcade.Post(i.gameObject);
+        wwButtonForwardTone.Post(gameObject);
     }
 
-    public static void ButtonForwardTone()
+    public void ButtonBackwardsTone()
     {
-        i.wwButtonForwardTone.Post(i.gameObject);
+        wwButtonBackwardsTone.Post(gameObject);
     }
 
-    public static void ButtonBackwardsTone()
+    public void LeaderboardArrows()
     {
-        i.wwButtonBackwardsTone.Post(i.gameObject);
-    }
-
-    public static void LeaderboardArrows()
-    {
-        i.wwLeaderboardArrows.Post(i.gameObject);
+        wwLeaderboardArrows.Post(gameObject);
     }
 }

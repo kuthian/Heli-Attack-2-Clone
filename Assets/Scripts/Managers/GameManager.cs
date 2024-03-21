@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : SceneSingleton<GameManager>
 {
     static public bool Paused => Time.timeScale == 0;
 

@@ -2,65 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameMusic : MonoBehaviour
+public class GameMusic : PrefabSingleton<GameMusic>
 {
+    [Header("WWise Event")]
     [SerializeField] private AK.Wwise.Event wwGameMusic;
 
+    [Header("WWise States")]
     [SerializeField] private AK.Wwise.State wwGameplay;
     [SerializeField] private AK.Wwise.State wwMainMenu;
     [SerializeField] private AK.Wwise.State wwPaused;
 
-    private AK.Wwise.State _initState;
+    private AK.Wwise.State initState;
 
-    private static GameMusic _i;
-
-    public static GameMusic i
+    public static void Init(AK.Wwise.State state)
     {
-        get
-        {
-            _i = (GameMusic)FindObjectOfType(typeof(GameMusic));
-            if (_i == null)
-            {
-                _i = Instantiate(Resources.Load<GameMusic>("GameMusic"));
-            }
-            return _i;
-        }
-    }
-
-    public void Init()
-    {
-    }
-
-    public void Init(AK.Wwise.State state)
-    {
-        _initState = state;
-        _initState.SetValue();
+        Instance.initState = state;
+        Instance.initState.SetValue();
     }
 
     void Start()
     {
-        name = "GameMusic";
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this);
         wwGameMusic.Post(gameObject);
-        if (_initState.IsValid())
+        if (initState.IsValid())
         {
-            _initState.SetValue();
+            initState.SetValue();
         }
     }
 
     static public void Gameplay()
     {
-        i.wwGameplay.SetValue();
+        Instance.wwGameplay.SetValue();
     }
 
     static public void MainMenu()
     {
-        i.wwMainMenu.SetValue();
+        Instance.wwMainMenu.SetValue();
     }
 
     static public void Paused()
     {
-        i.wwPaused.SetValue();
+        Instance.wwPaused.SetValue();
     }
 
 }

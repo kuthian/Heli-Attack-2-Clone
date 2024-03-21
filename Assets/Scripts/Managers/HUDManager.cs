@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HUDManager : Singleton<HUDManager>
+public class HUDManager : SceneSingleton<HUDManager>
 {
     [SerializeField]
     private HealthBar healthBar;

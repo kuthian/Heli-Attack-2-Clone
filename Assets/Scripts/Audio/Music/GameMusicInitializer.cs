@@ -10,11 +10,11 @@ public class GameMusicInitializer : MonoBehaviour
     {
         if (_state.IsValid())
         {
-            GameMusic.i.Init(_state);
+            GameMusic.Init(_state);
         }
         else
         {
-            GameMusic.i.Init();
+            GameMusic.Init();
         }
     }
 }

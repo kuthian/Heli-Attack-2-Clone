@@ -17,7 +17,7 @@ public class AudioMenu : MonoBehaviour
 
     void Start()
     {
-        volumeSettings = SteamCloud.GetVolumeSettings();
+        volumeSettings = PlayerSettings.GetVolume();
 
         UpdateValues();
         UpdateSliders();
@@ -30,21 +30,21 @@ public class AudioMenu : MonoBehaviour
     private void updateMasterVolume()
     {
         volumeSettings.Master = (int)masterVolumeSlider.value;
-        SaveVolumeSettings();
+        volumeSettings.Apply();
         UpdateValues();
     }
     
     private void updateMusicVolume()
     {
         volumeSettings.Music = (int)musicVolumeSlider.value;
-        SaveVolumeSettings();
+        volumeSettings.Apply();
         UpdateValues();
     }    
 
     private void updateSfxVolume()
     {
         volumeSettings.Sfx = (int)sfxVolumeSlider.value;
-        SaveVolumeSettings();
+        volumeSettings.Apply();
         UpdateValues();
     }
     
@@ -53,7 +53,8 @@ public class AudioMenu : MonoBehaviour
         masterVolumeValue.text = volumeSettings.Master.ToString();
         musicVolumeValue.text = volumeSettings.Music.ToString();
         sfxVolumeValue.text = volumeSettings.Sfx.ToString();
-    }    
+    }
+
     private void UpdateSliders()
     {
         masterVolumeSlider.value = volumeSettings.Master;
@@ -61,8 +62,8 @@ public class AudioMenu : MonoBehaviour
         sfxVolumeSlider.value = volumeSettings.Sfx;
     }
 
-    public void SaveVolumeSettings()
+    public void SaveChanges()
     {
-        SteamCloud.SaveVolumeSettings(volumeSettings);
+        volumeSettings.Save();
     }
 }

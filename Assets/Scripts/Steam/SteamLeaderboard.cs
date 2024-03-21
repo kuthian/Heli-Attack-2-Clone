@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class SteamLeaderboard : SCPSingleton<SteamLeaderboard>
+public class SteamLeaderboard : PersistentSingleton<SteamLeaderboard>
 {
     public static int GetCurrentFriendLeaderboardPosition()
     {

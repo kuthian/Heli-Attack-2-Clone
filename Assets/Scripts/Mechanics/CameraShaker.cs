@@ -2,7 +2,7 @@ using Cinemachine;
 using System.Collections;
 using UnityEngine;
 
-public class CameraShaker : Singleton<CameraShaker>
+public class CameraShaker : SceneSingleton<CameraShaker>
 {
     internal CinemachineVirtualCamera virtualCamera;
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise;

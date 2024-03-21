@@ -4,32 +4,32 @@ public class UISoundsProxy : MonoBehaviour
 {
     public static void MouseClick()
     {
-        UISounds.MouseClick();
+        UISounds.Instance.MouseClick();
     }
 
     public static void MouseHover()
     {
-        UISounds.MouseHover();
+        UISounds.Instance.MouseHover();
     }
 
     public static void PressArcade()
     {
-        UISounds.PressArcade();
+        UISounds.Instance.PressArcade();
     }
 
     public static void ButtonForwardTone()
     {
-        UISounds.ButtonForwardTone();
+        UISounds.Instance.ButtonForwardTone();
     }
 
     public static void ButtonBackwardsTone()
     {
-        UISounds.ButtonBackwardsTone();
+        UISounds.Instance.ButtonBackwardsTone();
     }
 
     public static void LeaderboardArrows()
     {
-        UISounds.LeaderboardArrows();
+        UISounds.Instance.LeaderboardArrows();
     }
 
 }

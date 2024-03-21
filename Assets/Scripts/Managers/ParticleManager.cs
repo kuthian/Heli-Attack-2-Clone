@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ParticleManager : Singleton<ParticleManager>
+public class ParticleManager : SceneSingleton<ParticleManager>
 {
     public static void PlayExplodedEffect(Transform parent)
     {

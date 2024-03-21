@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// Singleton class for managing different types of dynamic objects in the game.
 /// </summary>
-public class DynamicObjects : Singleton<DynamicObjects>
+public class DynamicObjects : SceneSingleton<DynamicObjects>
 {
     /// <summary>
     /// Gets the transform of the "Particles" game object.

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ItemManager : Singleton<ItemManager>
+public class ItemManager : SceneSingleton<ItemManager>
 {
     public static GameObject GetRiflePrefab()
     {
