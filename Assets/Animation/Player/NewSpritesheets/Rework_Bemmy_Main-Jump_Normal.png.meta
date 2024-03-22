@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e144532658a97a74ca509793cfc05402
+guid: 3f23ab6669f4aac4683f70ba0084dfa0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Jump_0
+      name: Rework_Bemmy_Main-Jump_Normal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f4d55eedf055384d9c8e0a8451654d9
-      internalID: 1080116327
+      spriteID: b95f30deeb3d500488fdb43b15644b96
+      internalID: 139479024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Jump_1
+      name: Rework_Bemmy_Main-Jump_Normal_1
       rect:
         serializedVersion: 2
         x: 64
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dba9192b82b180845950f10c4fd7db2e
-      internalID: 2021820092
+      spriteID: 194a760c83f4d964a8ba5a9824bdec36
+      internalID: 1276487021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Jump_2
+      name: Rework_Bemmy_Main-Jump_Normal_2
       rect:
         serializedVersion: 2
         x: 128
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26a098ace254f6b4b88ff9974f2e8ad1
-      internalID: 931263607
+      spriteID: c1fcf5fb10911a24291df8fcb439798d
+      internalID: 1656275476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Jump_3
+      name: Rework_Bemmy_Main-Jump_Normal_3
       rect:
         serializedVersion: 2
         x: 192
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e42b8fbcd9415ed4fb3cac1f38631d9e
-      internalID: -228865389
+      spriteID: 7c05ecde949e412469d6e574fa94de6a
+      internalID: -544002653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Jump_4
+      name: Rework_Bemmy_Main-Jump_Normal_4
       rect:
         serializedVersion: 2
         x: 256
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e0ad89540235d40af70a06ba590908
-      internalID: -1646099281
+      spriteID: c28fddbfdc72e3a40a1734e8cf3e4d79
+      internalID: 322915845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Jump_5
+      name: Rework_Bemmy_Main-Jump_Normal_5
       rect:
         serializedVersion: 2
         x: 320
@@ -247,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4ac3f40b5b12a1408afe0fda856c16e
-      internalID: 1024505355
+      spriteID: 8196be2ba579e284e9f0b358a0e5c015
+      internalID: -1580818402
       vertices: []
       indices: 
       edges: []
@@ -262,16 +262,14 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 3f23ab6669f4aac4683f70ba0084dfa0, type: 3}
-      name: _NormalMap
+    secondaryTextures: []
     nameFileIdTable:
-      Rework_Bemmy_Main-Jump_3: -228865389
-      Rework_Bemmy_Main-Jump_5: 1024505355
-      Rework_Bemmy_Main-Jump_1: 2021820092
-      Rework_Bemmy_Main-Jump_2: 931263607
-      Rework_Bemmy_Main-Jump_4: -1646099281
-      Rework_Bemmy_Main-Jump_0: 1080116327
+      Rework_Bemmy_Main-Jump_Normal_0: 139479024
+      Rework_Bemmy_Main-Jump_Normal_2: 1656275476
+      Rework_Bemmy_Main-Jump_Normal_3: -544002653
+      Rework_Bemmy_Main-Jump_Normal_4: 322915845
+      Rework_Bemmy_Main-Jump_Normal_5: -1580818402
+      Rework_Bemmy_Main-Jump_Normal_1: 1276487021
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
