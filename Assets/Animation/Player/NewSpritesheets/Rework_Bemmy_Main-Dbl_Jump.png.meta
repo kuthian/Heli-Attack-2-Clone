@@ -199,7 +199,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 97faa544e44a27445a9584fcee4c3a90, type: 3}
+      name: _NormalMap
     nameFileIdTable:
       Rework_Bemmy_Main-Dbl_Jump_2: -1528759448
       Rework_Bemmy_Main-Dbl_Jump_0: -1848726845
