@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 117ea8001c25ad949b974f7364c62f6d
+guid: 3f84e5fa41864244dba9d9c7213907d8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_0
+      name: Rework_Bemmy_Main-Death_Normal_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6b05f4394ed6f640b8afbd46307127b
-      internalID: 65086011
+      spriteID: 4aecda0d72803fc468033618279a5d43
+      internalID: 902304623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_1
+      name: Rework_Bemmy_Main-Death_Normal_1
       rect:
         serializedVersion: 2
         x: 64
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3617f7b80942d89439ed53e3e847754e
-      internalID: 1651480918
+      spriteID: ff8f14a36f44bf543a0ce875f58ec836
+      internalID: -306676955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_2
+      name: Rework_Bemmy_Main-Death_Normal_2
       rect:
         serializedVersion: 2
         x: 128
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e522b23c8a6cb364e9b539c1e30ae45d
-      internalID: -1628711850
+      spriteID: 9448d7b18692eb044bdb23c77c5057d7
+      internalID: 804500078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_3
+      name: Rework_Bemmy_Main-Death_Normal_3
       rect:
         serializedVersion: 2
         x: 192
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a283f76eb137a0446b823cc97a590f8c
-      internalID: 263070864
+      spriteID: 9061d71e10785a549afe07722d93b6b2
+      internalID: -1042220229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_4
+      name: Rework_Bemmy_Main-Death_Normal_4
       rect:
         serializedVersion: 2
         x: 256
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a05ce03e134f60e4dbe8add0778fddb3
-      internalID: 2103952469
+      spriteID: 00d424696a2ab424b8479a1c5e30bef3
+      internalID: 230208708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_5
+      name: Rework_Bemmy_Main-Death_Normal_5
       rect:
         serializedVersion: 2
         x: 320
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e56166167f48d154e8e28897e05e16fe
-      internalID: -722365607
+      spriteID: 024db7a4b5a48c641896a4821cb4ce5d
+      internalID: -258013081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_6
+      name: Rework_Bemmy_Main-Death_Normal_6
       rect:
         serializedVersion: 2
         x: 384
@@ -268,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bf8b793282a656458444e060a591c83
-      internalID: -132572637
+      spriteID: 35c6422c6ce5c6f43a48a220c370a065
+      internalID: 2060450106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_7
+      name: Rework_Bemmy_Main-Death_Normal_7
       rect:
         serializedVersion: 2
         x: 448
@@ -289,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f3fbc473ee32584db8d70d814ad08df
-      internalID: -1166529148
+      spriteID: b5f1d96655f86ab47be7c8f80f3f3064
+      internalID: 943757185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_8
+      name: Rework_Bemmy_Main-Death_Normal_8
       rect:
         serializedVersion: 2
         x: 512
@@ -310,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac46188b1d3431e4db369ced9004a294
-      internalID: -411343669
+      spriteID: 8d22deacfc3e08b47925d58f5b912859
+      internalID: 1707207321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_9
+      name: Rework_Bemmy_Main-Death_Normal_9
       rect:
         serializedVersion: 2
         x: 576
@@ -331,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 738cdb963f6cb1f44a358665b59f9f73
-      internalID: -481890153
+      spriteID: b83fde992a06a2344b725ef7c57f7fa2
+      internalID: 1440438917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rework_Bemmy_Main-Death_10
+      name: Rework_Bemmy_Main-Death_Normal_10
       rect:
         serializedVersion: 2
         x: 640
@@ -352,8 +352,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26713070b723bf24697c5e741354ed31
-      internalID: -1095342482
+      spriteID: 6965f714702581046b2c55780b9579ed
+      internalID: 893572711
       vertices: []
       indices: 
       edges: []
@@ -367,21 +367,19 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 3f84e5fa41864244dba9d9c7213907d8, type: 3}
-      name: _NormalMap
+    secondaryTextures: []
     nameFileIdTable:
-      Rework_Bemmy_Main-Death_9: -481890153
-      Rework_Bemmy_Main-Death_8: -411343669
-      Rework_Bemmy_Main-Death_5: -722365607
-      Rework_Bemmy_Main-Death_0: 65086011
-      Rework_Bemmy_Main-Death_4: 2103952469
-      Rework_Bemmy_Main-Death_1: 1651480918
-      Rework_Bemmy_Main-Death_3: 263070864
-      Rework_Bemmy_Main-Death_6: -132572637
-      Rework_Bemmy_Main-Death_10: -1095342482
-      Rework_Bemmy_Main-Death_2: -1628711850
-      Rework_Bemmy_Main-Death_7: -1166529148
+      Rework_Bemmy_Main-Death_Normal_1: -306676955
+      Rework_Bemmy_Main-Death_Normal_7: 943757185
+      Rework_Bemmy_Main-Death_Normal_5: -258013081
+      Rework_Bemmy_Main-Death_Normal_0: 902304623
+      Rework_Bemmy_Main-Death_Normal_10: 893572711
+      Rework_Bemmy_Main-Death_Normal_9: 1440438917
+      Rework_Bemmy_Main-Death_Normal_6: 2060450106
+      Rework_Bemmy_Main-Death_Normal_4: 230208708
+      Rework_Bemmy_Main-Death_Normal_3: -1042220229
+      Rework_Bemmy_Main-Death_Normal_8: 1707207321
+      Rework_Bemmy_Main-Death_Normal_2: 804500078
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

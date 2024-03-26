@@ -3429,7 +3429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxHealth>k__BackingField: 100
   <CurrentHealth>k__BackingField: 0
-  <Invincible>k__BackingField: 1
+  <Invincible>k__BackingField: 0
 --- !u!114 &633470008
 MonoBehaviour:
   m_ObjectHideFlags: 0
