@@ -1449,7 +1449,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2400,6 +2400,8 @@ PlayableDirector:
     value: {fileID: 1383020870}
   - key: {fileID: 2877165524470514363, guid: cc62b0a87561b00479903af38d17cf71, type: 2}
     value: {fileID: 1047794226}
+  - key: {fileID: -8415133277283253294, guid: cc62b0a87561b00479903af38d17cf71, type: 2}
+    value: {fileID: 1387843383}
   m_ExposedReferences:
     m_References:
     - fe5a859cbca36c14ba1ffddcb796f706: {fileID: 1092413865}
@@ -4775,6 +4777,8 @@ PlayableDirector:
     value: {fileID: 504060261}
   - key: {fileID: -3628391598408788223, guid: a83638d8010536f488c65b37c6f70e89, type: 2}
     value: {fileID: 848810959}
+  - key: {fileID: -2203723470392048573, guid: a83638d8010536f488c65b37c6f70e89, type: 2}
+    value: {fileID: 1387843383}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1100367750
@@ -6072,7 +6076,7 @@ GameObject:
   - component: {fileID: 1387843384}
   - component: {fileID: 1387843385}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: BemmyBacklight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
